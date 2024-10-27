@@ -1,0 +1,3713 @@
+:root {
+            --main-aiautotool-color: rgb(0, 174, 239);
+        }
+        .aiautotool_right {
+            display: table-cell;
+            width: 300px;
+            background-color: #f0f0f0; /* Màu nền cho bên phải */
+            padding:10px;
+
+        }
+
+
+.aiautotool-fixed {
+    position: fixed !important;
+    
+
+}
+        /* CSS cho bên trái (co giãn theo chiều rộng của bên phải) */
+        .aiautotool_left {
+            display: table-cell;
+            background-color: #f0f0f0; /* Màu nền cho bên trái */
+        }
+
+        /* CSS cho box nổi bật */
+        .aiautotool_box {
+            padding: 10px;
+            margin: 10px;
+            background-color: #ffffff;
+            border: 0.5px solid #ccc;
+            border-radius:5px;
+            box-shadow: 3px 3px 5px 0 #888888;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* CSS cho tiêu đề của box */
+        /* CSS cho tiêu đề của box */
+.aiautotool_box_head {
+    border-bottom: 1px solid #ccc; /* Đường gạch màu nhẹ */
+    padding: 5px;
+    box-shadow-: 0px 3px 5px 0px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+    text-transform: uppercase; /* In hoa */
+    font-weight: bold; /* Màu đậm */
+    
+    color: rgb(0, 174, 239); /* Màu văn bản */
+}
+
+
+        /* CSS cho nội dung của box */
+        .aiautotool_box_content {
+            padding: 10px;
+        }
+
+        /* CSS cho container chứa bên trái và bên phải */
+        .aiautotool_container {
+            display: table;
+            width: 100%; /* Độ rộng tự động là 100% của trang */
+        }
+
+
+
+         /* CSS cho form bên trong box */
+        .aiautotool_form {
+            padding: 10px;
+        }
+
+        /* CSS cho input */
+        .aiautotool_input,.aiautotool_button,.aiautotool_select {
+             width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng mượt */
+            transition: box-shadow 0.3s; /* Hiệu ứng chuyển đổi */
+            box-sizing: border-box;
+        }
+        .aiautotool_input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Hiệu ứng bóng mượt khi focus */
+    outline: none; /* Loại bỏ đường viền focus mặc định */
+    border: 1px solid var(--main-aiautotool-color);
+}
+.aiautotool_input:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Hiệu ứng bóng mượt khi focus */
+    outline: none; /* Loại bỏ đường viền focus mặc định */
+    border: 1px solid var(--main-aiautotool-color);
+}
+
+        /* CSS cho button */
+        .aiautotool_button {
+            padding: 10px 20px;
+            background-color: var(--main-aiautotool-color);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+         .aiautotool_container input,.aiautotool_container select {
+             width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng mượt */
+            transition: box-shadow 0.3s; /* Hiệu ứng chuyển đổi */
+            box-sizing: border-box;
+        }
+
+        .aiautotool_container input[type="checkbox"] {
+            color: var(--main-color); /* Sử dụng mã màu chung */
+            width:auto;
+        }
+        
+.aiautotool_container input:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Hiệu ứng bóng mượt khi focus */
+    outline: none; /* Loại bỏ đường viền focus mặc định */
+    border: 1px solid var(--main-aiautotool-color);
+}
+
+        /* CSS cho button */
+        .aiautotool_container  .aibutton {
+            padding: 10px 20px;
+            background-color: var(--main-aiautotool-color);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        /* CSS cho select box */
+        
+
+        /* CSS cho checkbox và label */
+        .aiautotool_checkbox_label {
+            display: block;
+            margin: 5px 0;
+        }
+.aiautotool_button_gen {
+    background-color: #f5f5f5; /* Màu nền nhạt */
+     /* Màu chữ nhạt */
+    padding: 5px 10px; /* Khoảng cách bên trong nút */
+    border: 1px solid #ccc; /* Viền nhạt */
+    border-radius: 4px; /* Góc bo tròn */
+    text-decoration: none; /* Loại bỏ gạch chân */
+    cursor: pointer; /* Con trỏ thành bàn */
+}
+
+.aiautotool_button_gen:hover {
+    background-color: #e0e0e0; /* Màu nền nhạt khi di chuột qua */
+}
+      /* CSS cho toàn bộ trang */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .aiautotool_button_gen.disabled {
+    pointer-events: none; /* Ngăn click khi bị disable */
+    opacity: 0.6; /* Giảm độ mờ khi bị disable */
+}
+
+.loading {
+    display: none; /* Ẩn nút "Loading" ban đầu */
+}
+
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+    display: none; /* Ẩn ban đầu */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+.aiautotool_categories {
+       max-height: 70px;
+        overflow-y: auto;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+        background-color: #fff;
+        border: 1px solid #ccc; 
+    }
+
+    .aiautotool_categories li {
+    list-style-type: none; /* Ẩn dấu tròn (bullet) */
+}
+
+.aiautotool_right .aiautotool_box{width:300px;}
+
+
+ .tabbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 174, 239); /* Màu xanh */
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index:2147483646
+  }
+  #tabbar {
+  position: absolute;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+#find-img-button,
+#write-button {
+  margin-right: 10px;
+}
+
+.borderaiautotool_bar{
+  border-radius:5px !important;
+  background:#fff !important;
+}
+.borderaiautotool_bar button{
+  border:none !important;
+  padding:15px !important;
+
+}
+.borderaiautotool_bar button:befor{
+  border-right:1px #000 solid;
+  
+}
+.borderaiautotool_bar button:hover{
+  border:none !important;
+  pading:5px !important;
+  color:#000 !important;
+
+  cursor: pointer !important;
+  background:#e3f2cd;
+  border-radius:5px;
+}
+
+
+
+
+/*tab aiautotool*/
+/* Add these styles to your CSS file or style tag */
+
+.aiautotool_tab {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc; /* Add a horizontal line below tabs */
+}
+
+.aiautotool_tab button {
+    background-color: #F0F4FB;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+    border-radius:5px 5px 0 0;
+}
+
+.aiautotool_tab button:hover {
+    background-color: #ddd;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+
+
+.aiautotool_navpublic{
+    padding:10px;
+}
+
+
+.video_list_find div, .img_list_find div {
+  width: 50%;
+  cursor: pointer ;
+}
+.img_list_find, .video_list_find {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0px;
+  max-height: 400px;
+  overflow: scroll;
+}
+.video_list_find div img,
+.img_list_find div img {
+  width: 100%;
+  border-radius: 5px;
+  border: 3px #fff solid;
+}
+
+.aiautotool_title {
+    grid-column: 1 / span 2; /* Span two columns for the input */
+}
+.aiautotool_btn{
+    
+    align-items: center;
+    border-bottom: 1px #f3f4f7 solid;
+padding: 5px !important;
+margin: 5px !important;
+list-style: none;
+box-sizing: border-box !important;
+}
+.aiautotool_btn .icon {
+    margin-right: 5px; /* Khoảng cách giữa icon và text */
+  
+}
+.aiautotool_btn span span {
+    
+   
+}
+.btn_writer{
+  /*font-size: 10px;
+  cursor: pointer;
+  padding: 5px;
+  background-color: rgba(0,85,255,.12);
+  color: #05f!important;
+  border-radius: 3px;
+  font-weight: 500;*/
+}
+.btn_writer:hover {
+  /*background-color: rgba(0,85,255,.15);
+  border-color: rgba(0,85,255,.1);
+  color: #05f;*/
+}
+.btn_bardWriter{
+  /*background-color: #fd13610f !important;
+  color: #fd1361!important;
+
+  font-size: 10px;
+  cursor: pointer;
+  padding: 5px;
+  color: #05f!important;
+  border-radius: 3px;
+  font-weight: 500;*/
+  
+}
+.btn_bardWriter:hover {
+  /*border-color: #fd136125 !important;
+  color: #fd1361;*/
+}
+
+.chatgpt-write{
+  /*background-color: #59BACC !important;
+  color: #fd1361!important;
+
+  font-size: 10px;
+  cursor: pointer;
+  padding: 5px;
+  color: #05f!important;
+  border-radius: 3px;
+  font-weight: 500;
+  */
+}
+.chatgpt-write:hover {
+ /* border-color: #fd136125 !important;
+  color: #fd1361;*/
+}
+
+
+.outbard ,
+#outbard {
+    max-height: 350px;
+    overflow-y: auto;
+}
+#outbard{
+    font-weight: 500;
+    font-size: 12px;
+}
+#outbard h2{
+
+}
+#outbard p {
+    line-height: 1.6;
+}
+#outbard li {
+  list-style: none;
+}
+
+
+
+#outbard h1,#outbard h2, #outbard h3, #outbard h4, #outbard h5, #outbard h6,
+#outbard li, #outbard ul, #outbard ol, #outbard table {
+  font-size: 12px;
+}
+
+.text-center {
+  text-align: center !important;
+}
+.p-5 {
+  padding: 3rem !important;
+}
+.badge-soft-primary {
+  background-color: rgba(0,85,255,.12);
+  color: #05f !important;
+}
+.badge {
+  display: inline-block;
+  padding: .3em .5em;
+  font-size: 82%;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+}
+.d-none {
+  display: none !important;
+}
+
+
+
+/*box f*/
+
+.aiautotool_right .aiautotool_box_f_container {
+            display: flex;
+            flex-wrap: wrap; /* Cho phép các box xuống dòng khi màn hình nhỏ hơn */
+            justify-content: space-between;
+            max-width: 100%;
+            margin: 0 auto;
+            max-height:500px;
+            overflow: auto;
+        }
+
+
+.aiautotool_box_f_container {
+            display: flex;
+            flex-wrap: wrap; /* Cho phép các box xuống dòng khi màn hình nhỏ hơn */
+            justify-content: space-between;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .aiautotool_box_f_box {
+            position: relative;
+            width: 48%; /* Sử dụng % để tự động co lại theo kích thước màn hình */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .aiautotool_box_f_box img {
+            max-width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .aiautotool_box_f_box-head {
+            background-color: #4CAF50;
+            text-align: center;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .aiautotool_box_f_box-content {
+            padding: 10px;
+        }
+
+        .aiautotool_box_f_box-content p {
+            color: #888; /* Màu chữ nhạt hơn */
+        }
+
+        .aiautotool_box_f_box-link {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .aiautotool_box_f_box-footer {
+            text-align: center;
+            background-color: #e0e0e0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .aiautotool_box_f_toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .aiautotool_box_f_toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 34px;
+            transition: 0.4s;
+        }
+
+        .aiautotool_box_f_toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+
+        .aiautotool_box_f_toggle-switch input[type="checkbox"] {
+            display: none;
+        }
+
+        .aiautotool_box_f_toggle-switch input[type="checkbox"]:checked + .aiautotool_box_f_toggle-slider {
+            background-color: #4CAF50;
+        }
+
+        .aiautotool_box_f_toggle-switch input[type="checkbox"]:checked + .aiautotool_box_f_toggle-slider:before {
+            transform: translateX(26px);
+        }
+
+        .aiautotool_box_f_new-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 5px 10px;
+            border-radius: 20px;
+            color: #fff;
+        }
+
+
+
+
+
+.publish-date-time-row {
+    display: flex;
+    align-items: center;
+    width:100%;
+    justify-content: space-between;
+}
+
+.aiautotool_box_time_select {
+    width: 8em !important;
+    text-align: center;
+    padding: 6px 1px !important;
+    font-size: 12px !important;
+    line-height: 1.16666666 !important;
+    vertical-align: middle !important;
+}
+
+.aiautotool_box_time_input {
+    
+    width: 4em !important;
+    text-align: center;
+    padding: 6px 1px !important;
+    font-size: 12px !important;
+    line-height: 1.16666666 !important;
+    vertical-align: middle !important;
+}
+
+.aiautotool_box_time_label {
+    
+}
+
+
+
+        .publish-date-time-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .aiautotool_box_time_label {
+            
+            text-align: center;
+            margin: 0 5px;
+        }
+        
+        .aiautotool_box_time_input, .aiautotool_box_time_select {
+            flex: 1;
+        }
+
+
+        #custom-thumbnail-preview img{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*canonical */
+.aiautotool_form_canonical_body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .aiautotool_form_canonical_tab {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .aiautotool_form_canonical_h2 {
+            font-size: 24px;
+            margin: 0 0 20px;
+            color: #333;
+        }
+
+        .aiautotool_form_canonical_header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .aiautotool_form_canonical_header_step2 {
+            background-color: #33cc33;
+        }
+
+        .aiautotool_form_canonical_header_step3 {
+            background-color: #ff9933;
+        }
+
+        .aiautotool_form_canonical_input {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .aiautotool_form_canonical_table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .aiautotool_form_canonical_th, .aiautotool_form_canonical_td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .aiautotool_form_canonical_td:hover{
+            cursor: zoom-in;
+            background:#309e4736;
+        }
+        .aiautotool_form_canonical_th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .aiautotool_form_canonical_button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            margin: 5px;
+        }
+
+        .aiautotool_form_canonical_button:hover {
+            background-color: #0056b3;
+        }
+
+        .aiautotool_form_canonical_button_center {
+            text-align: center;
+        }
+
+        .aiautotool_form_canonical_checkbox-label {
+            display: flex;
+            align-items: center;
+        }
+
+        .aiautotool_form_canonical_checkbox-label input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .aiautotool_form_canonical_loading {
+            display: none;
+            color: #007bff;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+
+
+
+         /* CSS cho container */
+        .aiautotool_canonical_container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* CSS cho box bên trái */
+        .aiautotool_canonical_box_left {
+            flex: 1;
+            padding: 20px;
+            background-color: #f0f0f0;
+            box-shadow: 3px 3px 5px #888888;
+        }
+
+        /* CSS cho box bên phải (ẩn ban đầu) */
+        .aiautotool_canonical_box_right {
+            display: none;
+            flex: 2;
+            padding: 20px;
+            background-color: #e0e0e0;
+            box-shadow: 3px 3px 5px #888888;
+        }
+
+        /* CSS cho table header */
+        .aiautotool_table_header {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* CSS cho button */
+        .aiautotool_button {
+            background-color: #27ae60;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+/*     301 css   */
+ .aiautotool_301_redirect_form {
+            text-align: center;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            box-sizing:border-box;
+        }
+
+        .aiautotool_301_redirect_form h2 {
+            font-size: 24px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            margin: 0;
+        }
+
+        .aiautotool_301_redirect_form .form-row {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .aiautotool_301_redirect_form .form-row label,
+        .aiautotool_301_redirect_form .form-row input[type="text"],
+        .aiautotool_301_redirect_form .form-row button {
+            flex: 1;
+            padding: 5px;
+            margin:5px;
+        }
+
+        .aiautotool_301_redirect_form .form-row label {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .aiautotool_301_redirect_form .form-row button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+
+        .aiautotool_container {
+            /*height: 100vh;*/
+            overflow: hidden;
+            position: relative;
+        }
+
+        .aiautotool_content {
+            width: 300px;
+            height: 100%;
+            background-color: #ffffff;
+            position: absolute;
+            top: 0;
+            right: -300px;
+            transition: right 0.5s ease-in-out;
+            z-index: 9999999;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 99999;
+        }
+
+        .aiautotool_yourcar{
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .listcarModel {
+          width: 100%;
+          display: inline-flex;
+          flex-wrap: wrap;
+          margin-bottom: 24px;
+          max-height: 52vh;
+          overflow-y: auto;
+        }
+        .listcarModel ul li a {
+          color: #221f1f;
+          font-size: 1.125rem;
+          text-decoration: none;
+          font-weight: normal;
+        }
+
+        .listcarModel  ul li {
+          list-style: none;
+        }
+        .year-tag {
+          background: #e6e7e8;
+          padding: 12px 2px;
+          width: 54px;
+          text-align: center;
+          font-size: .75rem !important;
+          line-height: 14px;
+          border: 0;
+          font-family: BMWTypeNext-Bold !important;
+          font-weight: normal !important;
+          border-radius: 3px;
+          cursor: pointer;
+          margin-right: 8px;
+          margin-bottom: 8px;
+        }
+
+
+         #aiautotool_bar_right {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #F0F4FB;
+            color: #000;
+            transition: right 0.3s ease;
+            box-sizing: border-box;
+            z-index:1000000000000;
+            border:1px solid #f7f7f7;
+        }
+        #aiautotool_bar_right .handle-actions, #aiautotool_bar_right .postbox-header{
+            display:none;
+        }
+        #aiautotool_bar_right .tabcontent {
+            display: none;
+            padding: 10px !important;
+
+            background-color: #;
+        }
+        #toggleButton {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg); /* Xoay dọc nút */
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: right 0.3s ease;
+            right: -45px; /* Ban đầu nằm bên phải 0px */
+            white-space: nowrap; /* Ngăn chặn quá trình wrap của văn bản */
+
+            z-index:1000000000000;
+        }
+        .aiautotool_btn_menu{
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg); /* Xoay dọc nút */
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: right 0.3s ease;
+            right: -45px; /* Ban đầu nằm bên phải 0px */
+            white-space: nowrap; /* Ngăn chặn quá trình wrap của văn bản */
+
+            z-index:1000000000000;
+        }
+
+        #toggleButton.open {
+            right: 255px; /* Khi mở, di chuyển nút về phải theo chiều rộng của div */
+        }
+
+
+
+        /*css news theme*/
+
+
+
+
+
+    @import url('https://fonts.googleapis.com/css?family=Oswald|Nunito|Josefin+Sans|Montserrat|Roboto+Condensed|Open+Sans|Raleway|Playfair+Display|Inter|Lora|Quicksand|Kanit|Comfortaa|Prompt|IBM+Plex+Serif|Spectral|Philosopher:ital|Taviraj|Readex+Pro|Anybody');
+:root{
+    --aiautotool-color:#00875c;
+    --gradient:linear-gradient(19deg, rgba(0,135,92,1) 0%, rgb(98 172 37) 100%);
+}
+.aiautotool_left{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+.aiautotool_container{
+   /* max-width:1000px;*/
+}
+.aiautotool_container .ft-updated {
+    margin-bottom: 20px;
+    background: #aaff9f4a;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid #6fb54480;
+    color: var(--aiautotool-color);
+}
+.aiautotool_container .ft-menu button{
+    background:none;
+    border:none;
+    width:100%;
+}
+.aiautotool_container .nav-tab-active {
+  margin-bottom: -1px;
+  color: #3c434a !important;
+  background: #f0f0f1 !important;
+}
+.aiautotool_container .ft-box{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns: 120px auto;
+}
+@media (max-width: 700px){
+    .aiautotool_container .ft-box{grid-template-columns: 70px auto;}
+}
+.aiautotool_container .ft-menu{
+    background:var(--aiautotool-color);
+    text-align: center;
+    padding:5px;
+    border-radius: 10px 0px 0px 7px;
+}
+.aiautotool_container .ft-logo {
+    padding: 10px;
+    background: #00b57b;
+    margin: -5px -5px 5px -5px;
+    border-radius: 7px 0px 0px 0px;
+    color: #fff;
+}
+.aiautotool_container .ft-logo img{
+    max-width:40px;
+    width:100%;
+}
+.aiautotool_container .ft-menu button{
+    color:#abff89;
+    font-size:10px;
+    padding:10px 0px;
+    border-radius:7px;
+    margin-left:0px;
+}
+.nav-tab:hover{
+    background:none;
+}
+.aiautotool_container .ft-menu button:hover{
+    color:#fff;
+}
+.aiautotool_container .ft-menu button i{
+    font-size:30px;
+    display:block;
+    margin-bottom:7px;
+}
+.aiautotool_container .ft-menu .sotab.nav-tab-active{
+    background:#fff;
+    color:var(--aiautotool-color);
+}
+.aiautotool_container .ft-main{
+    background:#fff;
+    border-radius: 0px 7px 7px 0px;
+    padding: 20px 20px 80px 20px;
+    font-size:16px;
+    position: relative;
+}
+.aiautotool_container .ft-main h2 {
+    margin-top: 0px;
+    color: var(--aiautotool-color);
+    font-weight: bold;
+    font-size:25px;
+}
+
+.aiautotool_container .ft-main h3 {
+    border:none;
+    padding: 10px 15px;
+    background: linear-gradient(85deg, #dddddd91 0%, rgba(255,255,255,0) 100%);
+    position: relative;
+    margin-bottom:30px;
+    margin-top:20px;
+    border-radius: 7px 7px 7px 0px;
+    font-size:16px;
+}
+.aiautotool_container .ft-main h3:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left:0;
+    border: none;
+    border-bottom: solid 15px transparent;
+    border-right: solid 20px var(--aiautotool-color);
+}
+.aiautotool_container .ft-img{
+    width:100%;
+}
+.aiautotool_container .ft-main h3  i{
+    margin-right:7px;
+    color:var(--aiautotool-color);
+}
+.aiautotool_container .ft-box form{border:none !important;}
+.aiautotool_container .ft-main h4 {
+    font-weight: bold;
+    color: #777;
+    padding: 10px 15px;
+    border-radius: 7px;
+    background: linear-gradient(85deg, #dddddd91 0%, rgba(255,255,255,0) 100%);
+}
+.aiautotool_container .ft-main .aiautotool_container .ft-input-big {
+    padding: 3px 7px;
+    width: 100%;
+    border: 2px solid var(--aiautotool-color);
+    border-radius: 7px;
+    margin-right: 7px;
+}
+.aiautotool_container .ft-main .aiautotool_container .ft-textarea{
+    padding: 3px 7px;
+    width: 100%;
+    height:80px;
+    border: 2px solid var(--aiautotool-color);
+    border-radius: 7px;
+    margin-right: 7px;
+}
+.aiautotool_container .ft-main .aiautotool_container .ft-input-small {
+    padding: 3px 7px;
+    width: 70px;
+    border: 2px solid var(--aiautotool-color);
+    border-radius: 7px;
+    margin-right: 7px;
+}
+.aiautotool_container .ft-main .aiautotool_container .ft-input-color {
+    background: none;
+    border: 1px solid #ccc;
+    width: 120px;
+    height: 40px;
+    border-radius:7px;
+    cursor: pointer;
+}
+.aiautotool_container .ft-main .aiautotool_container .ft-input-color::-webkit-color-swatch {
+    border: none;
+}
+.aiautotool_container .ft-card .clr-field button {
+    width:30px;
+    height:30px;
+    border-radius:7px;
+    margin-right:7px;
+}
+.aiautotool_container .ft-right-text{
+    font-size: 16px;
+    margin-left:7px;
+}
+.aiautotool_container .ft-submit  {
+    background: var(--gradient) !important;
+    padding: 10px;
+    border-radius: 7px;
+    color: #fff;
+    border-bottom: 5px solid #157b2a;
+   cursor:pointer;
+    width: 100%;
+    bottom: 20px;
+    box-sizing:border-box;
+}
+.aiautotool_container .ft-main select {
+    width: 150px;
+    border: 2px solid var(--aiautotool-color);
+    border-radius: 7px;
+}
+.aiautotool_container .ft-submit button:hover{
+    opacity:0.7;
+}
+.aiautotool_container .ft-submit button i{
+    margin-right:7px;
+}
+.aiautotool_container .ft-main a{
+    text-decoration: none;
+    color:var(--aiautotool-color);
+    cursor: pointer;
+}
+.aiautotool_container .ft-main .aiautotool_container .ft-selec{
+    width: 90px;
+    background: var(--aiautotool-color);
+    color: #fff;
+    border-radius: 7px;
+    border-bottom: 4px solid #157b2a;
+}
+.aiautotool_container .ft-main #ft-save-fast{
+    background: var(--gradient);
+    border-bottom: 4px solid #157b2a;
+    position: fixed;
+    z-index: 999999999;
+    right: 10px;
+    bottom:10px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-size: 27px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+.aiautotool_container .ft-del a {
+    background: #6d6d6d;
+    padding: 7px 10px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #fff;
+    border-radius: 7px;
+    font-size: 12px;
+    border-bottom: 4px solid #222;
+}
+.aiautotool_container .ft-del a:hover, .aiautotool_container .ft-main #ft-save-fast:hover, .aiautotool_container .ft-main #ft-selec:hover{
+    opacity:0.7;
+}
+.aiautotool_container .ft-del a i{
+    margin-right:7px;
+}
+#del-result span, #del-media span {
+    background: #9cfdb68c;
+    padding: 10px;
+    display: block;
+    border-radius: 7px;
+    color: var(--aiautotool-color);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.aiautotool_container .ft-card-note {
+    background: #dddddd21;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 7px;
+}
+.aiautotool_container .ft-card-note p {
+    font-size: 16px;
+    margin: 0px;
+}
+.aiautotool_container .ft-card-note p:not(:last-child){
+    border-bottom:1px solid #ccc;
+    padding-bottom:10px;
+}
+.aiautotool_container .ft-card-note p:not(:first-child){
+    padding-top:10px;
+}
+.aiautotool_container .ft-fb-group img{
+    border-radius:7px;
+    max-width:200px;
+    width:100%;
+}
+.aiautotool_container .ft-card-note .ft-donate-a{
+    background: #595959;
+    border-bottom: 4px solid #3a3a3a;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 7px;
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+.aiautotool_container .ft-card-note span{
+    margin-top:10px;
+}
+/* css nút check cho đẹp măt */
+.aiautotool_container .nut-switch input[type="checkbox"],
+.aiautotool_container .nut-switch input[type="radio"],
+.aiautotool_container .nut-switch .slider {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.aiautotool_container .nut-switch input[type="checkbox"],.nut-switch input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.aiautotool_container  .slider {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  background-color: #ddd;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+.aiautotool_container  .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+.aiautotool_container  input:checked + .slider {
+  background-color:var(--aiautotool-color);
+}
+.aiautotool_container  input:checked + .slider:before {
+  transform: translateX(24px);
+}
+.aiautotool_container .ft-label-right {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+/* foxtool on */
+.aiautotool_container .ft-on {
+    padding: 10px;
+    background: #309e4736;
+    border-radius: 7px;
+    margin-bottom:20px;
+}
+.aiautotool_container .ft-on-right{
+    font-size:20px;
+    font-weight:bold;
+    color:var(--aiautotool-color);
+}
+.aiautotool_container .nut-fton input[type="checkbox"],
+.aiautotool_container .nut-fton input[type="radio"],
+.aiautotool_container .nut-fton .aiautotool_container .ftder {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.aiautotool_container .nut-fton input[type="checkbox"],
+.aiautotool_container .nut-fton input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.aiautotool_container .ftder {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 26px;
+  background-color: #f3aaaa;
+  border-radius: 7px;
+  transition: background-color 0.3s;
+}
+.aiautotool_container .ftder:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 40px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.aiautotool_container input:checked + .aiautotool_container .ftder {
+  background-color:var(--aiautotool-color);
+}
+.aiautotool_container input:checked + .aiautotool_container .ftder:before {
+  transform: translateX(24px);
+}
+/* ket thuc */
+.aiautotool_container .ft-label-right {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+/* note */
+.aiautotool_container .ft-note {
+    background: #95fffb52;
+    padding: 23px 10px 10px 10px;
+    border-radius: 7px;
+    font-size: 14px;
+    position: relative;
+    margin-top: 20px;
+}
+.aiautotool_container .ft-note i {
+    color: var(--aiautotool-color);
+    margin-right: 7px;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 100%;
+    position: absolute;
+    top: -10px;
+    border: 4px solid #95fffb52;
+}
+.aiautotool_container .ft-note.aiautotool_container .ft-note-red {
+    background: #fe8f7752;
+}
+.aiautotool_container .ft-note.aiautotool_container .ft-note-red i{
+    border: 4px solid #fe8f7752;
+    color: #ff4444;
+}
+
+/* cau hinh mail smtp */
+.aiautotool_container .ft-card-mail .aiautotool_container .ft-smtp-a{
+    background: #00875c;
+    border-bottom: 4px solid #005d40;
+    padding: 10px;
+    border-radius: 7px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.aiautotool_container .ft-card-mail #ft-smtp {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+.aiautotool_container .ft-card-mail #ft-smtp p:last-child{
+    margin-bottom:0px;
+}
+.aiautotool_container .ft-card-mail #ft-smtp h3{
+    margin-top:0px;
+}
+.aiautotool_container #ft-send-email {
+    display: block;
+    padding: 10px;
+    background: #ff7405;
+    color: #fff;
+    text-align: center;
+    border-radius: 7px;
+}
+.aiautotool_container #ft-sen-end span, .edoi {
+    background: #e6e6e6;
+    : 1px ;
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 7px;
+}
+.aiautotool_container .edoi{
+    display:flex;
+    align-items: center;
+}
+.aiautotool_container .edoi img{
+    width:30px;
+    margin-right:10px;
+}
+/* woo loading */
+.aiautotool_container .ft-woo-load{
+    display:flex;
+}
+.aiautotool_container .ft-woo-load img{
+    max-width:30px;
+    padding:5px;
+    width:100%;
+}
+/* code */
+.aiautotool_container .ft-code-textarea{
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAF3KCAMAAADOqCikAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAJUExURYKCgt7e3vDw8AHoqskAAEApSURBVHja7J3bcuw4rkQx+P+Pnoe2XbogIREUNyl7nYiZ0xEauyu0nCSQBSbN1f/9z3j0kkcmH5l8ZMlP/dNHf46XSSj29R/xC63yB6A/hvyEZv99RHgN4mWZHKz932WGvk7vV8jBtBza37x9SaVZsI6+di+xtEY9qkr0NXQ9rPEyeHU/ynfzUs2mi4pSvZE9Ql8j5YC+FuR18ebh1fHI5NswU+/Q3PTrHfEIXoetIXwbZqqT+gJmjb/w+Ufo67a+PJGD+gPQ9YbposLwN4bzMs2L9bCbV+xvmCl/w77fbWGTEv7GpWDxN3Z/vYpXuEbZ95v3dqWgr1n1YYkX9WE/L0v0FVYO1lFUlOoN/I2h/Zc/LT30NatfVv4GvG49MlNvw7Z1YNTDtvMy138A6tHXWg2vnS/nipf8plj7G3pr25SHEa/4Y3yXNfDq1Fe7v7F5EvKKior/eOFvDOZlib5YDx9YD02uh5KXlfav0N8wVyh/1kP8jZ2+FC/V+FihX0ZfU+vDEi/qw35eluir/TspbWLU6w38jaH9l2rA0dfr+uXY34DXNF6WOEvqp7J/l/6E+BtP+BuWWPdq18v2Skt/Ifrq7ZcveQX1RtY76IoIXs/xskRfrIcr+RtX+1fkb1jyB/D9CfE3xvgbF7zQ12L+BvXhu/wNS4Y0yvUG/sbQ/kvKAX29rV9O9kp43Xmk3R7T77CiFPsuDVsNLsePiveb6BBK2EmZ9DeSXW+Hi/Mp/1xfSWWe8tKlSN470H8N5GWJvlgPH1gPTa6HkpeV9i+Vv5EMaTC/cdaX4iXOp6h++ZIX+ppWH5Z4UR/287JEX2oc9+KbrMjE6Kg38DeG9l9xA46+Xtgvy/wNeN30o9TbyGdgvN0JxD98ild2ZkSsbN7sbyROBfMb/0Bfrf6GO/Mby/JifmPwemhyPZS8rLR/Mb/xiL4ULzXT7s39MvqaXB8+9y0nvJp4WaIv9c2IN/sbPfUG/sbQ/ov5jV/TLzO/0cvLm+dtarwMfT3Fq/F8Ss3fqD3C33hKX63+huFvrMvLEhGxHj6wHracT6n5G4a/8aC+Ws6n1Ppl9DW5Pizxoj7s59V6PqXmb/TUG/gbQ/svf0566Gtuv4y/0fMoTyMphb7qEJtSvs1PPj68/Cq98+KmBmsMES3li2aP0FeLvtyz0Lyn8kU/IUb0XwN5PZYvynoYr4c62VWHsJX2r8Z80ezRX9ZXAkVJrzU0D33NrQ9LvKgP+3lZoi+vhcw/li+aPUJfD/VfD+aLoq+5/XJrvii8HvCjruwj/PmxvFrnN1zni17/QuY35ujLPfs6mPmNV/FifmPwetg0v+E6X/Ry/2J+4xF9Nc1vuM6rvPwqE33Nqg9LvKgP+3k1z29cl3PMb7yp/2J+49f0y8xvLMXr4s2jr8X8jYutDX9jsX75Bi/8jQV5WaIv1sN1/I3r/Qt/YyV/45IX+lrK36A+fJe/keVvdNQb+BtD+y83WW+gr3f1y/gb5Ucm38bHUzq+Q3PTr3fEI3gFb+O4E209wP2L2vA6+xumt7byI/yNp/TlWikpFHP1yOQnxN8YzMsSEbEePrAemlwPJS8rbVInfyNHib8R//UqXoc1yvZv3pt5oa9p9WGJF/VhPy9L9HWoHKy7qCjVG/gbQ/svf0566Gtuv3z2N+B195EdarDNizIXN/PaT6cc2Ed2WPoeewQv31VrHvH6UDvy2lC7+Quff4S+GvXliRzEm49HSXeH9YT08DfG8jLNi/Wwm9dpfmOzEprkZaVN6jy/cQMl/sbxr1fxOq5Rm3rDpIis6c2jr39TH5Z4UR/287JEX6evxrb7V6WoKNUb+BtD+y9/Wnroa1a/HMxvwGuwH+WJfSTe/G5hC0wnV4/yRJc/yqtxfuOHSjBuIfrlY3kY8YoN/zQBFX3d15drfaW8zBWv6PuUPJEMXg/xskRfrIcPrIct8xufXaqwf0XzGypEdLse4m+U5ze+/sFM7V8JL/Q1rT4s8aI+7OfVOr/hrsdxhYnRWW/gbwztv9xkvYG+3tUvh/Mb8JrHyzQv5qMW9DdM98ucT1mwX77kxfmUBXlZoi/Ww5X8jav9i/Mpa/kbF7zQ12L+BvXhu/wN0/4G51MW7b+Ev4G+3tcvcz6li9fX+w14/fcGY15WOk/0XRo2bW2fH4aXH/abgFfsb1gpf2OL67b1oR6hr1Z9JZV5ykuXIubqEf7GYF6W6Iv18IH10OR6KHlZaf8K5zcyg0tHj/5lfSleob9hpTwH9DW3Pizxoj7s52WJvkJ/w0r5Gx31Bv7G0P4rzt9AXy/sl+P5DXjd96MUr3AGZnOystkJxD98ilfob9hWawGvVn8jMTGY3/gH+mr1N9yZ31iWF/Mbg9dDk+uh5GWl/Yv5jUf0pXiF+aLbH2rkhb6m1YclXtSH/bws0VeYL2pyKDTxN3rqDfyNof0X8xu/pl9mfqOXl7fnwZZ4kd877f6Ukr/B/Slz9dXqb3B/ysK8uD9l8HrYdH9Kyd/g/pRp96eU+mX0Nbk+5P6USbya708p+Rvcn7Js/8X9Kb+mX8bf6OFliR8VJp9YR0hUKd/mZyoIXjq902SS4TYZ2xpDREv5ouoR+mrVl3sWmvdUvugnxIj+ayCvx/JFWQ/j9dDkeih5WWn/aswXVY/+ur4UL5G/ofrlS17oa1p9WOJFfdjPyxJ9ifyNSmh5R72BvzG0/3owXxR9ze2XW/NF4TX0Pl9/erQDP+qB+Q3X+aLX1j3zG3P05Z59Hcz8xqt4Mb8xeD1smt9wnS96uX8xv/GIvprmN1znVV5+lYm+ZtWHJV7Uh/28muc3rss55jfe1H8xv/Fr+mXmN5bidfHm0ddi/sbF1oa/sVi/fIMX/saCvCzRF+vhOv7G9f6Fv7GSv3HJC30t5W9QH77L38jyNzrqDfyNof2Xm6w30Ne7+mX8jeKj7XvYv43t2zu/w+SRfvPm+g9APdrNAsFr9x5c8Tp3UscI31v98m5bO2yI6tF+dsvh1amvFn/DXJUiW177omLLC39jMC9L9MV6+MB6aHI9lLystH8d/I39eih54W8c9KV4nRsfK/TL6GuB+rDEi/qwn5cl+joXZlbwN3rrDfyNof3XuQFHXy/tl4/+BryaeO2+Y/rf/hhsPDnz0ymr0Nfokbl6ZK4e7bIm4LU3Dk6ew08TdX5RH2Dnrc299f6U3f+3w1/UZuADfXXqy7W+FJRglPS4Ysb6wt8YzMs0L9bDbl6Rv7G/FTHiZaX9K/I3QpT75RB/Y68vxSvyN/YpiG280Ne0+rDEi/qwn5cl+or8jX0KR7x/+aP1Bv7G0P4r9DfQ1xv75dDfgNdQP8o9u9RG84qiVOzk+u55iUSXv82rcX5jv4vd75ejKEs7V/URL/yNbn21+xtR3tf5ScQLf2MwL0v0xXr4wHrYMr/x2aUK+1fob0Qhoof1EH+jPL/xVW8098voa2p9WOJFfdjPq3V+wz37kkv7G/V6A39jaP8l/A309b5+OfY34DWNlyV+FPNR6/kblswDcD5lvX75khfnUxbkZYm+WA9X8jeu9i/Op6zlb1zwQl+L+RvUh+/yNyyZ3+B8ypr9l5rfQF+v65c5n9LF6+v9xvM2kpeVzhN9l4bhfJTk5XFgzp/mFfkbP28wnD+s5G9scUW8Yn/DOZ/yjL7cG/M3dl+NRLzEvKgzvzGclyX6Yj18YD00uR5KXlbav8T5FOlvCO/rr+tL8RLnUyp5Duhrbn1Y4kV92M/LEn2J8ymV/I2OegN/Y2j/FedvoK8X9svqfAq87vpRipe4Y/dn52rlhX/4GK/Q3/j533nMq9XfiJ0K5jf+lb5a/Y2e71PwNwbzYn5j8Hpocj2UvKy0fzG/8Yi+FK8wX3T7Q4280Ne0+rDEi/qwn5cl+grzRZsvnWd+Y+n+i/mNX9MvM7/Ry8vb82BLvMjvnXZ/Ssnf4P6Uufpq9Te4P2VhXtyfMng9bLo/peRvcH/KtPtTSv0y+ppcH3J/yiRezfenlPwN7k9Ztv/i/pRf0y/jb/TwssSPipNPskd2XPoeyLf5yceHl3mc3rnfueL8DeVvxCGiHfmi8msC9NWoL9f68ufyRT8hRvRfA3k9li/KehivhybXQ8nLSvtXY75o+Ah9SV4if0Pfx3HBC31Nqw9LvKgP+3lZoi+Rv6HvT4mKiu56A39jaP/1YL4o+prbL7fmi8Jr6H2+bjIvBf9w2vyG63xRk3mVzG/M1ZdrfTnzGy/jxfzG4PWwaX7Ddb7o5f7F/MYj+mqa33CdV3nFC31Nqw9LvKgP+3k1z2+4zhc1mS/K/May/RfzG7+mX2Z+Yyle2Xmi/7xl9LWSv5HlOYQ3veJvTO2Xb/DC31iQlyX6Yj1cx9+43r/wN1byNy55oa+l/A3qw3f5G1n+Rke9gb8xtP+K5zfQ1wv7ZfyNZXiZ5iV/Kvt36U9IPf+Ev2G6X5a7XrZX6k+Ivp7ol2/y2tUbWe+gKyJ4Pc3LEn2xHq7hb9zbv/b+hiV/APtPiL/xtL9xixf6WsbfoD58l79h2t/orTfwN4b2X4Ec0Nc7++Vkr4TXNa/dENrxvht5nsjC80T725/unULKzi7pT/gXebm+fXXXRJ1f1AfY0Z/PrnO1/N8Vb4jcD/ucvlzry7NTtEG94eHZ9v11UvgbI3lZcuqZ9bCXl7gfVuZvWJi/cW//ivyNEOXhE+Jv7ENMBC9xP2yU53CLF/qaVh+WeFEf9vOyRF/iftjw0Ouxmnuu3sDfGNp/hf4G+npjv5xkVcFrkB/l2o9KeQVRKtndOjrR5a/zapzf2O9i9/vlIMoyu2tMJ6Cir4K+2v2NIO8ru3tRJ5LB62leluiL9fCB9bBlfuOzSxX2r9DfCENE9+sh/kZ5fuOr3mjul9HX1PqwxIv6sJ9X6/yGu5zfSP2Ner2BvzG0/xL+Bvp6X7+c3KUOrxm8LPGjmI9az9+wZB6A8ynr9cuXvDifsiAvS/TFeriSv3G1f3E+ZS1/44IX+lrM36A+fJe/Ycn8BudT1uy/1PwG+npdv8z5lC5eX+83nreRvKx0nui7NAznoyQvFwfK/jKv+H5Yk/6GlfI3trgiXrG/4ZxPeUZf7o35G7uvRiJeYl7Umd8YzssSfbEePrAemlwPJS8r7V/ifIr0N2Lv68/rS/ES51MqeQ7oa259WOJFfdjPyxJ9ifMplfyNjnoDf2No/xXnb6CvF/bL6nwKvO76UYpXOAOzceZbeeEfPsYrOzMiVjZv9jdCp4L5jX+mr1Z/o+f7FPyNwbyY3xi8HppcDyUvK+1fzG88oi/FK8wX3f5QIy/0Na0+LPGiPuznZYm+1Dcj3uxv9NQb+BtD+y/mN35Nv8z8Ri8vb8+DLfEiv3fa/Sklf4P7U+bqq9Xf4P6UhXlxf8rg9bDp/pSSv8H9KdPuTyn1y+hrcn3I/SmTeDXfn1LyN7g/Zdn+i/tTfk2/jL/Rw8sSP6ox6Xp7cuLB/KiffHx4qfTOw5Um8qYGkb+hXP1avqj8mgB9NerLtb78uXzRT4gR/ddAXo/li7IexuuhyfVQJ5OX9q/GfNH4EfpSvET+hr6P44IX+ppWH5Z4UR/287JEX9nNa0l9+Fi+qBzTQl/P9V8P5ouir7n9cmu+KLyG3ufrJvNS8A+nzW+4zhc1mVfJ/MZcfbnWlzO/8TJezG8MXg+b5jdc54te7l/Mbzyir6b5Ddd5lVe80Ne0+rDEi/qwn1fz/IbrfFGT+aLMbyzbfzG/8Wv6ZeY3luKVnSf6z1tGXyv5G1meg54Vwd+Y1S/f4IW/sSAvS/TFeriOv3G9f+FvrORvXPJCX0v5G9SH7/I3svyNjnoDf2No/xXPb6CvF/bL+BvlR59Jm9NOpN9hxQncJve2/AFspAqvXXKvK17HTsqkv5Hsevuk5fsb4nZpdXh16iupzFNe+quW+G4C/I1/wMsSfbEePrAemlwPJS8r7V97fyM1uHbroaMvi/2NHa9jTyT75Zu80Ne0+rDEi/qwn5cl+jp+J3VzUndvYnTXG/gbQ/uvYwOOvl7bL/u5MofXfV4/h4pPvOKbeTeX3aibhoJHtk90u3tAaXvOCF77A3YHlJ8m6oRyA+y4tbn4hbm/4fJjpI/QV5u+XOsr9Df2z0XggHiEvzGYl2lerIfdvCJ/4/Nc8bLS/hX5G5co8TeO+lK8In/ja/u6feoZfS1RH5Z4UR/287JEX5G/8bN/Jalu/mi9gb8xtP8K/Q309cZ+OfQ34DXUj3LtR6W8dJRKfrcO9/keeDXOb+yMxIZ+WUdZ5neN4W88oa92f0NHgeV3Lxr+xmheluiL9fCB9bBlfmNbeDTvX6G/oUJEN+sh/kZ5fuPzJr2ZF/qaVh+WeFEf9vNqnd9wl/Mbqb9RrzfwN4b2X8LfQF/v65djfwNe03hZ4kcxH7Wev2HJPADnU9brly95cT5lQV6W6Iv1cCV/42r/4nzKWv7GBS/0tZi/QX34Ln/DkvkNzqes2X+p+Q309bp+mfMpXbx2VeJx3kbystJ5ot3YzXGoRvJyEZjzl3lF/sZ+CjHg1Zy/sZtCjKA0PUJfjfpyb8zf2H01EorI1SP8jcG8LNEX6+ED66HJ9VDystL+Jc6nSH9DPfrj+lK8xPmUSp4D+ppbH5Z4UR/287JEX+J8SiV/o6PewN8Y2n/F+Rvo64X9sjqfAq+7fpTiFd+x+9m5WnnhHz7GK/Q3bKvCgFerv5GYGMxv/AN9tfobPd+n4G8M5sX8xuD10OR6KHlZaf9ifuMRfSleYb7o9ocaeaGvafVhiRf1YT8vS/QV5oveuJXPH6038DeG9l/Mb/yafpn5jV5e3p4HW+JFfu+0+1NK/gb3p8zVV6u/wf0pC/Pi/pTB62HT/Sklf4P7U6bdn1Lql9HX5PqQ+1Mm8Wq+P6Xkb3B/yrL9F/en/Jp+GX+jh5clflSY0Wo6FCX4zwP5Nj/5+PAymd5pKsnw8G7D85VnV78nX1Q+Ql+N+nKtL38uX/QTYkT/NZDXY/mirIfxemhyPZS8rLR/NeaLykd/XF+Kl8jf0PdxXPBCX9PqwxIv6sN+XpboS+Rv6PtTgqKiv97A3xjafz2YL4q+5vbLrfmi8Bp6n6+bzEvBP5w2v+E6X9RkXiXzG3P15VpfzvzGy3gxvzF4PWya33CdL3q5fzG/8Yi+muY3XOdVXvFCX9PqwxIv6sN+Xs3zG67zRU3mizK/sWz/xfzGr+mXmd9Yild2nui//0JfK/kbWZ6DuukVf2Nev3yDF/7Ggrws0Rfr4Tr+xvX+hb+xkr9xyQt9LeVvUB++y9/I8jc66g38jaH9Vzy/gb5e2C/jbxQfbSdt7NQUu37z3swrgZL91PazwWs3GeWKV9BJebO/kZgY2U/tSDm8OvV139/wpBRJ6o3NZ8PfGMzLEn2xHj6wHppcDyUvK+1fe3/DEn9jvx46+lL+xvHEkKg3bvfL6GuJ+rDEi/qwn5cl+jp/M+LN/kZ/vYG/MbT/CuSAvt7ZLx/2Sni18fo5VHziJW/m9U1ebHCeKDqF5JenkMKzS5tOGV6e3GmyvTrFLKBsZ3/jsKudXq94lP3UztpAX536cq0UFzfzBqOkp/Im1Bf+xmBepnmxHnbzivyNz03aipeV9q/I3whR7pdD/I29vhSvyN/42r7iPIcLXuhrWn1Y4kV92M/LEn1F/sbP/qV4qUtgy/UG/sbQ/iv0N9DXG/vl0N+A11A/yrUflfKKolRc56VsvWh4dcxv/FDR+1fYL0dRlq5DRHffHeBv9Oqr3d+IosBch3pteOFvDOZlib5YDx9YD1vmNz67VGH/Cv2NMER0vx7ib5TnN77qjeZ+GX1NrQ9LvKgP+3m1zm+46/yNzN+o1xv4G0P7L+FvoK/39cuxvwGvabws8aOYj1rP37BkHoDzKev1y5e8OJ+yIC9L9MV6uJK/cbV/cT5lLX/jghf6WszfoD58l79hyfwG51PW7L/U/Ab6el2/zPmULl67lLbjvI3kZaXzRLvU5aOLJXm5OFD2l3lF/sbPGwznDyv5G7sQ+oBX7G8451Oe0VdSmae84nlRWW98fhZe43hZoi/WwwfWQ5ProeRlpf1LnE+R/oaL6NE/ri/FS5xPqeQ5oK+59WGJF/VhPy9L9CXOp1TyNzrqDfyNof1XnL+Bvl7YL6vzKfC660cpXtEMzO6HGnnhHz7GK/Q3dqcsA16t/kbi6jO/8Q/01epv9Hyfgr8xmBfzG4PXQ5ProeRlpf2L+Y1H9KV4hfmiO9RtvNDXtPqwxIv6sJ+XJfoK80XDS+ev/I2eegN/Y2j/xfzGr+mXmd/o5eXtebAlXuT3Trs/peRvcH/KXH21+hvcn7IwL+5PGbweNt2fUvI3uD9l2v0ppX4ZfU2uD7k/ZRKv5vtTSv4G96cs239xf8qv6ZfxN3p4WeJHhXG72zsXPD5P5I/mR/3k48Nr48y74qXyN5S/EYaIutfzReNH6KtdX6715c/li35CjOi/BvJ6LF+U9TBeD02uh5KXlfavxnzR+BH6UrxE/oa+j+OCF/qaVh+WeFEf9vOyRF8if0PfnxIUFf31Bv7G0P7rwXxR9DW3X27NF4XX0Pt83WReCv7htPkN1/miJvMqmd+Yqy/X+nLmN17Gi/mNweth0/yG63zRy/2L+Y1H9NU0v+E6r/KKF/qaVh+WeFEf9vNqnt/QlZ6bzBdlfmPZ/ov5jV/TLzO/sRSv7DzRfw4Y+lrJ38jyHKJZEfyNuf3yDV74GwvyskRfrIfr+BvX+xf+xkr+xiUv9LWUv0F9+C5/I8vf6Kg38DeG9l/x/Ab6emG/jL9R5yXeRvIOa7xqj+Dl99yDpJOq+Ru1R/gbz+rrvr9hzvzG4rwsERHr4QProX7z/f7G7hH+xiP6sltrVK1fRl9L1IclXtSH/bws0dcT/kZ/vYG/MbT/8iekh75W6JfxN7p4/RwqPvEKb+bdJlWqm4aeepR8wr/Ia28cnPzDzdXXZ9fxG1j4U8kvbHuUfEL01a4v10pxcWnveZTUTl/fhJ8Qf2MwL9O8WA+7eUX+xucmbcXLSpuUuB82MDF0Ngv6krzE/bA6z+GCF/qaVh+WeFEf9vOyRF/ifth6UVGqN/A3hvZf/oT00NcK/bK6HxZe4/wo16aTN0apXOalxIkuf5xX4/zGD5WkyboZPXqZLxonoKKvdn21+xuVvK84kQxeD/OyRF+shw+shy3zG59dqrB/NeaLWnRKAn01zW981RvNRTv6mloflnhRH/bzap3fcNf5G5mJUa838DeG9l9+O9oXfS3eL7fmi8JrMC9L/Cjmo9bzNyyx7jmfsl6/fMmL8ykL8rJEX6yHK/kbV/sX51PW8jcueKGvxfwN6sN3+RuWDGlwPmXN/kvNb6Cv1/XLnE/p4vX1foXdZ3LepnKe6Ls0vLm17SpDeO0qeVe8Yn/DSvkbW1w3rA/XeyX6KugrqcxTXroUEfOizvzGcF6W6Iv18IH10OR6KHlZaf8S51OkvxE+Ql+KlzifUslzQF9z68MSL+rDfl6W6EucT6nkb3TUG/gbQ/uvuAFHXy/sl9X5FHjd9aMUr2gGZhvp2soL//AxXtmZkShfdHfK8m6/nLj6zG/8A321+hs936fgbwzmxfzG4PXQ5HooeVlp/2J+4xF9KV5hvuhOZW280Ne0+rDEi/qwn5cl+grzRW9MBfuj9Qb+xtD+i/mNX9MvM7/Ry8vb82BLvMjvnXZ/Ssnf4P6Uufpq9Te4P2VhXtyfMng9bLo/peRvcH/KtPtTSv0y+ppcH3J/yiRezfenlPwN7k9Ztv/i/pRf0y/jb/TwssSPCpNPtinN3hgSVcq3+cnHh5dK78ySDPeZ1W0hoqV80fgR+mrXl3sWmvdUvugnxIj+ayCvx/JFWQ/j9VAnu0peVtq/GvNF40foSybjBf7GrtBr5IW+ptWHJV7Uh/28LNGXyN+ohJZ31Bv4G0P7rwfzRdHX3H65NV8UXkPv8/XnRjvwoySv1vkN1/mi17+Q+Y05+nKtL2d+42W8mN8YvB42zW+4zhe93L+Y33hEX03zG67zKi+/ykRfs+rDEi/qw35ezfMbutJzk/mizG8s238xv/Fr+mXmN5bidYESfS3mb1xsbfgbi/XLN3jhbyzIyxJ9sR6u429c71/4Gyv5G5e80NdS/gb14bv8jSx/o6PewN8Y2n+5yXoDfb2rX8bfqD3aTdqc3oaCkj4yLzwyzx/BK+B1cg/M405q98gOP7Ufg7r5aD9IfH6Ev/GUvlyLKOVlrngd640PL/yNwbws0Rfr4QProYRikpeV9q+9v3E8WGFyPXT0ZbG/cYSipGdSRJYulehrTn1Y4kV92M/LEn1lpePtoqK73sDfGNp/+X3poa+1++XjXgmvJl4/h4pPvMKbef1wk9sJinvjI/M7j+B1iN44vo3PELxFjyzyNzy5zlU/2v3/24/QV7O+XItIvfnzKKkfV0whPfyNsbxM82I97OYV+Rufm7QVLyvtX5G/cYkSf+OoL8Ur8je+ti+TIrJ0qURfc+rDEi/qw35elugrrPSssajorjfwN4b2X35feuhr7X459DfgNdSPcm06pbyCKJXjPaRnqypKdPnrvBrnN37+F0mTFT0Koiz3T6LRjuhUC/oq6Kvd3wjyvoInES/8jcG8LNEX6+ED62HL/Mbnf1HYv0J/I84X3a2H+Bvl+Y2veqO5X0ZfU+vDEi/qw35erfMb7tnXVdrfqNcb+BtD+y/hb6Cv9/XLsb8Br2m8LPGjmI9az9+wxLrnfMp6/fIlL86nLMjLEn2xHq7kb1ztX5xPWcvfuOCFvhbzN6gP3+VvWDK/wfmUNfsvNb+Bvl7XL3M+pYvX1/uN520kLyudJ/ouDcOhGsnLwwNlf5tXvEmZ9DeslL+xxRVCuf8IfbXry70xf2P31UgoIleP8DcG87JEX6yHD6yHJtdDyctK+5c4nyL9jdj7+vP6UrzE+ZRKngP6mlsflnhRH/bzskRf4nxKJX+jo97A3xjaf8X5G+jrhf2yOp8Cr7t+lOIVzsBsg10beeEfPsZLbVIe+xs/y1qTv5GYGMxv/AN9tfob7sxvLMuL+Y3B66HJ9VDystL+xfzGI/pSvMJ80R3qNl7oa1p9WOJFfdjPyxJ9haO/JodCE3+jp97A3xjafzG/8Wv6ZeY3enl5ex5siRf5vdPuTyn5G9yfMldfrf4G96cszIv7Uwavh033p5T8De5PmXZ/SqlfRl+T60PuT5nEq/n+lJK/wf0py/Zf3J/ya/pl/I0eXpb4UXHySfJIh9h05Nvsq0R46fmNOMnQj/cm3wkR7cgXVV8ToK9WfblnoXlP5YvuUxDhNYjXY/mirIfxeiihmORlpf2rMV80foS+EihKevdD89DXCvVhiRf1YT8vS/SVlY63i4ruegN/Y2j/9WC+KPqa2y+35ovCa+h9vt5qVeFHFXi1zm+4zhe9tu6Z35ijL9f6cuY3XsaL+Y3B62HT/IbrfNHL/Yv5jUf01TS/4Tqv8vKrTPQ1qz4s8aI+7OfVPL/h+tCryXxR5jeW7b+Y3/g1/TLzG0vxukCJvhbzNy62NvyNxfrlG7zwNxbkZYm+WA/X8Teu9y/8jZX8jUte6Gspf4P68F3+Rpa/0VFv4G8M7b/cZL2Bvt7VL+NvFB9t38P+bWzf3uEdJo+2TtT9n7r8hfAK3sZ+J9q/PYny6G/snMPkF959lHxC9FXQl2t95X8Arv8A1CfE3xjMyxIRsR4+sB6aloNpORT2r72/cfkHgL8R//XarTXq+Oa9mRf6mlYflnhRH/bzskRfjeXcdVFRqjfwN4b2Xw/+QvQ1t19O9kp4XfP6OVR84hXezLvtlOPXGx012q6f9x8ln/Av8tobB6fBiZ8myqJHFs5vXP7CtkfJL0Rf7fryRA5RlbL7r/CRyU+IvzGYl2lerIfdvCJ/43OTtuJlpf0r8jdClIdPiL+xDzERvCJ/42v7ivrlS17oa1p9WOJFfdjPyxJ9hZWDRfkb52ruuXoDf2No/yV+Ifp6X78s9kp4DfSjPLGPMl5BlMrx9u2zwSUSXf40r8b5DXc5v5H2y0GU5d6Zjwx/kYCKvlr11e5vBHlfO15RvaESyeD1KC9L9MV6+MB62DK/8dmlCvtX6G/E+aK79RB/ozy/8VVvNPfL6GtqfVjiRX3Yz6t1fsNdj+NmJka93sDfGNp/qQYcfb2uX479DXhN42WJH8V81Hr+hiXzAJxPWa9fvuTF+ZQFeVmiL9bDlfyNq/2L8ylr+RsXvNDXYv4G9eG7/A1LhjQ4n7Jm/6XmN9DX6/plzqd08fp6v8LuM233Fc4TfZeGrQaX40cdK3lXvOJOykr5G1tcLYY/51Me0Zd7Y/7G7qsR0dAJXvgbg3lZoi/WwwfWQ5ProeRlpf1LnE9JBnic+Y2zvhQvcT6lkueAvubWhyVe1If9vCzRlxrHLeRvdNQb+BtD+6+4AUdfL+yX1fkUeN31oxSvaAZmmxzVygv/8DFe2ZkRsbJ5s7/hzvzGTH21+hs936fgbwzmxfzG4PXQ5HooeVlp/2J+4xF9KV5hvuj2hxp5oa9p9WGJF/VhPy9L9KW+GfFmf6On3sDfGNp/Mb/xa/pl5jd6eXl7HmyJF/m90+5PKfkb3J8yV1+t/gb3pyzMi/tTBq+HTfenlPwN7k+Zdn9KqV9GX5PrQ+5PmcSr+f6Ukr/B/SnL9l/cn/Jr+mX8jR5elvhRxbhdHWJTyrfZ3eoLr2R+4/KmBpG/oVz9Wr5o/Ah9tevLtb78uXzRT4gR/ddAXo/li7IexuuhhGI6mby0fzXmi8aP0FcCRUlP5Dn4o/mi6Oux+rDEi/qwn5cl+spKx6Q+fCxfNH6Evh7tvx7MF0Vfc/vl1nxReA29z9dN5qXgH06b33CdL3r9C5nfmKMv9+zrYOY3XsWL+Y3B62HT/IbrfNHL/Yv5jUf01TS/4Tqv8ooX+ppWH5Z4UR/282qe37gu55jfeFP/xfzGr+mXmd9Yild2nug/bxl9reRvZHkOelYEf2NWv3yDF/7Ggrws0Rfr4Tr+xvX+hb+xkr9xyQt9LeVvUB++y9/I8jc66g38jaH9lwiIQF/v65fxNxbhdfHm8Q8X8zcutjbmNxbrl2/zwt9YkJcl+mI9XMHfuLt/4W+s4W/c5IW+FvE3qA/f5W8kQxr99Qb+xtD+y03WG+jrXf0y/kYXr59DxWe7L7mZ19qPGtUPKDm8Tq/j0N5umyiLHlk0v+H7Y+qHf5fl/y7xU+IToq92fblnUQ/n/Wv//Pps+/YT4m8M5mWaF+thNy9xP6zM37Agf+Pu/iXuh9UBLI6/Efz1Kl7ifthznsNNXuhrWn1Y4kV92M/LEn2JOLWraI7A3+ipN/A3hvZfob+Bvt7YLydZVfAa5Ed5+kjzquTbhIkuf51X4/yGu5zfSPvlSr5omICKvgr6avc3KnlfYSIZvJ7mZYm+WA8fWA9b5jc+u1Rh/2rMF7XolAT6aprf+Ko3mvtl9DW1Pizxoj7s59U6v+HpI+1v1OsN/I2h/ZfwN9DX+/rl1nxReA3mZYkfxXzUev6GJfMAnE9Zr1++5MX5lAV5WaIv1sOV/I2r/YvzKWv5Gxe80Ndi/gb14bv8DUvmNzifsmb/peY30Nfr+mXOp3Tx+nq/4joh03Zf4TzRd2l48w9gVxnCa1fJu+IlkgxL+RtbXDc2xH0lj7/Rq6+kMk95mWuDywUv/I3BvCzRF+vhA+uhyfVQ8rLS/iXOp0h/I3yEvhQvcT6lkueAvubWhyVe1If9vCzRlxrHLeRvdNQb+BtD+684fwN9vbBfVudT4HXXj5Jxu9v3uYfSeMkX/uHDvLIzI1FR8b2sNfkbiavP/MY/0Ferv9HzfQr+xmBezG8MXg9NroeSl5X2L+Y3HtGX4hXmi25/qJEX+ppWH5Z4UR/287JEX2E513jpPPMbi/dfzG/8mn6Z+Y1eXt6eB1viRX7vtPtTSv4G96fM1Verv8H9KQvz4v6Uweth0/0pJX+D+1Om3Z9S6pfR1+T6kPtTJvFqvj+l5G9wf8qy/Rf3p/yafhl/o4eXJX5UY9yuBf95IN/mJx8fXiq9M0kyPMRZx1NVHvfLtXzR+BH6ateXa335c/minxAj+q+BvB7LF2U9jNdDneyqQ9hK+1djvmj8CH0lUJT01FTwo/mi6Oux+rDEi/qwn5cl+vK7IfOH/csfrTfwN4b2Xw/mi6Kvuf1ya74ovIbe5+sm81LwD6fNb7jOFzWZV8n8xlx9udaXM7/xMl7MbwxeD5vmN1zni17uX8xvPKKvpvkN13mVV7zQ17T6sMSL+rCfV/P8hn7kJvNFmd9Ytv9ifuPX9MvMbyzFKztPtFsV4bWEv5HlOehZEfyNWf3yDV74GwvyskRfrIfr+BvX+xf+xkr+xiUv9LWUv0F9+C5/I8vf6Kg38DeG9l/x/Ab6emG/jL9ReGTybXzcpOM7NDf9ekc8gpfk9dmJjrw+ndSJ19bfML21lR/hbzyrL9dKSaGYq0cmP+Ef9zfG87JERKyHD6yHJtdDyctKm9TG38hR4m9k+lK8ftYoi968N/NCX9PqwxIv6sN+Xpbo66dysIeKilK98cf9jdH9lz8hPfS1Qr+89Tfg1cxr9887XsebeTe83I7niUwfNSo/Ep/wT/qHJ+Pgs3zZ6errb5RnYLb9hcdj6t2PXN66gr4K+nKtlLAU2T+PHpn8hPgbg3mZ5sV62M0r8jc+N2krXlbapCJ/I0R5+IT4G7u/XsUr8je+ti+TIrJ0qURfc+rDEi/qw35elugr8jd+9q9KUVGqN/A3hvZf/oT00NcK/XLob8BrqB/l2nRKeR2jVEznpRy9aHh1zG+4y/mNtF8+Rlmazhc9fXeAv9Grr3Z/45j3ZTrv68ALf2MwL0v0xXr4wHrYMr/x2aUK+1fob5xCRM/rIf5GeX7jq95oLtrR19T6sMSL+rCfV+v8RvCt2S0To15v4G8M7b+Ev4G+3tcvx/4GvKbxssSPYj5qPX/DEuue8ynr9cuXvDifsiAvS/TFeriSv3G1f3E+ZS1/44IX+lrM36A+fJe/YcmQBudT1uy/1PwG+npdv8z5lC5eX+83nreRvKx0nui7NLy5te0qQ3jtKnlXvGJ/w0r5G1tcN6yPfSWPv9Grr6QyT3npUkTMizrzG8N5WaIv1sMH1kOT66HkZaX9S5xPkf6GR9Gj6EvxEudTKnkO6GtufVjiRX3Yz8sSfYnzKZX8jY56A39jaP8V52+grxf2y+p8Crzu+lGK12EGxvZv3pt54R8+xiv0N35SdD3m1epvJK4+8xv/QF+t/kbP9yn4G4N5Mb8xeD00uR5KXlbav5jfeERfileYL7q7DqWNF/qaVh+WeFEf9vOyRF9hvqjJodDE3+ipN/A3hvZfzG/8mn6Z+Y1eXt6eB1viRX7vtPtTSv4G96fM1Verv8H9KQvz4v6Uweth0/0pJX+D+1Om3Z9S6pfR1+T6kPtTJvFqvj+l5G9wf8qy/Rf3p/yafhl/o4eXJX7UIfnEukOiSvk2P/n48IrSO00mGVoQZ90WIlrKFz0/gldNX+5ZaN5T+aKfECP6r4G8HssXZT2M10OT66HkZaX9qzFf9PwIXuJ8isv7Uzy5j+OCF/qaVh+WeFEf9vOyRF8if6MSWt5Rb+BvDO2/HswXRV9z++XWfFF4Db3P158b7cCPkrxa5zdc54teW/fMb8zRl2t9OfMbL+PF/Mbg9bBpfsN1vujl/sX8xiP6aprfcJ1XeflVJvqaVR+WeFEf9vNqnt/QlZ6bzBdlfmPZ/ov5jV/TLzO/sRSvC5ToazF/42Jrw99YrF++wQt/Y0FeluiL9XAdf+N6/8LfWMnfuOSFvpbyN6gP3+VvZPkbHfUG/sbQ/stN1hvo6139Mv5G5dHhouStHPZ31mzeof30yOfXexjCefARvKKLrV3x2nRSR15bf+M0NPXYI/yNp/TlWikpFHP1yOQn/OP+xnheloiI9fCB9dDkeih5WWmT2vgbd1Dib8R/vYrXZ4061RsmRWTpUom+5tSHJV7Uh/28LNHX5qux8/5VKSpK9cYf9zdG91/+nPTQ19x+ebtXwquJ16kG++F1XhX/Z1vbyI7niQ6/8PFHf53X6ZDkZvnaXFJ+/KbY/ETt+hc+/wh9VfTliRxOpYgfGYQfQ35C/I3BvEzzYj3s5nX0N3aLouRlpU3q5G/cQYm/cfzrVbwO/sa23jApIrv55tHXv6wPS7yoD/t5WaKvg7+x378qRUWp3sDfGNp/+dPSQ1+z+uWzvwGv0X6UJ/aRePO7hS0wnVw9OiW6wGu3E92Z3/ihEoxbiH75WB5GvGLD/3SqBV41fbnWV8rLXPGKvk85JZLBawQvS/TFevjAetgyv/HZpQr7VzS/EYSIntZD/I3y/MZXvWGm9q+EF/qaVh+WeFEf9vNqnd9w1+O4wsTorDfwN4b2X26y3kBf7+qXw/kNeM3jZZoX81EL+hum+2XOpyzYL1/y4nzKgrws0Rfr4Ur+xtX+xfmUtfyNC17oazF/g/rwXf6GaX+D8ymL9l/C30Bf7+uXOZ/Sxevr/Qa8/nuDMS8rnSf6Lg2btrbPD8PLD/tNwCv2N6yUv7HFddv6CB7Bq6SvpDJPeelSxFw9wt8YzMsSfbEePrAemlwPJS8r7V/h/EZmcJ0ewSvqvzZTvKLeaD1Ujr7m1oclXtSH/bws0Vfob1gpf6Oj3sDfGNp/xfkb6OuF/XI8vwGv+36U4nWcgTmerGx2AvEPn+IV+hvfrzjIj/pe1tomMZz5jZn6avU3er5Pwd8YzIv5jcHrocn1UPKy0v7F/MYj+lK8wnzR7Q818kJf0+rDEi/qw35elugrzBc1ORSa+Bs99Qb+xtD+i/mNX9MvM7/Ry8vb82BLvMjvnXZ/Ssnf4P6Uufpq9Te4P2VhXtyfMng9bLo/peRvcH/KtPtTSv0y+ppcH3J/yiRezfenlPwN7k9Ztv/i/pRf0y/jb/TwssSPOiafHJOWm0OiSvk2P1NB8ArTO0/J2HH+hvI3shDRUr5o8AheJX25Z6F5T+WLfkKM6L8G8nosX5T1MF4PTa6HkpeV9q/GfNHgEbzi+XkP7k/Z1hutoXnoa259WOJFfdjPyxJ9ifyNSmh5R72BvzG0/3owXxR9ze2XW/NF4TX0Pl9/erQDP+qB+Q3X+aLX1j3zG3P05Z59Hcz8xqt4Mb8xeD1smt9wnS96uX8xv/GIvprmN1znVV5+lYm+ZtWHJV7Uh/28muc3rss55jfe1H8xv/Fr+mXmN5bidfHm0ddi/sbF1oa/sVi/fIMX/saCvCzRF+vhOv7G9f6Fv7GSv3HJC30t5W9QH77L38jyNzrqDfyNof2Xm6w30Ne7+mX8jcKj43v4vI0jqc87PN10s329hyGc06N9sbl9tHl8eLSbBYLX7j244vXppM43E238jdPQ1OHRblvbPTqPSIW8/ra/8Yi+XOsr5WWueNnuE255/XF/YzwvS/TFevjAemhyPZS8rLR/bfwNMXcdr4eOvgJ/48TrZ4061xtmav9KeKGvafVhiRf1YT8vS/T1UzlE+5euD/dFRXe98cf9jdH9l5usN9DXu/rl3XcB8GrltfvnHa/jzby2u93pMFRzOMQX8oofbc7IxryOn/DP+oe2P1W+8Q93TdR+fmMP7GDqevQLr+5P2eVr7B7tw0HQV6e+XOsr9Df26AJ9xfXG7p/hNYiXaV6sh928In9jfytixMtK+1fkb4Qo98sh/sZeX4pX5G/sUxDbeKGvafVhiRf1YT8vS/QV+Rv7FI54//JH6w38jaH9V+hvoK839suhvwGvoX6Uaz8q5XWMUrHzGnridU50gZc3zm/sd7H7/fIxyvIUDxXMb5wTUOFV01e7v3HM+wqNrJAX/sZgXpboi/XwgfWwZX7js0sV9q/Q3ziFiJ7XQ/yN8vzGV73R3C+jr6n1YYkX9WE/r9b5jfN3Uvf8jXq9gb8xtP8S/gb6el+/HPsb8JrGyxI/ivmo9fwNS+YBOJ+yXr98yYvzKQvyskRfrIcr+RtX+xfnU9byNy54oa/F/A3qw3f5G5bMb3A+Zc3+S81voK/X9cucT+ni9fV+43kbyctK54m+S8NwPkry8lNgDrwif+PnDYbzh5X8jS2uiFfsbzjnU57Rl3tj/sbuq5GIl5gXdeY3hvOyRF+shw+shybXQ8nLSvuXOJ8i/Y3TI3ip8ynS37BSngP6mlsflnhRH/bzskRf4nxKJX+jo97A3xjaf8X5G+jrhf2yOp8Cr7t+lOJ1mIHZ5qWYqfNECS/8w8d4hf7GN54gP+p7WWvyN2JXn/mNf6WvVn+j5/sU/I3BvJjfGLwemlwPJS8r7V/MbzyiL8UrzBfd/lAjL/Q1rT4s8aI+7Odlib7CfFEzlb+R+Bs99Qb+xtD+i/mNX9MvM7/Ry8vb82BLvMjvnXZ/Ssnf4P6Uufpq9Te4P2VhXtyfMng9bLo/peRvcH/KtPtTSv0y+ppcH3J/yiRezfenlPwN7k9Ztv/i/pRf0y/jb/TwssSPOiSf2DE0WZ0n8kfzo37y8eF1yuQPeKn8DeVvxCGiHfmi50fwqunLtb78uXzRT4gR/ddAXo/li7IexuuhyfVQ8rLS/tWYL3p+BC9xPsXl/Sme3MdxwQt9TasPS7yoD/t5WaIvkb+h70+JioruegN/Y2j/9WC+KPqa2y+35ovCa+h9vm4yLwX/cNr8hut8UZN5lcxvzNWXa3058xsv48X8xuD1sGl+w3W+6OX+xfzGI/pqmt9wnVd5xQt9TasPS7yoD/t5Nc9vuM4XNZkvyvzGsv0X8xu/pl9mfmMpXtl5ov+8ZfS1kr+R5TmcbnrF35jeL9/ghb+xIC9L9MV6uI6/cb1/4W+s5G9c8kJfS/kb1Ifv8jey/I2OegN/Y2j/Fc9voK8X9sv4G8vwMs1L/pQlvzD+hPB6yt8w3S/LXc+SDTH+hPB6ql++yWtXb8S9Q1YRwWsEL0v0xXq4hr9xb//a+xuW/AHsPyH+xtP+xi1e6GsZf4P68F3+hml/o7fewN8Y2n+d/A309dZ++eBvwKuN1+6fj/fdyPNEFp4nspPru+MVPjL9SHzCv8jrfDLhs3wdm6gPyjMw2/1Cj69zPR3L3D0y/ci5H/ZJfbnWV+hv7P4r0ldcb+zuloLXIF6mebEedvMS98PK/A0L8zfu7V+RvxGiPHxC/I19iIngJe6HjfIcbvFCX9PqwxIv6sN+XpboS9wPGx56PaVwPFZv4G8M7b9CfwN9vbFfDv0NeA31o1z7USmvIEolvlsnS3SB13YnujW/sd/F7vfLQZRlfNdYloAKr6K+2v2NIO8rvnsxSySD1wheluiL9fCB9bBlfuOzSxX2r9DfiPJFD+sh/kZ5fuOr3mjul9HX1PqwxIv6sJ9X6/zG+Tupe/5Gvd7A3xjafwl/A329r1+O/Q14TeNliR/FfNR6/oYl8wCcT1mvX77kxfmUBXlZoi/Ww5X8jav9i/Mpa/kbF7zQ12L+BvXhu/wNS+Y3OJ+yZv+l5jfQ1+v6Zc6ndPH6er/xvI3kZaXzRN+lYTgfJXn58UAZvDy+H9akv2Gl/I0trohX7G8451Oe0Zd7Y/7G7quRiJeYF3XmN4bzskRfrIcPrIcm10PJy0r7lzifIv2N0yN4qfMp0t+wUp4D+ppbH5Z4UR/287JEX+J8SiV/o6PewN8Y2n/F+Rvo64X9sjqfAq+7fpTidZiBsf2b92Ze+IeP8Qr9je8XHeRHfS9rTf5GaGIwv/HP9NXqb/R8n4K/MZgX8xuD10OT66HkZaX9i/mNR/SleIX5otsfauSFvqbVhyVe1If9vCzRV5gvKi6dz/2NnnoDf2No/8X8xq/pl5nf6OXl7XmwJV7k9067P6Xkb3B/ylx9tfob3J+yMC/uTxm8Hjbdn1LyN7g/Zdr9KaV+GX1Nrg+5P2USr+b7U0r+BvenLNt/cX/Kr+mX8Td6eFniRx2ST+wiiXd7cuLB/KiffHx4Remd5543zt9Q/kYYIrp35tvyRc+P4FXTl2t9+XP5op8QI/qvgbweyxdlPYzXQ5ProeRlpf2rMV/0/Ahe4nyKy/tTPLmP44IX+ppWH5Z4UR/287JEXyJ/Q9+fEhQV/fUG/sbQ/uvBfFH0Nbdfbs0XhdfQ+3zdZF4K/uG0+Q3X+aIm8yqZ35irL9f6cuY3XsaL+Y3B62HT/IbrfNHL/Yv5jUf01TS/4Tqv8ooX+ppWH5Z4UR/282qe33CdL2oyX5T5jWX7L+Y3fk2/zPzGUryy80T/ecvoayV/I8tzON30ir8xvV++wQt/Y0FeluiL9XAdf+N6/8LfWMnfuOSFvpbyN6gP3+VvZPkbHfUG/sbQ/iue30BfL+yX8TeKvLZJsHte2yTYIy+rOIHb5N771r1vpQqvXXKvK15Hf8Okv5E4Ffuk5bujHTte+Bvd+koq85SX/qrF3AUv/I3BvCzRF+vhA+uhyfVQ8rLS/rX3N1KDa7ceOvqy2N/Y8Tr4Gyb75Zu80Ne0+rDEi/qwn5cl+jr4G3ZzUndvYnTXG/gbQ/uvg7+Bvt7bLx/8DXi18drdLLPjdbyZd18WmjrJFR012uHyOCo2f/THeZ2AbXaiA7BPJxUAs+0vPB5T3z6K/Y3zic1bj9BXSV+u9RX6G/vnoYhcPcLfGMzLNC/Ww25ekb+xXxojXlbavyJ/4xIl/sZRX4pX5G98bV9Rv3zJC31Nqw9LvKgP+3lZoq/I3/jZvxSv0N/oqTfwN4b2X6G/gb7e2C+H/ga8hvpRrv2olJeOUgnzUj7fl8Frz6txfsNdzm+k/bKOsgzzRbe88De69dXub+gosDDva8MLf2MwL0v0xXr4wHrYMr/hLuc3rvev0N8I80X36yH+Rnl+4/MmvZkX+ppWH5Z4UR/282qd3wi+Nbvlb9TrDfyNof2X8DfQ1/v65djfgNc0Xpb4UcxHredvWDIPwPmU9frlS16cT1mQlyX6Yj1cyd+42r84n7KWv3HBC30t5m9QH77L37BkfoPzKWv2X2p+A329rl/mfEoXr12VeJy3kbysdJ5oN3ZzHKqRvPx4oAxeob+xn0IMeDXnb+ymECMo9x7Bq6Yv98b8jd1XI6GIXD3C3xjMyxJ9sR4+sB6aXA8lLyvtX+J8ivQ3To/gpc6nSH/DSnkO6GtufVjiRX3Yz8sSfYnzKZX8jY56A39jaP8V52+grxf2y+p8Crzu+lGK12EGZpuXEl1qc8kL//AxXqG/8f3KgvyobbjQ7X45MTGY3/gH+mr1N3q+T8HfGMyL+Y3B66HJ9VDystL+xfzGI/pSvMJ80e0PNfJCX9PqwxIv6sN+XpboK8wXjS6dv/Q3euoN/I2h/RfzG7+mX2Z+o5eXt+fBlniR3zvt/pSSv8H9KXP11epvcH/Kwry4P2Xweth0f0rJ3+D+lGn3p5T6ZfQ1uT7k/pRJvJrvTyn5G9yfsmz/xf0pv6Zfxt/o4WWJH3VIPtmvWjoPNgix6cm3+fms8LIgvfPIS+VvKH8jDBHtyRc9P4JXTV+u9eXP5Yt+QozovwbyeixflPUwXg9NroeSl5X2r8Z80fMjeInzKS7vT/HkPo4LXuhrWn1Y4kV92M/LEn2J/A19f0pQVPTXG/gbQ/uvB/NF0dfcfrk1XxReQ+/zdZN5KfiH0+Y3XOeLmsyrZH5jrr5c68uZ33gZL+Y3Bq+HTfMbrvNFL/cv5jce0VfT/IbrvMorXuhrWn1Y4kV92M+reX7Ddb6oyXxR5jeW7b+Y3/g1/TLzG0vxys4T/fdf6GslfyPLczjd9Iq/Mb1fvsELf2NBXpboi/VwHX/jev/C31jJ37jkhb6W8jeoD9/lb2T5Gx31Bv7G0P4rnt9AXy/sl/E3iry2kzYHXocTDRte2zmn+7wSKNlPbT/bMF7/F2AA8iiPy4nAgBYAAAAASUVORK5CYII=);
+    background-attachment: local;
+    background-repeat: no-repeat;
+    padding-left: 35px !important;
+    padding-top: 10px !important;
+    width: 100%;
+    height: 500px ;
+    border: 2px solid var(--aiautotool-color);
+    border-radius: 7px;
+}
+.aiautotool_container .CodeMirror {
+    height: 500px;
+    border: 2px solid var(--aiautotool-color);
+    border-radius: 7px;
+}
+/* block neu chua check */
+.aiautotool_container .toggle-div.noon {
+    pointer-events: none;
+    filter: grayscale(1);
+}
+/* css chat */
+.aiautotool_container .ft-button-grid{
+    display:flex;
+}
+.aiautotool_container .ft-button-grid:not(:last-child){
+    margin-bottom:20px;
+}
+.aiautotool_container .ft-button-grid select{
+    width:90px;
+}
+.aiautotool_container .ft-button-grid-in{
+    margin-left:10px;
+    width:100%;
+}
+.aiautotool_container .ft-button-grid-in input:first-child{
+    margin-bottom:10px;
+}
+/* thanh keo qua lai */
+.aiautotool_container .ft-keo {
+  width: 100%;
+}
+.aiautotool_container .ftslide {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius:7px;
+}
+.aiautotool_container .ftslide:hover {
+  opacity: 1;
+}
+.aiautotool_container .ftslide::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #309e47;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 2px solid #fff;
+}
+.aiautotool_container .ftslide::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+/* show csdl */
+.aiautotool_container .ft-scdl-scrool {
+    height: 300px;
+    overflow: auto;
+}
+.aiautotool_container .ft-card-note * {
+    scrollbar-color: #eee #ffffff00;
+    scrollbar-width: thin !important;
+}
+.aiautotool_container .ft-card-note ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: none;
+}
+.aiautotool_container .ft-card-note ::-webkit-scrollbar-thumb {
+    background-color: #eee;
+    border-radius: 2px;
+}
+.aiautotool_container .ft-card-note ::-webkit-scrollbar-track {
+    background-color: none;
+}
+.aiautotool_container .ft-showcsdl-tit {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: #c9c9c9;
+    padding: 10px;
+    color: #fff;
+    border-radius: 7px;
+}
+.aiautotool_container .ft-showcsdl {
+    display: grid;
+    grid-template-columns: auto 60px;
+    grid-gap: 10px;
+}
+.aiautotool_container .ft-showcsdl div{
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.aiautotool_container .ft-csdl-tatol {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #7e7e7e;
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+.aiautotool_container .ft-footer-img-display{
+    width:100%;
+    height:auto;
+}
+
+
+
+.aiautotool-popup {
+     /* Màu nền trong suốt */
+     background: #fff;
+    padding: 20px;
+    position: fixed;
+    z-index: 99999999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+    max-height: 80vh;
+    width:80%;
+    overflow-y: auto;
+}
+
+.aiautotool-popup table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.aiautotool-popup th, .aiautotool-popup td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.aiautotool-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #555;
+}
+
+.aiautotool-popup-close:hover {
+    color: #000;
+}
+
+.aiautotool-popup td a {
+    color: #0073e6; /* Màu của liên kết */
+    text-decoration: underline; /* Gạch chân dưới cho liên kết */
+    cursor: pointer;
+}
+
+.aiautotool-popup td a:hover {
+    color: #0056b3; /* Màu khi di chuột qua liên kết */
+}
+
+
+
+
+.aiautotool-notification .aiautotool-seo-icon {
+  float: left;
+  margin: 20px 10px;
+}
+
+.aiautotool-button-upsell:active, .aiautotool-button-upsell:focus, .aiautotool-button-upsell:hover {
+  background-color: #f2ae01;
+  color: #000;
+}
+.aiautotool-button-upsell {
+  align-items: center;
+  background-color: #fec228;
+  border-radius: 4px;
+  box-shadow: inset 0 -4px 0 #0003;
+  box-sizing: border-box;
+  color: #000;
+  display: inline-flex;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.2));
+  font-family: Arial,sans-serif;
+  font-size: 16px;
+  justify-content: center;
+  line-height: 1.5;
+  min-height: 48px;
+  padding: 8px 1em;
+  text-decoration: none;
+}
+.aiautotool-notification .aiautotool-seo-icon-wrap {
+  margin: 0 0 0 85px;
+}
+.aiautotool-notification .aiautotool-seo-icon {
+  float: left;
+  margin: 20px 10px;
+}
+
+
+.aiautotool_container .aiautotool_table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 18px;
+            text-align: left;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+.aiautotool_container         .aiautotool_table th,
+.aiautotool_container         .aiautotool_table td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+.aiautotool_container         .aiautotool_table thead th {
+            background-color: #009688;
+            color: #fff;
+            font-weight: bold;
+        }
+
+.aiautotool_container         .aiautotool_table tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+
+.aiautotool_container .btn{
+  background: #6d6d6d;
+  padding: 7px 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #fff;
+  border-radius: 7px;
+  font-size: 12px;
+  border-bottom: 4px solid #222;
+}
+.aiautotool_container         .json-key-item.aiautotool_submitindex_jsonkey {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px; /* Điều này tùy thuộc vào khoảng cách bạn muốn giữa các mục */
+    }
+
+.aiautotool_container     .json-key-item.aiautotool_submitindex_jsonkey textarea {
+        flex: 1;
+        margin-right: 10px; /* Điều này tùy thuộc vào khoảng cách bạn muốn giữa textarea và button */
+    }
+
+ .aiautotool_container    .json-key-item.aiautotool_submitindex_jsonkey button {
+        flex-shrink: 0;
+    }
+.aiautotool_container     .remove-json-key-item{width: 70px !important;
+color: #000;
+border: 1px solid #000 !important;
+border-radius: 5px !important;
+padding: 5px !important;}
+
+.askassistant {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: auto;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .askassistant textarea {
+            resize: none;
+            padding: 0.5625rem 1rem;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            min-height: calc(1.5em + 1.125rem + 2px);
+            font-weight: 400;
+              line-height: 1.5;
+              color: #495057;
+              background-color: #fff;
+              background-clip: padding-box;
+              border: 1px solid #dee2e6;
+              appearance: none;
+              border-radius: 0.25rem;
+              transition: aiautotool-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            
+        }
+
+       
+        .askassistant .select-and-button {
+                display: flex;
+                justify-content: space-between;
+            }
+
+        .askassistant select,
+        .askassistant button {
+            padding: 2px;
+margin-bottom: 5px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 10px;
+        }
+
+        .askassistant select {
+           
+            margin-right: 5px; /* Để tạo khoảng cách giữa select và button */
+        }
+
+        .askassistant button {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        .askassistant button:hover {
+            background-color: #45a049;
+        }
+
+
+@-webkit-keyframes aiautotool-animate-wave {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes aiautotool-animate-wave {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+.aiautotool-animate-slower:after {
+    -webkit-animation: aiautotool-animate-wave 30s infinite linear;
+    animation: aiautotool-animate-wave 30s infinite linear;
+}
+
+.aiautotool-animate-slow:after {
+    -webkit-animation: aiautotool-animate-wave 25s infinite linear;
+    animation: aiautotool-animate-wave 25s infinite linear;
+}
+
+.aiautotool-animate-fast:after {
+    -webkit-animation: aiautotool-animate-wave 10s infinite linear;
+    animation: aiautotool-animate-wave 10s infinite linear;
+}
+
+.aiautotool-animate-faster:after {
+    -webkit-animation: aiautotool-animate-wave 5s infinite linear;
+    animation: aiautotool-animate-wave 5s infinite linear;
+}
+
+
+
+
+.wave {
+    background-color: #F3F6F9;
+    overflow: hidden;
+    position: relative;
+}
+
+.wave div {
+    z-index: 100;
+    position: relative;
+}
+
+.wave:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: -1;
+}
+
+.wave:after {
+    content: ' ';
+    width: 1000px;
+    height: 1025px;
+    position: absolute;
+    bottom: 65%;
+    left: -250px;
+    border-radius: 35%;
+    background: white;
+    z-index: 0;
+}
+
+.wave:after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.wave-animate:after {
+    -webkit-animation: animate-wave 15s infinite linear;
+    animation: animate-wave 15s infinite linear;
+}
+
+.wave-animate-slower:after {
+    -webkit-animation: animate-wave 30s infinite linear;
+    animation: animate-wave 30s infinite linear;
+}
+
+.wave-animate-slow:after {
+    -webkit-animation: animate-wave 25s infinite linear;
+    animation: animate-wave 25s infinite linear;
+}
+
+.wave-animate-fast:after {
+    -webkit-animation: animate-wave 10s infinite linear;
+    animation: animate-wave 10s infinite linear;
+}
+
+.wave-animate-faster:after {
+    -webkit-animation: animate-wave 5s infinite linear;
+    animation: animate-wave 5s infinite linear;
+}
+
+.wave.wave-primary {
+    background-color: rgba(54, 153, 255, 0.1) !important;
+}
+
+.wave.wave-primary .svg-icon svg g [fill] {
+    fill: #3699FF;
+}
+
+.wave.wave-secondary {
+    background-color: rgba(228, 230, 239, 0.1) !important;
+}
+
+.wave.wave-secondary .svg-icon svg g [fill] {
+    fill: #E4E6EF;
+}
+
+.wave.wave-success {
+    background-color: #00b57b !important;
+}
+
+.wave.wave-success .svg-icon svg g [fill] {
+    fill: #1BC5BD;
+}
+
+.wave.wave-info {
+    background-color: rgba(137, 80, 252, 0.1) !important;
+}
+
+.wave.wave-info .svg-icon svg g [fill] {
+    fill: #8950FC;
+}
+
+.wave.wave-warning {
+    background-color: rgba(255, 168, 0, 0.1) !important;
+}
+
+.wave.wave-warning .svg-icon svg g [fill] {
+    fill: #FFA800;
+}
+
+.wave.wave-danger {
+    background-color: rgba(246, 78, 96, 0.1) !important;
+}
+
+.wave.wave-danger .svg-icon svg g [fill] {
+    fill: #F64E60;
+}
+
+.wave.wave-light {
+    background-color: rgba(243, 246, 249, 0.1) !important;
+}
+
+.wave.wave-light .svg-icon svg g [fill] {
+    fill: #F3F6F9;
+}
+
+.wave.wave-dark {
+    background-color: rgba(24, 28, 50, 0.1) !important;
+}
+
+.wave.wave-dark .svg-icon svg g [fill] {
+    fill: #181C32;
+}
+
+.wave.wave-white {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.wave.wave-white .svg-icon svg g [fill] {
+    fill: #ffffff;
+}
+
+@-webkit-keyframes animate-wave {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-wave {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+.aiautotool_btn_upgradepro {
+    background-color: #FFD700; /* Mã màu nền vàng đậm */
+    border: 2px solid #FFD700; /* Viền màu vàng đậm */
+    border-radius: 20px; /* Bo tròn hình bầu dục, có thể điều chỉnh theo ý muốn */
+    padding: 10px 20px; /* Kích thước đệm */
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Hiệu ứng chuyển đổi màu nền và màu chữ */
+    animation: buybtn 1s infinite;
+}
+
+.aiautotool_btn_upgradepro:hover {
+    background-color: #FFFF00; /* Mã màu nền vàng nhạt khi hover */
+    color: #000000;
+
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0; /* Tắt */
+    }
+}
+
+
+@keyframes buybtn {
+ 0% {
+  transform: translate3d(0, 0, 0) scale(1);
+ }
+ 33.3333% {
+  transform: translate3d(0, 0, 0) scale(0.9);
+ }
+ 66.6666% {
+  transform: translate3d(0, 0, 0) scale(1);
+ }
+ 100% {
+  transform: translate3d(0, 0, 0) scale(1);
+ }
+ 0% {
+  box-shadow: 0 0 0 0px #8cc9164d,0 0 0 0px #8cc9164d;
+ }
+ 50% {
+  transform: scale(0.8);
+ }
+ 100% {
+  box-shadow: 0 0 0 15px rgba(0,210,255,0),0 0 0 30px rgba(0,210,255,0);
+ }
+}
+
+.aiautotool_container .fa,.aiautotool_container .fa-regular,.aiautotool_container .fa-solid{
+    font-family:var(--fa-style-family,"Font Awesome 6 Free");
+    font-weight:var(--fa-style,900)
+}
+.toplevel_page_ai_auto_tool .fa,.toplevel_page_ai_auto_tool .fa-regular,.toplevel_page_ai_auto_tool .fa-solid{
+    font-family:var(--fa-style-family,"Font Awesome 6 Free");
+    font-weight:var(--fa-style,900)
+}
+.fs-submenu-item.pricing.upgrade-mode {
+  color: rgba(240,246,252,.7);
+}
+.aiautotool_red{
+    color:red !important;
+}
+.aiautotool_container .notice-dismiss{
+    width:10%;
+}
+
+.serviceBox{
+    color: #f67d4a;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 55px 20px 60px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.serviceBox:before,
+.serviceBox:after{
+    content: "";
+    background: #f67d4a;
+    height: 45px;
+    width: 100%;
+    box-shadow: 0 -3px 8px rgba(0,0,0,0.3) inset;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.serviceBox:after{
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3) inset;
+    top: auto;
+    bottom: 0;
+}
+.serviceBox .service-icon{
+    font-size: 40px;
+    margin: 0 0 10px;
+} 
+.serviceBox .title{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+}
+.serviceBox .description{
+    color: #777;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0;
+}
+.serviceBox.pink{ color: #EC6D9E; }
+.serviceBox.pink:before,
+.serviceBox.pink:after{
+    background-color: #EC6D9E;
+}
+.serviceBox.purple{ color: #8672B9; }
+.serviceBox.purple:before,
+.serviceBox.purple:after{
+    background-color: #8672B9;
+}
+.serviceBox.blue{ color: #5196EC; }
+.serviceBox.blue:before,
+.serviceBox.blue:after{
+    background-color: #5196EC;
+}
+@media only screen and (max-width: 990px){
+    .serviceBox{ margin: 0 0 30px; }
+}
+
+
+
+/* HTML: <div class="loader"></div> */
+.loaderbar {
+  width: 65px;
+aspect-ratio: 1;
+position: relative;
+color: #000;
+margin: 0 auto;
+}
+.loaderbar:before,
+.loaderbar:after {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  box-shadow: 0 0 0 3px inset #000;
+  animation: l4 2.5s infinite;
+}
+.loaderbar:after {
+  animation-delay: -1.25s;
+}
+@keyframes l4 {
+  0% {
+    inset: 0 35px 35px 0;
+  }
+  12.5% {
+    inset: 0 35px 0 0;
+  }
+  25% {
+    inset: 35px 35px 0 0;
+  }
+  37.5% {
+    inset: 35px 0 0 0;
+  }
+  50% {
+    inset: 35px 0 0 35px;
+  }
+  62.5% {
+    inset: 0 0 0 35px;
+  }
+  75% {
+    inset: 0 0 35px 35px;
+  }
+  87.5% {
+    inset: 0 0 35px 0;
+  }
+  100% {
+    inset: 0 35px 35px 0;
+  }
+}
+
+
+
+.aiautotool_dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.aiautotool_dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Columns */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Clear floats after the columns */
+.aiautotool_dropdown-content::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style links inside the aiautotool_dropdown */
+.aiautotool_dropdown-content a {
+  color: black;
+  padding: 8px 0;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of aiautotool_dropdown links on hover */
+.aiautotool_dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the aiautotool_dropdown menu on hover */
+.aiautotool_dropdown:hover .aiautotool_dropdown-content {
+  display: block;
+}
+
+
+
+.aiautotool-modal-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            display:none;
+        }
+
+        .aiautotool-modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: opacity 0.3s ease;
+        }
+
+        .aiautotool-modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            min-width:70%;
+            min-height: 300px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+        }
+
+        .aiautotool-modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .aiautotool-modal-close:hover {
+            color: red;
+        }
+
+
+        .aiautotool_btn_v1 {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 3px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius:3px;
+}
+
+
+.aiautotool_btn_v11 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #04AA6D;
+}
+.aiautotool_btn_v11 i{
+    color:#04AA6D;
+}
+.aiautotool_btn_v11:hover i{
+    color:white;
+}
+.aiautotool_btn_v11:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.aiautotool_btn_v12 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.aiautotool_btn_v12:hover {
+  background-color: #008CBA;
+  color: white;
+}
+.aiautotool_btn_v12 i{
+    color:#008CBA;
+}
+.aiautotool_btn_v12:hover i{
+    color:white;
+}
+.aiautotool_btn_v13 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.aiautotool_btn_v13:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.aiautotool_btn_v13 i{
+    color:#f44336;
+}
+.aiautotool_btn_v13:hover i{
+    color:white;
+}
+
+.aiautotool_btn_v14 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.aiautotool_btn_v14:hover {background-color: #e7e7e7;}
+.aiautotool_btn_v14 i{
+    color:#e7e7e7;
+}
+.aiautotool_btn_v14:hover i{
+    color:white;
+}
+.aiautotool_btn_v15 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.aiautotool_btn_v15:hover {
+  background-color: #555555;
+  color: white;
+}
+.aiautotool_btn_v15 i{
+    color:#555555;
+}
+.aiautotool_btn_v15:hover i{
+    color:white;
+}
+.aiautotool_btn_v16 {
+  background-color: white;
+  color: black;
+  border: 2px solid #fdcd26;
+}
+
+.aiautotool_btn_v16:hover {
+  background-color: #fdcd26;
+  color: white;
+}
+.aiautotool_btn_v16 i{
+    color:#fdcd26;
+}
+.aiautotool_btn_v16:hover i{
+    color:white;
+}
+
+.aiautotool_modal_content{
+    max-height:500px;
+}
+
+
+.aiautotool_input2 {
+  position: relative !important;
+  width: 100% !important;
+}
+.aiautotool_input2_input {
+  width: 100% !important;
+  border: 1px solid #ccc !important;
+  border-radius: 100px !important;
+  padding: 10px 100px 10px 20px !important; 
+  line-height: 1 !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  margin:none !important;
+  box-shadow:none !important;
+  transition:none !important;
+  margin: 0px !important;
+}
+.aiautotool_input2_button{
+  position: absolute !important;
+  right: 3px !important; 
+  top: 3px !important;
+  bottom: 3px !important;
+  border: 0 !important;
+  background: #d1095e !important;
+  color: #fff !important;
+  outline: none !important;
+  margin: 0 !important;
+  padding: 0 10px !important;
+  border-radius: 100px !important;
+  z-index: 2 !important;
+  width:100px !important;
+  cursor: pointer;
+}
+
+
+
+abbr span, abbr div {}
+abbr, abbr[data-title] {cursor:help;
+  text-decoration:none;
+  border-bottom:1px dotted rgba(0,0,0,0.4);
+  border-radius:8px;}
+abbr:hover {background:rgba(0,0,0,0.1);}
+abbr[data-title]:hover {
+  position:relative;
+  background:rgba(0,255,0,.2);
+  }
+abbr[data-title]:hover:after {position:absolute;
+  left:16px; top:calc(100% + .8em); z-index:20;
+  content:attr(data-title);
+  white-space:nowrap;
+  padding:2px 4px 0;
+  border:1px solid green; border-radius:6px;
+  box-shadow:2px 2px 4px rgba(0,128,0,.5);
+  background:linear-gradient(#dfd, #bfb);
+  color:#030;}
+div.tip {
+  display:inline-block !important;
+  margin:0; background:red;}
+abbr span, div.tip div {
+  position:absolute;
+  display:none;
+  z-index:10;
+  padding:2px 4px 0; margin:1.5em 0 0 8px;
+  max-width:0px;
+  border:1px solid green;
+  border-radius:6px;
+  box-shadow:2px 2px 4px rgba(0,128,0,.5);
+  background:linear-gradient(#dfd, #bfb);
+  visibility:hidden; opacity:0;
+  -webkit-transition:
+    visibility 2s linear,
+    opacity 2s linear;
+  transition:
+    visibility 2s linear,
+    opacity 2s linear;
+  }
+abbr:hover span, div.tip:hover div {
+  display:inline-block;
+  max-width:300px;
+  visibility:visible; opacity:1;
+  -webkit-transition-delay:0s;
+  transition-delay:0s;
+  }
+
+
+
+.aiautotool_dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.aiautotool_dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Columns */
+.column {
+  float: left;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Clear floats after the columns */
+.aiautotool_dropdown-content::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style links inside the aiautotool_dropdown */
+.aiautotool_dropdown-content a {
+  color: black;
+  padding: 8px 0;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of aiautotool_dropdown links on hover */
+.aiautotool_dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the aiautotool_dropdown menu on hover */
+.aiautotool_dropdown:hover .aiautotool_dropdown-content {
+  display: block;
+}
+
+
+
+.aiautotool_tab_v2_wrapper {
+  padding: 0px;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 13px;
+}
+.aiautotool_tab_v2_wrapper .icon {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+.aiautotool_tab_v2_wrapper .icon:first-child {
+  left: 0;
+  display: none;
+  background: linear-gradient(90deg, #fff 70%, transparent);
+}
+.aiautotool_tab_v2_wrapper .icon:last-child {
+  right: 0;
+  justify-content: flex-end;
+  background: linear-gradient(-90deg, #fff 70%, transparent);
+}
+.aiautotool_tab_v2_wrapper .icon i {
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+}
+.aiautotool_tab_v2_wrapper .icon i:hover {
+  background: #efedfb;
+}
+.aiautotool_tab_v2_wrapper .icon:first-child i {
+  margin-left: 15px;
+} 
+.aiautotool_tab_v2_wrapper .icon:last-child i {
+  margin-right: 15px;
+} 
+.aiautotool_tab_v2_wrapper .tabs-box {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.aiautotool_tab_v2_wrapper .tabs-box.dragging {
+  scroll-behavior: auto;
+  cursor: grab;
+}
+.tabs-box .tab {
+  cursor: pointer;
+  font-size: 1.18rem;
+  white-space: nowrap;
+  background: #f5f4fd;
+  padding: 13px 20px;
+  border-radius: 30px;
+  border: 1px solid #d8d5f2;
+}
+.tabs-box .tab:hover{
+  background: #efedfb;
+}
+.tabs-box.dragging .tab {
+  user-select: none;
+  pointer-events: none;
+}
+.tabs-box .tab.active{
+  color: #fff;
+  background: var(--aiautotool-color);
+  border-color: transparent;
+}
+
+.ft-wrap-body {
+  display: grid;
+  grid-template-columns: auto 370px;
+  grid-gap: 20px;
+  max-width: 1500px;
+}
+.ft-sidebar-right {
+  margin-top: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.ft-widget{
+    border-radius: 7px;
+    padding: 20px;
+    transition: transform .1s;
+}
+.ft-widget:hover{
+    transform:scale(0.97);
+}
+
+.aiautotool_box_f_box:hover{
+    transform:scale(0.97);
+}
+
+.starloader {
+   --s: 30px;
+   height: calc(var(--s)*0.9);
+   width: calc(var(--s)*5);
+  --v1:transparent,#000 0.5deg 108deg,#0000 109deg;
+  --v2:transparent,#000 0.5deg  36deg,#0000  37deg;
+  -webkit-mask:
+    conic-gradient(from 54deg  at calc(var(--s)*0.68) calc(var(--s)*0.57),var(--v1)),
+    conic-gradient(from 90deg  at calc(var(--s)*0.02) calc(var(--s)*0.35),var(--v2)),
+    conic-gradient(from 126deg at calc(var(--s)*0.5)  calc(var(--s)*0.7) ,var(--v1)),
+    conic-gradient(from 162deg at calc(var(--s)*0.5)  0                  ,var(--v2));
+  -webkit-mask-size: var(--s) var(--s);
+  -webkit-mask-composite: xor,destination-over;
+          mask-composite: exclude,add;
+  -webkit-mask-repeat:repeat-x;
+  background:#ffb940;
+  margin:auto;
+  margin-top:10px;
+}
+.ft-widget a, .ft-widget a {
+  text-transform: uppercase;
+}
+
+.ft-sidebar-right a {
+  color: var(--aiautotool-color);
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ft-widget-color1 {
+  margin-top: 20px;
+  background: #fff1f1;
+}
+
+.ft-sidebar-right h3 {
+  border: none;
+  padding: 10px 15px;
+  background: linear-gradient(85deg, #dddddd91 0%, rgba(255,255,255,0) 100%);
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  border-radius: 7px 7px 7px 0px;
+  font-size: 16px;
+}
+
+.ft-sidebar-right h3::after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+    border-right-color: currentcolor;
+    border-right-style: none;
+    border-right-width: medium;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px var(--aiautotool-color);
+}
+
+
+
+
+.btnkct1 {
+  color: #000;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 0.9em 1.6em;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+}
+
+.btnkct1--gooey {
+  color: #06c8d9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 4px solid #06c8d9;
+  border-radius: 0;
+  position: relative;
+  transition: all 700ms ease;
+}
+
+.btnkct1--gooey .btnkct1__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+
+.btnkct1--gooey .btnkct1__blobs div {
+  background-color: #06c8d9;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.btnkct1--gooey .btnkct1__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.btnkct1--gooey .btnkct1__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.btnkct1--gooey .btnkct1__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.btnkct1--gooey:hover {
+  color: #fff;
+}
+
+.btnkct1--gooey:hover .btnkct1__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+
+.formkct1 {
+  width: 100%;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-size: 200% 100%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.formkct1 button:active {
+  scale: 0.95;
+}
+
+.formkct1 .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formkct1 .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.formkct1 .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.formkct1 .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.formkct1 .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.formkct1 .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.formkct1 .form-group input:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.formkct1 .form-group textarea:focus {
+  outline: none;
+  border-color: #e81cff;
+} 
+
+.formkct1 .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #717171;
+  font-weight: 600;
+  width: 40%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.formkct1 .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+
+.diagram-meta-box {
+    display: flex;
+    gap: 10px;
+}
+
+.diagram-meta-box-column {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.diagram-meta-box-column:first-child {
+    width: 30%;
+}
+
+.diagram-meta-box-column:last-child {
+    width: 70%;
+}
+
+#flowchart {
+    border: 1px solid #ddd;
+    padding: 10px;
+    height: 300px;
+}
+
+#flowchart {
+    border: 1px solid #ddd;
+    padding: 10px;
+    height: 300px;
+    width: 800px;
+    overflow: auto;
+}
+
+.flowchart-node {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+
+
+
+ .aiautotool_container {}
+        /* General styles for the step headers */
+.campaign-steps-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.step-header {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    border-bottom: 3px solid transparent;
+}
+
+.step-header.active {
+    color: #0073aa;
+    border-bottom: 3px solid #0073aa;
+}
+
+.step-header:hover {
+    color: #005177;
+}
+
+/* Additional styles for better visual distinction */
+.step-header::before {
+    content: '\2022';
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+    color: transparent;
+}
+
+.step-header.active::before {
+    color: #0073aa;
+}
+
+.step-header:first-child {
+    margin-left: 0;
+}
+
+.step-header:last-child {
+    margin-right: 0;
+}
+
+.campaign-step {
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.campaign-step.active {
+    display: block !important;
+    opacity: 1;
+}
+
+#diagram-flowchart-container {
+    width: 100%;
+    max-height: 400px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.next-step, .prev-step {
+    display: none;
+    margin-top: 20px;
+}
+
+.button-wrapper {
+    text-align: right;
+    margin-top: 20px;
+}
+
+
+/*box campa*/
+.campaign-box {
+  font-family: 'Arial', sans-serif; 
+   
+  padding: 20px; 
+  width:95%;
+}
+
+.campaign-box .container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+/* CSS cho tiêu đề form */
+.campaign-box h2 {
+  color: #333; /* Màu tiêu đề */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* CSS cho label của các trường nhập liệu */
+.campaign-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* CSS cho các trường nhập liệu (input, textarea) */
+.campaign-box input[type="text"],
+.campaign-box textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease; /* Hiệu ứng chuyển tiếp mượt mà */
+}
+
+.campaign-box input[type="text"]:focus,
+.campaign-box textarea:focus {
+  border-color: #007bff; /* Màu xanh dương khi focus */
+  outline: none;
+}
+
+/* CSS cho nút submit */
+.campaign-box button[type="submit"] {
+  background-color: #007bff; /* Màu xanh dương */
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển tiếp mượt mà */
+}
+
+.campaign-box button[type="submit"]:hover {
+  background-color: #0056b3; /* Màu xanh đậm hơn khi hover */
+}
+
+/* CSS cho các bước (step) nếu có */
+.campaign-box .step-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.campaign-box .step {
+  width: 23%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.campaign-box .step.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.campaign-box #flowchart{
+    border: 1px solid #ddd;
+padding: 10px;
+height: 378px;
+width: 97%;
+overflow: auto;
+}
+
+.campaign-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007cba;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 124, 186, 0.5);
+}
+
+
+.groupsite-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Container for each list (available and selected) */
+.group-site-list-container {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+/* Label styles */
+.group-site-list-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Select box styles */
+.group-site-list-container select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    height: calc(100% - 40px); /* Adjusting for padding and margins */
+    background-color: #f1f1f1;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Button container styles */
+.group-site-buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+.group-site-buttons-container .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0073aa;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.group-site-buttons-container .button:hover {
+    background-color: #005a87;
+}
+
+
+
+
+/*start customer box*/
+/* Style for the campaign box */
+.campaign-box {
+    max-width: 800px !important;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+
+
+@keyframes gooey {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.1;
+    }
+}
+
+@keyframes blob {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2c3e50; /* Darker text color */
+    margin-bottom: 5px;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdc3c7; /* Light gray border */
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="url"],
+.form-group input[type="email"],
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    background: #f9f9f9; /* Light gray background */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3498db; /* Highlight border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+}
+
+/*end stater customer box*/
+
+.diagram-meta-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.diagram-meta-box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.diagram-meta-box-body {
+    display: flex;
+    gap: 1rem;
+}
+
+.diagram-meta-box-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.diagram-meta-box-column h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.diagram-meta-box-column .button {
+    margin: 0.2rem 0;
+}
+
+.diagram-flowchart {
+    flex: 2;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    overflow: auto;
+}
+
+#chart_container {
+    width: 100%;
+    height: 500px;
+    overflow: scroll;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.flowchart-example-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.campaign-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.campaign-steps-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.step-header {
+    flex: 1;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.step-header.active {
+    background-color: #0073aa;
+    color: #fff;
+}
+
+.campaign-step {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.ft-code-textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-family: monospace;
+}
+
+.ft-input-big {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#diagram-flowchart-container {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+#flowchart {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.progress {
+        height: 20px;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 0;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Progress Bar */
+    .progress-bar-danger {
+        background-color: #d9534f; /* Red color for danger */
+        width: 0;
+        height: 100%;
+        transition: width 0.6s ease;
+    }
+
+    /* Badge */
+    .badge {
+        padding: 3px 7px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        background-color: #777;
+        border-radius: 10px;
+    }
+
+    /* Badge Red */
+    .bg-red {
+        background-color: #d9534f;
+    }
+
+    #contentmo{max-height:300px;overflow: auto;}
+
+    /* HTML: <div class="btnloader"></div> */
+.btnloader {
+  width: 90px;
+  height: 14px;
+  box-shadow: 0 3px 0 #fff;
+  position: relative;
+  display: grid;
+  clip-path: inset(-60px 0 -5px)
+}
+.btnloader:after {
+  content: "";
+  position: relative;
+  background: repeating-linear-gradient(90deg,#0000 0 calc(50% - 8px), #ccc 0 calc(50% + 8px), #0000 0 100%) 0 0/calc(100%/3) 100%;
+  animation: l6-1 1s infinite;
+} 
+.btnloader:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  aspect-ratio: 1;
+  left: calc(50% - 7px);
+  bottom: 0;
+  border-radius: 50%;
+  background: lightblue;
+  animation: l6-2 1s infinite;
+}
+@keyframes l6-1 {
+  50%,100% {background-position: calc(100%/2) 0}
+}
+@keyframes l6-2 {
+  0%,50% {transform:translateY(-80px)}
+}
+
+
+
+/*fflowchart start*/
+/* Flowchart start */
+.flowchart-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.flowchart-links-layer,
+.flowchart-operators-layer,
+.flowchart-temporary-link-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flowchart-operators-layer,
+.flowchart-temporary-link-layer {
+    pointer-events: none;
+}
+
+.flowchart-temporary-link-layer {
+    display: none;
+}
+
+.flowchart-link,
+.flowchart-operator {
+    cursor: default;
+}
+
+.flowchart-operator-connector {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.flowchart-operator-connector-label {
+    font-size: small;
+    color: #333;
+}
+
+.flowchart-operator-inputs .flowchart-operator-connector-label {
+    margin-left: 14px;
+}
+
+.flowchart-operator-outputs .flowchart-operator-connector-label {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.flowchart-operator-connector-arrow {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #3498db; /* Light blue */
+    position: absolute;
+    top: 0;
+}
+
+.flowchart-operator-connector-small-arrow {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+    position: absolute;
+    top: 5px;
+    pointer-events: none;
+}
+
+.flowchart-operator-connector:hover .flowchart-operator-connector-arrow {
+    border-left: 10px solid #2980b9; /* Darker blue */
+}
+
+.flowchart-operator-inputs .flowchart-operator-connector-arrow {
+    left: -1px;
+}
+
+.flowchart-operator-outputs .flowchart-operator-connector-arrow {
+    right: -10px;
+}
+
+.flowchart-operator-inputs .flowchart-operator-connector-small-arrow {
+    left: -1px;
+}
+
+.flowchart-operator-outputs .flowchart-operator-connector-small-arrow {
+    right: -7px;
+}
+
+.unselectable {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.flowchart-operator {
+    position: absolute;
+    width: 140px;
+    border: 1px solid #bdc3c7; /* Light gray */
+    background: #ecf0f1; /* Lighter gray */
+    pointer-events: auto;
+    border-radius:5px;
+    background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+  /*animation: rotation_481 5000ms infinite linear;*/
+}
+
+.flowchart-operator.hover {
+    border-color: #ff9966; /* Medium gray */
+}
+
+.flowchart-operator.selected {
+    border-color: #7f8c8d; /* Darker gray */
+}
+
+.flowchart-operator .flowchart-operator-title {
+    width: 100%;
+    padding: 5px;
+    font-weight: bold;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dcdcdc; 
+    background: #3498db; 
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: move;
+    color: #fff; 
+    border-radius:5px 5px 0 0;
+}
+
+.flowchart-operator .flowchart-operator-inputs-outputs {
+    display: table;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.flowchart-operator .flowchart-operator-inputs,
+.flowchart-default-operator .flowchart-operator-outputs {
+    display: table-cell;
+    width: 50%;
+}
+
+.flowchart-vertical .flowchart-operator-inputs,
+.flowchart-vertical .flowchart-operator-outputs {
+    position: relative;
+    text-align: center;
+    display: table;
+    width: 100%;
+}
+
+.flowchart-vertical .flowchart-operator-connector-set {
+    display: table-cell;
+}
+
+.flowchart-vertical .flowchart-operator-connector {
+    position: relative;
+}
+
+.flowchart-vertical .flowchart-operator-connector-label {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    color: #333;
+}
+
+.flowchart-vertical .flowchart-operator-inputs .flowchart-operator-connector-label {
+    margin-left: auto;
+}
+
+.flowchart-vertical .flowchart-operator-connector-arrow {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #3498db; /* Light blue */
+    left: calc(50% - 10px);
+}
+
+.flowchart-vertical .flowchart-operator-connector:hover .flowchart-operator-connector-arrow {
+    border-left-color: transparent;
+    border-top-color: #2980b9; /* Darker blue */
+}
+
+.flowchart-vertical .flowchart-operator-connector-small-arrow {
+    border-right: 5px solid transparent;
+    top: 2px;
+    left: calc(50% - 5px);
+}
+
+.flowchart-vertical .flowchart-operator-connector-arrow {
+    top: 0;
+}
+
+.flowchart-vertical .flowchart-operator-outputs .flowchart-operator-connector-arrow {
+    bottom: -20px;
+    top: auto;
+}
+
+.flowchart-vertical .flowchart-operator-outputs .flowchart-operator-connector-small-arrow {
+    left: calc(50% - 5px);
+    bottom: -12px;
+    top: auto;
+}
+
+.flowchart-vertical .flowchart-link rect {
+    display: none;
+}
+
+.flowchart-operator-body {
+    padding: 5px;
+    cursor: move;
+}
+
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+
+
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+/*flowchart end*/
+
+

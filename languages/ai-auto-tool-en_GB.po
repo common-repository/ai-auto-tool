@@ -1,0 +1,610 @@
+# Copyright (C) 2017 underDEV
+# This file is distributed under the GPL3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ai Auto Tool \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ai-auto-tool\n"
+"POT-Creation-Date: 2023-11-30 18:04:36+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2023-12-01 07:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: English (UK)\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.1"
+
+#: inc/aiautotool_tool_extra_config.php:291
+msgid ""
+" Disable feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head in tag <head>"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:118
+msgid "301 page 404 to Home"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1047
+msgid "Action"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:67
+msgid "Active Editor Classic for new post and edit"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:80
+msgid "Active Old Widget Classic"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:73
+msgid "add button fontselect, fontsizeselect, separator, table for Editor"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:72
+msgid "Add button for Editor Classic"
+msgstr ""
+
+#: Ai-Auto-Tool.php:980
+msgid "Add New API Key"
+msgstr ""
+
+#: inc/scan.php:703
+msgid "Add Post"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1618
+msgid "Add To Post"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1104 Ai-Auto-Tool.php:1591
+msgid "Ai auto Tool"
+msgstr ""
+
+#. Name of the plugin
+msgid ""
+"Ai Auto Tool Content Writing Assistant (Bard Writer, ChatGPT ) All in One"
+msgstr ""
+"Ai Auto Tool Content Writing Assistant (Bard Writer, ChatGPT ) All in One"
+
+#: Ai-Auto-Tool.php:1595
+msgid "AI Content"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1021
+msgid "Allow image auto save when aiautotool.com post article"
+msgstr ""
+
+#: inc/scan.php:657
+msgid "Allow users to input and save multiple post titles."
+msgstr ""
+
+#: inc/scan.php:700
+msgid "Allows AI auto change title for Post"
+msgstr ""
+
+#: Ai-Auto-Tool.php:966
+msgid "API Key"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:125
+msgid "Block copy content and using Devtool"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:325
+msgid "Block SQL injection, cross-site scripting (XSS)"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:320
+msgid "Block SQL injection, cross-site scripting (XSS) from request"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:344
+msgid "Change Time save post auto"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1040
+msgid "Clear all log Images"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:252
+msgid "Compress HTML output"
+msgstr ""
+
+#: inc/scan.php:735
+msgid "Config Schedule time"
+msgstr ""
+
+#: inc/scan.php:644
+msgid "Crawl site wp"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:357
+msgid "Delete autosave"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:356
+msgid "Delete revisions"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:372
+msgid "Delete revisions success"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:389
+msgid "Delete success all drafts"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:406
+msgid "Delete success all Trash"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:354
+msgid "Delete trash for database optimization"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:296
+msgid "Disable Feed - Rss"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:297
+msgid "Disable feed, Rss,Atom, Rss2 comments, Atom Comments"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:290
+msgid ""
+"Disable info feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head in tag <head> "
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:266
+msgid "Disable REST API"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:82
+msgid "Disable Update auto"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:88
+msgid "Disable Update Core"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:95
+msgid "Disable Update Language Packet"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:109
+msgid "Disable Update Plugin"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:102
+msgid "Disable Update Themes"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:278
+#: inc/aiautotool_tool_extra_config.php:279
+msgid "Disable Wp-Embed"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:284
+#: inc/aiautotool_tool_extra_config.php:285
+msgid "Disable X-Pingback"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:272
+msgid "Disable XML RPC"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:273
+msgid "Disable XML RPC "
+msgstr ""
+
+#: inc/scan.php:744
+msgid "Edit the wp-config.php file:"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:61
+msgid "Editor "
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:358
+msgid "Empty trash"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:257
+msgid "Enable HTML compression"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:243
+msgid "Enable Instant-page"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:333
+msgid "Enable limit for saved versions"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:249
+msgid "Enable Smooth-scroll"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:337
+msgid "Enter the number of saved versions"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:375
+#: inc/aiautotool_tool_extra_config.php:392
+#: inc/aiautotool_tool_extra_config.php:409
+msgid "Error. Delete not success!"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:50
+msgid "Extra Config Settings"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1045
+msgid "From url"
+msgstr ""
+
+#: inc/scan.php:757
+msgid "Here:"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:162
+msgid "Hide Feedback"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:176
+msgid "Hide Interface"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:169
+msgid "Hide Media"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:141
+msgid "Hide News Feed"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:155
+msgid "Hide Page"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:183
+msgid "Hide Plugins"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:148
+msgid "Hide Posts"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:204
+msgid "Hide setup"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:135
+msgid "Hide the tools on page admin"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:197
+msgid "Hide tools"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:190
+msgid "Hide User"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1106
+msgid "Home"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://aiautotool.com"
+msgstr "https://aiautotool.com"
+
+#: inc/aiautotool_tool_extra_config.php:230
+msgid "If you don't use it, you can turn off Classic CSS on the homepage"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:236
+msgid "If you don't use it, you can turn off Emoji"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:224
+msgid "If you don't use it, you can turn off Gutenberg CSS on the homepage"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:351
+msgid ""
+"If you enable this function and set automatic limits and save time for posts "
+"or pages, it will reduce the data stored in the database"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:207
+msgid ""
+"If you feel that the above tools are unnecessary, you can hide them to give "
+"the WP admin a clearer view. This function only hides and does not block "
+"access to the link."
+msgstr ""
+
+#: inc/scan.php:693
+msgid "If your check , AI has rewrite your title post."
+msgstr ""
+
+#: Ai-Auto-Tool.php:1596
+msgid "Images"
+msgstr ""
+
+#: inc/scan.php:677
+msgid "Input tag for post, have random 3 tag in input."
+msgstr ""
+
+#: Ai-Auto-Tool.php:1602
+msgid ""
+"Input title for post Then Click gen Article,Select a phrase and click the "
+"Write button to use this feature"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:244
+msgid ""
+"Instant-page is a library that allows you to preload the content of a page "
+"into the browser memory simply by hovering over any link on the page. When "
+"you click the link, it provides a fast and seamless experience"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:218
+msgid ""
+"jQuery Migrate is a library used to maintain the functionality of some "
+"themes and plugins using outdated code. If your website no longer uses this "
+"library, you can turn it off"
+msgstr ""
+
+#. Author of the plugin
+msgid "KCT"
+msgstr "KCT"
+
+#: inc/scan.php:681
+msgid "Language for title, Ai has write content for language your select."
+msgstr ""
+
+#: Ai-Auto-Tool.php:1036
+msgid "Log Img"
+msgstr ""
+
+#: inc/scan.php:742
+msgid "Manually set up Cron in WordPress"
+msgstr ""
+
+#: inc/scan.php:655
+msgid "Multiple Post Titles Input"
+msgstr ""
+
+#: Ai-Auto-Tool.php:970
+msgid "New API Key - Select User for API KEY when post Single:"
+msgstr ""
+
+#: inc/scan.php:737
+msgid ""
+"Note: This form only saves the list of titles you enter into a draft. "
+"Configure the time for the AI BOT to run in the background to generate "
+"content for draft articles. For example, if you choose 5 hours, the AI BOT "
+"will automatically select a random draft article every 5 hours and proceed "
+"to create content and images for the article. Afterward, it will "
+"automatically publish the article according to the schedule you set."
+msgstr ""
+
+#: inc/scan.php:146
+msgid "Number Post for one public Draft"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:267
+msgid "Nếu bạn không sử dụng REST API thì nên Disable đi để bảo mật website"
+msgstr ""
+
+#: inc/scan.php:750
+msgid "Open crontab using the command:"
+msgstr ""
+
+#: inc/scan.php:745
+msgid ""
+"Open the wp-config.php file, usually located in the root directory of your "
+"WordPress website, and add the following line:"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:238
+msgid "Optimization libraries core WP"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:328
+msgid "Optimize post content in the database"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:261
+msgid "Optimize Security For WP"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:113
+msgid "Redirect and Block copy content"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1002 Ai-Auto-Tool.php:1059
+msgid "Remove"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:302
+msgid "Remove version"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:308
+msgid "Remove version JS, CSS"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:315
+msgid "Remove version WordPress"
+msgstr ""
+
+#: inc/scan.php:759
+msgid ""
+"Represents the Cron interval, here set to every 5 minutes. You can adjust it "
+"as needed."
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:418
+msgid "Save all"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1028 inc/scan.php:155
+msgid "Save Configuration"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:348
+msgid "Save time (minutes)"
+msgstr ""
+
+#: inc/scan.php:168 inc/scan.php:172 inc/scan.php:617 inc/scan.php:618
+#: inc/scan.php:643 inc/scan.php:650
+msgid "Schedule AI Post"
+msgstr ""
+
+#: inc/scan.php:749
+msgid "Schedule Cron using crontab:"
+msgstr ""
+
+#: inc/scan.php:97
+msgid "Schedule Post"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1626
+msgid ""
+"Select a phrase and click the <b>Find Image</b> button to use this feature"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1615
+msgid "Select a phrase and click the <b>Write</b> button to use this feature"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1624
+msgid "Select a phrase and click the Find Image button to use this feature"
+msgstr ""
+
+#: inc/scan.php:665
+msgid "Select categories for post when post publish"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:250
+msgid ""
+"Smooth-scroll is a library that allows you to create smooth scrolling "
+"effects, making the website appear faster to users"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1605
+msgid "Start socket"
+msgstr ""
+
+#: Ai-Auto-Tool.php:1608
+msgid "Start socket Error, Please F5 to reload."
+msgstr ""
+
+#: inc/scan.php:659
+msgid "Store these titles as draft posts in the WordPress database."
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"The AI Auto Tool Plugin is a powerful tool that automates various tasks for "
+"effortless content creation and management."
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:133
+msgid ""
+"This feature allows you to add Editor classic to the article and product "
+"category description box when you edit"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:119
+msgid ""
+"This feature allows you to redirect non-existent links (404 error) to the "
+"homepage"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:326
+msgid ""
+"This feature helps protect the website against attacks such as SQL injection "
+"and cross-site scripting (XSS)."
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:126
+msgid ""
+"This feature prevents users from copying text, right-clicking, and accessing "
+"Devtool"
+msgstr ""
+
+#: inc/scan.php:130
+msgid "Time public Draft"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:318
+msgid ""
+"To prevent hackers from probing and exploiting vulnerabilities in outdated "
+"JS, CSS, WordPress versions, it is advisable to conceal the version "
+"information to make it more challenging for them to identify the specific "
+"versions you are using."
+msgstr ""
+
+#: Ai-Auto-Tool.php:1046
+msgid "To Url"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:229
+msgid "Turn off Classic CSS"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:235
+msgid "Turn off Emoji"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:223
+msgid "Turn off Gutenberg CSS"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:217
+msgid "Turn off jQuery Migrate"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:212
+msgid "Turn off unnecessary items"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:66
+msgid "Turn On Editor Classic"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:132
+msgid "Turn On Editor classic for Description in categories page"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:79
+msgid "Turn On Widget Classic"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:111
+msgid "Turn on/off auto Update of WordPress"
+msgstr ""
+
+#: inc/aiautotool_tool_extra_config.php:258
+msgid ""
+"With this function, HTML will be compressed into a single line, removing "
+"unnecessary characters and spaces to speed up page loading"
+msgstr ""

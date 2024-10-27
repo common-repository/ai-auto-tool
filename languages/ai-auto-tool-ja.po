@@ -1,0 +1,781 @@
+# Copyright (C) 2017 underDEV
+# This file is distributed under the GPL3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ai Auto Tool \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ai-auto-tool\n"
+"POT-Creation-Date: 2023-11-30 17:16+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2023-12-01 15:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.1"
+
+#: inc/aiautotool_tool_extra_config.php:291
+#, fuzzy
+#| msgid ""
+#| "Disable feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+#| "start_post_rel_link, index_rel_link, parent_post_rel_link, "
+#| "adjacent_posts_rel_link_wp_head in tag "
+msgid ""
+" Disable feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head in tag <head>"
+msgstr ""
+"タグ内の "
+"feed_links_extra、rsd_link、wlwmanifest_link、wp_generator、start_post_rel_link、index_rel_link、parent_post_rel_link、adjustable_posts_rel_link_wp_head"
+" を無効にする <head>"
+
+#: inc/aiautotool_tool_extra_config.php:118
+#, fuzzy
+msgid "301 page 404 to Home"
+msgstr "301 ページ 404 ホームへ"
+
+#: Ai-Auto-Tool.php:1047
+#, fuzzy
+msgid "Action"
+msgstr "アクション"
+
+#: inc/aiautotool_tool_extra_config.php:67
+#, fuzzy
+msgid "Active Editor Classic for new post and edit"
+msgstr "新しい投稿と編集のためのアクティブ エディター クラシック"
+
+#: inc/aiautotool_tool_extra_config.php:80
+#, fuzzy
+msgid "Active Old Widget Classic"
+msgstr "アクティブな古いウィジェット クラシック"
+
+#: inc/aiautotool_tool_extra_config.php:73
+#, fuzzy
+msgid "add button fontselect, fontsizeselect, separator, table for Editor"
+msgstr "エディターのボタンのフォント選択、フォントサイズ選択、セパレーター、テーブルを追加します"
+
+#: inc/aiautotool_tool_extra_config.php:72
+#, fuzzy
+msgid "Add button for Editor Classic"
+msgstr "Editor Classic の追加ボタン"
+
+#: Ai-Auto-Tool.php:980
+msgid "Add New API Key"
+msgstr "新しいAPIキーを追加"
+
+#: inc/scan.php:703
+#, fuzzy
+msgid "Add Post"
+msgstr "投稿を追加"
+
+#: Ai-Auto-Tool.php:1618
+#, fuzzy
+msgid "Add To Post"
+msgstr "投稿に追加"
+
+#: Ai-Auto-Tool.php:1104 Ai-Auto-Tool.php:1591
+#, fuzzy
+msgid "Ai auto Tool"
+msgstr "Aiオートツール"
+
+#. Name of the plugin
+#, fuzzy
+msgid ""
+"Ai Auto Tool Content Writing Assistant (Bard Writer, ChatGPT ) All in One"
+msgstr "Ai Auto Tool コンテンツライティングアシスタント (Bard Writer、ChatGPT) をオールインワンで"
+
+#: Ai-Auto-Tool.php:1595
+#, fuzzy
+msgid "AI Content"
+msgstr "AIコンテンツ"
+
+#: Ai-Auto-Tool.php:1021
+#, fuzzy
+msgid "Allow image auto save when aiautotool.com post article"
+msgstr "aiautotool.com が記事を投稿するときに画像の自動保存を許可する"
+
+#: inc/scan.php:657
+#, fuzzy
+msgid "Allow users to input and save multiple post titles."
+msgstr "ユーザーが複数の投稿タイトルを入力して保存できるようにします。"
+
+#: inc/scan.php:700
+#, fuzzy
+msgid "Allows AI auto change title for Post"
+msgstr "投稿のタイトルをAIが自動変更できるようにする"
+
+#: Ai-Auto-Tool.php:966
+#, fuzzy
+msgid "API Key"
+msgstr "APIキー"
+
+#: inc/aiautotool_tool_extra_config.php:125
+#, fuzzy
+msgid "Block copy content and using Devtool"
+msgstr "コピー コンテンツのブロックと Devtool の使用"
+
+#: inc/aiautotool_tool_extra_config.php:325
+#, fuzzy
+msgid "Block SQL injection, cross-site scripting (XSS)"
+msgstr "SQL インジェクション、クロスサイト スクリプティング (XSS) をブロックします。"
+
+#: inc/aiautotool_tool_extra_config.php:320
+#, fuzzy
+msgid "Block SQL injection, cross-site scripting (XSS) from request"
+msgstr "SQL インジェクション、クロスサイト スクリプティング (XSS) をリクエストからブロック"
+
+#: inc/aiautotool_tool_extra_config.php:344
+#, fuzzy
+msgid "Change Time save post auto"
+msgstr "自動後の時間節約を変更する"
+
+#: Ai-Auto-Tool.php:1040
+#, fuzzy
+msgid "Clear all log Images"
+msgstr "すべてのログ画像をクリア"
+
+#: inc/aiautotool_tool_extra_config.php:252
+#, fuzzy
+msgid "Compress HTML output"
+msgstr "HTML出力を圧縮する"
+
+#: inc/scan.php:735
+#, fuzzy
+msgid "Config Schedule time"
+msgstr "設定スケジュール時間"
+
+#: inc/scan.php:644
+#, fuzzy
+msgid "Crawl site wp"
+msgstr "サイトをクロールする"
+
+#: inc/aiautotool_tool_extra_config.php:357
+#, fuzzy
+msgid "Delete autosave"
+msgstr "自動保存の削除"
+
+#: inc/aiautotool_tool_extra_config.php:356
+#, fuzzy
+msgid "Delete revisions"
+msgstr "リビジョンの削除"
+
+#: inc/aiautotool_tool_extra_config.php:372
+#, fuzzy
+msgid "Delete revisions success"
+msgstr "リビジョンの削除に成功しました"
+
+#: inc/aiautotool_tool_extra_config.php:389
+#, fuzzy
+msgid "Delete success all drafts"
+msgstr "すべての下書きの削除に成功しました"
+
+#: inc/aiautotool_tool_extra_config.php:406
+#, fuzzy
+msgid "Delete success all Trash"
+msgstr "すべてのゴミ箱を削除成功"
+
+#: inc/aiautotool_tool_extra_config.php:354
+#, fuzzy
+msgid "Delete trash for database optimization"
+msgstr "データベースを最適化するためにゴミ箱を削除する"
+
+#: inc/aiautotool_tool_extra_config.php:296
+#, fuzzy
+msgid "Disable Feed - Rss"
+msgstr "フィードを無効にする - RSS"
+
+#: inc/aiautotool_tool_extra_config.php:297
+#, fuzzy
+msgid "Disable feed, Rss,Atom, Rss2 comments, Atom Comments"
+msgstr "フィード、Rss、Atom、Rss2 コメント、Atom コメントを無効にする"
+
+#: inc/aiautotool_tool_extra_config.php:290
+#, fuzzy
+#| msgid ""
+#| "Disable info feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+#| "start_post_rel_link, index_rel_link, parent_post_rel_link, "
+#| "adjacent_posts_rel_link_wp_head in tag "
+msgid ""
+"Disable info feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head in tag <head> "
+msgstr ""
+"タグ内の情報 "
+"feed_links_extra、rsd_link、wlwmanifest_link、wp_generator、start_post_rel_link、index_rel_link、parent_post_rel_link、adjacent_posts_rel_link_wp_head"
+" を無効にする <head>"
+
+#: inc/aiautotool_tool_extra_config.php:266
+#, fuzzy
+msgid "Disable REST API"
+msgstr "REST APIを無効にする"
+
+#: inc/aiautotool_tool_extra_config.php:82
+#, fuzzy
+msgid "Disable Update auto"
+msgstr "自動更新を無効にする"
+
+#: inc/aiautotool_tool_extra_config.php:88
+#, fuzzy
+msgid "Disable Update Core"
+msgstr "アップデートコアを無効にする"
+
+#: inc/aiautotool_tool_extra_config.php:95
+#, fuzzy
+msgid "Disable Update Language Packet"
+msgstr "言語更新パケットを無効にする"
+
+#: inc/aiautotool_tool_extra_config.php:109
+#, fuzzy
+msgid "Disable Update Plugin"
+msgstr "アップデートプラグインを無効にする"
+
+#: inc/aiautotool_tool_extra_config.php:102
+#, fuzzy
+msgid "Disable Update Themes"
+msgstr "テーマの更新を無効にする"
+
+#: inc/aiautotool_tool_extra_config.php:278
+#: inc/aiautotool_tool_extra_config.php:279
+#, fuzzy
+msgid "Disable Wp-Embed"
+msgstr "Wp-Embed を無効にする"
+
+#: inc/aiautotool_tool_extra_config.php:284
+#: inc/aiautotool_tool_extra_config.php:285
+#, fuzzy
+msgid "Disable X-Pingback"
+msgstr "X-ピンバックを無効にする"
+
+#: inc/aiautotool_tool_extra_config.php:272
+#, fuzzy
+msgid "Disable XML RPC"
+msgstr "XML RPC を無効にする"
+
+#: inc/aiautotool_tool_extra_config.php:273
+#, fuzzy
+msgid "Disable XML RPC "
+msgstr "XML RPC を無効にする"
+
+#: inc/scan.php:744
+#, fuzzy
+msgid "Edit the wp-config.php file:"
+msgstr "wp-config.php ファイルを編集します。"
+
+#: inc/aiautotool_tool_extra_config.php:61
+#, fuzzy
+#| msgid "Editor"
+msgid "Editor "
+msgstr "編集者"
+
+#: inc/aiautotool_tool_extra_config.php:358
+#, fuzzy
+msgid "Empty trash"
+msgstr "空のごみ箱"
+
+#: inc/aiautotool_tool_extra_config.php:257
+#, fuzzy
+msgid "Enable HTML compression"
+msgstr "HTML圧縮を有効にする"
+
+#: inc/aiautotool_tool_extra_config.php:243
+#, fuzzy
+msgid "Enable Instant-page"
+msgstr "インスタントページを有効にする"
+
+#: inc/aiautotool_tool_extra_config.php:333
+#, fuzzy
+msgid "Enable limit for saved versions"
+msgstr "保存されたバージョンの制限を有効にする"
+
+#: inc/aiautotool_tool_extra_config.php:249
+#, fuzzy
+msgid "Enable Smooth-scroll"
+msgstr "スムーズスクロールを有効にする"
+
+#: inc/aiautotool_tool_extra_config.php:337
+#, fuzzy
+msgid "Enter the number of saved versions"
+msgstr "保存されたバージョンの数を入力してください"
+
+#: inc/aiautotool_tool_extra_config.php:375
+#: inc/aiautotool_tool_extra_config.php:392
+#: inc/aiautotool_tool_extra_config.php:409
+#, fuzzy
+msgid "Error. Delete not success!"
+msgstr "エラー。削除は成功しません!"
+
+#: inc/aiautotool_tool_extra_config.php:50
+#, fuzzy
+msgid "Extra Config Settings"
+msgstr "追加の構成設定"
+
+#: Ai-Auto-Tool.php:1045
+#, fuzzy
+msgid "From url"
+msgstr "URLから"
+
+#: inc/scan.php:757
+#, fuzzy
+msgid "Here:"
+msgstr "ここ："
+
+#: inc/aiautotool_tool_extra_config.php:162
+#, fuzzy
+msgid "Hide Feedback"
+msgstr "フィードバックを隠す"
+
+#: inc/aiautotool_tool_extra_config.php:176
+#, fuzzy
+msgid "Hide Interface"
+msgstr "インターフェースを隠す"
+
+#: inc/aiautotool_tool_extra_config.php:169
+#, fuzzy
+msgid "Hide Media"
+msgstr "メディアを隠す"
+
+#: inc/aiautotool_tool_extra_config.php:141
+#, fuzzy
+msgid "Hide News Feed"
+msgstr "ニュースフィードを隠す"
+
+#: inc/aiautotool_tool_extra_config.php:155
+#, fuzzy
+msgid "Hide Page"
+msgstr "ページを隠す"
+
+#: inc/aiautotool_tool_extra_config.php:183
+#, fuzzy
+msgid "Hide Plugins"
+msgstr "プラグインを隠す"
+
+#: inc/aiautotool_tool_extra_config.php:148
+#, fuzzy
+msgid "Hide Posts"
+msgstr "投稿を非表示にする"
+
+#: inc/aiautotool_tool_extra_config.php:204
+#, fuzzy
+msgid "Hide setup"
+msgstr "設定を隠す"
+
+#: inc/aiautotool_tool_extra_config.php:135
+#, fuzzy
+msgid "Hide the tools on page admin"
+msgstr "ページ管理上のツールを非表示にする"
+
+#: inc/aiautotool_tool_extra_config.php:197
+#, fuzzy
+msgid "Hide tools"
+msgstr "ツールを非表示にする"
+
+#: inc/aiautotool_tool_extra_config.php:190
+#, fuzzy
+msgid "Hide User"
+msgstr "ユーザーを非表示にする"
+
+#: Ai-Auto-Tool.php:1106
+#, fuzzy
+msgid "Home"
+msgstr "家"
+
+#. URI of the plugin
+#. Author URI of the plugin
+#, fuzzy
+msgid "https://aiautotool.com"
+msgstr "https://aiautotool.com"
+
+#: inc/aiautotool_tool_extra_config.php:230
+#, fuzzy
+msgid "If you don't use it, you can turn off Classic CSS on the homepage"
+msgstr "使用しない場合は、ホームページでクラシック CSS をオフにすることができます"
+
+#: inc/aiautotool_tool_extra_config.php:236
+#, fuzzy
+msgid "If you don't use it, you can turn off Emoji"
+msgstr "使用しない場合は絵文字をオフにすることができます"
+
+#: inc/aiautotool_tool_extra_config.php:224
+#, fuzzy
+msgid "If you don't use it, you can turn off Gutenberg CSS on the homepage"
+msgstr "使用しない場合は、ホームページで Gutenberg CSS を無効にできます。"
+
+#: inc/aiautotool_tool_extra_config.php:351
+#, fuzzy
+msgid ""
+"If you enable this function and set automatic limits and save time for posts "
+"or pages, it will reduce the data stored in the database"
+msgstr "この機能を有効にし、自動制限を設定し、投稿やページの時間を節約すると、データベースに保存されているデータを削減します。"
+
+#: inc/aiautotool_tool_extra_config.php:207
+#, fuzzy
+msgid ""
+"If you feel that the above tools are unnecessary, you can hide them to give "
+"the WP admin a clearer view. This function only hides and does not block "
+"access to the link."
+msgstr ""
+"上記のツールが不必要だと感じる場合は、Wp Adminにより明確な視点を提供するためにそれらを隠すことができます。 "
+"この機能は、リンクへのアクセスだけを隠し、ブロックしません。"
+
+#: inc/scan.php:693
+#, fuzzy
+msgid "If your check , AI has rewrite your title post."
+msgstr "あなたのチェックなら、Aiはあなたのタイトル投稿を再編しました。"
+
+#: Ai-Auto-Tool.php:1596
+#, fuzzy
+msgid "Images"
+msgstr "イメージ"
+
+#: inc/scan.php:677
+#, fuzzy
+msgid "Input tag for post, have random 3 tag in input."
+msgstr "入力タグ ポストには、入力タグに偶然の3タグがあります。"
+
+#: Ai-Auto-Tool.php:1602
+#, fuzzy
+msgid ""
+"Input title for post Then Click gen Article,Select a phrase and click the "
+"Write button to use this feature"
+msgstr "投稿のタイトルを入力すると、Gen 記事をクリックし、フレーズを選択し、この機能を使用するために書き込みボタンをクリックします。"
+
+#: inc/aiautotool_tool_extra_config.php:244
+#, fuzzy
+msgid ""
+"Instant-page is a library that allows you to preload the content of a page "
+"into the browser memory simply by hovering over any link on the page. When "
+"you click the link, it provides a fast and seamless experience"
+msgstr ""
+"Instant-Page は、ページのコンテンツをブラウザメモリにプレロードすることを可能にするライブラリであり、単にページ上のリンクを振り回します。 "
+"リンクをクリックすると、迅速かつ無限の体験を提供します。"
+
+#: inc/aiautotool_tool_extra_config.php:218
+#, fuzzy
+msgid ""
+"jQuery Migrate is a library used to maintain the functionality of some "
+"themes and plugins using outdated code. If your website no longer uses this "
+"library, you can turn it off"
+msgstr ""
+"JQuery Migrate は、時代遅れのコードを使用していくつかのテーマやプラグインの機能を維持するために使用されるライブラリです。 "
+"あなたのウェブサイトがもはやこのライブラリを使用していない場合、あなたはそれをオフにすることができます"
+
+#. Author of the plugin
+#, fuzzy
+msgid "KCT"
+msgstr "KCT"
+
+#: inc/scan.php:681
+#, fuzzy
+msgid "Language for title, Ai has write content for language your select."
+msgstr "タイトルのための言語、 ai はあなたの選択した言語のためのコンテンツを書く。"
+
+#: Ai-Auto-Tool.php:1036
+#, fuzzy
+msgid "Log Img"
+msgstr "ログ イムグ"
+
+#: inc/scan.php:742
+#, fuzzy
+msgid "Manually set up Cron in WordPress"
+msgstr "手動でWordPressでCronを設定する"
+
+#: inc/scan.php:655
+#, fuzzy
+msgid "Multiple Post Titles Input"
+msgstr "複数の投稿タイトル入力"
+
+#: Ai-Auto-Tool.php:970
+#, fuzzy
+msgid "New API Key - Select User for API KEY when post Single:"
+msgstr "新しい API キー - 単一の投稿時に API キーのユーザーを選択:"
+
+#: inc/scan.php:737
+#, fuzzy
+msgid ""
+"Note: This form only saves the list of titles you enter into a draft. "
+"Configure the time for the AI BOT to run in the background to generate "
+"content for draft articles. For example, if you choose 5 hours, the AI BOT "
+"will automatically select a random draft article every 5 hours and proceed "
+"to create content and images for the article. Afterward, it will "
+"automatically publish the article according to the schedule you set."
+msgstr ""
+"注:このフォームは、あなたがプロジェクトに入力したタイトルのリストのみを保存します。 "
+"アイボットが背景で実行する時間を設定して、論文のプロジェクトのコンテンツを生成します。 "
+"たとえば、5時間を選択した場合、AIボットは自動的に5時間ごとにランダムプロジェクト記事を選択し、記事のコンテンツと画像を作成します。 "
+"その後、あなたが設定したスケジュールに従って記事を自動的に公開します。"
+
+#: inc/scan.php:146
+#, fuzzy
+msgid "Number Post for one public Draft"
+msgstr "1 公立プロジェクトのポスト番号"
+
+#: inc/aiautotool_tool_extra_config.php:267
+#, fuzzy
+msgid "Nếu bạn không sử dụng REST API thì nên Disable đi để bảo mật website"
+msgstr "If You Don't Sử Dụng rest API Thì 無効にならないでください ウェブサイトを保存するために"
+
+#: inc/scan.php:750
+#, fuzzy
+msgid "Open crontab using the command:"
+msgstr "コマンドを使用してCrontabを開く:"
+
+#: inc/scan.php:745
+#, fuzzy
+msgid ""
+"Open the wp-config.php file, usually located in the root directory of your "
+"WordPress website, and add the following line:"
+msgstr "Wp-Config.Php ファイルを開いて、通常、WordPress ウェブサイトの root ディレクトリに位置し、次の行を追加します。"
+
+#: inc/aiautotool_tool_extra_config.php:238
+#, fuzzy
+msgid "Optimization libraries core WP"
+msgstr "図書館の最適化の核心WP"
+
+#: inc/aiautotool_tool_extra_config.php:328
+#, fuzzy
+msgid "Optimize post content in the database"
+msgstr "データベースにおける投稿コンテンツの最適化"
+
+#: inc/aiautotool_tool_extra_config.php:261
+#, fuzzy
+msgid "Optimize Security For WP"
+msgstr "WPのセキュリティの最適化"
+
+#: inc/aiautotool_tool_extra_config.php:425
+#, fuzzy
+msgid "Optimize WP"
+msgstr "WPの最適化"
+
+#: inc/aiautotool_tool_extra_config.php:113
+#, fuzzy
+msgid "Redirect and Block copy content"
+msgstr "コピーコンテンツをリダイレクトおよびブロック"
+
+#: Ai-Auto-Tool.php:1002 Ai-Auto-Tool.php:1059
+#, fuzzy
+msgid "Remove"
+msgstr "取り除く"
+
+#: inc/aiautotool_tool_extra_config.php:302
+#, fuzzy
+msgid "Remove version"
+msgstr "バージョン削除"
+
+#: inc/aiautotool_tool_extra_config.php:308
+#, fuzzy
+msgid "Remove version JS, CSS"
+msgstr "削除版 Js、CSS"
+
+#: inc/aiautotool_tool_extra_config.php:315
+#, fuzzy
+msgid "Remove version WordPress"
+msgstr "Wordpress バージョンを削除する"
+
+#: inc/scan.php:759
+#, fuzzy
+msgid ""
+"Represents the Cron interval, here set to every 5 minutes. You can adjust it "
+"as needed."
+msgstr "クロンの間隔を表し、ここで5分ごとに設定します。 必要に応じて調整できます。"
+
+#: inc/aiautotool_tool_extra_config.php:418
+#, fuzzy
+msgid "Save all"
+msgstr "すべてを救う"
+
+#: Ai-Auto-Tool.php:1028 inc/scan.php:155
+#, fuzzy
+msgid "Save Configuration"
+msgstr "構成保存"
+
+#: inc/aiautotool_tool_extra_config.php:348
+#, fuzzy
+msgid "Save time (minutes)"
+msgstr "時間の節約(数分)"
+
+#: inc/scan.php:168 inc/scan.php:172 inc/scan.php:617 inc/scan.php:618
+#: inc/scan.php:643 inc/scan.php:650
+#, fuzzy
+msgid "Schedule AI Post"
+msgstr "スケジュール A ポスト"
+
+#: inc/scan.php:749
+#, fuzzy
+msgid "Schedule Cron using crontab:"
+msgstr "Crontab を使用するスケジュール:"
+
+#: inc/scan.php:97
+#, fuzzy
+msgid "Schedule Post"
+msgstr "スケジュールポスト"
+
+#: Ai-Auto-Tool.php:1626
+#, fuzzy
+msgid ""
+"Select a phrase and click the <b>Find Image</b> button to use this feature"
+msgstr "単語を選択し、クリックします。 <b>イメージを見つける </b>この機能を使用するためのボタン"
+
+#: Ai-Auto-Tool.php:1615
+#, fuzzy
+msgid "Select a phrase and click the <b>Write</b> button to use this feature"
+msgstr "単語を選択し、クリックします。 <b>書く </b>この機能を使用するためのボタン"
+
+#: Ai-Auto-Tool.php:1624
+#, fuzzy
+msgid "Select a phrase and click the Find Image button to use this feature"
+msgstr "フレーズを選択し、この機能を使用するために画像を見つけるボタンをクリックします。"
+
+#: inc/scan.php:665
+#, fuzzy
+msgid "Select categories for post when post publish"
+msgstr "投稿のカテゴリを選択すると、投稿が公開されます。"
+
+#: inc/aiautotool_tool_extra_config.php:250
+#, fuzzy
+msgid ""
+"Smooth-scroll is a library that allows you to create smooth scrolling "
+"effects, making the website appear faster to users"
+msgstr "Smooth-Scroll は、ユーザーにとってサイトがより速く表示されるように、柔らかいスローリング効果を作成できるライブラリです。"
+
+#: Ai-Auto-Tool.php:1605
+#, fuzzy
+msgid "Start socket"
+msgstr "ソケットスタート"
+
+#: Ai-Auto-Tool.php:1608
+#, fuzzy
+msgid "Start socket Error, Please F5 to reload."
+msgstr "ソケットエラーを起動するには、F5 をリロードしてください。"
+
+#: inc/scan.php:659
+#, fuzzy
+msgid "Store these titles as draft posts in the WordPress database."
+msgstr "これらのタイトルをWordPressデータベースに投稿のデザインとして保存します。"
+
+#. Description of the plugin
+#, fuzzy
+msgid ""
+"The AI Auto Tool Plugin is a powerful tool that automates various tasks for "
+"effortless content creation and management."
+msgstr "AI自動ツールプラグインは、無力なコンテンツの作成と管理のためのさまざまなタスクを自動化する強力なツールです。"
+
+#: inc/aiautotool_tool_extra_config.php:133
+#, fuzzy
+msgid ""
+"This feature allows you to add Editor classic to the article and product "
+"category description box when you edit"
+msgstr "この機能では、編集時に記事と製品カテゴリの説明ボックスにクラシック編集者を追加することができます。"
+
+#: inc/aiautotool_tool_extra_config.php:119
+#, fuzzy
+msgid ""
+"This feature allows you to redirect non-existent links (404 error) to the "
+"homepage"
+msgstr "この機能により、既存のリンク(404エラー)をホームページにリダイレクトできます。"
+
+#: inc/aiautotool_tool_extra_config.php:326
+#, fuzzy
+msgid ""
+"This feature helps protect the website against attacks such as SQL injection "
+"and cross-site scripting (XSS)."
+msgstr "この機能は、SQL注射やCross-Site Scripting(Xss)などの攻撃からサイトを保護するのに役立ちます。"
+
+#: inc/aiautotool_tool_extra_config.php:126
+#, fuzzy
+msgid ""
+"This feature prevents users from copying text, right-clicking, and accessing "
+"Devtool"
+msgstr "この機能は、ユーザーがテキストをコピー、右クリック、Devtoolにアクセスするのを妨げます。"
+
+#: inc/scan.php:130
+#, fuzzy
+msgid "Time public Draft"
+msgstr "時間 公務員計画"
+
+#: inc/aiautotool_tool_extra_config.php:318
+#, fuzzy
+msgid ""
+"To prevent hackers from probing and exploiting vulnerabilities in outdated "
+"JS, CSS, WordPress versions, it is advisable to conceal the version "
+"information to make it more challenging for them to identify the specific "
+"versions you are using."
+msgstr ""
+"Js、CSS、WordPressのバージョンの脆弱性を試すことや利用するのを防ぐためには、バージョンの情報を隠すことをお勧めし、あなたが使用している特定のバージョンを特定することをより困難にします。"
+
+#: Ai-Auto-Tool.php:1046
+#, fuzzy
+msgid "To Url"
+msgstr "ウルル"
+
+#: inc/aiautotool_tool_extra_config.php:430
+#, fuzzy
+msgid "Tool Extra Config"
+msgstr "追加コントロールツール"
+
+#: inc/aiautotool_tool_extra_config.php:430
+#, fuzzy
+msgid "Total tool mini for wp"
+msgstr "WPのための全ツールミニ"
+
+#: inc/aiautotool_tool_extra_config.php:229
+#, fuzzy
+msgid "Turn off Classic CSS"
+msgstr "クラシックCSSを削除する"
+
+#: inc/aiautotool_tool_extra_config.php:235
+#, fuzzy
+msgid "Turn off Emoji"
+msgstr "エモジーをオフにする"
+
+#: inc/aiautotool_tool_extra_config.php:223
+#, fuzzy
+msgid "Turn off Gutenberg CSS"
+msgstr "Gutenberg CSS を削除する"
+
+#: inc/aiautotool_tool_extra_config.php:217
+#, fuzzy
+msgid "Turn off jQuery Migrate"
+msgstr "JQuery 移住を中止"
+
+#: inc/aiautotool_tool_extra_config.php:212
+#, fuzzy
+msgid "Turn off unnecessary items"
+msgstr "不必要な物件を削除する"
+
+#: inc/aiautotool_tool_extra_config.php:66
+#, fuzzy
+msgid "Turn On Editor Classic"
+msgstr "クラシックエディターに戻る"
+
+#: inc/aiautotool_tool_extra_config.php:132
+#, fuzzy
+msgid "Turn On Editor classic for Description in categories page"
+msgstr "カテゴリページの説明のためのクラシック編集者を切り替える"
+
+#: inc/aiautotool_tool_extra_config.php:79
+#, fuzzy
+msgid "Turn On Widget Classic"
+msgstr "ウィジェットクラシックに戻る"
+
+#: inc/aiautotool_tool_extra_config.php:111
+#, fuzzy
+msgid "Turn on/off auto Update of WordPress"
+msgstr "オープン/オフ自動アップデートのWordPress"
+
+#: inc/aiautotool_tool_extra_config.php:258
+#, fuzzy
+msgid ""
+"With this function, HTML will be compressed into a single line, removing "
+"unnecessary characters and spaces to speed up page loading"
+msgstr "この機能により、Html は単一のラインに圧縮され、ページのロードを加速するために不必要な文字やスペースを削除します。"

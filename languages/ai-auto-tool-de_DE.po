@@ -1,0 +1,840 @@
+# Copyright (C) 2017 underDEV
+# This file is distributed under the GPL3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ai Auto Tool \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ai-auto-tool\n"
+"POT-Creation-Date: 2023-11-30 17:16+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2023-12-01 15:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.1"
+
+#: inc/aiautotool_tool_extra_config.php:291
+#, fuzzy
+#| msgid ""
+#| "Disable feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+#| "start_post_rel_link, index_rel_link, parent_post_rel_link, "
+#| "adjacent_posts_rel_link_wp_head in tag "
+msgid ""
+" Disable feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head in tag <head>"
+msgstr ""
+"Feed_Links_Extra, Rsd_Link, Wlwmanifest_Link, Wp_Generator, "
+"Start_Post_Rel_Link, Index_Rel_Link, Parent_Post_Rel_Link, "
+"Adjacent_Posts_Rel_Link_Wp_Head in Tag deaktivieren <head>"
+
+#: inc/aiautotool_tool_extra_config.php:118
+#, fuzzy
+msgid "301 page 404 to Home"
+msgstr "301 Seite 404 nach Hause"
+
+#: Ai-Auto-Tool.php:1047
+#, fuzzy
+msgid "Action"
+msgstr "Maßnahmen"
+
+#: inc/aiautotool_tool_extra_config.php:67
+#, fuzzy
+msgid "Active Editor Classic for new post and edit"
+msgstr "Aktiver Editor-Klassiker für neue Beiträge und Bearbeitungen"
+
+#: inc/aiautotool_tool_extra_config.php:80
+#, fuzzy
+msgid "Active Old Widget Classic"
+msgstr "Aktiver alter Widget-Klassiker"
+
+#: inc/aiautotool_tool_extra_config.php:73
+#, fuzzy
+msgid "add button fontselect, fontsizeselect, separator, table for Editor"
+msgstr ""
+"Hinzufügen der Schaltfläche Fontselect, Fontsizeselect, Separator, Tabelle "
+"für Editor"
+
+#: inc/aiautotool_tool_extra_config.php:72
+#, fuzzy
+msgid "Add button for Editor Classic"
+msgstr "Schaltfläche für Editor-Klassiker hinzufügen"
+
+#: Ai-Auto-Tool.php:980
+#, fuzzy
+msgid "Add New API Key"
+msgstr "Neuen API-Schlüssel hinzufügen"
+
+#: inc/scan.php:703
+#, fuzzy
+msgid "Add Post"
+msgstr "Beitrag hinzufügen"
+
+#: Ai-Auto-Tool.php:1618
+#, fuzzy
+msgid "Add To Post"
+msgstr "Zu Post hinzufügen"
+
+#: Ai-Auto-Tool.php:1104 Ai-Auto-Tool.php:1591
+#, fuzzy
+msgid "Ai auto Tool"
+msgstr "Ai Auto Werkzeug"
+
+#. Name of the plugin
+#, fuzzy
+msgid ""
+"Ai Auto Tool Content Writing Assistant (Bard Writer, ChatGPT ) All in One"
+msgstr ""
+"Ai auto Werkzeug Inhalt Schreiben Assistent (Bard Schriftsteller, Chatgpt) "
+"alle in einem"
+
+#: Ai-Auto-Tool.php:1595
+#, fuzzy
+msgid "AI Content"
+msgstr "Inhalt"
+
+#: Ai-Auto-Tool.php:1021
+#, fuzzy
+msgid "Allow image auto save when aiautotool.com post article"
+msgstr "Bild auto speichern lassen, wenn Aiautotool.Com Artikel posten"
+
+#: inc/scan.php:657
+#, fuzzy
+msgid "Allow users to input and save multiple post titles."
+msgstr "Erlauben Sie Benutzern, mehrere Posttitel einzugeben und zu speichern."
+
+#: inc/scan.php:700
+#, fuzzy
+msgid "Allows AI auto change title for Post"
+msgstr "Ermöglicht die automatische Änderung des Titels für den Beitrag"
+
+#: Ai-Auto-Tool.php:966
+#, fuzzy
+msgid "API Key"
+msgstr "Api-Schlüssel"
+
+#: inc/aiautotool_tool_extra_config.php:125
+#, fuzzy
+msgid "Block copy content and using Devtool"
+msgstr "Kopieren Sie Inhalte blockieren und verwenden Sie Devtool"
+
+#: inc/aiautotool_tool_extra_config.php:325
+#, fuzzy
+msgid "Block SQL injection, cross-site scripting (XSS)"
+msgstr "SQL-Injektion blockieren, Cross-Site Scripting (Xss)"
+
+#: inc/aiautotool_tool_extra_config.php:320
+#, fuzzy
+msgid "Block SQL injection, cross-site scripting (XSS) from request"
+msgstr "SQL-Injektion blockieren, Cross-Site Scripting (Xss) auf Anfrage"
+
+#: inc/aiautotool_tool_extra_config.php:344
+#, fuzzy
+msgid "Change Time save post auto"
+msgstr "Zeit ändern post auto speichern"
+
+#: Ai-Auto-Tool.php:1040
+#, fuzzy
+msgid "Clear all log Images"
+msgstr "Alle Protokollbilder löschen"
+
+#: inc/aiautotool_tool_extra_config.php:252
+#, fuzzy
+msgid "Compress HTML output"
+msgstr "Komprimieren Sie die Html-Ausgabe"
+
+#: inc/scan.php:735
+#, fuzzy
+msgid "Config Schedule time"
+msgstr "Zeit für die Rückstellung des Zeitplans"
+
+#: inc/scan.php:644
+#, fuzzy
+msgid "Crawl site wp"
+msgstr "Crawl-Stelle Wp"
+
+#: inc/aiautotool_tool_extra_config.php:357
+#, fuzzy
+msgid "Delete autosave"
+msgstr "Autospeicher löschen"
+
+#: inc/aiautotool_tool_extra_config.php:356
+#, fuzzy
+msgid "Delete revisions"
+msgstr "Revisionen löschen"
+
+#: inc/aiautotool_tool_extra_config.php:372
+#, fuzzy
+msgid "Delete revisions success"
+msgstr "Erfolg bei Revisionen löschen"
+
+#: inc/aiautotool_tool_extra_config.php:389
+#, fuzzy
+msgid "Delete success all drafts"
+msgstr "Erfolg löschen alle Entwürfe"
+
+#: inc/aiautotool_tool_extra_config.php:406
+#, fuzzy
+msgid "Delete success all Trash"
+msgstr "Erfolg löschen alle Müll"
+
+#: inc/aiautotool_tool_extra_config.php:354
+#, fuzzy
+msgid "Delete trash for database optimization"
+msgstr "Papierkorb für Datenbank-Optimierung löschen"
+
+#: inc/aiautotool_tool_extra_config.php:296
+#, fuzzy
+msgid "Disable Feed - Rss"
+msgstr "Futter deaktivieren - Rss"
+
+#: inc/aiautotool_tool_extra_config.php:297
+#, fuzzy
+msgid "Disable feed, Rss,Atom, Rss2 comments, Atom Comments"
+msgstr "Deaktivieren von Feed, Rss, Atom, Rss2 Kommentare, Atom Kommentare"
+
+#: inc/aiautotool_tool_extra_config.php:290
+#, fuzzy
+#| msgid ""
+#| "Disable info feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+#| "start_post_rel_link, index_rel_link, parent_post_rel_link, "
+#| "adjacent_posts_rel_link_wp_head in tag "
+msgid ""
+"Disable info feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head in tag <head> "
+msgstr ""
+"Deaktivieren Sie Info Feed_Links_Extra, Rsd_Link, Wlwmanifest_Link, "
+"Wp_Generator, Start_Post_Rel_Link, Index_Rel_Link, Parent_Post_Rel_Link, "
+"Adjacent_Posts_Rel_Link_Wp_Head in Tag <head>"
+
+#: inc/aiautotool_tool_extra_config.php:266
+#, fuzzy
+msgid "Disable REST API"
+msgstr "Rest-API deaktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:82
+#, fuzzy
+msgid "Disable Update auto"
+msgstr "Aktualisieren automatisch deaktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:88
+#, fuzzy
+msgid "Disable Update Core"
+msgstr "Update-Kern deaktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:95
+#, fuzzy
+msgid "Disable Update Language Packet"
+msgstr "Aktualisierungspaket deaktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:109
+#, fuzzy
+msgid "Disable Update Plugin"
+msgstr "Update-Modul deaktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:102
+#, fuzzy
+msgid "Disable Update Themes"
+msgstr "Update-Themes deaktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:278
+#: inc/aiautotool_tool_extra_config.php:279
+#, fuzzy
+msgid "Disable Wp-Embed"
+msgstr "Wp-Embed deaktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:284
+#: inc/aiautotool_tool_extra_config.php:285
+#, fuzzy
+msgid "Disable X-Pingback"
+msgstr "X-Pingback deaktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:272
+#, fuzzy
+msgid "Disable XML RPC"
+msgstr "Xml RPC deaktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:273
+#, fuzzy
+msgid "Disable XML RPC "
+msgstr "Xml RPC deaktivieren"
+
+#: inc/scan.php:744
+#, fuzzy
+msgid "Edit the wp-config.php file:"
+msgstr "Bearbeiten Sie die Datei Wp-Config.Php:"
+
+#: inc/aiautotool_tool_extra_config.php:61
+#, fuzzy
+#| msgid "Editor"
+msgid "Editor "
+msgstr "Editor"
+
+#: inc/aiautotool_tool_extra_config.php:358
+#, fuzzy
+msgid "Empty trash"
+msgstr "Leerer Abfall"
+
+#: inc/aiautotool_tool_extra_config.php:257
+#, fuzzy
+msgid "Enable HTML compression"
+msgstr "Html-Komprimierung aktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:243
+#, fuzzy
+msgid "Enable Instant-page"
+msgstr "Sofortige Seite aktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:333
+#, fuzzy
+msgid "Enable limit for saved versions"
+msgstr "Limit für gespeicherte Versionen aktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:249
+#, fuzzy
+msgid "Enable Smooth-scroll"
+msgstr "Smooth-Scroll aktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:337
+#, fuzzy
+msgid "Enter the number of saved versions"
+msgstr "Geben Sie die Anzahl der gespeicherten Versionen ein"
+
+#: inc/aiautotool_tool_extra_config.php:375
+#: inc/aiautotool_tool_extra_config.php:392
+#: inc/aiautotool_tool_extra_config.php:409
+#, fuzzy
+msgid "Error. Delete not success!"
+msgstr "Fehler. Löschen Sie nicht Erfolg!"
+
+#: inc/aiautotool_tool_extra_config.php:50
+#, fuzzy
+msgid "Extra Config Settings"
+msgstr "Zusätzliche Konfigurationseinstellungen"
+
+#: Ai-Auto-Tool.php:1045
+#, fuzzy
+msgid "From url"
+msgstr "Aus dem Url"
+
+#: inc/scan.php:757
+#, fuzzy
+msgid "Here:"
+msgstr "Hier, bitte."
+
+#: inc/aiautotool_tool_extra_config.php:162
+#, fuzzy
+msgid "Hide Feedback"
+msgstr "Feedback ausblenden"
+
+#: inc/aiautotool_tool_extra_config.php:176
+#, fuzzy
+msgid "Hide Interface"
+msgstr "Schnittstelle ausblenden"
+
+#: inc/aiautotool_tool_extra_config.php:169
+#, fuzzy
+msgid "Hide Media"
+msgstr "Medien ausblenden"
+
+#: inc/aiautotool_tool_extra_config.php:141
+#, fuzzy
+msgid "Hide News Feed"
+msgstr "Nachrichten-Feed ausblenden"
+
+#: inc/aiautotool_tool_extra_config.php:155
+#, fuzzy
+msgid "Hide Page"
+msgstr "Seite ausblenden"
+
+#: inc/aiautotool_tool_extra_config.php:183
+#, fuzzy
+msgid "Hide Plugins"
+msgstr "Plugins ausblenden"
+
+#: inc/aiautotool_tool_extra_config.php:148
+#, fuzzy
+msgid "Hide Posts"
+msgstr "Beiträge ausblenden"
+
+#: inc/aiautotool_tool_extra_config.php:204
+#, fuzzy
+msgid "Hide setup"
+msgstr "Einrichtung ausblenden"
+
+#: inc/aiautotool_tool_extra_config.php:135
+#, fuzzy
+msgid "Hide the tools on page admin"
+msgstr "Werkzeuge auf der Seite Admin ausblenden"
+
+#: inc/aiautotool_tool_extra_config.php:197
+#, fuzzy
+msgid "Hide tools"
+msgstr "Werkzeuge ausblenden"
+
+#: inc/aiautotool_tool_extra_config.php:190
+#, fuzzy
+msgid "Hide User"
+msgstr "Benutzer ausblenden"
+
+#: Ai-Auto-Tool.php:1106
+#, fuzzy
+msgid "Home"
+msgstr "Zum Anfang"
+
+#. URI of the plugin
+#. Author URI of the plugin
+#, fuzzy
+msgid "https://aiautotool.com"
+msgstr "Https: //Aiautotool.Com"
+
+#: inc/aiautotool_tool_extra_config.php:230
+#, fuzzy
+msgid "If you don't use it, you can turn off Classic CSS on the homepage"
+msgstr ""
+"Wenn Sie es nicht verwenden, können Sie klassische CSS auf der Homepage "
+"deaktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:236
+#, fuzzy
+msgid "If you don't use it, you can turn off Emoji"
+msgstr "Wenn du es nicht benutzt, kannst du Emoji ausschalten."
+
+#: inc/aiautotool_tool_extra_config.php:224
+#, fuzzy
+msgid "If you don't use it, you can turn off Gutenberg CSS on the homepage"
+msgstr ""
+"Wenn Sie es nicht verwenden, können Sie Gutenberg CSS auf der Homepage "
+"deaktivieren"
+
+#: inc/aiautotool_tool_extra_config.php:351
+#, fuzzy
+msgid ""
+"If you enable this function and set automatic limits and save time for posts "
+"or pages, it will reduce the data stored in the database"
+msgstr ""
+"Wenn Sie diese Funktion aktivieren und automatische Limits setzen und Zeit "
+"für Beiträge oder Seiten sparen, werden die in der Datenbank gespeicherten "
+"Daten reduziert."
+
+#: inc/aiautotool_tool_extra_config.php:207
+#, fuzzy
+msgid ""
+"If you feel that the above tools are unnecessary, you can hide them to give "
+"the WP admin a clearer view. This function only hides and does not block "
+"access to the link."
+msgstr ""
+"Wenn Sie das Gefühl haben, dass die oben genannten Tools unnötig sind, "
+"können Sie sie verstecken, um dem Wp Admin eine klarere Ansicht zu geben. "
+"Diese Funktion blendet den Zugriff auf den Link nur aus und blockiert ihn "
+"nicht."
+
+#: inc/scan.php:693
+#, fuzzy
+msgid "If your check , AI has rewrite your title post."
+msgstr "Wenn Sie überprüfen, hat ai Ihren Titeleintrag umgeschrieben."
+
+#: Ai-Auto-Tool.php:1596
+#, fuzzy
+msgid "Images"
+msgstr "Bilder"
+
+#: inc/scan.php:677
+#, fuzzy
+msgid "Input tag for post, have random 3 tag in input."
+msgstr "Eingabe-Tag für Post, haben zufällige 3 Tag in der Eingabe."
+
+#: Ai-Auto-Tool.php:1602
+#, fuzzy
+msgid ""
+"Input title for post Then Click gen Article,Select a phrase and click the "
+"Write button to use this feature"
+msgstr ""
+"Eingabetitel für den Beitrag klicken Sie dann auf Artikel Gen, wählen Sie "
+"eine Phrase und klicken Sie auf die Schreibtaste, um diese Funktion zu "
+"verwenden"
+
+#: inc/aiautotool_tool_extra_config.php:244
+#, fuzzy
+msgid ""
+"Instant-page is a library that allows you to preload the content of a page "
+"into the browser memory simply by hovering over any link on the page. When "
+"you click the link, it provides a fast and seamless experience"
+msgstr ""
+"Instant-Page ist eine Bibliothek, die es Ihnen ermöglicht, den Inhalt einer "
+"Seite in den Browser-Speicher vorzuladen, indem Sie einfach über einen "
+"beliebigen Link auf der Seite schweben. Wenn Sie auf den Link klicken, "
+"bietet es eine schnelle und nahtlose Erfahrung"
+
+#: inc/aiautotool_tool_extra_config.php:218
+#, fuzzy
+msgid ""
+"jQuery Migrate is a library used to maintain the functionality of some "
+"themes and plugins using outdated code. If your website no longer uses this "
+"library, you can turn it off"
+msgstr ""
+"Jquery migration ist eine Bibliothek, die verwendet wird, um die "
+"Funktionalität einiger Themen und Plugins mit veraltetem Code zu erhalten. "
+"Wenn Ihre Website diese Bibliothek nicht mehr verwendet, können Sie sie "
+"ausschalten"
+
+#. Author of the plugin
+#, fuzzy
+msgid "KCT"
+msgstr "Kkt."
+
+#: inc/scan.php:681
+#, fuzzy
+msgid "Language for title, Ai has write content for language your select."
+msgstr ""
+"Sprache für Titel, hat ai schreiben Inhalt für Sprache, die Sie auswählen."
+
+#: Ai-Auto-Tool.php:1036
+#, fuzzy
+msgid "Log Img"
+msgstr "Protokoll Img"
+
+#: inc/scan.php:742
+#, fuzzy
+msgid "Manually set up Cron in WordPress"
+msgstr "Manuelle Einrichtung von Cron in Wordpress"
+
+#: inc/scan.php:655
+#, fuzzy
+msgid "Multiple Post Titles Input"
+msgstr "Eingabe mehrerer Posttitel"
+
+#: Ai-Auto-Tool.php:970
+#, fuzzy
+msgid "New API Key - Select User for API KEY when post Single:"
+msgstr ""
+"Neuer API-Schlüssel - Wählen Sie Benutzer für API-Schlüssel, wenn nach "
+"Single:"
+
+#: inc/scan.php:737
+#, fuzzy
+msgid ""
+"Note: This form only saves the list of titles you enter into a draft. "
+"Configure the time for the AI BOT to run in the background to generate "
+"content for draft articles. For example, if you choose 5 hours, the AI BOT "
+"will automatically select a random draft article every 5 hours and proceed "
+"to create content and images for the article. Afterward, it will "
+"automatically publish the article according to the schedule you set."
+msgstr ""
+"Hinweis: Dieses Formular speichert nur die Liste der Titel, die Sie in einen "
+"Entwurf eingeben. Konfigurieren Sie die Zeit, bis der ai Bot im Hintergrund "
+"läuft, um Inhalte für Entwürfe von Artikeln zu generieren. Zum Beispiel, "
+"wenn Sie 5 Stunden wählen, wird der ai Bot automatisch alle 5 Stunden einen "
+"zufälligen Entwurfsartikel auswählen und fortfahren, Inhalte und Bilder für "
+"den Artikel zu erstellen. Danach wird der Artikel automatisch nach dem von "
+"Ihnen festgelegten Zeitplan veröffentlicht."
+
+#: inc/scan.php:146
+#, fuzzy
+msgid "Number Post for one public Draft"
+msgstr "Nummer für einen öffentlichen Entwurf"
+
+#: inc/aiautotool_tool_extra_config.php:267
+#, fuzzy
+msgid "Nếu bạn không sử dụng REST API thì nên Disable đi để bảo mật website"
+msgstr ""
+"Weitere Informationen finden Sie unter: http://europa.eu."
+"int/comm/comm/en/index_de.htm"
+
+#: inc/scan.php:750
+#, fuzzy
+msgid "Open crontab using the command:"
+msgstr "Öffnen Sie Crontab mit dem Befehl:"
+
+#: inc/scan.php:745
+#, fuzzy
+msgid ""
+"Open the wp-config.php file, usually located in the root directory of your "
+"WordPress website, and add the following line:"
+msgstr ""
+"Öffnen Sie die Wp-Config.Php-Datei, die sich normalerweise im "
+"Wurzelverzeichnis Ihrer Wordpress-Website befindet, und fügen Sie die "
+"folgende Zeile hinzu:"
+
+#: inc/aiautotool_tool_extra_config.php:238
+#, fuzzy
+msgid "Optimization libraries core WP"
+msgstr "Optimierungsbibliotheken Kern Wp"
+
+#: inc/aiautotool_tool_extra_config.php:328
+#, fuzzy
+msgid "Optimize post content in the database"
+msgstr "Inhalte in der Datenbank optimieren"
+
+#: inc/aiautotool_tool_extra_config.php:261
+#, fuzzy
+msgid "Optimize Security For WP"
+msgstr "Optimieren Sie die Sicherheit für Wp"
+
+#: inc/aiautotool_tool_extra_config.php:425
+#, fuzzy
+msgid "Optimize WP"
+msgstr "Wp optimieren"
+
+#: inc/aiautotool_tool_extra_config.php:113
+#, fuzzy
+msgid "Redirect and Block copy content"
+msgstr "Inhalt der Kopie umleiten und blockieren"
+
+#: Ai-Auto-Tool.php:1002 Ai-Auto-Tool.php:1059
+#, fuzzy
+msgid "Remove"
+msgstr "Entfernen"
+
+#: inc/aiautotool_tool_extra_config.php:302
+#, fuzzy
+msgid "Remove version"
+msgstr "Version entfernen"
+
+#: inc/aiautotool_tool_extra_config.php:308
+#, fuzzy
+msgid "Remove version JS, CSS"
+msgstr "Version Js, CSS entfernen"
+
+#: inc/aiautotool_tool_extra_config.php:315
+#, fuzzy
+msgid "Remove version WordPress"
+msgstr "Version entfernen Wordpress"
+
+#: inc/scan.php:759
+#, fuzzy
+msgid ""
+"Represents the Cron interval, here set to every 5 minutes. You can adjust it "
+"as needed."
+msgstr ""
+"Stellt das Cron-Intervall dar, hier alle 5 Minuten eingestellt. Sie können "
+"es nach Bedarf anpassen."
+
+#: inc/aiautotool_tool_extra_config.php:418
+#, fuzzy
+msgid "Save all"
+msgstr "Alle speichern"
+
+#: Ai-Auto-Tool.php:1028 inc/scan.php:155
+#, fuzzy
+msgid "Save Configuration"
+msgstr "Konfiguration speichern"
+
+#: inc/aiautotool_tool_extra_config.php:348
+#, fuzzy
+msgid "Save time (minutes)"
+msgstr "Zeit sparen (Minuten)"
+
+#: inc/scan.php:168 inc/scan.php:172 inc/scan.php:617 inc/scan.php:618
+#: inc/scan.php:643 inc/scan.php:650
+#, fuzzy
+msgid "Schedule AI Post"
+msgstr "Zeitplan für den Dienstplan"
+
+#: inc/scan.php:749
+#, fuzzy
+msgid "Schedule Cron using crontab:"
+msgstr "Zeitplan Cron mit Crontab:"
+
+#: inc/scan.php:97
+#, fuzzy
+msgid "Schedule Post"
+msgstr "Zeitplan"
+
+#: Ai-Auto-Tool.php:1626
+#, fuzzy
+msgid ""
+"Select a phrase and click the <b>Find Image</b> button to use this feature"
+msgstr ""
+"Wählen Sie eine Phrase und klicken Sie auf die <b>Bild suchen </b>Knopf, um "
+"diese Funktion zu verwenden"
+
+#: Ai-Auto-Tool.php:1615
+#, fuzzy
+msgid "Select a phrase and click the <b>Write</b> button to use this feature"
+msgstr ""
+"Wählen Sie eine Phrase und klicken Sie auf die <b>Schreiben </b>Knopf, um "
+"diese Funktion zu verwenden"
+
+#: Ai-Auto-Tool.php:1624
+#, fuzzy
+msgid "Select a phrase and click the Find Image button to use this feature"
+msgstr ""
+"Wählen Sie eine Phrase und klicken Sie auf die Bildsuche Schaltfläche, um "
+"diese Funktion zu verwenden"
+
+#: inc/scan.php:665
+#, fuzzy
+msgid "Select categories for post when post publish"
+msgstr "Wählen Sie Kategorien für den Beitrag, wenn Post veröffentlichen"
+
+#: inc/aiautotool_tool_extra_config.php:250
+#, fuzzy
+msgid ""
+"Smooth-scroll is a library that allows you to create smooth scrolling "
+"effects, making the website appear faster to users"
+msgstr ""
+"Smooth-Scroll ist eine Bibliothek, mit der Sie sanfte Scroll-Effekte "
+"erstellen können, so dass die Website schneller für Benutzer erscheint"
+
+#: Ai-Auto-Tool.php:1605
+#, fuzzy
+msgid "Start socket"
+msgstr "Socket starten"
+
+#: Ai-Auto-Tool.php:1608
+#, fuzzy
+msgid "Start socket Error, Please F5 to reload."
+msgstr "Socket-Fehler starten, bitte F5 zum Reload."
+
+#: inc/scan.php:659
+#, fuzzy
+msgid "Store these titles as draft posts in the WordPress database."
+msgstr ""
+"Speichern Sie diese Titel als Entwurfsposts in der Wordpress Datenbank."
+
+#. Description of the plugin
+#, fuzzy
+msgid ""
+"The AI Auto Tool Plugin is a powerful tool that automates various tasks for "
+"effortless content creation and management."
+msgstr ""
+"Das ai Auto Tool Plugin ist ein leistungsfähiges Tool, das verschiedene "
+"Aufgaben für mühelose Content-Erstellung und -Verwaltung automatisiert."
+
+#: inc/aiautotool_tool_extra_config.php:133
+#, fuzzy
+msgid ""
+"This feature allows you to add Editor classic to the article and product "
+"category description box when you edit"
+msgstr ""
+"Diese Funktion ermöglicht es Ihnen, Editor-Klassiker in den Artikel und "
+"Produktkategorie Beschreibung Feld hinzufügen, wenn Sie bearbeiten"
+
+#: inc/aiautotool_tool_extra_config.php:119
+#, fuzzy
+msgid ""
+"This feature allows you to redirect non-existent links (404 error) to the "
+"homepage"
+msgstr ""
+"Diese Funktion ermöglicht es Ihnen, nicht vorhandene Links (404 Fehler) auf "
+"die Homepage umzuleiten"
+
+#: inc/aiautotool_tool_extra_config.php:326
+#, fuzzy
+msgid ""
+"This feature helps protect the website against attacks such as SQL injection "
+"and cross-site scripting (XSS)."
+msgstr ""
+"Diese Funktion hilft die Website vor Angriffen wie SQL-Injection und Cross-"
+"Site Scripting (Xss) zu schützen."
+
+#: inc/aiautotool_tool_extra_config.php:126
+#, fuzzy
+msgid ""
+"This feature prevents users from copying text, right-clicking, and accessing "
+"Devtool"
+msgstr ""
+"Diese Funktion verhindert das Kopieren von Text, Rechtsklick und Zugriff auf "
+"Devtool"
+
+#: inc/scan.php:130
+#, fuzzy
+msgid "Time public Draft"
+msgstr "Zeit öffentlicher Entwurf"
+
+#: inc/aiautotool_tool_extra_config.php:318
+#, fuzzy
+msgid ""
+"To prevent hackers from probing and exploiting vulnerabilities in outdated "
+"JS, CSS, WordPress versions, it is advisable to conceal the version "
+"information to make it more challenging for them to identify the specific "
+"versions you are using."
+msgstr ""
+"Um zu verhindern, dass Hacker Schwachstellen in veralteten Js, CSS, "
+"Wordpress-Versionen testen und ausnutzen, ist es ratsam, die "
+"Versionsinformationen zu verbergen, um es schwieriger für sie zu machen, die "
+"spezifischen Versionen zu identifizieren, die Sie verwenden."
+
+#: Ai-Auto-Tool.php:1046
+#, fuzzy
+msgid "To Url"
+msgstr "Nach Url"
+
+#: inc/aiautotool_tool_extra_config.php:430
+#, fuzzy
+msgid "Tool Extra Config"
+msgstr "Werkzeug extra config"
+
+#: inc/aiautotool_tool_extra_config.php:430
+#, fuzzy
+msgid "Total tool mini for wp"
+msgstr "Gesamtwerkzeug mini für Wp"
+
+#: inc/aiautotool_tool_extra_config.php:229
+#, fuzzy
+msgid "Turn off Classic CSS"
+msgstr "Klassische CSS ausschalten"
+
+#: inc/aiautotool_tool_extra_config.php:235
+#, fuzzy
+msgid "Turn off Emoji"
+msgstr "Emoji abschalten"
+
+#: inc/aiautotool_tool_extra_config.php:223
+#, fuzzy
+msgid "Turn off Gutenberg CSS"
+msgstr "Gutenberg CSS ausschalten"
+
+#: inc/aiautotool_tool_extra_config.php:217
+#, fuzzy
+msgid "Turn off jQuery Migrate"
+msgstr "Jquery-Migration ausschalten"
+
+#: inc/aiautotool_tool_extra_config.php:212
+#, fuzzy
+msgid "Turn off unnecessary items"
+msgstr "Unnötige Gegenstände ausschalten"
+
+#: inc/aiautotool_tool_extra_config.php:66
+#, fuzzy
+msgid "Turn On Editor Classic"
+msgstr "Einschalten des Editor-Klassikers"
+
+#: inc/aiautotool_tool_extra_config.php:132
+#, fuzzy
+msgid "Turn On Editor classic for Description in categories page"
+msgstr "Editor-Klassiker für Beschreibung in Kategorien einschalten"
+
+#: inc/aiautotool_tool_extra_config.php:79
+#, fuzzy
+msgid "Turn On Widget Classic"
+msgstr "Einschalten Widget classic"
+
+#: inc/aiautotool_tool_extra_config.php:111
+#, fuzzy
+msgid "Turn on/off auto Update of WordPress"
+msgstr "Schalten Sie automatisches Update von Wordpress ein/aus"
+
+#: inc/aiautotool_tool_extra_config.php:258
+#, fuzzy
+msgid ""
+"With this function, HTML will be compressed into a single line, removing "
+"unnecessary characters and spaces to speed up page loading"
+msgstr ""
+"Mit dieser Funktion wird Html in eine einzige Zeile komprimiert, wodurch "
+"unnötige Zeichen und Leerzeichen entfernt werden, um das Laden der Seite zu "
+"beschleunigen"

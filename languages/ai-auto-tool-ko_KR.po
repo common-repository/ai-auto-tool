@@ -1,0 +1,489 @@
+# Copyright (C) 2017 underDEV
+# This file is distributed under the GPL3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ai Auto Tool \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ai-auto-tool\n"
+"POT-Creation-Date: 2023-12-01 08:11+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-04-04 01:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"Language: ko_KR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.3"
+
+#: inc/aiautotool_tool_extra_config.php:291
+msgid ""
+" Disable feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head in tag <head>"
+msgstr "태그 <head>에서 Feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, start_post_rel_link, index_rel_link, parent_post_rel_link, neighbor_posts_rel_link_wp_head를 비활성화합니다."
+#: inc/aiautotool_tool_extra_config.php:118
+msgid "301 page 404 to Home"
+msgstr "301 페이지 404 홈으로"
+#: Ai-Auto-Tool.php:1047
+msgid "Action"
+msgstr "액션"
+#: inc/aiautotool_tool_extra_config.php:67
+msgid "Active Editor Classic for new post and edit"
+msgstr "새 게시 및 편집을 위한 Active Editor Classic"
+#: inc/aiautotool_tool_extra_config.php:80
+msgid "Active Old Widget Classic"
+msgstr "활성 이전 위젯 클래식"
+#: inc/aiautotool_tool_extra_config.php:73
+msgid "add button fontselect, fontsizeselect, separator, table for Editor"
+msgstr "버튼 글꼴 선택, 글꼴 크기 선택, 구분 기호, 편집기용 테이블 추가"
+#: inc/aiautotool_tool_extra_config.php:72
+msgid "Add button for Editor Classic"
+msgstr "Editor Classic용 추가 버튼"
+#: Ai-Auto-Tool.php:980
+msgid "Add New API Key"
+msgstr "새 API 키 추가"
+#: inc/scan.php:703
+msgid "Add Post"
+msgstr "게시물 추가"
+#: Ai-Auto-Tool.php:1618
+msgid "Add To Post"
+msgstr "게시물에 추가"
+#: Ai-Auto-Tool.php:1104 Ai-Auto-Tool.php:1591
+msgid "Ai auto Tool"
+msgstr "Ai 자동 도구"
+#. Name of the plugin
+msgid ""
+"Ai Auto Tool Content Writing Assistant (Bard Writer, ChatGPT ) All in One"
+msgstr "Ai 자동 도구 콘텐츠 작성 도우미(Bard Writer, ChatGPT) 올인원"
+#: Ai-Auto-Tool.php:1595
+msgid "AI Content"
+msgstr "AI 콘텐츠"
+#: Ai-Auto-Tool.php:1021
+msgid "Allow image auto save when aiautotool.com post article"
+msgstr "aiautotool.com에서 기사를 게시할 때 이미지 자동 저장 허용"
+#: inc/scan.php:657
+msgid "Allow users to input and save multiple post titles."
+msgstr "사용자가 여러 개의 게시물 제목을 입력하고 저장할 수 있도록 허용합니다."
+#: inc/scan.php:700
+msgid "Allows AI auto change title for Post"
+msgstr "AI가 게시물 제목 자동 변경을 허용합니다."
+#: Ai-Auto-Tool.php:966
+msgid "API Key"
+msgstr "API 키"
+#: inc/aiautotool_tool_extra_config.php:125
+msgid "Block copy content and using Devtool"
+msgstr "콘텐츠 복사 차단 및 Devtool 사용"
+#: inc/aiautotool_tool_extra_config.php:325
+msgid "Block SQL injection, cross-site scripting (XSS)"
+msgstr "SQL 주입, 크로스 사이트 스크립팅(XSS) 차단"
+#: inc/aiautotool_tool_extra_config.php:320
+msgid "Block SQL injection, cross-site scripting (XSS) from request"
+msgstr "요청으로부터 SQL 주입, XSS(교차 사이트 스크립팅) 차단"
+#: inc/aiautotool_tool_extra_config.php:344
+msgid "Change Time save post auto"
+msgstr "시간 변경 후 자동 저장"
+#: Ai-Auto-Tool.php:1040
+msgid "Clear all log Images"
+msgstr "모든 로그 이미지 지우기"
+#: inc/aiautotool_tool_extra_config.php:252
+msgid "Compress HTML output"
+msgstr "HTML 출력 압축"
+#: inc/scan.php:735
+msgid "Config Schedule time"
+msgstr "구성 일정 시간"
+#: inc/scan.php:644
+msgid "Crawl site wp"
+msgstr "크롤링 사이트 wp"
+#: inc/aiautotool_tool_extra_config.php:357
+msgid "Delete autosave"
+msgstr "자동저장 삭제"
+#: inc/aiautotool_tool_extra_config.php:356
+msgid "Delete revisions"
+msgstr "수정본 삭제"
+#: inc/aiautotool_tool_extra_config.php:372
+msgid "Delete revisions success"
+msgstr "수정본 삭제 성공"
+#: inc/aiautotool_tool_extra_config.php:389
+msgid "Delete success all drafts"
+msgstr "모든 초안 삭제 성공"
+#: inc/aiautotool_tool_extra_config.php:406
+msgid "Delete success all Trash"
+msgstr "성공한 모든 휴지통을 삭제하세요"
+#: inc/aiautotool_tool_extra_config.php:354
+msgid "Delete trash for database optimization"
+msgstr "데이터베이스 최적화를 위해 휴지통을 삭제하세요"
+#: inc/aiautotool_tool_extra_config.php:296
+msgid "Disable Feed - Rss"
+msgstr "피드 비활성화 - Rss"
+#: inc/aiautotool_tool_extra_config.php:297
+msgid "Disable feed, Rss,Atom, Rss2 comments, Atom Comments"
+msgstr "피드 비활성화, Rss,Atom, Rss2 댓글, Atom 댓글"
+#: inc/aiautotool_tool_extra_config.php:290
+msgid ""
+"Disable info feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head in tag <head> "
+msgstr "<head> 태그의 Feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, start_post_rel_link, index_rel_link, parent_post_rel_link, 인접_posts_rel_link_wp_head 정보 비활성화"
+#: inc/aiautotool_tool_extra_config.php:266
+msgid "Disable REST API"
+msgstr "REST API 비활성화"
+#: inc/aiautotool_tool_extra_config.php:82
+msgid "Disable Update auto"
+msgstr "자동 업데이트 비활성화"
+#: inc/aiautotool_tool_extra_config.php:88
+msgid "Disable Update Core"
+msgstr "업데이트 코어 비활성화"
+#: inc/aiautotool_tool_extra_config.php:95
+msgid "Disable Update Language Packet"
+msgstr "업데이트 언어 패킷 비활성화"
+#: inc/aiautotool_tool_extra_config.php:109
+msgid "Disable Update Plugin"
+msgstr "업데이트 플러그인 비활성화"
+#: inc/aiautotool_tool_extra_config.php:102
+msgid "Disable Update Themes"
+msgstr "업데이트 테마 비활성화"
+#: inc/aiautotool_tool_extra_config.php:278
+#: inc/aiautotool_tool_extra_config.php:279
+msgid "Disable Wp-Embed"
+msgstr "Wp-Embed 비활성화"
+#: inc/aiautotool_tool_extra_config.php:284
+#: inc/aiautotool_tool_extra_config.php:285
+msgid "Disable X-Pingback"
+msgstr "X-Pingback 비활성화"
+#: inc/aiautotool_tool_extra_config.php:272
+msgid "Disable XML RPC"
+msgstr "XML RPC 비활성화"
+#: inc/aiautotool_tool_extra_config.php:273
+msgid "Disable XML RPC "
+msgstr "XML RPC 비활성화"
+#: inc/scan.php:744
+msgid "Edit the wp-config.php file:"
+msgstr "wp-config.php 파일을 편집하세요:"
+#: inc/aiautotool_tool_extra_config.php:61
+msgid "Editor "
+msgstr "에디터"
+#: inc/aiautotool_tool_extra_config.php:358
+msgid "Empty trash"
+msgstr "휴지통 비우기"
+#: inc/aiautotool_tool_extra_config.php:257
+msgid "Enable HTML compression"
+msgstr "HTML 압축 활성화"
+#: inc/aiautotool_tool_extra_config.php:243
+msgid "Enable Instant-page"
+msgstr "인스턴트 페이지 활성화"
+#: inc/aiautotool_tool_extra_config.php:333
+msgid "Enable limit for saved versions"
+msgstr "저장된 버전에 대한 제한을 활성화합니다."
+#: inc/aiautotool_tool_extra_config.php:249
+msgid "Enable Smooth-scroll"
+msgstr "부드러운 스크롤 활성화"
+#: inc/aiautotool_tool_extra_config.php:337
+msgid "Enter the number of saved versions"
+msgstr "저장된 버전 수를 입력하세요"
+#: inc/aiautotool_tool_extra_config.php:375
+#: inc/aiautotool_tool_extra_config.php:392
+#: inc/aiautotool_tool_extra_config.php:409
+msgid "Error. Delete not success!"
+msgstr "오류. "
+#: inc/aiautotool_tool_extra_config.php:50
+msgid "Extra Config Settings"
+msgstr "추가 구성 설정"
+#: Ai-Auto-Tool.php:1045
+msgid "From url"
+msgstr "URL에서"
+#: inc/scan.php:757
+msgid "Here:"
+msgstr "여기:"
+#: inc/aiautotool_tool_extra_config.php:162
+msgid "Hide Feedback"
+msgstr "피드백 숨기기"
+#: inc/aiautotool_tool_extra_config.php:176
+msgid "Hide Interface"
+msgstr "인터페이스 숨기기"
+#: inc/aiautotool_tool_extra_config.php:169
+msgid "Hide Media"
+msgstr "미디어 숨기기"
+#: inc/aiautotool_tool_extra_config.php:141
+msgid "Hide News Feed"
+msgstr "뉴스피드 숨기기"
+#: inc/aiautotool_tool_extra_config.php:155
+msgid "Hide Page"
+msgstr "페이지 숨기기"
+#: inc/aiautotool_tool_extra_config.php:183
+msgid "Hide Plugins"
+msgstr "플러그인 숨기기"
+#: inc/aiautotool_tool_extra_config.php:148
+msgid "Hide Posts"
+msgstr "게시물 숨기기"
+#: inc/aiautotool_tool_extra_config.php:204
+msgid "Hide setup"
+msgstr "설정 숨기기"
+#: inc/aiautotool_tool_extra_config.php:135
+msgid "Hide the tools on page admin"
+msgstr "페이지 관리자의 도구 숨기기"
+#: inc/aiautotool_tool_extra_config.php:197
+msgid "Hide tools"
+msgstr "숨기기 도구"
+#: inc/aiautotool_tool_extra_config.php:190
+msgid "Hide User"
+msgstr "사용자 숨기기"
+#: Ai-Auto-Tool.php:1106
+msgid "Home"
+msgstr "홈"
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://aiautotool.com"
+msgstr ""
+#: inc/aiautotool_tool_extra_config.php:230
+msgid "If you don't use it, you can turn off Classic CSS on the homepage"
+msgstr "사용하지 않으시면 홈페이지에서 Classic CSS를 꺼두시면 됩니다."
+#: inc/aiautotool_tool_extra_config.php:236
+msgid "If you don't use it, you can turn off Emoji"
+msgstr "사용하지 않으시면 이모지를 꺼두시면 됩니다"
+#: inc/aiautotool_tool_extra_config.php:224
+msgid "If you don't use it, you can turn off Gutenberg CSS on the homepage"
+msgstr "사용하지 않으시면 홈페이지에서 Gutenberg CSS를 꺼두시면 됩니다"
+#: inc/aiautotool_tool_extra_config.php:351
+msgid ""
+"If you enable this function and set automatic limits and save time for posts "
+"or pages, it will reduce the data stored in the database"
+msgstr "이 기능을 활성화하고 자동 제한을 설정하고 게시물이나 페이지에 대한 시간을 절약하면 데이터베이스에 저장되는 데이터가 줄어듭니다."
+#: inc/aiautotool_tool_extra_config.php:207
+msgid ""
+"If you feel that the above tools are unnecessary, you can hide them to give "
+"the WP admin a clearer view. This function only hides and does not block "
+"access to the link."
+msgstr "위 도구가 불필요하다고 생각되면 해당 도구를 숨겨 WP 관리자에게 더 명확한 보기를 제공할 수 있습니다. "
+#: inc/scan.php:693
+msgid "If your check , AI has rewrite your title post."
+msgstr "확인하면 AI가 제목 게시물을 다시 작성했습니다."
+#: Ai-Auto-Tool.php:1596
+msgid "Images"
+msgstr "이미지"
+#: inc/scan.php:677
+msgid "Input tag for post, have random 3 tag in input."
+msgstr "게시물에 대한 입력 태그, 입력에 임의의 3개 태그가 있습니다."
+#: Ai-Auto-Tool.php:1602
+msgid ""
+"Input title for post Then Click gen Article,Select a phrase and click the "
+"Write button to use this feature"
+msgstr "게시물 제목 입력 그런 다음 기사 작성을 클릭하고 문구를 선택한 후 쓰기 버튼을 클릭하여 이 기능을 사용하세요."
+#: inc/aiautotool_tool_extra_config.php:244
+msgid ""
+"Instant-page is a library that allows you to preload the content of a page "
+"into the browser memory simply by hovering over any link on the page. When "
+"you click the link, it provides a fast and seamless experience"
+msgstr "인스턴트 페이지는 페이지의 링크 위로 마우스를 가져가기만 하면 페이지의 콘텐츠를 브라우저 메모리에 미리 로드할 수 있는 라이브러리입니다. "
+#: inc/aiautotool_tool_extra_config.php:218
+msgid ""
+"jQuery Migrate is a library used to maintain the functionality of some "
+"themes and plugins using outdated code. If your website no longer uses this "
+"library, you can turn it off"
+msgstr "jQuery Migrate는 오래된 코드를 사용하여 일부 테마 및 플러그인의 기능을 유지하는 데 사용되는 라이브러리입니다. "
+#. Author of the plugin
+msgid "KCT"
+msgstr ""
+#: inc/scan.php:681
+msgid "Language for title, Ai has write content for language your select."
+msgstr "제목 언어, Ai는 선택한 언어에 대한 내용을 작성했습니다."
+#: Ai-Auto-Tool.php:1036
+msgid "Log Img"
+msgstr "로그 이미지"
+#: inc/scan.php:742
+msgid "Manually set up Cron in WordPress"
+msgstr "워드프레스에서 Cron을 수동으로 설정하세요"
+#: inc/scan.php:655
+msgid "Multiple Post Titles Input"
+msgstr "여러 게시물 제목 입력"
+#: Ai-Auto-Tool.php:970
+msgid "New API Key - Select User for API KEY when post Single:"
+msgstr "새 API 키 - 싱글 게시 시 API 키에 대한 사용자 선택:"
+#: inc/scan.php:737
+msgid ""
+"Note: This form only saves the list of titles you enter into a draft. "
+"Configure the time for the AI BOT to run in the background to generate "
+"content for draft articles. For example, if you choose 5 hours, the AI BOT "
+"will automatically select a random draft article every 5 hours and proceed "
+"to create content and images for the article. Afterward, it will "
+"automatically publish the article according to the schedule you set."
+msgstr "참고: 이 양식은 초안에 입력한 제목 목록만 저장합니다. "
+#: inc/scan.php:146
+msgid "Number Post for one public Draft"
+msgstr "하나의 공개 초안을 위한 번호 포스트"
+#: inc/aiautotool_tool_extra_config.php:267
+msgid "Nếu bạn không sử dụng REST API thì nên Disable đi để bảo mật website"
+msgstr "Nếu bạn không sử dụng REST API thì nên 웹사이트 비활성화"
+#: inc/scan.php:750
+msgid "Open crontab using the command:"
+msgstr "다음 명령을 사용하여 crontab을 엽니다."
+#: inc/scan.php:745
+msgid ""
+"Open the wp-config.php file, usually located in the root directory of your "
+"WordPress website, and add the following line:"
+msgstr "일반적으로 WordPress 웹사이트의 루트 디렉터리에 있는 wp-config.php 파일을 열고 다음 줄을 추가합니다."
+#: inc/aiautotool_tool_extra_config.php:238
+msgid "Optimization libraries core WP"
+msgstr "최적화 라이브러리 코어 WP"
+#: inc/aiautotool_tool_extra_config.php:328
+msgid "Optimize post content in the database"
+msgstr "데이터베이스의 게시물 콘텐츠 최적화"
+#: inc/aiautotool_tool_extra_config.php:261
+msgid "Optimize Security For WP"
+msgstr "WP의 보안 최적화"
+#: inc/aiautotool_tool_extra_config.php:425
+msgid "Optimize WP"
+msgstr "WP 최적화"
+#: inc/aiautotool_tool_extra_config.php:113
+msgid "Redirect and Block copy content"
+msgstr "리디렉션 및 복사 콘텐츠 차단"
+#: Ai-Auto-Tool.php:1002 Ai-Auto-Tool.php:1059
+msgid "Remove"
+msgstr "제거"
+#: inc/aiautotool_tool_extra_config.php:302
+msgid "Remove version"
+msgstr "버전 제거"
+#: inc/aiautotool_tool_extra_config.php:308
+msgid "Remove version JS, CSS"
+msgstr "JS, CSS 버전 제거"
+#: inc/aiautotool_tool_extra_config.php:315
+msgid "Remove version WordPress"
+msgstr "워드프레스 버전 제거"
+#: inc/scan.php:759
+msgid ""
+"Represents the Cron interval, here set to every 5 minutes. You can adjust it "
+"as needed."
+msgstr "Cron 간격을 나타내며 여기서는 5분마다로 설정됩니다. "
+#: inc/aiautotool_tool_extra_config.php:418
+msgid "Save all"
+msgstr "모두 저장"
+#: Ai-Auto-Tool.php:1028 inc/scan.php:155
+msgid "Save Configuration"
+msgstr "구성 저장"
+#: inc/aiautotool_tool_extra_config.php:348
+msgid "Save time (minutes)"
+msgstr "저장 시간(분)"
+#: inc/scan.php:168 inc/scan.php:172 inc/scan.php:617 inc/scan.php:618
+#: inc/scan.php:643 inc/scan.php:650
+msgid "Schedule AI Post"
+msgstr "AI 포스트 예약"
+#: inc/scan.php:749
+msgid "Schedule Cron using crontab:"
+msgstr "crontab을 사용하여 Cron을 예약합니다."
+#: inc/scan.php:97
+msgid "Schedule Post"
+msgstr "일정 게시"
+#: Ai-Auto-Tool.php:1626
+msgid ""
+"Select a phrase and click the <b>Find Image</b> button to use this feature"
+msgstr "이 기능을 사용하려면 문구를 선택하고 <b>이미지 찾기</b> 버튼을 클릭하세요."
+#: Ai-Auto-Tool.php:1615
+msgid "Select a phrase and click the <b>Write</b> button to use this feature"
+msgstr "이 기능을 사용하려면 문구를 선택하고 <b>쓰기</b> 버튼을 클릭하세요."
+#: Ai-Auto-Tool.php:1624
+msgid "Select a phrase and click the Find Image button to use this feature"
+msgstr "문구를 선택하고 이미지 찾기 버튼을 클릭하면 이 기능을 사용할 수 있습니다"
+#: inc/scan.php:665
+msgid "Select categories for post when post publish"
+msgstr "포스트 게시 시 게시물 카테고리 선택"
+#: inc/aiautotool_tool_extra_config.php:250
+msgid ""
+"Smooth-scroll is a library that allows you to create smooth scrolling "
+"effects, making the website appear faster to users"
+msgstr "Smooth-scroll은 부드러운 스크롤 효과를 생성하여 웹 사이트가 사용자에게 더 빠르게 표시되도록 하는 라이브러리입니다."
+#: Ai-Auto-Tool.php:1605
+msgid "Start socket"
+msgstr "시작 소켓"
+#: Ai-Auto-Tool.php:1608
+msgid "Start socket Error, Please F5 to reload."
+msgstr "소켓 시작 오류입니다. 다시 로드하려면 F5 키를 누르십시오."
+#: inc/scan.php:659
+msgid "Store these titles as draft posts in the WordPress database."
+msgstr "이 제목을 WordPress 데이터베이스에 초안 게시물로 저장하세요."
+#. Description of the plugin
+msgid ""
+"The AI Auto Tool Plugin is a powerful tool that automates various tasks for "
+"effortless content creation and management."
+msgstr "AI 자동 도구 플러그인은 간편한 콘텐츠 생성 및 관리를 위해 다양한 작업을 자동화하는 강력한 도구입니다."
+#: inc/aiautotool_tool_extra_config.php:133
+msgid ""
+"This feature allows you to add Editor classic to the article and product "
+"category description box when you edit"
+msgstr "이 기능을 사용하면 기사 편집 시 기사 및 제품 카테고리 설명 상자에 Editor classic을 추가할 수 있습니다."
+#: inc/aiautotool_tool_extra_config.php:119
+msgid ""
+"This feature allows you to redirect non-existent links (404 error) to the "
+"homepage"
+msgstr "이 기능을 사용하면 존재하지 않는 링크(404 오류)를 홈페이지로 리디렉션할 수 있습니다."
+#: inc/aiautotool_tool_extra_config.php:326
+msgid ""
+"This feature helps protect the website against attacks such as SQL injection "
+"and cross-site scripting (XSS)."
+msgstr "이 기능은 SQL 삽입 및 XSS(교차 사이트 스크립팅)와 같은 공격으로부터 웹 사이트를 보호하는 데 도움이 됩니다."
+#: inc/aiautotool_tool_extra_config.php:126
+msgid ""
+"This feature prevents users from copying text, right-clicking, and accessing "
+"Devtool"
+msgstr "이 기능은 사용자가 텍스트 복사, 마우스 오른쪽 버튼 클릭 및 Devtool 액세스를 방지합니다."
+#: inc/scan.php:130
+msgid "Time public Draft"
+msgstr "시간 공개 초안"
+#: inc/aiautotool_tool_extra_config.php:318
+msgid ""
+"To prevent hackers from probing and exploiting vulnerabilities in outdated "
+"JS, CSS, WordPress versions, it is advisable to conceal the version "
+"information to make it more challenging for them to identify the specific "
+"versions you are using."
+msgstr "해커가 오래된 JS, CSS, WordPress 버전의 취약점을 조사하고 악용하는 것을 방지하려면 사용 중인 특정 버전을 식별하기 어렵게 만들기 위해 버전 정보를 숨기는 것이 좋습니다."
+#: Ai-Auto-Tool.php:1046
+msgid "To Url"
+msgstr "URL로"
+#: inc/aiautotool_tool_extra_config.php:430
+msgid "Tool Extra Config"
+msgstr "도구 추가 구성"
+#: inc/aiautotool_tool_extra_config.php:430
+msgid "Total tool mini for wp"
+msgstr "WP용 토탈툴 미니"
+#: inc/aiautotool_tool_extra_config.php:229
+msgid "Turn off Classic CSS"
+msgstr "클래식 CSS 끄기"
+#: inc/aiautotool_tool_extra_config.php:235
+msgid "Turn off Emoji"
+msgstr "이모지 끄기"
+#: inc/aiautotool_tool_extra_config.php:223
+msgid "Turn off Gutenberg CSS"
+msgstr "구텐베르그 CSS 끄기"
+#: inc/aiautotool_tool_extra_config.php:217
+msgid "Turn off jQuery Migrate"
+msgstr "jQuery 마이그레이션 끄기"
+#: inc/aiautotool_tool_extra_config.php:212
+msgid "Turn off unnecessary items"
+msgstr "불필요한 항목을 끄세요"
+#: inc/aiautotool_tool_extra_config.php:66
+msgid "Turn On Editor Classic"
+msgstr "에디터 클래식 켜기"
+#: inc/aiautotool_tool_extra_config.php:132
+msgid "Turn On Editor classic for Description in categories page"
+msgstr "카테고리 페이지의 설명을 위해 Editor classic을 켭니다."
+#: inc/aiautotool_tool_extra_config.php:79
+msgid "Turn On Widget Classic"
+msgstr "위젯 클래식 켜기"
+#: inc/aiautotool_tool_extra_config.php:111
+msgid "Turn on/off auto Update of WordPress"
+msgstr "워드프레스 자동 업데이트 켜기/끄기"
+#: inc/aiautotool_tool_extra_config.php:258
+msgid ""
+"With this function, HTML will be compressed into a single line, removing "
+"unnecessary characters and spaces to speed up page loading"
+msgstr "이 기능을 사용하면 HTML이 한 줄로 압축되어 불필요한 문자와 공백을 제거하여 페이지 로딩 속도를 높입니다."
+
+

@@ -1,0 +1,692 @@
+# Copyright (C) 2017 underDEV
+# This file is distributed under the GPL3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ai Auto Tool \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ai-auto-tool\n"
+"POT-Creation-Date: 2023-11-30 17:16+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2023-12-01 15:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: Tiếng Việt\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.1"
+
+#: inc/aiautotool_tool_extra_config.php:291
+#, fuzzy
+#| msgid ""
+#| "Disable feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+#| "start_post_rel_link, index_rel_link, parent_post_rel_link, "
+#| "adjacent_posts_rel_link_wp_head in tag "
+msgid ""
+" Disable feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head in tag <head>"
+msgstr ""
+"Tắt feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head trong thẻ"
+
+#: inc/aiautotool_tool_extra_config.php:118
+msgid "301 page 404 to Home"
+msgstr "301 trang 404 về Trang chủ"
+
+#: Ai-Auto-Tool.php:1047
+msgid "Action"
+msgstr "Hành động"
+
+#: inc/aiautotool_tool_extra_config.php:67
+msgid "Active Editor Classic for new post and edit"
+msgstr "Kích hoạt Biên tập Cổ điển cho bài viết mới và chỉnh sửa"
+
+#: inc/aiautotool_tool_extra_config.php:80
+msgid "Active Old Widget Classic"
+msgstr "Kích hoạt Tiện ích Cổ điển cũ"
+
+#: inc/aiautotool_tool_extra_config.php:73
+msgid "add button fontselect, fontsizeselect, separator, table for Editor"
+msgstr "thêm nút fontselect, fontsizeselect, separator, table cho Biên tập"
+
+#: inc/aiautotool_tool_extra_config.php:72
+msgid "Add button for Editor Classic"
+msgstr "Thêm nút cho Biên tập Cổ điển"
+
+#: Ai-Auto-Tool.php:980
+msgid "Add New API Key"
+msgstr "Thêm mới API KEY"
+
+#: inc/scan.php:703
+msgid "Add Post"
+msgstr "Thêm mới Bài viết"
+
+#: Ai-Auto-Tool.php:1618
+msgid "Add To Post"
+msgstr "Thêm nội dung vào Editor"
+
+#: Ai-Auto-Tool.php:1104 Ai-Auto-Tool.php:1591
+msgid "Ai auto Tool"
+msgstr "Ai auto Tool"
+
+#. Name of the plugin
+msgid ""
+"Ai Auto Tool Content Writing Assistant (Bard Writer, ChatGPT ) All in One"
+msgstr ""
+"Trợ lý Soạn thảo Nội dung Tự động AI (Bard Writer, ChatGPT) Tất cả trong Một"
+
+#: Ai-Auto-Tool.php:1595
+msgid "AI Content"
+msgstr "Nội dung AI"
+
+#: Ai-Auto-Tool.php:1021
+msgid "Allow image auto save when aiautotool.com post article"
+msgstr "Cho phép aiautotool lưu hình ảnh vào host khi post bài viết. "
+
+#: inc/scan.php:657
+msgid "Allow users to input and save multiple post titles."
+msgstr ""
+"Cho phép người dùng nhập nhiều dòng tiêu đề bài viết, mỗi dòng là một tiêu "
+"đề."
+
+#: inc/scan.php:700
+msgid "Allows AI auto change title for Post"
+msgstr ""
+"Cho phép AI tự động tạo tiêu đề bài viết dựa vào tiêu đề hiện có và thay đổi "
+"nó"
+
+#: Ai-Auto-Tool.php:966
+msgid "API Key"
+msgstr "API KEY"
+
+#: inc/aiautotool_tool_extra_config.php:125
+msgid "Block copy content and using Devtool"
+msgstr "Chặn sao chép nội dung và sử dụng Devtool"
+
+#: inc/aiautotool_tool_extra_config.php:325
+msgid "Block SQL injection, cross-site scripting (XSS)"
+msgstr "Chặn SQL injection, cross-site scripting (XSS)"
+
+#: inc/aiautotool_tool_extra_config.php:320
+msgid "Block SQL injection, cross-site scripting (XSS) from request"
+msgstr "Chặn SQL injection, cross-site scripting (XSS) từ yêu cầu"
+
+#: inc/aiautotool_tool_extra_config.php:344
+msgid "Change Time save post auto"
+msgstr "Thay đổi Thời gian lưu bài viết tự động"
+
+#: Ai-Auto-Tool.php:1040
+msgid "Clear all log Images"
+msgstr "Xoá log hình ảnh đã lưu"
+
+#: inc/aiautotool_tool_extra_config.php:252
+msgid "Compress HTML output"
+msgstr "Nén đầu ra HTML"
+
+#: inc/scan.php:735
+msgid "Config Schedule time"
+msgstr "Cấu hình thời gian chạy Cron"
+
+#: inc/scan.php:644
+msgid "Crawl site wp"
+msgstr "Cào một site WP mở wp-json"
+
+#: inc/aiautotool_tool_extra_config.php:357
+msgid "Delete autosave"
+msgstr "Xoá  các bản auto Save"
+
+#: inc/aiautotool_tool_extra_config.php:356
+msgid "Delete revisions"
+msgstr "Xóa bản sửa đổi"
+
+#: inc/aiautotool_tool_extra_config.php:372
+msgid "Delete revisions success"
+msgstr "Xóa bản sửa đổi thành công"
+
+#: inc/aiautotool_tool_extra_config.php:389
+msgid "Delete success all drafts"
+msgstr "Xóa thành công tất cả các bản nháp"
+
+#: inc/aiautotool_tool_extra_config.php:406
+msgid "Delete success all Trash"
+msgstr "Xóa thành công tất cả bài viết trong Thùng rác"
+
+#: inc/aiautotool_tool_extra_config.php:354
+msgid "Delete trash for database optimization"
+msgstr "Xóa rác để tối ưu hóa cơ sở dữ liệu"
+
+#: inc/aiautotool_tool_extra_config.php:296
+msgid "Disable Feed - Rss"
+msgstr "Tắt Feed - Rss"
+
+#: inc/aiautotool_tool_extra_config.php:297
+msgid "Disable feed, Rss,Atom, Rss2 comments, Atom Comments"
+msgstr "Tắt feed, Rss, Atom, Rss2 comments, Atom Comments"
+
+#: inc/aiautotool_tool_extra_config.php:290
+#, fuzzy
+#| msgid ""
+#| "Disable info feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+#| "start_post_rel_link, index_rel_link, parent_post_rel_link, "
+#| "adjacent_posts_rel_link_wp_head in tag "
+msgid ""
+"Disable info feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head in tag <head> "
+msgstr ""
+"Tắt thông tin feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head trong thẻ"
+
+#: inc/aiautotool_tool_extra_config.php:266
+msgid "Disable REST API"
+msgstr "Tắt REST API"
+
+#: inc/aiautotool_tool_extra_config.php:82
+msgid "Disable Update auto"
+msgstr "Tắt Cập nhật tự động"
+
+#: inc/aiautotool_tool_extra_config.php:88
+msgid "Disable Update Core"
+msgstr "Tắt Cập nhật Core"
+
+#: inc/aiautotool_tool_extra_config.php:95
+msgid "Disable Update Language Packet"
+msgstr "Tắt Cập nhật Gói ngôn ngữ"
+
+#: inc/aiautotool_tool_extra_config.php:109
+msgid "Disable Update Plugin"
+msgstr "Tắt Cập nhật Plugin"
+
+#: inc/aiautotool_tool_extra_config.php:102
+msgid "Disable Update Themes"
+msgstr "Tắt Cập nhật Chủ đề"
+
+#: inc/aiautotool_tool_extra_config.php:278
+#: inc/aiautotool_tool_extra_config.php:279
+msgid "Disable Wp-Embed"
+msgstr "Tắt Wp-Embed"
+
+#: inc/aiautotool_tool_extra_config.php:284
+#: inc/aiautotool_tool_extra_config.php:285
+msgid "Disable X-Pingback"
+msgstr "Tắt X-Pingback"
+
+#: inc/aiautotool_tool_extra_config.php:272
+msgid "Disable XML RPC"
+msgstr "Tắt XML RPC"
+
+#: inc/aiautotool_tool_extra_config.php:273
+msgid "Disable XML RPC "
+msgstr "Tắt XML RPC"
+
+#: inc/scan.php:744
+msgid "Edit the wp-config.php file:"
+msgstr "Chỉnh sửa file wp-config.php"
+
+#: inc/aiautotool_tool_extra_config.php:61
+#, fuzzy
+#| msgid "Editor"
+msgid "Editor "
+msgstr "Biên tập"
+
+#: inc/aiautotool_tool_extra_config.php:358
+msgid "Empty trash"
+msgstr "Xoá các bài viết trong thùng rác"
+
+#: inc/aiautotool_tool_extra_config.php:257
+msgid "Enable HTML compression"
+msgstr "Bật nén HTML"
+
+#: inc/aiautotool_tool_extra_config.php:243
+msgid "Enable Instant-page"
+msgstr "Bật Instant-page"
+
+#: inc/aiautotool_tool_extra_config.php:333
+msgid "Enable limit for saved versions"
+msgstr "Bật giới hạn cho phiên bản đã lưu"
+
+#: inc/aiautotool_tool_extra_config.php:249
+msgid "Enable Smooth-scroll"
+msgstr "Bật Smooth-scroll"
+
+#: inc/aiautotool_tool_extra_config.php:337
+msgid "Enter the number of saved versions"
+msgstr "Nhập số lượng phiên bản đã lưu"
+
+#: inc/aiautotool_tool_extra_config.php:375
+#: inc/aiautotool_tool_extra_config.php:392
+#: inc/aiautotool_tool_extra_config.php:409
+msgid "Error. Delete not success!"
+msgstr "Lỗi! xoá không thành công"
+
+#: inc/aiautotool_tool_extra_config.php:50
+msgid "Extra Config Settings"
+msgstr "Cấu hình tool Extra"
+
+#: Ai-Auto-Tool.php:1045
+msgid "From url"
+msgstr "Url hình Nguồn"
+
+#: inc/scan.php:757
+msgid "Here:"
+msgstr "Ở đây:"
+
+#: inc/aiautotool_tool_extra_config.php:162
+msgid "Hide Feedback"
+msgstr "Ẩn Phản hồi"
+
+#: inc/aiautotool_tool_extra_config.php:176
+msgid "Hide Interface"
+msgstr "Ẩn Giao diện"
+
+#: inc/aiautotool_tool_extra_config.php:169
+msgid "Hide Media"
+msgstr "Ẩn Phương tiện"
+
+#: inc/aiautotool_tool_extra_config.php:141
+msgid "Hide News Feed"
+msgstr "Ẩn Dòng tin tức"
+
+#: inc/aiautotool_tool_extra_config.php:155
+msgid "Hide Page"
+msgstr "Ẩn Trang"
+
+#: inc/aiautotool_tool_extra_config.php:183
+msgid "Hide Plugins"
+msgstr "Ẩn Plugin"
+
+#: inc/aiautotool_tool_extra_config.php:148
+msgid "Hide Posts"
+msgstr "Ẩn Bài viết"
+
+#: inc/aiautotool_tool_extra_config.php:204
+msgid "Hide setup"
+msgstr "Ẩn Cài đặt"
+
+#: inc/aiautotool_tool_extra_config.php:135
+msgid "Hide the tools on page admin"
+msgstr "Ẩn các công cụ trên trang quản trị"
+
+#: inc/aiautotool_tool_extra_config.php:197
+msgid "Hide tools"
+msgstr "Ẩn Công cụ"
+
+#: inc/aiautotool_tool_extra_config.php:190
+msgid "Hide User"
+msgstr "Ẩn Người dùng"
+
+#: Ai-Auto-Tool.php:1106
+msgid "Home"
+msgstr "Trang chủ"
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://aiautotool.com"
+msgstr "https://aiautotool.com"
+
+#: inc/aiautotool_tool_extra_config.php:230
+msgid "If you don't use it, you can turn off Classic CSS on the homepage"
+msgstr "Nếu bạn không sử dụng nó, bạn có thể tắt CSS Cổ điển trên trang chủ"
+
+#: inc/aiautotool_tool_extra_config.php:236
+msgid "If you don't use it, you can turn off Emoji"
+msgstr "Nếu bạn không sử dụng nó, bạn có thể tắt Emoji"
+
+#: inc/aiautotool_tool_extra_config.php:224
+msgid "If you don't use it, you can turn off Gutenberg CSS on the homepage"
+msgstr "Nếu bạn không sử dụng nó, bạn có thể tắt CSS Gutenberg trên trang chủ"
+
+#: inc/aiautotool_tool_extra_config.php:351
+msgid ""
+"If you enable this function and set automatic limits and save time for posts "
+"or pages, it will reduce the data stored in the database"
+msgstr ""
+"Nếu bạn bật chức năng này và đặt giới hạn tự động và thời gian lưu cho bài "
+"viết hoặc trang, nó sẽ giảm dữ liệu được lưu trong cơ sở dữ liệu"
+
+#: inc/aiautotool_tool_extra_config.php:207
+msgid ""
+"If you feel that the above tools are unnecessary, you can hide them to give "
+"the WP admin a clearer view. This function only hides and does not block "
+"access to the link."
+msgstr ""
+"Nếu bạn cảm thấy rằng các công cụ trên là không cần thiết, bạn có thể ẩn "
+"chúng để mang lại tầm nhìn rõ ràng cho quản trị WP. Chức năng này chỉ ẩn và "
+"không chặn quyền truy cập vào liên kết."
+
+#: inc/scan.php:693
+msgid "If your check , AI has rewrite your title post."
+msgstr ""
+"Nếu bạn chọn thì AI sẽ được phép viết lại và đổi tiêu đề bài viết bạn vừa "
+"nhập"
+
+#: Ai-Auto-Tool.php:1596
+msgid "Images"
+msgstr "Hình ảnh"
+
+#: inc/scan.php:677
+msgid "Input tag for post, have random 3 tag in input."
+msgstr ""
+"Nhập thẻ tag, cách nhau bởi dấu phẩy. hệ thống sẽ tự động lấy ngẫu nhiên 3 "
+"thẻ tag để thêm cho mỗi bài viết nhập vào."
+
+#: Ai-Auto-Tool.php:1602
+msgid ""
+"Input title for post Then Click gen Article,Select a phrase and click the "
+"Write button to use this feature"
+msgstr ""
+"Nhập tiêu đề bài viết sau đó nhấn vào button Bard write hoặc Chatgpt write "
+"để viết, Dùng chuột chọn một đoạn văn bản trong editor để sử dụng tính năng "
+"này. "
+
+#: inc/aiautotool_tool_extra_config.php:244
+msgid ""
+"Instant-page is a library that allows you to preload the content of a page "
+"into the browser memory simply by hovering over any link on the page. When "
+"you click the link, it provides a fast and seamless experience"
+msgstr ""
+"Instant-page là một thư viện cho phép bạn tải trước nội dung của trang vào "
+"bộ nhớ trình duyệt chỉ bằng cách di chuột qua bất kỳ liên kết nào trên trang."
+" Khi bạn nhấp vào liên kết, nó mang lại trải nghiệm nhanh chóng và mượt mà"
+
+#: inc/aiautotool_tool_extra_config.php:218
+msgid ""
+"jQuery Migrate is a library used to maintain the functionality of some "
+"themes and plugins using outdated code. If your website no longer uses this "
+"library, you can turn it off"
+msgstr ""
+"jQuery Migrate là một thư viện được sử dụng để duy trì chức năng của một số "
+"chủ đề và plugin sử dụng mã lỗi. Nếu trang web của bạn không còn sử dụng thư "
+"viện này, bạn có thể tắt nó"
+
+#. Author of the plugin
+msgid "KCT"
+msgstr "KCT"
+
+#: inc/scan.php:681
+msgid "Language for title, Ai has write content for language your select."
+msgstr ""
+"Nguôn ngữ của tiêu đề bài viết, Hệ thống AI sẽ viết nội dung cho bài viết "
+"dựa trên ngôn ngữ mà bạn chọn."
+
+#: Ai-Auto-Tool.php:1036
+msgid "Log Img"
+msgstr "Log hình ảnh "
+
+#: inc/scan.php:742
+msgid "Manually set up Cron in WordPress"
+msgstr "Thiết lập thủ công Cron trong WordPress"
+
+#: inc/scan.php:655
+msgid "Multiple Post Titles Input"
+msgstr "Nhập nhiều tiêu đề bài viết"
+
+#: Ai-Auto-Tool.php:970
+msgid "New API Key - Select User for API KEY when post Single:"
+msgstr "Key API mới - Chọn User cho API KEY khi đăng Single:"
+
+#: inc/scan.php:737
+msgid ""
+"Note: This form only saves the list of titles you enter into a draft. "
+"Configure the time for the AI BOT to run in the background to generate "
+"content for draft articles. For example, if you choose 5 hours, the AI BOT "
+"will automatically select a random draft article every 5 hours and proceed "
+"to create content and images for the article. Afterward, it will "
+"automatically publish the article according to the schedule you set."
+msgstr ""
+"Lưu ý: Biểu mẫu này chỉ lưu lại danh sách đầu sách bạn nhập vào bản nháp. "
+"Định cấu hình thời gian để AI BOT chạy ngầm tạo nội dung cho bài viết nháp. "
+"Ví dụ: bạn chọn 5 giờ, AI BOT sẽ tự động chọn một bài viết nháp ngẫu nhiên "
+"cứ sau 5 giờ và tiến hành tạo nội dung, hình ảnh cho bài viết. Sau đó, nó sẽ "
+"tự động xuất bản bài viết theo lịch trình bạn đặt."
+
+#: inc/scan.php:146
+msgid "Number Post for one public Draft"
+msgstr "Mỗi lần chạy sẽ publish bao nhiêu bài từ draft?"
+
+#: inc/aiautotool_tool_extra_config.php:267
+msgid "Nếu bạn không sử dụng REST API thì nên Disable đi để bảo mật website"
+msgstr "Nếu bạn không sử dụng REST API, hãy tắt nó để bảo vệ trang web"
+
+#: inc/scan.php:750
+msgid "Open crontab using the command:"
+msgstr "Mở crontab bằng lệnh:"
+
+#: inc/scan.php:745
+msgid ""
+"Open the wp-config.php file, usually located in the root directory of your "
+"WordPress website, and add the following line:"
+msgstr ""
+"Mở tệp wp-config.php, thường nằm trong thư mục gốc của trang web WordPress "
+"của bạn và thêm dòng sau:"
+
+#: inc/aiautotool_tool_extra_config.php:238
+msgid "Optimization libraries core WP"
+msgstr "Tối ưu hóa thư viện Core WP"
+
+#: inc/aiautotool_tool_extra_config.php:328
+msgid "Optimize post content in the database"
+msgstr "Tối ưu hóa nội dung bài viết trong cơ sở dữ liệu"
+
+#: inc/aiautotool_tool_extra_config.php:261
+msgid "Optimize Security For WP"
+msgstr "Tối ưu hóa Bảo mật cho WP"
+
+#: inc/aiautotool_tool_extra_config.php:425
+msgid "Optimize WP"
+msgstr "Tối ưu hóa WP"
+
+#: inc/aiautotool_tool_extra_config.php:113
+msgid "Redirect and Block copy content"
+msgstr "Chuyển hướng và Chặn sao chép nội dung"
+
+#: Ai-Auto-Tool.php:1002 Ai-Auto-Tool.php:1059
+msgid "Remove"
+msgstr "Xóa"
+
+#: inc/aiautotool_tool_extra_config.php:302
+msgid "Remove version"
+msgstr "Xóa phiên bản"
+
+#: inc/aiautotool_tool_extra_config.php:308
+msgid "Remove version JS, CSS"
+msgstr "Xóa phiên bản JS, CSS"
+
+#: inc/aiautotool_tool_extra_config.php:315
+msgid "Remove version WordPress"
+msgstr "Xóa phiên bản WordPress"
+
+#: inc/scan.php:759
+msgid ""
+"Represents the Cron interval, here set to every 5 minutes. You can adjust it "
+"as needed."
+msgstr ""
+"Biểu thị khoảng thời gian Cron, ở đây được đặt thành 5 phút một lần. Bạn có "
+"thể điều chỉnh nó khi cần thiết."
+
+#: inc/aiautotool_tool_extra_config.php:418
+msgid "Save all"
+msgstr "Lưu tất cả"
+
+#: Ai-Auto-Tool.php:1028 inc/scan.php:155
+msgid "Save Configuration"
+msgstr "Lưu Cấu hình"
+
+#: inc/aiautotool_tool_extra_config.php:348
+msgid "Save time (minutes)"
+msgstr "Thời gian lưu (phút)"
+
+#: inc/scan.php:168 inc/scan.php:172 inc/scan.php:617 inc/scan.php:618
+#: inc/scan.php:643 inc/scan.php:650
+msgid "Schedule AI Post"
+msgstr "Lên lịch Bài viết của Trí tuệ Nhân tạo"
+
+#: inc/scan.php:749
+msgid "Schedule Cron using crontab:"
+msgstr "Lên lịch Cron bằng cách sử dụng crontab:"
+
+#: inc/scan.php:97
+msgid "Schedule Post"
+msgstr "Lên lịch Bài viết"
+
+#: Ai-Auto-Tool.php:1626
+msgid ""
+"Select a phrase and click the <b>Find Image</b> button to use this feature"
+msgstr ""
+"Chọn một cụm từ và nhấp vào nút <b>Tìm hình ảnh</b> để sử dụng tính năng này"
+
+#: Ai-Auto-Tool.php:1615
+msgid "Select a phrase and click the <b>Write</b> button to use this feature"
+msgstr "Chọn một cụm từ và nhấp vào nút <b>Viết</b> để sử dụng tính năng này"
+
+#: Ai-Auto-Tool.php:1624
+msgid "Select a phrase and click the Find Image button to use this feature"
+msgstr "Chọn một cụm từ và nhấp vào nút Tìm hình ảnh để sử dụng tính năng này"
+
+#: inc/scan.php:665
+msgid "Select categories for post when post publish"
+msgstr "Chọn danh mục cho bài viết khi công bố"
+
+#: inc/aiautotool_tool_extra_config.php:250
+msgid ""
+"Smooth-scroll is a library that allows you to create smooth scrolling "
+"effects, making the website appear faster to users"
+msgstr ""
+"Smooth-scroll là một thư viện cho phép bạn tạo hiệu ứng cuộn mượt, làm cho "
+"trang web hiển thị nhanh chóng đối với người dùng"
+
+#: Ai-Auto-Tool.php:1605
+msgid "Start socket"
+msgstr "Bắt đầu kết nối "
+
+#: Ai-Auto-Tool.php:1608
+msgid "Start socket Error, Please F5 to reload."
+msgstr "Kết nối bị lỗi, hãy nhấn F5 để tải lại trang"
+
+#: inc/scan.php:659
+msgid "Store these titles as draft posts in the WordPress database."
+msgstr ""
+"Lưu các tiêu đề này như các bài viết nháp trong cơ sở dữ liệu WordPress."
+
+#. Description of the plugin
+msgid ""
+"The AI Auto Tool Plugin is a powerful tool that automates various tasks for "
+"effortless content creation and management."
+msgstr ""
+"Plugin AI Auto Tool là một công cụ mạnh mẽ tự động hóa các nhiệm vụ khác "
+"nhau để tạo và quản lý nội dung một cách dễ dàng."
+
+#: inc/aiautotool_tool_extra_config.php:133
+msgid ""
+"This feature allows you to add Editor classic to the article and product "
+"category description box when you edit"
+msgstr ""
+"Tính năng này cho phép bạn thêm Biên tập cổ điển vào ô mô tả của bài viết và "
+"sản phẩm khi bạn chỉnh sửa"
+
+#: inc/aiautotool_tool_extra_config.php:119
+msgid ""
+"This feature allows you to redirect non-existent links (404 error) to the "
+"homepage"
+msgstr ""
+"Tính năng này cho phép bạn chuyển hướng liên kết không tồn tại (lỗi 404) về "
+"trang chủ"
+
+#: inc/aiautotool_tool_extra_config.php:326
+msgid ""
+"This feature helps protect the website against attacks such as SQL injection "
+"and cross-site scripting (XSS)."
+msgstr ""
+"Tính năng này giúp bảo vệ trang web khỏi các cuộc tấn công như SQL injection "
+"và cross-site scripting (XSS)."
+
+#: inc/aiautotool_tool_extra_config.php:126
+msgid ""
+"This feature prevents users from copying text, right-clicking, and accessing "
+"Devtool"
+msgstr ""
+"Tính năng này ngăn người dùng sao chép văn bản, nhấp chuột phải và truy cập "
+"Devtool"
+
+#: inc/scan.php:130
+msgid "Time public Draft"
+msgstr "Thời gian công khai Dự thảo"
+
+#: inc/aiautotool_tool_extra_config.php:318
+msgid ""
+"To prevent hackers from probing and exploiting vulnerabilities in outdated "
+"JS, CSS, WordPress versions, it is advisable to conceal the version "
+"information to make it more challenging for them to identify the specific "
+"versions you are using."
+msgstr ""
+"Để ngăn chặn hacker khám phá và lợi dụng lỗ hổng trong các phiên bản JS, CSS,"
+" WordPress lỗi thời, nên che giấu thông tin phiên bản để làm cho nó khó nhận "
+"diện hơn đối với họ."
+
+#: Ai-Auto-Tool.php:1046
+msgid "To Url"
+msgstr "URL"
+
+#: inc/aiautotool_tool_extra_config.php:430
+msgid "Tool Extra Config"
+msgstr "Các tiện ích WP"
+
+#: inc/aiautotool_tool_extra_config.php:430
+msgid "Total tool mini for wp"
+msgstr "Các tiện ích mini cho WP"
+
+#: inc/aiautotool_tool_extra_config.php:229
+msgid "Turn off Classic CSS"
+msgstr "Tắt CSS Cổ điển"
+
+#: inc/aiautotool_tool_extra_config.php:235
+msgid "Turn off Emoji"
+msgstr "Tắt Emoji"
+
+#: inc/aiautotool_tool_extra_config.php:223
+msgid "Turn off Gutenberg CSS"
+msgstr "Tắt CSS Gutenberg"
+
+#: inc/aiautotool_tool_extra_config.php:217
+msgid "Turn off jQuery Migrate"
+msgstr "Tắt jQuery Migrate"
+
+#: inc/aiautotool_tool_extra_config.php:212
+msgid "Turn off unnecessary items"
+msgstr "Tắt các mục không cần thiết"
+
+#: inc/aiautotool_tool_extra_config.php:66
+msgid "Turn On Editor Classic"
+msgstr "Bật Chế độ Biên tập Cổ điển editor cũ"
+
+#: inc/aiautotool_tool_extra_config.php:132
+msgid "Turn On Editor classic for Description in categories page"
+msgstr "Bật Biên tập cổ điển cho Mô tả trang trong trang Danh mục"
+
+#: inc/aiautotool_tool_extra_config.php:79
+msgid "Turn On Widget Classic"
+msgstr "Bật Tiện ích Cổ điển"
+
+#: inc/aiautotool_tool_extra_config.php:111
+msgid "Turn on/off auto Update of WordPress"
+msgstr "Bật/Tắt Cập nhật tự động WordPress"
+
+#: inc/aiautotool_tool_extra_config.php:258
+msgid ""
+"With this function, HTML will be compressed into a single line, removing "
+"unnecessary characters and spaces to speed up page loading"
+msgstr ""
+"Với chức năng này, HTML sẽ được nén thành một dòng duy nhất, loại bỏ các ký "
+"tự và khoảng trắng không cần thiết để tăng tốc độ tải trang"

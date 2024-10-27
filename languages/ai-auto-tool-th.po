@@ -1,0 +1,810 @@
+# Copyright (C) 2017 underDEV
+# This file is distributed under the GPL3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ai Auto Tool \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ai-auto-tool\n"
+"POT-Creation-Date: 2023-11-30 17:16+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2023-12-01 15:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.1"
+
+#: inc/aiautotool_tool_extra_config.php:291
+#, fuzzy
+#| msgid ""
+#| "Disable feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+#| "start_post_rel_link, index_rel_link, parent_post_rel_link, "
+#| "adjacent_posts_rel_link_wp_head in tag "
+msgid ""
+" Disable feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head in tag <head>"
+msgstr ""
+"ปิด Feed_Links_Extra, Rsd_Link, Wlwmanifest_Link, Wp_Generator, "
+"Start_Post_Rel_Link, Index_Rel_Link, Parent_Post_Rel_Link, "
+"Adjacent_Posts_Rel_Link_Wp_Head ในแท็ก <head>"
+
+#: inc/aiautotool_tool_extra_config.php:118
+#, fuzzy
+msgid "301 page 404 to Home"
+msgstr "301 หน้า 404 ไปยัง บ้าน"
+
+#: Ai-Auto-Tool.php:1047
+#, fuzzy
+msgid "Action"
+msgstr "การกระทํา"
+
+#: inc/aiautotool_tool_extra_config.php:67
+#, fuzzy
+msgid "Active Editor Classic for new post and edit"
+msgstr "การแก้ไขคลาสสิกที่ใช้งานสําหรับโพสต์ใหม่และแก้ไข"
+
+#: inc/aiautotool_tool_extra_config.php:80
+#, fuzzy
+msgid "Active Old Widget Classic"
+msgstr "วิดเจ็ตคลาสสิค"
+
+#: inc/aiautotool_tool_extra_config.php:73
+#, fuzzy
+msgid "add button fontselect, fontsizeselect, separator, table for Editor"
+msgstr "เพิ่มปุ่ม Fontselect, Fontsizeselect, Separator, ตารางสําหรับตัวแก้ไข"
+
+#: inc/aiautotool_tool_extra_config.php:72
+#, fuzzy
+msgid "Add button for Editor Classic"
+msgstr "เพิ่มปุ่มสําหรับเครื่องแก้ไขคลาสสิก"
+
+#: Ai-Auto-Tool.php:980
+msgid "Add New API Key"
+msgstr "เพิ่มคีย์ API ใหม่"
+
+#: inc/scan.php:703
+#, fuzzy
+msgid "Add Post"
+msgstr "เพิ่มโพสต์"
+
+#: Ai-Auto-Tool.php:1618
+#, fuzzy
+msgid "Add To Post"
+msgstr "เพิ่มให้โพสต์"
+
+#: Ai-Auto-Tool.php:1104 Ai-Auto-Tool.php:1591
+#, fuzzy
+msgid "Ai auto Tool"
+msgstr "Ai เครื่องมือรถยนต์"
+
+#. Name of the plugin
+#, fuzzy
+msgid ""
+"Ai Auto Tool Content Writing Assistant (Bard Writer, ChatGPT ) All in One"
+msgstr ""
+"Ai เครื่องมืออัตโนมัติเนื้อหาเขียนผู้ช่วย (ผู้เขียนบาร์, Chatgpt) "
+"ทั้งหมดในหนึ่ง"
+
+#: Ai-Auto-Tool.php:1595
+#, fuzzy
+msgid "AI Content"
+msgstr "ชอบความสุข"
+
+#: Ai-Auto-Tool.php:1021
+#, fuzzy
+msgid "Allow image auto save when aiautotool.com post article"
+msgstr "ให้ภาพอัตโนมัติบันทึกเมื่อ Aiautotool.Com โพสต์บทความ"
+
+#: inc/scan.php:657
+#, fuzzy
+msgid "Allow users to input and save multiple post titles."
+msgstr "ให้ผู้ใช้เข้าและบันทึกชื่อโพสต์หลายรายการ"
+
+#: inc/scan.php:700
+#, fuzzy
+msgid "Allows AI auto change title for Post"
+msgstr "อนุญาต ai auto เปลี่ยนชื่อสําหรับโพสต์"
+
+#: Ai-Auto-Tool.php:966
+#, fuzzy
+msgid "API Key"
+msgstr "ปิดคีย์"
+
+#: inc/aiautotool_tool_extra_config.php:125
+#, fuzzy
+msgid "Block copy content and using Devtool"
+msgstr "บล็อกการคัดลอกเนื้อหาและใช้ Devtool"
+
+#: inc/aiautotool_tool_extra_config.php:325
+#, fuzzy
+msgid "Block SQL injection, cross-site scripting (XSS)"
+msgstr "บล็อกฉีด SQL, Cross-Site Scripting (Xss)"
+
+#: inc/aiautotool_tool_extra_config.php:320
+#, fuzzy
+msgid "Block SQL injection, cross-site scripting (XSS) from request"
+msgstr "บล็อกการฉีด SQL, Cross-Site Scripting (Xss) จากคําขอ"
+
+#: inc/aiautotool_tool_extra_config.php:344
+#, fuzzy
+msgid "Change Time save post auto"
+msgstr "เปลี่ยนเวลาบันทึกรถโพสต์"
+
+#: Ai-Auto-Tool.php:1040
+#, fuzzy
+msgid "Clear all log Images"
+msgstr "ล้างภาพทั้งหมด"
+
+#: inc/aiautotool_tool_extra_config.php:252
+#, fuzzy
+msgid "Compress HTML output"
+msgstr "การบีบอัด HDL"
+
+#: inc/scan.php:735
+#, fuzzy
+msgid "Config Schedule time"
+msgstr "การกําหนดเวลา"
+
+#: inc/scan.php:644
+#, fuzzy
+msgid "Crawl site wp"
+msgstr "Crawl เว็บไซต์ WP"
+
+#: inc/aiautotool_tool_extra_config.php:357
+#, fuzzy
+msgid "Delete autosave"
+msgstr "ลบรถไฟ"
+
+#: inc/aiautotool_tool_extra_config.php:356
+#, fuzzy
+msgid "Delete revisions"
+msgstr "ลบการตรวจสอบ"
+
+#: inc/aiautotool_tool_extra_config.php:372
+#, fuzzy
+msgid "Delete revisions success"
+msgstr "ลบรีวิวประสบความสําเร็จ"
+
+#: inc/aiautotool_tool_extra_config.php:389
+#, fuzzy
+msgid "Delete success all drafts"
+msgstr "ลบความสําเร็จทุกโครงการ"
+
+#: inc/aiautotool_tool_extra_config.php:406
+#, fuzzy
+msgid "Delete success all Trash"
+msgstr "ลบความสําเร็จทุกขยะ"
+
+#: inc/aiautotool_tool_extra_config.php:354
+#, fuzzy
+msgid "Delete trash for database optimization"
+msgstr "ลบฝุ่นสําหรับการปรับปรุงฐานข้อมูล"
+
+#: inc/aiautotool_tool_extra_config.php:296
+#, fuzzy
+msgid "Disable Feed - Rss"
+msgstr "ปรับปรุงอาหาร - RSS"
+
+#: inc/aiautotool_tool_extra_config.php:297
+#, fuzzy
+msgid "Disable feed, Rss,Atom, Rss2 comments, Atom Comments"
+msgstr "ปล่อย feed, Rss, atom, Rss2 ความคิดเห็น, atom ความคิดเห็น"
+
+#: inc/aiautotool_tool_extra_config.php:290
+#, fuzzy
+#| msgid ""
+#| "Disable info feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+#| "start_post_rel_link, index_rel_link, parent_post_rel_link, "
+#| "adjacent_posts_rel_link_wp_head in tag "
+msgid ""
+"Disable info feed_links_extra, rsd_link, wlwmanifest_link, wp_generator, "
+"start_post_rel_link, index_rel_link, parent_post_rel_link, "
+"adjacent_posts_rel_link_wp_head in tag <head> "
+msgstr ""
+"ปิดข้อมูล Feed_Links_Extra, Rsd_Link, Wlwmanifest_Link, Wp_Generator, "
+"Start_Post_Rel_Link, Index_Rel_Link, Parent_Post_Rel_Link, "
+"Adjacent_Posts_Rel_Link_Wp_Head ในแท็ก <head>"
+
+#: inc/aiautotool_tool_extra_config.php:266
+#, fuzzy
+msgid "Disable REST API"
+msgstr "ปิดเพลินกับไฟ"
+
+#: inc/aiautotool_tool_extra_config.php:82
+#, fuzzy
+msgid "Disable Update auto"
+msgstr "ปรับปรุงอัตโนมัติ"
+
+#: inc/aiautotool_tool_extra_config.php:88
+#, fuzzy
+msgid "Disable Update Core"
+msgstr "ปรับปรุง Core"
+
+#: inc/aiautotool_tool_extra_config.php:95
+#, fuzzy
+msgid "Disable Update Language Packet"
+msgstr "ปิดการปรับปรุงภาษาแพคเกจ"
+
+#: inc/aiautotool_tool_extra_config.php:109
+#, fuzzy
+msgid "Disable Update Plugin"
+msgstr "ปลั๊กอินอัพเดต"
+
+#: inc/aiautotool_tool_extra_config.php:102
+#, fuzzy
+msgid "Disable Update Themes"
+msgstr "ปรับปรุงธีม"
+
+#: inc/aiautotool_tool_extra_config.php:278
+#: inc/aiautotool_tool_extra_config.php:279
+#, fuzzy
+msgid "Disable Wp-Embed"
+msgstr "ปิดการใช้งาน Wp-Embed"
+
+#: inc/aiautotool_tool_extra_config.php:284
+#: inc/aiautotool_tool_extra_config.php:285
+#, fuzzy
+msgid "Disable X-Pingback"
+msgstr "ปิดการใช้งาน X-Pingback"
+
+#: inc/aiautotool_tool_extra_config.php:272
+#, fuzzy
+msgid "Disable XML RPC"
+msgstr "ปิดใช้งาน Xml RPC"
+
+#: inc/aiautotool_tool_extra_config.php:273
+#, fuzzy
+msgid "Disable XML RPC "
+msgstr "ปิดใช้งาน Xml RPC"
+
+#: inc/scan.php:744
+#, fuzzy
+msgid "Edit the wp-config.php file:"
+msgstr "แก้ไขไฟล์ Wp-Config.Php:"
+
+#: inc/aiautotool_tool_extra_config.php:61
+#, fuzzy
+#| msgid "Editor"
+msgid "Editor "
+msgstr "ผู้จัดจําหน่าย"
+
+#: inc/aiautotool_tool_extra_config.php:358
+#, fuzzy
+msgid "Empty trash"
+msgstr "สกปรกว่างเปล่า"
+
+#: inc/aiautotool_tool_extra_config.php:257
+#, fuzzy
+msgid "Enable HTML compression"
+msgstr "ปรับการบีบอัด HTML"
+
+#: inc/aiautotool_tool_extra_config.php:243
+#, fuzzy
+msgid "Enable Instant-page"
+msgstr "อนุญาตให้เว็บไซต์ทันที"
+
+#: inc/aiautotool_tool_extra_config.php:333
+#, fuzzy
+msgid "Enable limit for saved versions"
+msgstr "ปรับ จํากัด สําหรับเวอร์ชันที่บันทึก"
+
+#: inc/aiautotool_tool_extra_config.php:249
+#, fuzzy
+msgid "Enable Smooth-scroll"
+msgstr "อนุญาตให้ Smooth-Scroll"
+
+#: inc/aiautotool_tool_extra_config.php:337
+#, fuzzy
+msgid "Enter the number of saved versions"
+msgstr "หมายเลขรุ่นที่บันทึกไว้"
+
+#: inc/aiautotool_tool_extra_config.php:375
+#: inc/aiautotool_tool_extra_config.php:392
+#: inc/aiautotool_tool_extra_config.php:409
+#, fuzzy
+msgid "Error. Delete not success!"
+msgstr "ข้อผิดพลาด อย่าลบความสําเร็จ!"
+
+#: inc/aiautotool_tool_extra_config.php:50
+#, fuzzy
+msgid "Extra Config Settings"
+msgstr "การตั้งค่าเพิ่มเติม Config"
+
+#: Ai-Auto-Tool.php:1045
+#, fuzzy
+msgid "From url"
+msgstr "จาก url"
+
+#: inc/scan.php:757
+#, fuzzy
+msgid "Here:"
+msgstr "นี่คือ:"
+
+#: inc/aiautotool_tool_extra_config.php:162
+#, fuzzy
+msgid "Hide Feedback"
+msgstr "ลบ Feedback"
+
+#: inc/aiautotool_tool_extra_config.php:176
+#, fuzzy
+msgid "Hide Interface"
+msgstr "อินเตอร์เฟซที่ซ่อนอยู่"
+
+#: inc/aiautotool_tool_extra_config.php:169
+#, fuzzy
+msgid "Hide Media"
+msgstr "สื่อลามก"
+
+#: inc/aiautotool_tool_extra_config.php:141
+#, fuzzy
+msgid "Hide News Feed"
+msgstr "ไฟฟ้ดข่าว"
+
+#: inc/aiautotool_tool_extra_config.php:155
+#, fuzzy
+msgid "Hide Page"
+msgstr "หน้าที่ซ่อน"
+
+#: inc/aiautotool_tool_extra_config.php:183
+#, fuzzy
+msgid "Hide Plugins"
+msgstr "ซ่อนปลั๊กอิน"
+
+#: inc/aiautotool_tool_extra_config.php:148
+#, fuzzy
+msgid "Hide Posts"
+msgstr "โพสต์ที่ซ่อน"
+
+#: inc/aiautotool_tool_extra_config.php:204
+#, fuzzy
+msgid "Hide setup"
+msgstr "ซ่อนการตั้งค่า"
+
+#: inc/aiautotool_tool_extra_config.php:135
+#, fuzzy
+msgid "Hide the tools on page admin"
+msgstr "ซ่อนเครื่องมือบนหน้า Admin"
+
+#: inc/aiautotool_tool_extra_config.php:197
+#, fuzzy
+msgid "Hide tools"
+msgstr "เครื่องมือที่ซ่อน"
+
+#: inc/aiautotool_tool_extra_config.php:190
+#, fuzzy
+msgid "Hide User"
+msgstr "ซ่อนผู้ใช้"
+
+#: Ai-Auto-Tool.php:1106
+#, fuzzy
+msgid "Home"
+msgstr "บ้าน"
+
+#. URI of the plugin
+#. Author URI of the plugin
+#, fuzzy
+msgid "https://aiautotool.com"
+msgstr "Https: //Aiautotool.Com"
+
+#: inc/aiautotool_tool_extra_config.php:230
+#, fuzzy
+msgid "If you don't use it, you can turn off Classic CSS on the homepage"
+msgstr "หากคุณไม่ใช้มันคุณสามารถเปิดใช้งาน CSS คลาสสิกบนเว็บไซต์"
+
+#: inc/aiautotool_tool_extra_config.php:236
+#, fuzzy
+msgid "If you don't use it, you can turn off Emoji"
+msgstr "หากคุณไม่ใช้มันคุณสามารถปิด Emoji"
+
+#: inc/aiautotool_tool_extra_config.php:224
+#, fuzzy
+msgid "If you don't use it, you can turn off Gutenberg CSS on the homepage"
+msgstr "หากคุณไม่ใช้มันคุณสามารถปิด Gutenberg CSS บนเว็บไซต์"
+
+#: inc/aiautotool_tool_extra_config.php:351
+#, fuzzy
+msgid ""
+"If you enable this function and set automatic limits and save time for posts "
+"or pages, it will reduce the data stored in the database"
+msgstr ""
+"หากคุณเปิดใช้งานฟังก์ชั่นนี้และกําหนดข้อ จํากัด "
+"อัตโนมัติและประหยัดเวลาสําหรับโพสต์หรือหน้าจะลดข้อมูลที่เก็บไว้ในฐานข้อมูล"
+
+#: inc/aiautotool_tool_extra_config.php:207
+#, fuzzy
+msgid ""
+"If you feel that the above tools are unnecessary, you can hide them to give "
+"the WP admin a clearer view. This function only hides and does not block "
+"access to the link."
+msgstr ""
+"หากคุณรู้สึกว่าเครื่องมือข้างต้นไม่จําเป็นคุณสามารถซ่อนไว้เพื่อให้ Wp Admin "
+"ความเห็นที่ชัดเจนมากขึ้น ฟังก์ชั่นนี้จะซ่อนและไม่บล็อกการเข้าถึงลิงค์"
+
+#: inc/scan.php:693
+#, fuzzy
+msgid "If your check , AI has rewrite your title post."
+msgstr "หากการตรวจสอบของคุณ AI ได้เขียนใหม่บทความชื่อของคุณ"
+
+#: Ai-Auto-Tool.php:1596
+#, fuzzy
+msgid "Images"
+msgstr "รูปภาพ"
+
+#: inc/scan.php:677
+#, fuzzy
+msgid "Input tag for post, have random 3 tag in input."
+msgstr "แท็ก input สําหรับโพสต์มี 3 แท็กสุ่มใน input"
+
+#: Ai-Auto-Tool.php:1602
+#, fuzzy
+msgid ""
+"Input title for post Then Click gen Article,Select a phrase and click the "
+"Write button to use this feature"
+msgstr ""
+"ใส่ชื่อสําหรับโพสต์แล้วคลิก Gen บทความ "
+"เลือกคําและคลิกปุ่มเขียนเพื่อใช้ฟังก์ชั่นนี้"
+
+#: inc/aiautotool_tool_extra_config.php:244
+#, fuzzy
+msgid ""
+"Instant-page is a library that allows you to preload the content of a page "
+"into the browser memory simply by hovering over any link on the page. When "
+"you click the link, it provides a fast and seamless experience"
+msgstr ""
+"Instant-Page "
+"เป็นห้องสมุดที่ช่วยให้คุณสามารถดาวน์โหลดเนื้อหาของหน้าไปยังหน่วยความจําเบราว์เซอร์โดยการเดินผ่านลิงค์ใด"
+" ๆ บนหน้า เมื่อคุณคลิกที่ลิงค์ให้ประสบการณ์ที่รวดเร็วและไร้รอยต่อ"
+
+#: inc/aiautotool_tool_extra_config.php:218
+#, fuzzy
+msgid ""
+"jQuery Migrate is a library used to maintain the functionality of some "
+"themes and plugins using outdated code. If your website no longer uses this "
+"library, you can turn it off"
+msgstr ""
+"JQuery Migrate "
+"เป็นห้องสมุดที่ใช้ในการรักษาฟังก์ชันของธีมบางอย่างและปลั๊กอินโดยใช้รหัสเก่า "
+"หากเว็บไซต์ของคุณไม่ใช้ห้องสมุดนี้คุณสามารถเปิดใช้งานได้"
+
+#. Author of the plugin
+#, fuzzy
+msgid "KCT"
+msgstr "KCT"
+
+#: inc/scan.php:681
+#, fuzzy
+msgid "Language for title, Ai has write content for language your select."
+msgstr "ภาษาสําหรับชื่อ, ai มีเนื้อหาเขียนสําหรับภาษาที่คุณเลือก"
+
+#: Ai-Auto-Tool.php:1036
+#, fuzzy
+msgid "Log Img"
+msgstr "โลก IMG"
+
+#: inc/scan.php:742
+#, fuzzy
+msgid "Manually set up Cron in WordPress"
+msgstr "การตั้งค่า Cron ใน Wordpress มือถือ"
+
+#: inc/scan.php:655
+#, fuzzy
+msgid "Multiple Post Titles Input"
+msgstr "หมายเลขโพสต์หลายรายการ"
+
+#: Ai-Auto-Tool.php:970
+#, fuzzy
+msgid "New API Key - Select User for API KEY when post Single:"
+msgstr "ปุ่ม API ใหม่ - เลือกผู้ใช้สําหรับ ปุ่ม API เมื่อโพสต์เดี่ยว:"
+
+#: inc/scan.php:737
+#, fuzzy
+msgid ""
+"Note: This form only saves the list of titles you enter into a draft. "
+"Configure the time for the AI BOT to run in the background to generate "
+"content for draft articles. For example, if you choose 5 hours, the AI BOT "
+"will automatically select a random draft article every 5 hours and proceed "
+"to create content and images for the article. Afterward, it will "
+"automatically publish the article according to the schedule you set."
+msgstr ""
+"หมายเหตุ: รูปแบบนี้จะบันทึกรายชื่อชื่อที่คุณเข้าสู่โครงการเท่านั้น "
+"กําหนดเวลาสําหรับ AI Bot "
+"เพื่อทํางานในพื้นหลังเพื่อสร้างเนื้อหาสําหรับบทความการออกแบบ "
+"ตัวอย่างเช่นถ้าคุณเลือก 5 ชั่วโมง AI Bot จะเลือกบทความการออกแบบแบบสุ่มทุก 5 "
+"ชั่วโมงโดยอัตโนมัติและดําเนินการในการสร้างเนื้อหาและภาพสําหรับบทความ "
+"หลังจากนั้นมันจะเผยแพร่บทความโดยอัตโนมัติตามแผนที่ที่คุณกําหนด"
+
+#: inc/scan.php:146
+#, fuzzy
+msgid "Number Post for one public Draft"
+msgstr "หมายเลขโพสต์สําหรับโครงการสาธารณะเดียว"
+
+#: inc/aiautotool_tool_extra_config.php:267
+#, fuzzy
+msgid "Nếu bạn không sử dụng REST API thì nên Disable đi để bảo mật website"
+msgstr ""
+"หากคุณไม่ Sử dụng API ที่พัก คุณไม่สามารถปิดการใช้งาน ไปเพื่อ Bảo Mật "
+"เว็บไซต์"
+
+#: inc/scan.php:750
+#, fuzzy
+msgid "Open crontab using the command:"
+msgstr "เปิด Crontab โดยใช้คําสั่ง:"
+
+#: inc/scan.php:745
+#, fuzzy
+msgid ""
+"Open the wp-config.php file, usually located in the root directory of your "
+"WordPress website, and add the following line:"
+msgstr ""
+"เปิดไฟล์ Wp-Config.Php ซึ่งมักจะอยู่ในไดเรกทอรี root ของเว็บไซต์ WordPress "
+"ของคุณและเพิ่มเส้นต่อไปนี้:"
+
+#: inc/aiautotool_tool_extra_config.php:238
+#, fuzzy
+msgid "Optimization libraries core WP"
+msgstr "การปรับปรุงห้องสมุดหลัก Wp"
+
+#: inc/aiautotool_tool_extra_config.php:328
+#, fuzzy
+msgid "Optimize post content in the database"
+msgstr "ปรับปรุงเนื้อหาโพสต์ในฐานข้อมูล"
+
+#: inc/aiautotool_tool_extra_config.php:261
+#, fuzzy
+msgid "Optimize Security For WP"
+msgstr "ปรับปรุงความปลอดภัยสําหรับ WP"
+
+#: inc/aiautotool_tool_extra_config.php:425
+#, fuzzy
+msgid "Optimize WP"
+msgstr "ปรับปรุง WP"
+
+#: inc/aiautotool_tool_extra_config.php:113
+#, fuzzy
+msgid "Redirect and Block copy content"
+msgstr "การแปลงและบล็อกการคัดลอกเนื้อหา"
+
+#: Ai-Auto-Tool.php:1002 Ai-Auto-Tool.php:1059
+#, fuzzy
+msgid "Remove"
+msgstr "ปล่อย"
+
+#: inc/aiautotool_tool_extra_config.php:302
+#, fuzzy
+msgid "Remove version"
+msgstr "ดาวน์โหลด Version"
+
+#: inc/aiautotool_tool_extra_config.php:308
+#, fuzzy
+msgid "Remove version JS, CSS"
+msgstr "ลบเวอร์ชัน Js, CSS"
+
+#: inc/aiautotool_tool_extra_config.php:315
+#, fuzzy
+msgid "Remove version WordPress"
+msgstr "ลบเวอร์ชัน WordPress"
+
+#: inc/scan.php:759
+#, fuzzy
+msgid ""
+"Represents the Cron interval, here set to every 5 minutes. You can adjust it "
+"as needed."
+msgstr ""
+"แสดงช่วงเวลา Cron, ที่นี่ตั้งค่าเป็นทุก 5 นาที คุณสามารถปรับได้ตามความต้องการ"
+
+#: inc/aiautotool_tool_extra_config.php:418
+#, fuzzy
+msgid "Save all"
+msgstr "การบันทึกทั้งหมด"
+
+#: Ai-Auto-Tool.php:1028 inc/scan.php:155
+#, fuzzy
+msgid "Save Configuration"
+msgstr "บันทึกการกําหนดค่า"
+
+#: inc/aiautotool_tool_extra_config.php:348
+#, fuzzy
+msgid "Save time (minutes)"
+msgstr "การประหยัดเวลา (นาที)"
+
+#: inc/scan.php:168 inc/scan.php:172 inc/scan.php:617 inc/scan.php:618
+#: inc/scan.php:643 inc/scan.php:650
+#, fuzzy
+msgid "Schedule AI Post"
+msgstr "โพสต์ที่กําหนด"
+
+#: inc/scan.php:749
+#, fuzzy
+msgid "Schedule Cron using crontab:"
+msgstr "แผนที่ Cron โดยใช้ Crontab:"
+
+#: inc/scan.php:97
+#, fuzzy
+msgid "Schedule Post"
+msgstr "โพสต์แผนที่"
+
+#: Ai-Auto-Tool.php:1626
+#, fuzzy
+msgid ""
+"Select a phrase and click the <b>Find Image</b> button to use this feature"
+msgstr "เลือกคําพูดและคลิกที่ <b>ค้นหารูปภาพ </b>ปุ่มที่จะใช้ฟังก์ชั่นนี้"
+
+#: Ai-Auto-Tool.php:1615
+#, fuzzy
+msgid "Select a phrase and click the <b>Write</b> button to use this feature"
+msgstr "เลือกคําพูดและคลิกที่ <b>เขียน </b>ปุ่มที่จะใช้ฟังก์ชั่นนี้"
+
+#: Ai-Auto-Tool.php:1624
+#, fuzzy
+msgid "Select a phrase and click the Find Image button to use this feature"
+msgstr "เลือกคําและคลิกที่ปุ่มค้นหาภาพเพื่อใช้ฟังก์ชั่นนี้"
+
+#: inc/scan.php:665
+#, fuzzy
+msgid "Select categories for post when post publish"
+msgstr "เลือกหมวดหมู่สําหรับโพสต์เมื่อโพสต์เผยแพร่"
+
+#: inc/aiautotool_tool_extra_config.php:250
+#, fuzzy
+msgid ""
+"Smooth-scroll is a library that allows you to create smooth scrolling "
+"effects, making the website appear faster to users"
+msgstr ""
+"Smooth-Scroll "
+"เป็นห้องสมุดที่ช่วยให้คุณสามารถสร้างผลการสกรูได้อย่างราบรื่นทําให้เว็บไซต์ดูเร็วขึ้นสําหรับผู้ใช้"
+
+#: Ai-Auto-Tool.php:1605
+#, fuzzy
+msgid "Start socket"
+msgstr "เริ่มต้นซ็อกเก็ต"
+
+#: Ai-Auto-Tool.php:1608
+#, fuzzy
+msgid "Start socket Error, Please F5 to reload."
+msgstr "เปิดข้อผิดพลาด Socket โปรด F5 ไปยัง Reload"
+
+#: inc/scan.php:659
+#, fuzzy
+msgid "Store these titles as draft posts in the WordPress database."
+msgstr "เก็บหัวข้อเหล่านี้เป็นโพสต์การออกแบบในฐานข้อมูล WordPress"
+
+#. Description of the plugin
+#, fuzzy
+msgid ""
+"The AI Auto Tool Plugin is a powerful tool that automates various tasks for "
+"effortless content creation and management."
+msgstr ""
+"เครื่องมืออัตโนมัติ AI Plugin "
+"เป็นเครื่องมือที่มีประสิทธิภาพที่อัตโนมัติงานต่างๆสําหรับการสร้างและจัดการเนื้อหาได้อย่างง่ายดาย"
+
+#: inc/aiautotool_tool_extra_config.php:133
+#, fuzzy
+msgid ""
+"This feature allows you to add Editor classic to the article and product "
+"category description box when you edit"
+msgstr ""
+"คุณสมบัตินี้ช่วยให้คุณสามารถเพิ่มตัวแก้ไขคลาสสิกไปยังบทความและกล่องคําอธิบายประเภทผลิตภัณฑ์เมื่อคุณแก้ไข"
+
+#: inc/aiautotool_tool_extra_config.php:119
+#, fuzzy
+msgid ""
+"This feature allows you to redirect non-existent links (404 error) to the "
+"homepage"
+msgstr ""
+"คุณสมบัตินี้ช่วยให้คุณสามารถนําไปสู่ลิงค์ที่ไม่มีอยู่ (404 ความผิดพลาด) "
+"ไปยังเว็บไซต์"
+
+#: inc/aiautotool_tool_extra_config.php:326
+#, fuzzy
+msgid ""
+"This feature helps protect the website against attacks such as SQL injection "
+"and cross-site scripting (XSS)."
+msgstr ""
+"คุณสมบัตินี้ช่วยปกป้องเว็บไซต์จากการโจมตีเช่นการฉีด SQL และ Cross-Site "
+"Scripting (Xss)"
+
+#: inc/aiautotool_tool_extra_config.php:126
+#, fuzzy
+msgid ""
+"This feature prevents users from copying text, right-clicking, and accessing "
+"Devtool"
+msgstr ""
+"คุณสมบัตินี้ป้องกันผู้ใช้จากการคัดลอกข้อความ, คลิกขวาและเข้าถึง Devtool"
+
+#: inc/scan.php:130
+#, fuzzy
+msgid "Time public Draft"
+msgstr "ระยะเวลาโครงการสาธารณะ"
+
+#: inc/aiautotool_tool_extra_config.php:318
+#, fuzzy
+msgid ""
+"To prevent hackers from probing and exploiting vulnerabilities in outdated "
+"JS, CSS, WordPress versions, it is advisable to conceal the version "
+"information to make it more challenging for them to identify the specific "
+"versions you are using."
+msgstr ""
+"เพื่อหลีกเลี่ยงการทดสอบและใช้ประโยชน์จาก Vulnerabilities ใน Js, CSS, "
+"WordPress "
+"รุ่นที่เก่าแก่มันจะแนะนําให้ซ่อนข้อมูลเวอร์ชันเพื่อทําให้มันเป็นเรื่องยากสําหรับพวกเขาในการระบุเวอร์ชันเฉพาะที่คุณใช้"
+
+#: Ai-Auto-Tool.php:1046
+#, fuzzy
+msgid "To Url"
+msgstr "ไปยัง url"
+
+#: inc/aiautotool_tool_extra_config.php:430
+#, fuzzy
+msgid "Tool Extra Config"
+msgstr "เครื่องมือเพิ่มเติม Config"
+
+#: inc/aiautotool_tool_extra_config.php:430
+#, fuzzy
+msgid "Total tool mini for wp"
+msgstr "เครื่องมือขนาดเล็กสําหรับ WP"
+
+#: inc/aiautotool_tool_extra_config.php:229
+#, fuzzy
+msgid "Turn off Classic CSS"
+msgstr "ปิด CSS คลาสสิก"
+
+#: inc/aiautotool_tool_extra_config.php:235
+#, fuzzy
+msgid "Turn off Emoji"
+msgstr "ปิด Emoji"
+
+#: inc/aiautotool_tool_extra_config.php:223
+#, fuzzy
+msgid "Turn off Gutenberg CSS"
+msgstr "ปิด Gutenberg CSS"
+
+#: inc/aiautotool_tool_extra_config.php:217
+#, fuzzy
+msgid "Turn off jQuery Migrate"
+msgstr "ปิด JQuery การย้าย"
+
+#: inc/aiautotool_tool_extra_config.php:212
+#, fuzzy
+msgid "Turn off unnecessary items"
+msgstr "ปิดรายการที่ไม่จําเป็น"
+
+#: inc/aiautotool_tool_extra_config.php:66
+#, fuzzy
+msgid "Turn On Editor Classic"
+msgstr "แปลงไปที่ Editor Classic"
+
+#: inc/aiautotool_tool_extra_config.php:132
+#, fuzzy
+msgid "Turn On Editor classic for Description in categories page"
+msgstr "ปิดตัวแก้ไขคลาสสิกสําหรับการอธิบายในหน้าหมวดหมู่"
+
+#: inc/aiautotool_tool_extra_config.php:79
+#, fuzzy
+msgid "Turn On Widget Classic"
+msgstr "แปลงบน Widget Classic"
+
+#: inc/aiautotool_tool_extra_config.php:111
+#, fuzzy
+msgid "Turn on/off auto Update of WordPress"
+msgstr "ปิด / ปิดอัตโนมัติอัปเดตของ WordPress"
+
+#: inc/aiautotool_tool_extra_config.php:258
+#, fuzzy
+msgid ""
+"With this function, HTML will be compressed into a single line, removing "
+"unnecessary characters and spaces to speed up page loading"
+msgstr ""
+"ด้วยฟังก์ชั่นนี้ HTML "
+"จะถูกบีบอัดลงในเส้นเดียวซึ่งจะลบตัวอักษรและพื้นที่ที่ไม่จําเป็นเพื่อเร่งโหลดหน้า"
