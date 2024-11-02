@@ -81,8 +81,8 @@ EOT;
 
     public function render_feature(){
         $autoToolBox = new AutoToolBox("Post Exporter", "Export & Import Post from list Url", "#", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
-
-        echo $autoToolBox->generateHTML();
+        echo ($autoToolBox->generateHTML());
+       
         
     }
     public function add_menu() {
@@ -130,16 +130,16 @@ EOT;
                 <div class="aiautotool_left">
                     <div class="ft-box">
             <div class="ft-menu">
-                <div class="ft-logo"><img src="<?php echo plugins_url('../images/logo.svg', __FILE__); ?>">
+                <div class="ft-logo"><img src="<?php echo esc_url(plugins_url('../images/logo.svg', __FILE__)); ?>">
                     <br>Backup & Restore</div>
 
               
                  <button href="#tab-setting" class="nav-tab sotabt "><i class="fa-solid fa-file-export"></i> Export / Restore</button>
                
 
-                <button  href="#tab-delete"  class="nav-tab  sotab"><i class="fa-solid fa-trash-can"></i> <?php _e('Delete Post', 'ai-auto-tool'); ?></button>
+                <button  href="#tab-delete"  class="nav-tab  sotab"><i class="fa-solid fa-trash-can"></i> <?php esc_html_e('Delete Post', 'ai-auto-tool'); ?></button>
 
-                <button  href="#tab-backupdata"  class="nav-tab  sotab"><i class="fa-solid fa-trash-can"></i> <?php _e('Backup Database', 'ai-auto-tool'); ?></button>               
+                <button  href="#tab-backupdata"  class="nav-tab  sotab"><i class="fa-solid fa-trash-can"></i> <?php esc_html_e('Backup Database', 'ai-auto-tool'); ?></button>               
 
             </div>
             <div class="ft-main">
@@ -155,7 +155,7 @@ EOT;
             <form method="post" onsubmit="return backupDatabase();">
 
                 <div class="ft-submit button-primary">
-                <button type="submit" name="aiautotool_backup_database"><i class="fa-solid fa-file-export"></i> <?php _e('Export Database', 'ai-auto-tool'); ?></button>
+                <button type="submit" name="aiautotool_backup_database"><i class="fa-solid fa-file-export"></i> <?php esc_html_e('Export Database', 'ai-auto-tool'); ?></button>
             </div>
 
            
@@ -164,9 +164,10 @@ EOT;
             function backupDatabase() {
                 // Tạo một XMLHttpRequest để gửi yêu cầu AJAX
                 var xhr = new XMLHttpRequest();
-                var nonce = '<?php echo wp_create_nonce('backup_database_nonce'); ?>';
+                var nonce = '<?php echo esc_js(wp_create_nonce('backup_database_nonce')); ?>';
+
                 // Thiết lập phương thức và URL của yêu cầu
-                xhr.open('POST', '<?php echo admin_url('admin-ajax.php'); ?>', true);
+                xhr.open('POST', '<?php echo esc_url(admin_url('admin-ajax.php')); ?>', true);
                 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
                 xhr.onload = function() {
@@ -174,7 +175,9 @@ EOT;
                         // Tạo một liên kết tải về và thêm vào DOM
                         var downloadLink = document.createElement('a');
                         downloadLink.href = 'data:application/octet-stream,' + encodeURIComponent(xhr.responseText);
-                        downloadLink.download = 'backup-<?php echo date('YmdHis'); ?>.sql';
+                        
+                        downloadLink.download = 'backup-<?php echo esc_attr(date('YmdHis')); ?>.sql';
+
                         downloadLink.style.display = 'none';
                         document.body.appendChild(downloadLink);
                         downloadLink.click();
@@ -489,21 +492,27 @@ EOT;
                 $tables = $wpdb->get_results($query, ARRAY_N);
 
                 foreach ($tables as $table) {
-                    $table = $table[0];
-                    $result = $wpdb->get_results("SELECT * FROM $table", ARRAY_A);
+                $table = $table[0]; // Giả sử $table là một mảng chứa tên bảng
+                $escaped_table = esc_sql($table); // Thoát tên bảng
 
-                    echo "-- Table structure for table $table\n\n";
-                    echo "DROP TABLE IF EXISTS $table;\n";
-                    $create_table = $wpdb->get_row("SHOW CREATE TABLE $table", ARRAY_N);
-                    echo $create_table[1] . ";\n\n";
+                // Xuất câu lệnh DROP TABLE với tên bảng đã được thoát
+                echo "DROP TABLE IF EXISTS `".esc_sql($escaped_table)."`;\n"; // Bảo vệ tên bảng
 
-                    echo "-- Data for table $table\n\n";
-                    foreach ($result as $row) {
-                        $row = array_map('addslashes', $row);
-                        echo "INSERT INTO $table VALUES ('" . implode("','", $row) . "');\n";
-                    }
-                    echo "\n\n";
+                $result = $wpdb->get_results("SELECT * FROM `$escaped_table`", ARRAY_A);
+                $create_table = $wpdb->get_row("SHOW CREATE TABLE `".esc_sql($escaped_table)."`", ARRAY_N);
+                echo esc_sql($create_table[1]) . ";\n\n";
+
+                echo "-- Data for table `".esc_sql($escaped_table)."`\n\n";
+                foreach ($result as $row) {
+                    // Thoát các giá trị trong mảng $row trước khi đưa vào câu lệnh SQL
+                    $escaped_row = array_map('esc_sql', $row); // Thoát từng giá trị trong mảng $row
+                    echo "INSERT INTO `".esc_sql($escaped_table)."` VALUES ('" . implode("','", esc_sql($escaped_row)) . "');\n"; // Sử dụng biến đã thoát
                 }
+                echo "\n\n";
+            }
+
+
+
 
                 $backup_content = ob_get_clean(); 
 
@@ -514,10 +523,10 @@ EOT;
                 // file_put_contents($filename, $backup_content);
 
                 // sendmail($filename);
-                echo $backup_content; 
+                echo esc_html($backup_content);
             } else {
                 
-                echo 'Invalid nonce or action.';
+                echo esc_html('Invalid nonce or action.');
             }
 
             exit();

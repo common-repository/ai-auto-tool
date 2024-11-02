@@ -47,12 +47,12 @@ class AIautotool_autocomment extends rendersetting{
     }
     public function aiautotool_check_post_limit() {
         if (!$this->aiautotool_checklimit($this->config)) {
-            
-            $this->notice->add_notice(
-                                sprintf(
-                                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
+            /* translators: %s là đường dẫn tới trang nâng cấp lên bản Pro của AI Auto Tool.*/
+            $title = sprintf('AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>',
                                     aiautotool_premium()->get_upgrade_url()
-                                ),
+                                );
+            $this->notice->add_notice(
+                                $title,
                                 'notice-error',
                                 null,
                                 true,
@@ -66,7 +66,6 @@ class AIautotool_autocomment extends rendersetting{
         
         if ($this->is_new_month($current_date, $stored_data['start_date'])) {
             // Nếu đã qua một tháng, đặt lại số lượng bài đăng và ngày bắt đầu
-
             $expiration = strtotime('+1 month', strtotime($current_date));
             $expiration = date('Y-m-d', $expiration);
             update_option($this->plan_limit_aiautotool, array( 'start_date' => $current_date,'expiration'=>$expiration));
@@ -120,7 +119,8 @@ class AIautotool_autocomment extends rendersetting{
     public function render_plan(){
          if ($this->active=='true') {
            $quota = $this->config['number_post']==-1? 'Unlimited':$this->config['number_post'];
-        echo '<p>'.$this->icon.' '.$this->name_plan.':<strong>  Usage : '.$this->config['usage'].'</strong></p>';
+        echo '<p>' . esc_html($this->icon) . ' ' . esc_html($this->name_plan) . ': <strong> Usage: ' . esc_html($this->config['usage']) . '</strong></p>';
+
        
 
         }
@@ -191,12 +191,12 @@ class AIautotool_autocomment extends rendersetting{
 
         }else{
             
-
-             $this->notice->add_notice(
-                                sprintf(
-                                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
+            /* translators: %s là đường dẫn tới trang nâng cấp lên bản Pro của AI Auto Tool.*/
+            $title = sprintf('AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>',
                                     aiautotool_premium()->get_upgrade_url()
-                                ),
+                                );
+            $this->notice->add_notice(
+                                $title,
                                 'notice-error',
                                 null,
                                 true,
@@ -227,12 +227,12 @@ class AIautotool_autocomment extends rendersetting{
 
     public function schedule_create_autocomments(){
         if (!$this->aiautotool_checklimit($this->config)) {
-            
-           $this->notice->add_notice(
-                               sprintf(
-                                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
+           /* translators: %s là đường dẫn tới trang nâng cấp lên bản Pro của AI Auto Tool.*/
+            $title = sprintf('AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>',
                                     aiautotool_premium()->get_upgrade_url()
-                                ),
+                                );
+            $this->notice->add_notice(
+                                $title,
                                 'notice-error',
                                 null,
                                 true,
@@ -347,7 +347,24 @@ The answers must only be in JSON format, with this exact format, you have to fil
                             $comments[] = $comment_id;
                             $generated_posts[] = $post_id;
                             update_option('autocomment_generated_posts', $generated_posts);
-                            $this->notice->add_notice( __( 'A New Comment create for post <a href="'.get_permalink($post_id).'">'.$post->post_title.'</a> ', 'ai-auto-tool' ), 'notice-info', null, true ,$this->name_plan);
+
+                            /* translators: %1$s là đường dẫn tới bài viết, %2$s là tiêu đề của bài viết. */
+                            $message = sprintf(
+                                'A New Comment created for post <a href="%1$s">%2$s</a>',
+                                get_permalink($post_id),
+                                $post->post_title
+                            );
+
+                            $this->notice->add_notice(
+                                $message,
+                                'notice-info',
+                                null,
+                                true,
+                                $this->name_plan
+                            );
+
+
+
                             $checkinsert = true;
                         }
                         
@@ -422,7 +439,7 @@ The answers must only be in JSON format, with this exact format, you have to fil
     // Khởi tạo cài đặt
     public function init_settings() {
         register_setting('aiautotool-settings-group', 'aiautotool_setting_autocomment');
-        add_settings_section('aiautotool-section', __('AI Auto Tool Settings', 'aiautotool'), array($this, 'section_callback'), 'aiautotool-settings');
+        add_settings_section('aiautotool-section', __('AI Auto Tool Settings', 'ai-auto-tool'), array($this, 'section_callback'), 'aiautotool-settings');
         add_settings_field('submitindex_field', __('Information:', 'ai-auto-tool'), array($this, 'submitindex_field_callback'), 'aiautotool-settings', 'aiautotool-section');
         add_settings_field('post_types_field', __('Post Types List:', 'ai-auto-tool'), array($this, 'post_types_field_callback'), 'aiautotool-settings', 'aiautotool-section');
     }
@@ -457,9 +474,9 @@ The answers must only be in JSON format, with this exact format, you have to fil
     ?>
 
     <div id="tool-autocomment" class="tab-content" style="display:none;">
-        <h1><i class="fa-regular fa-comments"></i> <?php _e('Config using AI auto create comment', 'ai-auto-tool'); ?></h1>
+        <h1><i class="fa-regular fa-comments"></i> <?php esc_html_e('Config using AI auto create comment', 'ai-auto-tool'); ?></h1>
         <div class="wrap">
-            <h3><?php _e('Config post type for auto create comment', 'aiautotool'); ?></h3>
+            <h3><?php esc_html_e('Config post type for auto create comment', 'ai-auto-tool'); ?></h3>
             <form method="post" action="options.php">
                 <?php
                 settings_fields('aiautotool-settings-group');
@@ -467,7 +484,7 @@ The answers must only be in JSON format, with this exact format, you have to fil
                 ?>
 
                 <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                    <?php _e('Time create comment','ai-auto-tool'); ?>
+                    <?php esc_html_e('Time create comment','ai-auto-tool'); ?>
                     </p>
                      <select id="aiautotool_setting_autocomment[time_comment]" name="aiautotool_setting_autocomment[time_comment]">
                             <option value="1" <?php selected($current_interval, 1); ?>>1 minute</option>
@@ -483,7 +500,7 @@ The answers must only be in JSON format, with this exact format, you have to fil
                             <option value="1440" <?php selected($current_interval, 1440); ?>>24 hour</option>
                         </select>
                 <!-- <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                   <?php _e('Number Comment for one Post','ai-auto-tool'); ?>:
+                   <?php esc_html_e('Number Comment for one Post','ai-auto-tool'); ?>:
                     </p>
                 <select id="aiautotool_setting_autocomment[number_comment]" name="aiautotool_setting_autocomment[number_comment]">
                             <?php 
@@ -497,7 +514,7 @@ The answers must only be in JSON format, with this exact format, you have to fil
                             
                         </select> -->
                 
-                <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php _e('Select post type', 'ai-auto-tool'); ?></p>
+                <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php esc_html_e('Select post type', 'ai-auto-tool'); ?></p>
 
                 <?php
                     $post_types = get_post_types(array( 'public' => true ), 'names' );
@@ -505,11 +522,12 @@ The answers must only be in JSON format, with this exact format, you have to fil
                     foreach ($post_types as $post_type) {
                         ?>
                         <label class="nut-switch">
-                            <input type="checkbox" name="aiautotool_setting_autocomment[post_type][]" value="<?php echo $post_type; ?>" <?php echo in_array($post_type, $setting['post_type']) ? 'checked="checked"' : ''; ?> />
+                           <input type="checkbox" name="aiautotool_setting_autocomment[post_type][]" value="<?php echo esc_attr($post_type); ?>" <?php echo in_array($post_type, $setting['post_type']) ? 'checked="checked"' : ''; ?> />
+
                             <span class="slider"></span>
                         </label>
-                        <label class="ft-label-right"><?php _e('Active :  ', 'ai-auto-tool');
-                            echo $post_type; ?></label>
+                        <label class="ft-label-right"><?php esc_html_e('Active :  ', 'ai-auto-tool'); ?>
+                           <?php echo esc_html($post_type); ?></label>
                         </p>
                         <?php
                         $i++;
@@ -530,20 +548,21 @@ The answers must only be in JSON format, with this exact format, you have to fil
     public function render_tab_setting() {
         if($this->active=="true"){
 
-         echo '<button href="#tool-autocomment" class="nav-tab sotab"><i class="fa-regular fa-comments"></i> '.__('Auto comment','ai-auto-tool').'</button>';
+         echo '<button href="#tool-autocomment" class="nav-tab sotab"><i class="fa-regular fa-comments"></i> '.esc_html__('Auto comment','ai-auto-tool').'</button>';
         }
     }
 
     public function render_feature() {
 
-       $autoToolBox = new AutoToolBox($this->icon.' '.$this->name_plan, __('Auto General Comment using AI','ai-auto-tool'), "#", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
+       $autoToolBox = new AutoToolBox($this->icon.' '.$this->name_plan, esc_html__('Auto General Comment using AI','ai-auto-tool'), "#", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
 
-        echo $autoToolBox->generateHTML();
+        echo ($autoToolBox->generateHTML());
+
     }
 
     // Callback cho section
     public function section_callback() {
-        echo '<p>' . __('Enter information and select Post Types.', 'aiautotool') . '</p>';
+        echo '<p>' . esc_html__('Enter information and select Post Types.', 'ai-auto-tool') . '</p>';
     }
 
     // Callback cho textarea thông tin
@@ -558,8 +577,9 @@ The answers must only be in JSON format, with this exact format, you have to fil
         $selected_post_types = get_option('aiautotool_setting_post_types', array());
 
         foreach ($post_types as $post_type) {
-            $checked = in_array($post_type->name, $selected_post_types) ? 'checked="checked"' : '';
-            echo '<input type="checkbox" name="aiautotool_setting_post_types[]" value="' . esc_attr($post_type->name) . '" ' . $checked . ' /> ' . esc_html($post_type->label) . '<br>';
+            $checked = in_array($post_type->name, $selected_post_types) ? 'checked' : ''; // 'checked' không cần "checked=\"checked\""
+echo '<input type="checkbox" name="aiautotool_setting_post_types[]" value="' . esc_attr($post_type->name) . '" ' . ($checked ? esc_attr($checked) : '') . ' /> ' . esc_html($post_type->label) . '<br>';
+
         }
     }
     private function get_settings() {

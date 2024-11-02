@@ -4,7 +4,7 @@ Plugin Name: Ai Auto Tool Content Writing Assistant (Gemini Bard Writer, ChatGPT
 Plugin URI: https://aiautotool.com
 Description: The AI Auto Tool Plugin is a powerful tool that automates various tasks for effortless content creation and management.
 Author: KCT
-Version: 2.1.2
+Version: 2.1.4
 Author URI: https://aiautotool.com
 License: GPL2
 */
@@ -12,7 +12,7 @@ License: GPL2
 defined( 'ABSPATH' ) || exit;
 define( 'MENUSUBPARRENT','ai_auto_tool' );
 define('AIAUTOTOOL_URI', plugin_dir_url( __FILE__ ));
-define('AIAUTOTOOL_VS', '2.1.2');
+define('AIAUTOTOOL_VS', '2.1.4');
 
 define('AIAUTOTOOL_DIR', plugin_dir_path( __FILE__ ));
 define('AIAUTOTOOL_BASENAME', plugin_basename( __FILE__ ));
@@ -21,7 +21,7 @@ define('AIAUTOTOOL_FREE', 30);
 define('AIAUTOTOOL_API_GEM','https://bard.aitoolseo.com');
 define('AIAUTOTOOL_API_GTP','https://bard.aiautotool.com');
 
-    
+
 
  
 if ( ! function_exists( 'aiautotool_premium' ) ) {
@@ -42,7 +42,7 @@ if ( ! function_exists( 'aiautotool_premium' ) ) {
                 'has_premium_version' => false,
                 'has_addons'          => false,
                 'has_paid_plans'      => true,
-                 
+                'has_affiliation' => 'all',
                 'menu'                => array(
                     'slug'           => 'ai_auto_tool',
                     'contact'        => true,
@@ -63,6 +63,11 @@ if ( ! function_exists( 'aiautotool_premium' ) ) {
 
 aiautotool_premium()->add_filter( 'hide_freemius_powered_by', '__return_true' );
 
+
+/* translators: %s là đường dẫn tới trang nâng cấp lên bản Pro của AI Auto Tool.*/
+$Upgrade_notifice = sprintf('AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>',
+                                    aiautotool_premium()->get_upgrade_url());
+define('AIAUTOTOOL_TITLE_UPGRADE', $Upgrade_notifice);
 
 function aiautotool_activate()
 {
@@ -540,7 +545,7 @@ return $content;
         public function config_page() {
             
             if (!current_user_can('manage_options')) {
-            wp_die(__('You do not have sufficient permissions to access this page.'));
+            wp_die(esc_html__('You do not have sufficient permissions to access this page.','ai-auto-tool'));
         }
 
         
@@ -613,7 +618,7 @@ return $content;
                     <div class="ft-wrap-body">
                     <div class="ft-box ">
             <div class="ft-menu aiautotool-animate-faster wave-animate-fast">
-                <div class="ft-logo"><img src="<?php echo plugins_url('/images/logo.svg', __FILE__); ?>">
+                <div class="ft-logo"><img src="<?php echo esc_url(plugins_url('/images/logo.svg', __FILE__)); ?>">
                     <br>AI Autotool Settings</div>
 
               
@@ -621,9 +626,9 @@ return $content;
                 <button href="#set-prompt" class="nav-tab sotabt "><i class="fa-solid fa-gears"></i>Edit Prompt</button>
                 <?php self::show_render_tab_setting(); ?>
 
-                <button  href="#tab2"  class="nav-tab  sotab "><i class="fa-solid fa-code"></i> <?php _e('WP HEAD', 'ai-auto-tool'); ?></button>
-                <button  href="#tab3"  class="nav-tab  sotab" ><i class="fa-solid fa-code"></i> <?php _e('WP BODY', 'ai-auto-tool'); ?></button>
-                <button  href="#tab4"  class=" nav-tab sotab" ><i class="fa-solid fa-code"></i> <?php _e('WP FOOTER', 'ai-auto-tool'); ?></button>
+                <button  href="#tab2"  class="nav-tab  sotab "><i class="fa-solid fa-code"></i> <?php esc_html_e('WP HEAD', 'ai-auto-tool'); ?></button>
+                <button  href="#tab3"  class="nav-tab  sotab" ><i class="fa-solid fa-code"></i> <?php esc_html_e('WP BODY', 'ai-auto-tool'); ?></button>
+                <button  href="#tab4"  class=" nav-tab sotab" ><i class="fa-solid fa-code"></i> <?php esc_html_e('WP FOOTER', 'ai-auto-tool'); ?></button>
                 <button href="#tab-infodonate" class="nav-tab sotab"><i class="fa-solid fa-circle-info"></i> Info plugin</button>
 
             </div>
@@ -645,11 +650,11 @@ return $content;
 
                  <div id="tab-setting1" class="tab-content sotab-box ftbox"  style="display:none">
                 <!-- Content for the API tab goes here -->
-                <h2><i class="fa-solid fa-gears"></i> <?php _e('API Key','ai-auto-tool') ?></h2>
+                <h2><i class="fa-solid fa-gears"></i> <?php esc_html_e('API Key','ai-auto-tool') ?></h2>
 
                 <form method="post">
                      <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                        <?php _e('New API Key - Select User for API KEY when post Single:','ai-auto-tool'); ?>
+                        <?php esc_html_e('New API Key - Select User for API KEY when post Single:','ai-auto-tool'); ?>
                     
                     </p>
                     <p>
@@ -659,7 +664,7 @@ return $content;
                             <option value="<?php echo esc_html($user->ID); ?>"><?php echo esc_html($user->display_name); ?></option>
                         <?php endforeach; ?>
                     </select>
-                        <button type="submit" name="aiautotool_add_key" class="button-primary ft-submit"><?php _e('Add New API Key','ai-auto-tool') ?></button>
+                        <button type="submit" name="aiautotool_add_key" class="button-primary ft-submit"><?php esc_html_e('Add New API Key','ai-auto-tool') ?></button>
                     </p>
                 </form>
 
@@ -681,7 +686,7 @@ return $content;
                                     <form method="post">
                                         <input type="hidden" name="aiautotool_remove_api_key" value="<?php echo esc_html($k); ?>">
 
-                                        <button type="submit" class="button-secondary "><?php _e('Remove','ai-auto-tool'); ?></button>
+                                        <button type="submit" class="button-secondary "><?php esc_html_e('Remove','ai-auto-tool'); ?></button>
                                     </form>
                                 </td>
                             </tr>
@@ -700,52 +705,52 @@ return $content;
                    
 
                     <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                    <?php _e('Allow image auto save when aiautotool.com post article','ai-auto-tool'); ?>
+                    <?php esc_html_e('Allow image auto save when aiautotool.com post article','ai-auto-tool'); ?>
                     </p>
                         <label class="aiautotool_box_f_toggle-switch">
                             <input type="checkbox" id="aiautotool_config_img" name="aiautotool_config_img" value="1"  <?php echo esc_html($checked);?>>>
                             <span class="aiautotool_box_f_toggle-slider"></span>
                         </label>
                     <p>
-                        <button type="submit" name="aiautotool_save_config" class="button-primary ft-submit"><?php _e('Save Configuration','ai-auto-tool'); ?></button>
+                        <button type="submit" name="aiautotool_save_config" class="button-primary ft-submit"><?php esc_html_e('Save Configuration','ai-auto-tool'); ?></button>
         </p>
         </form>
             </div>
             <div class="sotab-box ftbox tab-content" id="tab2" style="display:none">
                 <form method="post" >
-            <h2><?php _e('WP HEAD', 'ai-auto-tool'); ?></h2>
+            <h2><?php esc_html_e('WP HEAD', 'ai-auto-tool'); ?></h2>
             <div class="ft-card">
-              <h3><i class="fa-solid fa-code"></i> <?php _e('Add to WP head', 'ai-auto-tool') ?></h3>
+              <h3><i class="fa-solid fa-code"></i> <?php esc_html_e('Add to WP head', 'ai-auto-tool') ?></h3>
                 <p>
-                <textarea class="ft-code-textarea" name="aiautotool_code_settings[code2]" placeholder="<?php _e('Input code', 'ai-auto-tool'); ?>"><?php if(!empty($this->aiautotool_config_settings['code2'])){echo esc_textarea(stripslashes($this->aiautotool_config_settings['code2']));} ?></textarea>
+                <textarea class="ft-code-textarea" name="aiautotool_code_settings[code2]" placeholder="<?php esc_html_e('Input code', 'ai-auto-tool'); ?>"><?php if(!empty($this->aiautotool_config_settings['code2'])){echo esc_textarea(stripslashes($this->aiautotool_config_settings['code2']));} ?></textarea>
                 </p>
             </div>
-             <button type="submit" name="btncode" class="button-primary ft-submit"><?php _e('Save head','ai-auto-tool'); ?></button>
+             <button type="submit" name="btncode" class="button-primary ft-submit"><?php esc_html_e('Save head','ai-auto-tool'); ?></button>
              </form>
             </div>
             <!-- Javascript 2 -->
             <div class="sotab-box ftbox tab-content" id="tab3" style="display:none">
                 <form method="post" >
-            <h2><?php _e('WP BODY', 'ai-auto-tool'); ?></h2>
+            <h2><?php esc_html_e('WP BODY', 'ai-auto-tool'); ?></h2>
             <div class="ft-card">
-              <h3><i class="fa-solid fa-code"></i> <?php _e('Add to WP body', 'ai-auto-tool') ?></h3>
+              <h3><i class="fa-solid fa-code"></i> <?php esc_html_e('Add to WP body', 'ai-auto-tool') ?></h3>
                 <p>
-                <textarea class="ft-code-textarea" name="aiautotool_code_settings[code3]" placeholder="<?php _e('Input code', 'ai-auto-tool'); ?>"><?php if(!empty($this->aiautotool_config_settings['code3'])){echo esc_textarea(stripslashes($this->aiautotool_config_settings['code3']));} ?></textarea>
+                <textarea class="ft-code-textarea" name="aiautotool_code_settings[code3]" placeholder="<?php esc_html_e('Input code', 'ai-auto-tool'); ?>"><?php if(!empty($this->aiautotool_config_settings['code3'])){echo esc_textarea(stripslashes($this->aiautotool_config_settings['code3']));} ?></textarea>
                 </p>
             </div>
-                 <button type="submit" name="btncode" class="button-primary ft-submit"><?php _e('Save body','ai-auto-tool'); ?></button></form>
+                 <button type="submit" name="btncode" class="button-primary ft-submit"><?php esc_html_e('Save body','ai-auto-tool'); ?></button></form>
             </div>
             <!-- Javascript 3 -->
             <div class="sotab-box ftbox tab-content" id="tab4" style="display:none">
                 <form method="post" >
-            <h2><?php _e('WP FOOTER', 'ai-auto-tool'); ?></h2>
+            <h2><?php esc_html_e('WP FOOTER', 'ai-auto-tool'); ?></h2>
             <div class="ft-card">
-              <h3><i class="fa-solid fa-code"></i> <?php _e('Add to WP footer', 'ai-auto-tool') ?></h3>
+              <h3><i class="fa-solid fa-code"></i> <?php esc_html_e('Add to WP footer', 'ai-auto-tool') ?></h3>
                 <p>
-                <textarea class="ft-code-textarea" name="aiautotool_code_settings[code4]" placeholder="<?php _e('Input code', 'ai-auto-tool'); ?>"><?php if(!empty($this->aiautotool_config_settings['code4'])){echo esc_textarea(stripslashes($this->aiautotool_config_settings['code4']));} ?></textarea>
+                <textarea class="ft-code-textarea" name="aiautotool_code_settings[code4]" placeholder="<?php esc_html_e('Input code', 'ai-auto-tool'); ?>"><?php if(!empty($this->aiautotool_config_settings['code4'])){echo esc_textarea(stripslashes($this->aiautotool_config_settings['code4']));} ?></textarea>
                 </p>
             </div>  
-                 <button type="submit" name="btncode" class="button-primary ft-submit"><?php _e('Save footer','ai-auto-tool'); ?></button>
+                 <button type="submit" name="btncode" class="button-primary ft-submit"><?php esc_html_e('Save footer','ai-auto-tool'); ?></button>
              </form>
             </div>
 
@@ -756,7 +761,7 @@ return $content;
                     <p><i class="fa-solid fa-circle-info"></i>DEV By: <b><a target="_blank" href="https://aiautotool.com">AI auto Tool</a></b></p>
                     <p>Author: <b>KCT</b></p>
                     <p>Skin by: <a target="_blank" href="https://wordpress.org/plugins/foxtool/"><b>Fox Theme</b></a></p>
-                    <p><?php _e('If you feel this plugin is useful, please Donate to me, I will try to add more useful functions in the next updates :)','aiautotool'); ?></p>
+                    <p><?php esc_html_e('If you feel this plugin is useful, please Donate to me, I will try to add more useful functions in the next updates :)','ai-auto-tool'); ?></p>
                     <p>
                     <a class="ft-donate-a" target="_blank" href="https://paypal.me/aiautotool">Donate me if it's useful to you</a>
                     
@@ -767,18 +772,18 @@ return $content;
             <!-- tab log -->
              <div id="tab-log" class="tab-content sotab-box ftbox" style="display:none;">
 
-        <h2><?php _e('Log Img','ai-auto-tool'); ?></h2>
+        <h2><?php esc_html_e('Log Img','ai-auto-tool'); ?></h2>
                <form method="post">
                                         <input type="hidden" name="aiautotool_remove_log_img" value="1">
 
-                                        <button type="submit" class="button-secondary"><?php _e('Clear all log Images','ai-auto-tool'); ?></button>
+                                        <button type="submit" class="button-secondary"><?php esc_html_e('Clear all log Images','ai-auto-tool'); ?></button>
                                     </form>
         <table class="wp-list-table widefat fixed striped">
                     <thead>
                         <tr>
-                            <th><?php _e('From url','ai-auto-tool'); ?></th>
-                            <th><?php _e('To Url','ai-auto-tool'); ?></th>
-                            <th><?php _e('Action','ai-auto-tool'); ?></th>
+                            <th><?php esc_html_e('From url','ai-auto-tool'); ?></th>
+                            <th><?php esc_html_e('To Url','ai-auto-tool'); ?></th>
+                            <th><?php esc_html_e('Action','ai-auto-tool'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -790,7 +795,7 @@ return $content;
                                     <form method="post">
                                         <input type="hidden" name="aiautotool_remove_img_log_item" value="<?php echo esc_html($k); ?>">
 
-                                        <button type="submit" class="button-secondary"><?php _e('Remove','ai-auto-tool'); ?></button>
+                                        <button type="submit" class="button-secondary"><?php esc_html_e('Remove','ai-auto-tool'); ?></button>
                                     </form>
                                 </td>
                             </tr>
@@ -810,11 +815,11 @@ return $content;
         <script type="text/javascript"></script>
         <div class="ft-sidebar-right">
             <div class="ft-widget ft-widget-color1">
-                <h2><?php _e('If you find it helpful','ai-auto-tool'); ?></h2>
+                <h2><?php esc_html_e('If you find it helpful','ai-auto-tool'); ?></h2>
                 <a target="_blank" href="https://wordpress.org/support/plugin/ai-auto-tool/reviews/?filter=5">Rate now
                 <div class="starloader"></div></a>
             </div>
-            <h3><?php _e('Active tool','ai-auto-tool'); ?></h3>
+            <h3><?php esc_html_e('Active tool','ai-auto-tool'); ?></h3>
             <div class="aiautotool_box_f_container  ">
             <?php self::render_list_feature(); ?>
             </div>
@@ -830,15 +835,15 @@ return $content;
 
         public function render_subscription_info() {
                 $domain = esc_html(home_url());
-                echo "<p><i class=\"fa-solid fa-globe\"></i> Domain: <strong>$domain</strong></p>";
-                echo "<p><i class=\"fa-solid fa-globe\"></i> Plugin Version: <strong>" . AIAUTOTOOL_VS . "</strong></p>";
+                echo "<p><i class=\"fa-solid fa-globe\"></i> Domain: <strong>".esc_html($domain)."</strong></p>";
+                echo "<p><i class=\"fa-solid fa-globe\"></i> Plugin Version: <strong>" . esc_html(AIAUTOTOOL_VS) . "</strong></p>";
                $dt =  $this->aiautotool_getdata();
                 if ($this->is_free_plan()) {
                     $accountType = 'Free';
-                    echo "<p><i class=\"fa-solid fa-bell\"></i> Current Plan: <b class=\"activate-license ai-auto-tool\">$accountType</b> </p>";
-                    echo '<p><i class="fa-solid fa-chart-simple"></i> Total limit: <b>' . AIAUTOTOOL_FREE . '</b> Request <abbr data-title="Includes services that use AI APIs"><code>(Post, Tag, Comment)</code></abbr></p>';
+                    echo "<p><i class=\"fa-solid fa-bell\"></i> Current Plan: <b class=\"activate-license ai-auto-tool\">".esc_html($accountType)."</b> </p>";
+                    echo '<p><i class="fa-solid fa-chart-simple"></i> Total limit: <b>' . esc_html(AIAUTOTOOL_FREE) . '</b> Request <abbr data-title="Includes services that use AI APIs"><code>(Post, Tag, Comment)</code></abbr></p>';
                     echo '<p><i class="fa-solid fa-chart-simple"></i> Total Usage: <b>' . esc_html($dt['usage']) . '</b> </p>';
-                    echo "<p style=\"display: flex;align-items: center;justify-content: center; \"><a style=\"color:#ff4444;font-weight:bold\" href=\"" . aiautotool_premium()->get_upgrade_url() . "\" class=\"aiautotool_btn_upgradepro activate-license\" ><i class=\"fa-solid fa-unlock-keyhole\"></i> Upgrade Pro</a></p>";
+                    echo "<p style=\"display: flex;align-items: center;justify-content: center; \"><a style=\"color:#ff4444;font-weight:bold\" href=\"" . esc_url(aiautotool_premium()->get_upgrade_url()) . "\" class=\"aiautotool_btn_upgradepro activate-license\" ><i class=\"fa-solid fa-unlock-keyhole\"></i> Upgrade Pro</a></p>";
 
                 } else {
                      $fs = rendersetting::is_premium();
@@ -852,11 +857,11 @@ return $content;
                     
                     echo '<p><i class="fa-solid fa-chart-simple"></i> Total Usage: <b>' . esc_html($dt['usage']) . '</b> </p>';
                    
-                    echo "<p><i class=\"fa-solid fa-bell\"></i> Current Plan: <b>$accountType</b> </p>";
+                    echo "<p><i class=\"fa-solid fa-bell\"></i> Current Plan: <b>".esc_html($accountType)."</b> </p>";
 
                 }
 
-                echo '<h3><i class="fa-solid fa-angles-right"></i> ' . __('Subscription features Auto ', 'ai-auto-tool') . '</h3>';
+                echo '<h3><i class="fa-solid fa-angles-right"></i> ' . esc_html__('Subscription features Auto ', 'ai-auto-tool') . '</h3>';
                 self::render_plan();
             }
 

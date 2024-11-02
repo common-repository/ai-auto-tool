@@ -60,7 +60,7 @@ class aiautotool_SSL_active extends rendersetting{
     public function render_feature(){
         $autoToolBox = new AutoToolBox("SSL Active Fix", "Active SSL Simple", "#", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
 
-        echo $autoToolBox->generateHTML();
+         echo ($autoToolBox->generateHTML());
         
     }
 

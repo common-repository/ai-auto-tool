@@ -5,7 +5,7 @@ Tags: ai, gpt, chatgpt, Gemini, Assistant
 Requires at least: 4.6
 Requires PHP: 7.4
 Tested up to: 6.6.2
-Stable tag: 2.1.2
+Stable tag: 2.1.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 

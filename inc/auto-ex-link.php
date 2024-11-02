@@ -198,7 +198,7 @@ class Aiautotool_exLink_backlink extends rendersetting{
     public function cron_interval($schedules) {
         $schedules['cron_interval'] = array(
             'interval' => 2 * 60,
-            'display' => __('aiauto backlink Interval'),
+            'display' => __('aiauto backlink Interval','ai-auto-tool'),
         );
         return $schedules;
     }
@@ -322,7 +322,8 @@ class Aiautotool_exLink_backlink extends rendersetting{
     public function render_feature(){
         $autoToolBox = new AutoToolBox("<i class=\"fa-solid fa-link\"></i> Microsite auto BackLink", "It also offers a Microsite management system that aids in SEO optimization and automatically links to websites within the same system. This helps you build a strong network of links and optimize your online presence", "https://aiautotool.com", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
 
-        echo $autoToolBox->generateHTML();
+       
+         echo ($autoToolBox->generateHTML());
         ?>
         
 
@@ -741,12 +742,12 @@ public function aiautotool_linkexauto_page() {
      <div class="aiautotool_left">
             <div class="ft-box">
                 <div class="ft-menu">
-                     <div class="ft-logo"><img src="<?php echo plugins_url('../images/logo.svg', __FILE__); ?>">
+                     <div class="ft-logo"><img src="<?php echo esc_url(plugins_url('../images/logo.svg', __FILE__)); ?>">
                     <br>Backlink control auto</div>
 
-                    <button class="nav-tab sotabt" href="#tab-view"><i class="fa-regular fa-gauge-max"></i> <?php _e('Manual send backlink', 'aiautotool'); ?></button>
-                    <button class="nav-tab sotabt" href="#tab-sendlink"><i class="fa-solid fa-shield-halved"></i> <?php _e('View List Sendlink', 'aiautotool'); ?></button>
-                <button class="nav-tab sotabt" href="#tab-log"><i class="fa-solid fa-shield-halved"></i> <?php _e('Log', 'aiautotool'); ?></button>
+                    <button class="nav-tab sotabt" href="#tab-view"><i class="fa-regular fa-gauge-max"></i> <?php esc_html_e('Manual send backlink', 'ai-auto-tool' ); ?></button>
+                    <button class="nav-tab sotabt" href="#tab-sendlink"><i class="fa-solid fa-shield-halved"></i> <?php esc_html_e('View List Sendlink', 'ai-auto-tool' ); ?></button>
+                <button class="nav-tab sotabt" href="#tab-log"><i class="fa-solid fa-shield-halved"></i> <?php esc_html_e('Log', 'ai-auto-tool' ); ?></button>
 
                     
                 </div>
@@ -757,7 +758,7 @@ public function aiautotool_linkexauto_page() {
 
                         if (!$link_to_edit) {
                             ?>
-                            <form id="aiautotool-form" method="post" action="<?php echo admin_url('admin-post.php'); ?>">
+                            <form id="aiautotool-form" method="post" action="<?php echo esc_url(admin_url('admin-ajax.php'));?>">
                             <?php wp_nonce_field('aiautotool_submit_nonce', 'aiautotool_nonce'); ?>
                             <!-- Add your form fields here -->
                             <input type="hidden" name="action" value="aiautotool_submit">
@@ -799,7 +800,7 @@ public function aiautotool_linkexauto_page() {
                             <?php
                         }else{
                             ?>
-                            <form id="aiautotool-form" method="post" action="<?php echo admin_url('admin-post.php'); ?>">
+                            <form id="aiautotool-form" method="post" action="<?php echo esc_url(admin_url('admin-ajax.php'));?>">
                             <?php wp_nonce_field('aiautotool_submit_nonce', 'aiautotool_nonce'); ?>
                             <input type="hidden" name="action" value="aiautotool_submit">
                             <input type="hidden" name="link_id" value="<?php echo esc_attr($link_id); ?>">
@@ -862,16 +863,16 @@ public function aiautotool_linkexauto_page() {
                     });
                     foreach ($link_info as $key=> $link) {
                         $textlink = self::aiautotool_parseHtmlAnchor($link['anchor_text']);
-                        echo '<tr data-key="'.$key.'" style="" class="aiautotool_form_canonical_td aiautotool-popup-trigger" data-popup-content="'.esc_attr(json_encode($link)).'">';
-                        echo '<td  class="aiautotool_form_canonical_td">' . $i++ . ' </td>';
-                        echo '<td  class="aiautotool_form_canonical_td">' . ($textlink['link']) . ' </td>';
-                        echo '<td  class="aiautotool_form_canonical_td">' . ($textlink['text']) . '</td>';
-                        echo '<td  class="aiautotool_form_canonical_td">' . nl2br($this->reverse_link_listfull($link['link_list']))  . '</td>';
+                        echo '<tr data-key="'.esc_attr($key).'" style="" class="aiautotool_form_canonical_td aiautotool-popup-trigger" data-popup-content="'.esc_attr(json_encode($link)).'">';
+                        echo '<td  class="aiautotool_form_canonical_td">' . esc_attr($i++) . ' </td>';
+                        echo '<td  class="aiautotool_form_canonical_td">' . (esc_attr($textlink['link'])) . ' </td>';
+                        echo '<td  class="aiautotool_form_canonical_td">' . (esc_attr($textlink['text'])) . '</td>';
+                        echo '<td  class="aiautotool_form_canonical_td">' . esc_html(nl2br($this->reverse_link_listfull($link['link_list'])))  . '</td>';
                         echo '<td  class="aiautotool_form_canonical_td">' . esc_html($link['schedule']) . ' hours</td>';
-                        echo '<td  class="aiautotool_form_canonical_td">' . date('Y-m-d H:i:s', $link['next_run']) . '</td>';
+                        echo '<td  class="aiautotool_form_canonical_td">' . esc_html(date('Y-m-d H:i:s', $link['next_run'])) . '</td>';
                         echo '<td  class="aiautotool_form_canonical_td">' . ($link['completed'] ? '<i style="color:var(--color)" class="fa-sharp fa-solid fa-badge-check"></i>' : '<i class="fa-sharp fa-solid fa-alarm-clock"></i>') . '</td>';
-                        echo '<td  class="aiautotool_form_canonical_td"><a href="' . admin_url('admin.php?page=aiautotool-linkexauto&action=edit&id=' . $link['id']) . '"><i class="fa-sharp fa-solid fa-pen-to-square"></i></a> | ';
-                        echo '<a href="' . admin_url('admin.php?page=aiautotool-linkexauto&action=delete&id=' . $link['id']) . '"><i class="fa-sharp fa-solid fa-trash"></i></a></td>';
+                        echo '<td  class="aiautotool_form_canonical_td"><a href="' . esc_url(admin_url('admin.php?page=aiautotool-linkexauto&action=edit&id=' . $link['id'])) . '"><i class="fa-sharp fa-solid fa-pen-to-square"></i></a> | ';
+                        echo '<a href="' . esc_url(admin_url('admin.php?page=aiautotool-linkexauto&action=delete&id=' . $link['id'])) . '"><i class="fa-sharp fa-solid fa-trash"></i></a></td>';
                         echo '</tr>';
 
                     }
@@ -1096,7 +1097,7 @@ public function aiautotool_linkexauto_page_initsite() {
                  $count = 0;
                 foreach ($ds_site as $site) {
                     $count++;
-                     echo '<li>' . $count . '. ' . esc_html($site) . '</li>';
+                     echo '<li>' . esc_html($count) . '. ' . esc_html($site) . '</li>';
                 }
             } else {
                 echo '<li>No sites added yet.</li>';
@@ -1126,15 +1127,15 @@ public function aiautotool_linkexauto_page_initsite() {
                             <option value="60" <?php selected($aiautolinkex_time_interval, 60); ?>>1 hour</option>
                         </select>
     <p></p>
-    <label class="ft-label-right"><?php _e('Create new post with AI when not find related post.', 'ai-auto-tool'); ?></label>
-                    <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php _e('When find related post for insert link not found, AI auto create singple post from archor text of link then insert backlink in new post.', 'ai-auto-tool'); ?></p>
+    <label class="ft-label-right"><?php esc_html_e('Create new post with AI when not find related post.', 'ai-auto-tool'); ?></label>
+                    <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php esc_html_e('When find related post for insert link not found, AI auto create singple post from archor text of link then insert backlink in new post.', 'ai-auto-tool'); ?></p>
                     <!-- tôi ưu 2 -->
                     <label class="nut-switch">
                     <input type="checkbox" name="accessnewpost" value="1" <?php if ( isset($accessnewpost) && 1 == $accessnewpost ) echo 'checked="checked"'; ?> />
                     <span class="slider"></span></label>
     <p><hr></p>
-    <label class="ft-label-right"><?php _e('Turn off auto link send', 'ai-auto-tool'); ?></label>
-                    <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php _e('Off auto send backlink.', 'ai-auto-tool'); ?></p>
+    <label class="ft-label-right"><?php esc_html_e('Turn off auto link send', 'ai-auto-tool'); ?></label>
+                    <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php esc_html_e('Off auto send backlink.', 'ai-auto-tool'); ?></p>
                     <!-- tôi ưu 2 -->
                     <label class="nut-switch">
                     <input type="checkbox" name="autolinkoffon" value="1" <?php if ( isset($autolinkoffon) && 1 == $autolinkoffon ) echo 'checked="checked"'; ?> />
@@ -1183,7 +1184,7 @@ public function aiautotool_linkexauto_page_initsite() {
                     btnSubmitKeyword.style.display = "none";
                 loadingIcon.style.display = "inline-block";
                     $.ajax({
-                        url: '<?php echo admin_url('admin-ajax.php'); ?>', // Thay bằng URL của trang hiện tại
+                        url: '<?php echo esc_url(admin_url('admin-ajax.php')); ?>', // Thay bằng URL của trang hiện tại
                         type: 'POST',
                         data: {
                             action: 'get_microsite_data',

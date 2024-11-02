@@ -84,9 +84,9 @@ add_action( 'wp_enqueue_scripts', 'aiautotool_extra_config_remove_wp_block_libra
 if(isset($aiautotool_config_settings['speed-off3'])){
 
     function aiautotool_extra_config_classic_styles_off() {
-    	if ( is_front_page()) {
+        if ( is_front_page()) {
         wp_dequeue_style( 'classic-theme-styles' );
-    	}
+        }
     }
     add_action( 'wp_enqueue_scripts', 'aiautotool_extra_config_classic_styles_off', 20 );
 
@@ -95,12 +95,12 @@ if(isset($aiautotool_config_settings['speed-off3'])){
 if(isset($aiautotool_config_settings['speed-off4'])){
 function aiautotool_extra_config_disable_emojis() {
     remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-	remove_action( 'wp_print_styles', 'print_emoji_styles' );
-	remove_action( 'admin_print_styles', 'print_emoji_styles' );	
-	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	
-	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );		
+    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+    remove_action( 'wp_print_styles', 'print_emoji_styles' );
+    remove_action( 'admin_print_styles', 'print_emoji_styles' );    
+    remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );  
+    remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );     
 }
 add_action( 'init', 'aiautotool_extra_config_disable_emojis' );
 }
@@ -139,7 +139,7 @@ protected function wp_minifyHTML($html){
         $strip = true;
         if (is_null($tag)) {
             if (!empty($token['script'])) {
-				// require_once( AIAUTOTOOL_DIR . 'inc/minify-js.php');
+                // require_once( AIAUTOTOOL_DIR . 'inc/minify-js.php');
                 if ($this->wp_compress_js) {
                     $content = Minifier::minify($content);
                 }
@@ -198,9 +198,9 @@ protected function wp_minifyHTML($html){
     return new WP_HTML_Compression($html);
  }
  function wp_wp_html_compression_start(){
-	if (!current_user_can('administrator')) {
+    if (!current_user_can('administrator')) {
     ob_start('wp_html_compression_finish');
-	}
+    }
  }
  add_action('get_header', 'wp_wp_html_compression_start');
 }
@@ -209,43 +209,54 @@ protected function wp_minifyHTML($html){
 # gioi han so ban ghi trong csdl 
 if(isset($aiautotool_config_settings['speed-data1'])){
 function aiautotool_extra_config_limit_post_revisions($num, $post) {
-	$aiautotool_config_settings = get_option('aiautotool_config_settings');
-	if(!empty($aiautotool_config_settings['speed-data11'])){
+    $aiautotool_config_settings = get_option('aiautotool_config_settings');
+    if(!empty($aiautotool_config_settings['speed-data11'])){
     $limit = $aiautotool_config_settings['speed-data11'];
-	} else {
-	$limit = 3;	
-	}
+    } else {
+    $limit = 3; 
+    }
     return $limit;
 }
-add_filter('wp_revisions_to_keep', 'aiautotool_extra_config_limit_post_revisions', 10, 2);	
+add_filter('wp_revisions_to_keep', 'aiautotool_extra_config_limit_post_revisions', 10, 2);  
 }
 # gioi han thoi gian luu bai viet tu dong pút
 if(isset($aiautotool_config_settings['speed-data2'])){
-	if (!defined('AUTOSAVE_INTERVAL')) {
-		$secon = !empty($aiautotool_config_settings['speed-data21']) ? $aiautotool_config_settings['speed-data21'] : 1;
-		define('AUTOSAVE_INTERVAL', $secon * MINUTE_IN_SECONDS);
-	}
+    if (!defined('AUTOSAVE_INTERVAL')) {
+        $secon = !empty($aiautotool_config_settings['speed-data21']) ? $aiautotool_config_settings['speed-data21'] : 1;
+        define('AUTOSAVE_INTERVAL', $secon * MINUTE_IN_SECONDS);
+    }
 } 
-# nhan nut xoa ban luu tu dong trong csdl
+
 function aiautotool_extra_config_delete_auto_drafts() {
+    check_ajax_referer('aiautotool_nonce', 'security');
+    if (!current_user_can('manage_options')){
+        wp_die(__('Insufficient permissions', 'ai-auto-tool'));
+    }
+    
     global $wpdb;
     $sql = "DELETE FROM {$wpdb->posts} WHERE `post_status` = 'auto-draft'";
     try {
         $wpdb->query($sql);
-        return true;
+       return true;
     } catch (Exception $e) {
-        return 'Lỗi! ' . $wpdb->last_error;
+        return __('Lỗi! ', 'ai-auto-tool') . esc_html($wpdb->last_error);
     }
 }
+
 add_action('wp_ajax_delete_auto_drafts', 'aiautotool_extra_config_delete_auto_drafts');
 add_action('wp_ajax_nopriv_delete_auto_drafts', 'aiautotool_extra_config_delete_auto_drafts');
 # nhan nut xoa het ban ghi tam trong csdl làm sach csdl
 function aiautotool_extra_config_delete_post_revisions() {
+    check_ajax_referer('aiautotool_nonce', 'security');
+    if (!current_user_can('manage_options')){
+        wp_die(esc_html__('Insufficient permissions', 'ai-auto-tool'));
+    }
+
     global $wpdb;
     $sql = 'DELETE FROM `' . $wpdb->prefix . 'posts` WHERE `post_type` = %s;';
     try {
         $wpdb->query($wpdb->prepare($sql, array('revision')));
-		return true;
+        return true;
     } catch (Exception $e) {
         return 'Error! ' . $wpdb->last_error;
     }
@@ -254,6 +265,11 @@ add_action('wp_ajax_delete_revisions', 'aiautotool_extra_config_delete_post_revi
 add_action('wp_ajax_nopriv_delete_revisions', 'aiautotool_extra_config_delete_post_revisions');
 # xoa tat ca bai trong thung rac
 function aiautotool_extra_config_delete_all_trashed_posts() {
+    check_ajax_referer('aiautotool_nonce', 'security');
+    if (!current_user_can('manage_options')){
+        wp_die(esc_html__('Insufficient permissions', 'ai-auto-tool'));
+    }
+    
     global $wpdb;
     $sql = "DELETE FROM {$wpdb->posts} WHERE `post_status` = 'trash'";
     try {
@@ -287,7 +303,7 @@ add_filter( 'script_loader_tag', 'aiautotool_extra_config_instantpage_loader_tag
 # cuon trang muot ma
 if(isset($aiautotool_config_settings['speed-link2'])){
 function aiautotool_extra_config_smooth_scripts() {
-	wp_enqueue_script( 'smooth-scroll', AIAUTOTOOL_URI . 'js/smooth-scroll.min.js', array(), true );
+    wp_enqueue_script( 'smooth-scroll', AIAUTOTOOL_URI . 'js/smooth-scroll.min.js', array(), true );
 }
 add_action( 'wp_enqueue_scripts', 'aiautotool_extra_config_smooth_scripts' );
 }
@@ -300,7 +316,7 @@ add_filter( 'rest_authentication_errors', function( $result ) {
         return $result;
     }
     if ( ! is_user_logged_in() ) {
-        return new WP_Error( 'rest_not_logged_in',  __('You are not currently logged in.'), array( 'status' => 401 ) );
+        return new WP_Error( 'rest_not_logged_in',  esc_html__('You are not currently logged in.','ai-auto-tool'), array( 'status' => 401 ) );
     }
     return $result;
 });
@@ -542,13 +558,14 @@ remove_filter('term_description', 'wp_kses_data');
 function aiautotool_show_css() {
     $aiautotool_code_config = get_option('aiautotool_code_settings',array());
     if (!empty($aiautotool_code_config['code1'])){
-        echo '<style>' . $aiautotool_code_config['code1'] . '</style>';
+        echo '<style>' . wp_kses_post(stripslashes($aiautotool_code_config['code1'])) . '</style>';
     }
     if (!empty($aiautotool_code_config['code11'])){
-        echo '<style>@media (max-width: 849px){' . stripslashes($aiautotool_code_config['code11']) . '}</style>';
+        echo '<style>@media (max-width: 849px){' . wp_kses_post(stripslashes($aiautotool_code_config['code11'])) . '}</style>';
     }
     if (!empty($aiautotool_code_config['code12'])){
-        echo '<style>@media (max-width: 549px){' . stripslashes($aiautotool_code_config['code12']) . '}</style>';
+       echo '<style>@media (max-width: 549px){' . wp_kses_post(stripslashes($aiautotool_code_config['code12'])) . '}</style>';
+
     }
 }
 add_action('wp_head', 'aiautotool_show_css');
@@ -557,7 +574,7 @@ function aiautotool_header_script() {
     $aiautotool_code_config = get_option('aiautotool_code_settings',array());
     echo '<!-- Aiautotool header -->';
     if (!empty($aiautotool_code_config['code2'])){
-        echo stripslashes($aiautotool_code_config['code2']);
+        echo wp_kses_post(stripslashes($aiautotool_code_config['code2']));
     }
     echo '<!-- end Aiautotool header -->';
 }
@@ -567,7 +584,7 @@ function aiautotool_body_script() {
     $aiautotool_code_config = get_option('aiautotool_code_settings',array());
     echo '<!-- Aiautotool body -->';
     if (!empty($aiautotool_code_config['code3'])) {
-        echo stripslashes($aiautotool_code_config['code3']);
+        echo wp_kses_post(stripslashes($aiautotool_code_config['code3']));
     }
     echo '<!-- end Aiautotool body -->';
 }
@@ -577,7 +594,7 @@ function aiautotool_footer_script() {
    $aiautotool_code_config = get_option('aiautotool_code_settings',array());
    echo '<!-- Aiautotool Footer -->';
     if (!empty($aiautotool_code_config['code4'])){
-        echo stripslashes($aiautotool_code_config['code4']);
+        echo wp_kses_post(stripslashes($aiautotool_code_config['code4']));
     }
     echo '<!-- End Aiautotool Footer -->';
 }

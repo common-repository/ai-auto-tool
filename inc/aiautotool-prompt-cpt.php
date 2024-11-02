@@ -63,9 +63,9 @@ class AIautotool_Prompt_CPT extends rendersetting{
         if (!empty($prompt_id)) {
            $params = get_post_meta($prompt_id, '_aiautotool_prompt_params', true);
            $arr = array();
-           $arr['prompt_content'] = $postprompt->post_content;
+           $arr['prompt_content'] = esc_html($postprompt->post_content);
            $arr['prompt_params'] = $params;
-           $arr['prompt_arr_replace'] = $arr_replace_prompt;
+           $arr['prompt_arr_replace'] = esc_html($arr_replace_prompt);
            echo wp_send_json_success($arr);
            
 
@@ -210,7 +210,7 @@ class AIautotool_Prompt_CPT extends rendersetting{
     public function render_tab_setting() {
         if($this->active=="true"){
 
-         echo '<button href="#tool-cloudflareai" class="nav-tab sotab"> '.$this->icon.__(' Prompt Manager','ai-auto-tool').'</button>';
+         echo '<button href="#tool-cloudflareai" class="nav-tab sotab"> '.esc_attr($this->icon).esc_html__(' Prompt Manager','ai-auto-tool').'</button>';
         }
     }
 
@@ -218,7 +218,7 @@ class AIautotool_Prompt_CPT extends rendersetting{
 
        $autoToolBox = new AutoToolBox($this->icon.' '.$this->name_plan, __('Prompt Manager.','ai-auto-tool'), "#", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
 
-        echo $autoToolBox->generateHTML();
+        echo ($autoToolBox->generateHTML());
     }
 
     public static function add_metabox() {

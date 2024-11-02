@@ -60,10 +60,7 @@ class AI_AutoTool_suggetauto extends rendersetting{
         if (!$this->aiautotool_checklimit($this->config)) {
             
             $this->notice->add_notice(
-                                sprintf(
-                                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                                    aiautotool_premium()->get_upgrade_url()
-                                ),
+                                AIAUTOTOOL_TITLE_UPGRADE,
                                 'notice-error',
                                 null,
                                 true,
@@ -120,7 +117,9 @@ class AI_AutoTool_suggetauto extends rendersetting{
     public function render_plan(){
          if ($this->active=='true') {
            $quota = $this->config['number_post']==-1? 'Unlimited':$this->config['number_post'];
-        echo '<p>'.$this->icon.' '.$this->name_plan.':<strong>  Usage : '.$this->config['usage'].'</strong></p>';
+        // echo '<p>'.$this->icon.' '.$this->name_plan.':<strong>  Usage : '.$this->config['usage'].'</strong></p>';
+        echo '<p>' . esc_html($this->icon) . ' ' . esc_html($this->name_plan) . ': <strong> Usage: ' . esc_html($this->config['usage']) . '</strong></p>';
+
        
 
         }
@@ -194,10 +193,7 @@ class AI_AutoTool_suggetauto extends rendersetting{
             
 
              $this->notice->add_notice(
-                                sprintf(
-                                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                                    aiautotool_premium()->get_upgrade_url()
-                                ),
+                                AIAUTOTOOL_TITLE_UPGRADE,
                                 'notice-error',
                                 null,
                                 true,
@@ -268,10 +264,7 @@ class AI_AutoTool_suggetauto extends rendersetting{
     public function schedule_create_draft_suggest_post() {
     if (!$this->aiautotool_checklimit($this->config)) {
         $this->notice->add_notice(
-            sprintf(
-                __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                aiautotool_premium()->get_upgrade_url()
-            ),
+            AIAUTOTOOL_TITLE_UPGRADE,
             'notice-error',
             null,
             true,
@@ -370,14 +363,22 @@ class AI_AutoTool_suggetauto extends rendersetting{
                             if (isset($suggestion['langue'])) {
                                 update_post_meta($post_id, 'lang', $suggestion['langue']);
                             }
+                           // translators: %s là tiêu đề của bài viết nháp.
+                            $smp = __( 'Created new draft post with title: %s', 'ai-auto-tool' );
 
-                            $this->notice->add_notice( __( 'Created new draft post with title: ' . $suggestion['title'], 'ai-auto-tool' ), 'notice-info', null, true ,$this->name_plan);
-                           
+                            $this->notice->add_notice(
+                                sprintf($smp, $suggestion['title']),
+                                'notice-info',
+                                null,
+                                true,
+                                $this->name_plan
+                            );
+
                         } else {
-                            $this->notice->add_notice( __( 'Failed to create draft post with title: ' . $suggestion['title'], 'ai-auto-tool' ), 'notice-error', null, true ,$this->name_plan);
+                            $this->notice->add_notice( __( 'Failed to create draft post with title ' , 'ai-auto-tool' ), 'notice-error', null, true ,$this->name_plan);
                         }
                     } else {
-                        $this->notice->add_notice( __( 'Draft post with title already exists: ' . $suggestion['title'], 'ai-auto-tool' ), 'notice-info', null, true ,$this->name_plan);
+                        $this->notice->add_notice( __( 'Draft post with title already exists ', 'ai-auto-tool' ), 'notice-info', null, true ,$this->name_plan);
                     }
                 }
             }
@@ -580,7 +581,7 @@ class AI_AutoTool_suggetauto extends rendersetting{
     // Khởi tạo cài đặt
     public function init_settings() {
         register_setting('aiautotool-settings-suggest-group', 'aiautotool_setting_suggest_post_draft');
-        add_settings_section('aiautotool-section', __('AI Auto Tool Settings', 'aiautotool'), array($this, 'section_callback'), 'aiautotool-settings');
+        add_settings_section('aiautotool-section', __('AI Auto Tool Settings', 'ai-auto-tool'), array($this, 'section_callback'), 'aiautotool-settings');
         add_settings_field('submitindex_field', __('Information:', 'ai-auto-tool'), array($this, 'submitindex_field_callback'), 'aiautotool-settings', 'aiautotool-section');
         add_settings_field('post_types_field', __('Post Types List:', 'ai-auto-tool'), array($this, 'post_types_field_callback'), 'aiautotool-settings', 'aiautotool-section');
     }
@@ -620,9 +621,12 @@ class AI_AutoTool_suggetauto extends rendersetting{
     ?>
 
     <div id="tool-suggest" class="tab-content" style="display:none;">
-        <h1> <?php echo $this->icon; _e(' Config AI Auto suggest title post ', 'ai-auto-tool'); ?></h1>
+        <h1>
+    <?php echo esc_html($this->icon); ?> <?php esc_html_e(' Config AI Auto suggest title post ', 'ai-auto-tool'); ?>
+</h1>
+
         <div class="wrap">
-            <h3><?php _e('Configure AI-powered title suggestion runtime ', 'aiautotool'); ?></h3>
+            <h3><?php esc_html_e('Configure AI-powered title suggestion runtime ', 'ai-auto-tool'); ?></h3>
             <form method="post" action="options.php">
                 <?php
                 settings_fields('aiautotool-settings-suggest-group');
@@ -631,7 +635,7 @@ class AI_AutoTool_suggetauto extends rendersetting{
                 
                 
              <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                    <?php _e('Time create draft post with title suggest','ai-auto-tool'); ?>
+                    <?php esc_html_e('Time create draft post with title suggest','ai-auto-tool'); ?>
                     </p>
                      <select id="aiautotool_setting_suggest_post_draft[time_suggest_post_draft]" name="aiautotool_setting_suggest_post_draft[time_suggest_post_draft]">
                             <option value="1" <?php selected($current_interval, 1); ?>>1 minute</option>
@@ -647,7 +651,7 @@ class AI_AutoTool_suggetauto extends rendersetting{
                             <option value="1440" <?php selected($current_interval, 1440); ?>>24 hour</option>
                         </select>
                  <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                   <?php _e('Number title need create when run','ai-auto-tool'); ?>:
+                   <?php esc_html_e('Number title need create when run','ai-auto-tool'); ?>:
                     </p>
                 <select id="aiautotool_setting_suggest_post_draft[number_post_title_draft]" name="aiautotool_setting_suggest_post_draft[number_post_title_draft]">
                             <?php 
@@ -662,7 +666,7 @@ class AI_AutoTool_suggetauto extends rendersetting{
                         </select> 
                 
 
-                <?php submit_button(__('Save Config', 'ai-auto-tool'), 'ft-submit'); ?>
+                <?php submit_button(esc_html__('Save Config', 'ai-auto-tool'), 'ft-submit'); ?>
             </form>
 
             
@@ -674,21 +678,23 @@ class AI_AutoTool_suggetauto extends rendersetting{
 
     public function render_tab_setting() {
         if($this->active=="true"){
+            echo '<button href="#tool-suggest" class="nav-tab sotab"> ' . esc_html($this->icon) . esc_html__(' AI Suggest New Post', 'ai-auto-tool') . '</button>';
 
-         echo '<button href="#tool-suggest" class="nav-tab sotab"> '.$this->icon.__(' AI Suggest New Post','ai-auto-tool').'</button>';
+         
         }
     }
 
     public function render_feature() {
 
        $autoToolBox = new AutoToolBox($this->icon.' '.$this->name_plan, __('The AI Suggest New Post feature automatically scans 20 existing titles on the website at random. It then uses Gemini AI to generate a list of topic-related titles based on the scanned titles and saves them as drafts. The Auto Blogging feature will publish these drafts according to a preset schedule. This allows the website to operate fully automatically based on AI, which is particularly effective when the site has over 100 initial posts with various categories and topics.','ai-auto-tool'), "#", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
+       echo ($autoToolBox->generateHTML());
 
-        echo $autoToolBox->generateHTML();
+       
     }
 
     // Callback cho section
     public function section_callback() {
-        echo '<p>' . __('Enter information and select Post Types.', 'aiautotool') . '</p>';
+        echo '<p>' . esc_html__('Enter information and select Post Types.', 'ai-auto-tool') . '</p>';
     }
 
     // Callback cho textarea thông tin
@@ -703,8 +709,9 @@ class AI_AutoTool_suggetauto extends rendersetting{
         $selected_post_types = get_option('aiautotool_setting_post_types', array());
 
         foreach ($post_types as $post_type) {
-            $checked = in_array($post_type->name, $selected_post_types) ? 'checked="checked"' : '';
-            echo '<input type="checkbox" name="aiautotool_setting_post_types[]" value="' . esc_attr($post_type->name) . '" ' . $checked . ' /> ' . esc_html($post_type->label) . '<br>';
+           $checked = in_array($post_type->name, $selected_post_types) ? 'checked' : ''; // Không cần "checked=\"checked\""
+echo '<input type="checkbox" name="aiautotool_setting_post_types[]" value="' . esc_attr($post_type->name) . '" ' . ($checked ? esc_attr($checked) : '') . ' /> ' . esc_html($post_type->label) . '<br>';
+
         }
     }
     private function get_settings() {

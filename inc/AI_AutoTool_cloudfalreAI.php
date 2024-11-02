@@ -60,10 +60,7 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
         if (!$this->aiautotool_checklimit($this->config)) {
             
             $this->notice->add_notice(
-                                sprintf(
-                                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                                    aiautotool_premium()->get_upgrade_url()
-                                ),
+                                AIAUTOTOOL_TITLE_UPGRADE,
                                 'notice-error',
                                 null,
                                 true,
@@ -119,8 +116,11 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
     }
     public function render_plan(){
          if ($this->active=='true') {
-           $quota = $this->config['number_post']==-1? 'Unlimited':$this->config['number_post'];
-        echo '<p>'.$this->icon.' '.$this->name_plan.':<strong>  Usage : '.$this->config['usage'].'</strong></p>';
+          
+
+        $quota = $this->config['number_post'] == -1 ? 'Unlimited' : esc_html($this->config['number_post']);
+echo '<p>' . esc_html($this->icon) . ' ' . esc_html($this->name_plan) . ': <strong> Usage: ' . esc_html($this->config['usage']) . '</strong></p>';
+
        
 
         }
@@ -209,10 +209,7 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
             
 
              $this->notice->add_notice(
-                                sprintf(
-                                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                                    aiautotool_premium()->get_upgrade_url()
-                                ),
+                                AIAUTOTOOL_TITLE_UPGRADE,
                                 'notice-error',
                                 null,
                                 true,
@@ -267,7 +264,8 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
                                 // Lấy URL hình ảnh
                                 $image_url = wp_get_attachment_url($attachment_id);
 
-                                echo $image_url;
+                                echo esc_url($image_url);
+
                                 wp_die();
                             }else{
                                 echo false;
@@ -310,7 +308,9 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
 
                                 $image_url = wp_get_attachment_url($attachment_id);
 
-                                echo $image_url;
+                                
+                                echo esc_url($image_url);
+
                                 wp_die();
                             }else{
                                 echo false;
@@ -386,8 +386,10 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
                 <?php
                 foreach ($this->arr_source_ai_model as $source => $models) {
                     $selected = ($source === $selected_source) ? ' selected' : '';
-                    echo "<option value='" . esc_attr($source) . "'$selected>" . esc_html($source) . "</option>";
+
+                    echo '<option value="' . esc_attr($source) . '"' . esc_attr($selected) . '>' . esc_html($source) . '</option>';
                 }
+
                 ?>
             </select>
             </div>
@@ -504,10 +506,7 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
     public function schedule_create_image_auto_cloudflare() {
         if (!$this->aiautotool_checklimit($this->config)) {
             $this->notice->add_notice(
-                sprintf(
-                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                    aiautotool_premium()->get_upgrade_url()
-                ),
+                AIAUTOTOOL_TITLE_UPGRADE,
                 'notice-error',
                 null,
                 true,
@@ -563,8 +562,23 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
 
                     $generated_posts[] = $post_id;
                     update_option('autoimagecloudflare_generated_posts', $generated_posts);
+                    // translators: %1$s là đường dẫn tới bài viết, %2$s là tiêu đề của bài viết.
+                    $message = sprintf(
+                        'A New Thumbnail created for post <a href="%1$s">%2$s</a>',
+                        get_permalink($post_id),
+                        $post->post_title
+                    );
 
-                    $this->notice->add_notice( __( 'A New Thumbnail created for post <a href="'.get_permalink($post_id).'">'.$post->post_title.'</a> ', 'ai-auto-tool' ), 'notice-info', null, true ,$this->name_plan);
+                    $this->notice->add_notice(
+                        $message,
+                        'notice-info',
+                        null,
+                        true,
+                        $this->name_plan
+                    );
+
+
+                   
                     
                     $this->aiautotool__update_usage();
                 } else {
@@ -736,7 +750,7 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
     // Khởi tạo cài đặt
     public function init_settings() {
         register_setting('aiautotool-settings-group', 'aiautotool_setting_cloudflare_image');
-        add_settings_section('aiautotool-section', __('AI Auto Tool Settings', 'aiautotool'), array($this, 'section_callback'), 'aiautotool-settings');
+        add_settings_section('aiautotool-section', __('AI Auto Tool Settings', 'ai-auto-tool'), array($this, 'section_callback'), 'aiautotool-settings');
         add_settings_field('submitindex_field', __('Information:', 'ai-auto-tool'), array($this, 'submitindex_field_callback'), 'aiautotool-settings', 'aiautotool-section');
         add_settings_field('post_types_field', __('Post Types List:', 'ai-auto-tool'), array($this, 'post_types_field_callback'), 'aiautotool-settings', 'aiautotool-section');
     }
@@ -792,40 +806,41 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
     ?>
 
     <div id="tool-cloudflareai" class="tab-content" style="display:none;">
-        <h1> <?php echo $this->icon; _e(' Config AI auto create Image ', 'ai-auto-tool'); ?></h1>
+        <h1> <?php echo esc_attr($this->icon); esc_html_e(' Config AI auto create Image ', 'ai-auto-tool'); ?></h1>
         <div class="wrap">
-            <h3><?php _e('Choice default source Create Image auto ', 'aiautotool'); ?></h3>
+            <h3><?php esc_html_e('Choice default source Create Image auto ', 'ai-auto-tool'); ?></h3>
             <form method="post" action="options.php">
                 <?php
                 settings_fields('aiautotool-settings-group');
                 
                 ?>
-                <?php foreach ($this->arr_source_ai_model as $key => $value) {
-                    ?>
+                <?php foreach ($this->arr_source_ai_model as $key => $value) { ?>
                     <label class="nut-switch">
-                            <input type="radio" name="aiautotool_setting_cloudflare_image[source_img_ai]" value="<?php echo $key;?>"  <?php echo $key == $setting['source_img_ai'] ? 'checked="checked"' : ''; ?> />
-                            <span class="slider"></span>
-                        </label>
-                        <label class="ft-label-right"><?php _e('', 'ai-auto-tool');
-                            echo $key; ?></label>
-                    <?php
-                } ?>
+                        <input type="radio" name="aiautotool_setting_cloudflare_image[source_img_ai]" value="<?php echo esc_attr($key); ?>" <?php echo esc_attr($key == $setting['source_img_ai'] ? 'checked="checked"' : ''); ?> />
+                        <span class="slider"></span>
+                    </label>
+                    <label class="ft-label-right"><?php echo esc_html($key); ?></label>
+                <?php } ?>
+
                 
                 
-                <h3><?php _e('Config api key Cloudfalre  ', 'aiautotool'); ?></h3>
+                <h3><?php esc_html_e('Config api key Cloudfalre  ', 'ai-auto-tool'); ?></h3>
                 <div id="cloudfalre">
                  <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                    <?php _e('Api Token Key for Workers AI Cloudflare','ai-auto-tool'); ?> : <a href="https://developers.cloudflare.com/fundamentals/api/get-started/create-token/" target="_blank"><?php _e('Document help','ai-auto-tool'); ?></a>
-                        <input class="ft-input-big" placeholder="API Token Key..." type="text" name="aiautotool_setting_cloudflare_image[apikey]" value="<?php if(!empty($this->aiautotool_setting_cloudflare_image['apikey'])){echo sanitize_text_field($this->aiautotool_setting_cloudflare_image['apikey']);} ?>">
+                    <?php esc_html_e('Api Token Key for Workers AI Cloudflare','ai-auto-tool'); ?> : <a href="https://developers.cloudflare.com/fundamentals/api/get-started/create-token/" target="_blank"><?php esc_html_e('Document help','ai-auto-tool'); ?></a>
+
+                    <input class="ft-input-big" placeholder="API Token Key..." type="text" name="aiautotool_setting_cloudflare_image[apikey]" value="<?php echo esc_attr(!empty($this->aiautotool_setting_cloudflare_image['apikey']) ? esc_attr($this->aiautotool_setting_cloudflare_image['apikey']) : ''); ?>">
+
+                       
                     
                 </p>
                 <p class="ft-note"><i class="fa-solid fa-lightbulb"></i> 
-                    <?php _e('ID Account cloudflare','ai-auto-tool'); ?>  <a href="https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids/" target="_blank"><?php _e('Document help','ai-auto-tool'); ?></a>
+                    <?php esc_html_e('ID Account cloudflare','ai-auto-tool'); ?>  <a href="https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids/" target="_blank"><?php esc_html_e('Document help','ai-auto-tool'); ?></a>
                     
-                     <input class="ft-input-big" placeholder="Account ID..." type="text" name="aiautotool_setting_cloudflare_image[id_account_cl]" value="<?php if(!empty($this->aiautotool_setting_cloudflare_image['id_account_cl'])){echo sanitize_text_field($this->aiautotool_setting_cloudflare_image['id_account_cl']);} ?>">
+                     <input class="ft-input-big" placeholder="Account ID..." type="text" name="aiautotool_setting_cloudflare_image[id_account_cl]" value="<?php if(!empty($this->aiautotool_setting_cloudflare_image['id_account_cl'])){echo esc_attr($this->aiautotool_setting_cloudflare_image['id_account_cl']);} ?>">
                 </p>
                 <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                    <?php _e('Model Image','ai-auto-tool'); ?>
+                    <?php esc_html_e('Model Image','ai-auto-tool'); ?>
                     <select id="aiautotool_setting_cloudflare_image[model_ai]" name="aiautotool_setting_cloudflare_image[model_ai]">
                             <option value="@cf/lykon/dreamshaper-8-lcm" <?php selected($current_model, '@cf/lykon/dreamshaper-8-lcm'); ?>>@cf/lykon/dreamshaper-8-lcm</option>
                             <option value="@cf/bytedance/stable-diffusion-xl-lightning" <?php selected($current_model, '@cf/bytedance/stable-diffusion-xl-lightning'); ?>>@cf/bytedance/stable-diffusion-xl-lightning</option>
@@ -833,16 +848,16 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
                         </select>
                 </p>
                 </div>
-                <h3><?php _e('Config api key Huggingface  ', 'aiautotool'); ?></h3>
+                <h3><?php esc_html_e('Config api key Huggingface  ', 'ai-auto-tool'); ?></h3>
                 <div id="hunggingface">
                     <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                    <?php _e('Api Token Key Huggingface ','ai-auto-tool'); ?> : <a href="https://huggingface.co/docs/api-inference/quicktour#get-your-api-token" target="_blank"><?php _e('Document help Get your API Token','ai-auto-tool'); ?></a>
-                        <input class="ft-input-big" placeholder="API Token Key..." type="text" name="aiautotool_setting_cloudflare_image[hunggingfacetoken]" value="<?php if(!empty($this->aiautotool_setting_cloudflare_image['hunggingfacetoken'])){echo sanitize_text_field($this->aiautotool_setting_cloudflare_image['hunggingfacetoken']);} ?>">
+                    <?php esc_html_e('Api Token Key Huggingface ','ai-auto-tool'); ?> : <a href="https://huggingface.co/docs/api-inference/quicktour#get-your-api-token" target="_blank"><?php esc_html_e('Document help Get your API Token','ai-auto-tool'); ?></a>
+                        <input class="ft-input-big" placeholder="API Token Key..." type="text" name="aiautotool_setting_cloudflare_image[hunggingfacetoken]" value="<?php if(!empty($this->aiautotool_setting_cloudflare_image['hunggingfacetoken'])){echo esc_attr($this->aiautotool_setting_cloudflare_image['hunggingfacetoken']);} ?>">
                     
                     </p>
 
                     <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                    <?php _e('Model Image','ai-auto-tool'); ?>
+                    <?php esc_html_e('Model Image','ai-auto-tool'); ?>
                     <select id="aiautotool_setting_cloudflare_image[hunggingface_model_ai]" name="aiautotool_setting_cloudflare_image[hunggingface_model_ai]">
                             <option value="stabilityai/stable-diffusion-3-medium-diffusers" <?php selected($hunggingface_model_ai, 'stabilityai/stable-diffusion-3-medium-diffusers'); ?>>stabilityai/stable-diffusion-3-medium-diffusers</option>
                             <option value="stablediffusionapi/realistic-stock-photo" <?php selected($hunggingface_model_ai, 'stablediffusionapi/realistic-stock-photo'); ?>>stablediffusionapi/realistic-stock-photo</option>
@@ -852,7 +867,7 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
 
                 </div>
                 <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                    <?php _e('Time create Image','ai-auto-tool'); ?>
+                    <?php esc_html_e('Time create Image','ai-auto-tool'); ?>
                     </p>
                      <select id="aiautotool_setting_cloudflare_image[time_cloudflare_image]" name="aiautotool_setting_cloudflare_image[time_cloudflare_image]">
                             <option value="1" <?php selected($current_interval, 1); ?>>1 minute</option>
@@ -868,7 +883,7 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
                             <option value="1440" <?php selected($current_interval, 1440); ?>>24 hour</option>
                         </select>
                 <!-- <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                   <?php _e('Number Image for one Post','ai-auto-tool'); ?>:
+                   <?php esc_html_e('Number Image for one Post','ai-auto-tool'); ?>:
                     </p>
                 <select id="aiautotool_setting_cloudflare_image[number_comment]" name="aiautotool_setting_cloudflare_image[number_comment]">
                             <?php 
@@ -882,7 +897,7 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
                             
                         </select> -->
                 
-                <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php _e('Select post type', 'ai-auto-tool'); ?></p>
+                <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php esc_html_e('Select post type', 'ai-auto-tool'); ?></p>
 
                 <?php
                     $post_types = get_post_types(array( 'public' => true ), 'names' );
@@ -890,11 +905,11 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
                     foreach ($post_types as $post_type) {
                         ?>
                         <label class="nut-switch">
-                            <input type="checkbox" name="aiautotool_setting_cloudflare_image[post_type][]" value="<?php echo $post_type; ?>" <?php echo in_array($post_type, $setting['post_type']) ? 'checked="checked"' : ''; ?> />
+                            <input type="checkbox" name="aiautotool_setting_cloudflare_image[post_type][]" value="<?php echo esc_attr($post_type); ?>" <?php echo in_array($post_type, $setting['post_type']) ? 'checked="checked"' : ''; ?> />
                             <span class="slider"></span>
                         </label>
-                        <label class="ft-label-right"><?php _e('Active :  ', 'ai-auto-tool');
-                            echo $post_type; ?></label>
+                        <label class="ft-label-right"><?php esc_html_e('Active :  ', 'ai-auto-tool');
+                            echo esc_attr($post_type); ?></label>
                         </p>
                         <?php
                         $i++;
@@ -915,20 +930,20 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
     public function render_tab_setting() {
         if($this->active=="true"){
 
-         echo '<button href="#tool-cloudflareai" class="nav-tab sotab"> '.$this->icon.__(' Image Generator','ai-auto-tool').'</button>';
+         echo '<button href="#tool-cloudflareai" class="nav-tab sotab"> '.esc_attr($this->icon).esc_html__(' Image Generator','ai-auto-tool').'</button>';
         }
     }
 
     public function render_feature() {
 
-       $autoToolBox = new AutoToolBox($this->icon.' '.$this->name_plan, __('This feature enables the system to automatically search for articles without thumbnails and use AI (Cloudfalre, huggingface...) to create suitable images for those articles.','ai-auto-tool'), "#", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
-
-        echo $autoToolBox->generateHTML();
+       $autoToolBox = new AutoToolBox($this->icon.' '.$this->name_plan, esc_html__('This feature enables the system to automatically search for articles without thumbnails and use AI (Cloudfalre, huggingface...) to create suitable images for those articles.','ai-auto-tool'), "#", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
+       echo ($autoToolBox->generateHTML());
+       
     }
 
     // Callback cho section
     public function section_callback() {
-        echo '<p>' . __('Enter information and select Post Types.', 'aiautotool') . '</p>';
+        echo '<p>' . esc_html__('Enter information and select Post Types.', 'ai-auto-tool') . '</p>';
     }
 
     // Callback cho textarea thông tin
@@ -944,7 +959,7 @@ class AI_AutoTool_cloudflareAI extends rendersetting{
 
         foreach ($post_types as $post_type) {
             $checked = in_array($post_type->name, $selected_post_types) ? 'checked="checked"' : '';
-            echo '<input type="checkbox" name="aiautotool_setting_post_types[]" value="' . esc_attr($post_type->name) . '" ' . $checked . ' /> ' . esc_html($post_type->label) . '<br>';
+            echo '<input type="checkbox" name="aiautotool_setting_post_types[]" value="' . esc_attr($post_type->name) . '" ' . esc_html($checked) . ' /> ' . esc_html($post_type->label) . '<br>';
         }
     }
     private function get_settings() {

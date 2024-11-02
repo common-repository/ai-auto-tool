@@ -29,7 +29,7 @@ class URL_Scanner_Plugin extends rendersetting{
     public $notice ;
     public function __construct() {
         
-        $this->name_plan =  __('Autoblogging AI post','ai-auto-tool');
+        $this->name_plan =  esc_html__('Autoblogging AI post','ai-auto-tool');
         $this->plan_limit_aiautotool =  'plan_limit_aiautotool_'.$this->active_option_name;
        
         $this->notice = new aiautotool_Warning_Notice();
@@ -113,10 +113,9 @@ class URL_Scanner_Plugin extends rendersetting{
         return $new_value;
     }
     public function render_plan(){
-         if ($this->active=='true') {
-           $quota = $this->config['number_post']==-1? 'Unlimited':$this->config['number_post'];
-        echo '<p>'.$this->icon.' '.$this->name_plan.':<strong>  Usage : '.$this->config['usage'].'</strong></p>';
-       
+          if ($this->active=='true') {
+          $quota = $this->config['number_post'] == -1 ? 'Unlimited' : esc_html($this->config['number_post']);
+echo '<p>' . esc_html($this->icon) . ' ' . esc_html($this->name_plan) . ': <strong> Usage: ' . esc_html($this->config['usage']) . '</strong></p>';
 
         }
     }
@@ -195,10 +194,7 @@ class URL_Scanner_Plugin extends rendersetting{
            
 
              $this->notice->add_notice(
-                                sprintf(
-                                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                                    aiautotool_premium()->get_upgrade_url()
-                                ),
+                                AIAUTOTOOL_TITLE_UPGRADE,
                                 'notice-error',
                                 null,
                                 true,
@@ -322,7 +318,7 @@ class URL_Scanner_Plugin extends rendersetting{
     }
     public function add_button_auto_Content($actions, $post) {
         $post_id = $post->ID;
-        $custom_button_html = '<a class="aiautotool_button_gen" href="javascript:void(0);" data-id="'.$post_id.'" onclick="bard_gen_content(this);"><img src="'.plugins_url('../images/logo.svg', __FILE__).'" width="16px" height="16px"  />Bard</a><div id="loading-icon" class="loader"></div>';
+        $custom_button_html = '<a class="aiautotool_button_gen" href="javascript:void(0);" data-id="'.$post_id.'" onclick="bard_gen_content(this);"><img src="'.esc_url(plugins_url('../images/logo.svg', __FILE__)).'" width="16px" height="16px"  />Bard</a><div id="loading-icon" class="loader"></div>';
         $actions['custom'] = $custom_button_html;
         return $actions;
     }
@@ -332,7 +328,7 @@ class URL_Scanner_Plugin extends rendersetting{
        
         ?>
         <div id="tab-scan-setting" class="tab-content" style="display:none;">
-            <h2><?php echo wp_kses_post($this->icon); ?> <?php _e('Schedule Post','ai-auto-tool'); ?></h2>
+            <h2><?php echo wp_kses_post($this->icon); ?> <?php esc_html_e('Schedule Post','ai-auto-tool'); ?></h2>
             <?php
             if (!current_user_can('manage_options')) {
             return;
@@ -371,7 +367,7 @@ class URL_Scanner_Plugin extends rendersetting{
             
             <form method="post" action="">
                  <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                    <?php _e('Time public Draft','ai-auto-tool'); ?>
+                    <?php esc_html_e('Time public Draft','ai-auto-tool'); ?>
                     </p>
                      <select id="aiautotool_draft_public_time" name="aiautotool_draft_public_time">
                             <option value="1" <?php selected($current_interval, 1); ?>>1 minute</option>
@@ -387,7 +383,7 @@ class URL_Scanner_Plugin extends rendersetting{
                             <option value="1440" <?php selected($current_interval, 1440); ?>>24 hour</option>
                         </select>
                 <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                   <?php _e('Number Post for one public Draft','ai-auto-tool'); ?>:
+                   <?php esc_html_e('Number Post for one public Draft','ai-auto-tool'); ?>:
                     </p>
                 <select id="aiautotool_draft_public_number_post" name="aiautotool_draft_public_number_post">
                             <option value="1" <?php selected($number_post, 1); ?>>1</option>
@@ -395,17 +391,17 @@ class URL_Scanner_Plugin extends rendersetting{
                             <option value="3" <?php selected($number_post, 3); ?>>3</option>
                         </select>
                 <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                   <?php _e('Turn off auto image when public post','ai-auto-tool'); ?>:
+                   <?php esc_html_e('Turn off auto image when public post','ai-auto-tool'); ?>:
                     </p>
 
                      <label class="nut-switch">
                                     <input type="checkbox" name="turnoff_auto_images" id="turnoff_auto_images"  value="1" <?php if ( isset( $aiautotool_draft_public_turnoff_auto_images) && true ==  $aiautotool_draft_public_turnoff_auto_images ) echo 'checked="checked"'; ?>>
                                     <span class="slider"></span></label>
-                                    <label class="ft-label-right"><?php _e('Disable auto Image in post.','ai-auto-tool'); ?></label>
+                                    <label class="ft-label-right"><?php esc_html_e('Disable auto Image in post.','ai-auto-tool'); ?></label>
                                     </p>
 
                 <p class="submit">
-                    <input type="submit" name="aiautotool_draft_public_save_settings" class=" ft-submit" value="<?php _e('Save Configuration','ai-auto-tool'); ?>" />
+                    <input type="submit" name="aiautotool_draft_public_save_settings" class=" ft-submit" value="<?php esc_html_e('Save Configuration','ai-auto-tool'); ?>" />
                 </p>
             </form>
             <hr>
@@ -419,14 +415,14 @@ class URL_Scanner_Plugin extends rendersetting{
     public function render_tab_setting() {
         // Cài đặt cho lớp auto_ex_link ở đây
         if ($this->active=='true') {
-        echo '<button href="#tab-scan-setting" class="nav-tab sotab"> '. wp_kses_post($this->icon).' '.__('Autoblogging AI post','ai-auto-tool').'</button>';
+        echo '<button href="#tab-scan-setting" class="nav-tab sotab"> '. wp_kses_post($this->icon).' '.esc_html__('Autoblogging AI post','ai-auto-tool').'</button>';
         }
     }
 
     public function render_feature(){
-        $autoToolBox = new AutoToolBox(wp_kses_post($this->icon).' '.__('Autoblogging AI post','ai-auto-tool'), "Autoblogging uses AI Gemini. Just put in the list of article titles and set the time to post. The system works 100% automatically to take care of your website every day", "https://doc.aiautotool.com/integrations/schedule-ai-post-user-guide", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
+        $autoToolBox = new AutoToolBox(wp_kses_post($this->icon).' '.esc_html__('Autoblogging AI post','ai-auto-tool'), "Autoblogging uses AI Gemini. Just put in the list of article titles and set the time to post. The system works 100% automatically to take care of your website every day", "https://doc.aiautotool.com/integrations/schedule-ai-post-user-guide", $this->active_option_name, $this->active,esc_url(plugins_url('../images/logo.svg', __FILE__)));
 
-        echo $autoToolBox->generateHTML();
+         echo ($autoToolBox->generateHTML());
         
         
     }
@@ -702,7 +698,7 @@ class URL_Scanner_Plugin extends rendersetting{
                             $post_id = wp_update_post($post_data);
                             $log->set_log('schedule_gen_content',array('post_id'=>$post_id,'post_title'=>$title,'msg'=>'create content success and Update content to post draft : '.$title));
                             $this->aiautotool_update_usage();
-                            $this->notice->add_notice( __( 'create content success and Update content to post draft : '.$title , 'ai-auto-tool' ), 'notice-info', null, true,$this->name_plan );
+                            $this->notice->add_notice( 'create content success and Update content to post draft : '.$title , 'notice-info', null, true,$this->name_plan );
                         }else{
                              $log->set_log('schedule_gen_content',array('post_id'=>$post_id,'post_title'=>$title,'msg'=>'create content Error '.$title));
                         }
@@ -716,10 +712,7 @@ class URL_Scanner_Plugin extends rendersetting{
             }
         }else{
              $this->notice->add_notice(
-                                sprintf(
-                                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                                    aiautotool_premium()->get_upgrade_url()
-                                ),
+                                AIAUTOTOOL_TITLE_UPGRADE,
                                 'notice-error',
                                 null,
                                 true,
@@ -895,10 +888,7 @@ public static function insert_text_after_third_paragraph($content, $text) {
                 }
             }else{
                 $this->notice->add_notice(
-                    sprintf(
-                        __( $this->name_plan.' Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                        aiautotool_premium()->get_upgrade_url()
-                    ),
+                    AIAUTOTOOL_TITLE_UPGRADE,
                     'notice-error',
                     null,
                     true,
@@ -1050,10 +1040,7 @@ public static function insert_text_after_third_paragraph($content, $text) {
                             }
                         }else{
                             $this->notice->add_notice(
-                                sprintf(
-                                    __( $this->name_plan.' Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                                    aiautotool_premium()->get_upgrade_url()
-                                ),
+                                AIAUTOTOOL_TITLE_UPGRADE,
                                 'notice-error',
                                 null,
                                 true,
@@ -1321,8 +1308,8 @@ public static function insert_text_after_third_paragraph($content, $text) {
 
         add_submenu_page(
         MENUSUBPARRENT,       
-        wp_kses_post($this->icon).' '.__('Autoblogging AI post','ai-auto-tool'),          
-        wp_kses_post($this->icon).' '.__('Autoblogging AI post','ai-auto-tool'),    
+        wp_kses_post($this->icon).' '.esc_html__('Autoblogging AI post','ai-auto-tool'),          
+        wp_kses_post($this->icon).' '.esc_html__('Autoblogging AI post','ai-auto-tool'),    
         'manage_options',             
         'add-post-draft',  
         array($this, 'add_key_to_post')  
@@ -1357,26 +1344,26 @@ public static function insert_text_after_third_paragraph($content, $text) {
             <div class="ft-wrap-body">
             <div class="ft-box">
                 <div class="ft-menu">
-                    <div class="ft-logo"><img src="<?php echo plugins_url('../images/logo.svg', __FILE__); ?>">
+                    <div class="ft-logo"><img src="<?php echo esc_url(plugins_url('../images/logo.svg', __FILE__)); ?>">
                     <br>Autoblogging</div>
-                    <button href="#tab-schedule" class="nav-tab sotabt "> <?php echo wp_kses_post($this->icon).' '. __('Autoblogging AI post','ai-auto-tool'); ?></button>
+                    <button href="#tab-schedule" class="nav-tab sotabt "> <?php echo wp_kses_post($this->icon).' '. esc_html__('Autoblogging AI post','ai-auto-tool'); ?></button>
                    
-                    <button href="#tab-log-schedule" class="nav-tab sotabt "><i class="fa-regular fa-folder-closed"></i> <?php _e('View log schedule','ai-auto-tool'); ?></button>
+                    <button href="#tab-log-schedule" class="nav-tab sotabt "><i class="fa-regular fa-folder-closed"></i> <?php esc_html_e('View log schedule','ai-auto-tool'); ?></button>
                 
                 </div>
                 <div class="ft-main">
 
                     <div id="tab-schedule" class="tab-content sotab-box ftbox">
-                         <h2><i class="fa-regular fa-clock"></i> <?php _e('Autoblogging AI post','ai-auto-tool'); ?></h2>
+                         <h2><i class="fa-regular fa-clock"></i> <?php esc_html_e('Autoblogging AI post','ai-auto-tool'); ?></h2>
                                
                             <!-- start form -->
                             <form id="add-post-form"  method="post" >
                                 <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('Multiple Post Titles Input','ai-auto-tool'); ?> 
+                                    <?php esc_html_e('Multiple Post Titles Input','ai-auto-tool'); ?> 
                                     <br>
-                                   <?php _e('Allow users to input and save multiple post titles.','ai-auto-tool'); ?>
+                                   <?php esc_html_e('Allow users to input and save multiple post titles.','ai-auto-tool'); ?>
                                    <br>
-                                   <?php _e('Store these titles as draft posts in the WordPress database. Support gen Title auto => <a href="https://aitoolseo.com/" target="_blank" class=" delete-post-csdl">Gen Title</a>','ai-auto-tool'); ?>
+                                   <?php esc_html_e('Store these titles as draft posts in the WordPress database. Support gen Title auto => <a href="https://aitoolseo.com/" target="_blank" class=" delete-post-csdl">Gen Title</a>','ai-auto-tool'); ?>
 
                                    <button class="aiautotool_idea_generated" title="AI Suggest Post title....">
                                         <i class="fa-solid fa-bolt"></i> Idea Title
@@ -1444,7 +1431,7 @@ public static function insert_text_after_third_paragraph($content, $text) {
      });
                     </script>
                                 </p>
-                                <textarea id="post-titles" class="ft-code-textarea" style="height:200px" name="post_titles" rows="5" cols="50"  placeholdertext="<?php _e('Enter post titles',''); ?>"></textarea>
+                                <textarea id="post-titles" class="ft-code-textarea" style="height:200px" name="post_titles" rows="5" cols="50"  placeholdertext="<?php esc_html_e('Enter post titles','ai-auto-tool'); ?>"></textarea>
 
                                 <?php 
                                 if (class_exists('AIautotool_Prompt_CPT')) {
@@ -1454,7 +1441,7 @@ public static function insert_text_after_third_paragraph($content, $text) {
                                 }
                                  ?>
                                 <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('Select categories for post when post publish','ai-auto-tool'); ?>
+                                    <?php esc_html_e('Select categories for post when post publish','ai-auto-tool'); ?>
                                 </p>
                                 <?php 
                                 wp_dropdown_categories(array(
@@ -1466,17 +1453,17 @@ public static function insert_text_after_third_paragraph($content, $text) {
 
                                  ?>
                                  <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('Input tag for post, have random 3 tag in input.','ai-auto-tool'); ?>
+                                    <?php esc_html_e('Input tag for post, have random 3 tag in input.','ai-auto-tool'); ?>
                                 </p>
-                                 <input type="text" class="ft-input-big" name="post_tags" id="post_tags" placeholdertext="<?php _e('Enter tags (comma-separated)',''); ?>" placeholder="Enter tags (comma-separated)">
+                                 <input type="text" class="ft-input-big" name="post_tags" id="post_tags" placeholdertext="<?php esc_html_e('Enter tags (comma-separated)','ai-auto-tool'); ?>" placeholder="Enter tags (comma-separated)">
                                  <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('Language for title, Ai has write content for language your select.','ai-auto-tool'); ?>
+                                    <?php esc_html_e('Language for title, Ai has write content for language your select.','ai-auto-tool'); ?>
                                 </p>
                                  <?php 
                                  echo '<select name="post_language" id="post_language">';
                                     foreach ($languages as $code => $name) {
                                         $is_selected = selected($language_code, $code, false);
-                                        echo '<option value="' . $code . '" ' . $is_selected . '>' . $name . '</option>';
+                                         echo '<option value="' . esc_html($code) . '" ' . esc_html($is_selected) . '>' . esc_html($name) . '</option>';
                                     }
                                     echo '</select>';
 
@@ -1497,17 +1484,17 @@ public static function insert_text_after_third_paragraph($content, $text) {
                                 ?>
 
                                    <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('If your check , AI has rewrite your title post.','ai-auto-tool'); ?> 
+                                    <?php esc_html_e('If your check , AI has rewrite your title post.','ai-auto-tool'); ?> 
                                 </p>
 
                                 <p>
                                     <label class="nut-switch">
                                     <input type="checkbox" name="auto_change_title" id="auto_change_title"  value="1">
                                     <span class="slider"></span></label>
-                                    <label class="ft-label-right"><?php _e('Allows AI auto change title for Post','ai-auto-tool'); ?></label>
+                                    <label class="ft-label-right"><?php esc_html_e('Allows AI auto change title for Post','ai-auto-tool'); ?></label>
                                     </p>
                                  
-                                  <input type="submit" value="<?php _e('Add Post','ai-auto-tool'); ?>" id="btnSubmitaddpost" class="ft-submit"><div id="loading-icon" class="loader"></div>
+                                  <input type="submit" value="<?php esc_html_e('Add Post','ai-auto-tool'); ?>" id="btnSubmitaddpost" class="ft-submit"><div id="loading-icon" class="loader"></div>
                                   </form>
                                   
                                   <div id="progress-bar-container">
@@ -1541,13 +1528,13 @@ public static function insert_text_after_third_paragraph($content, $text) {
                     
                      <div id="tab-log-schedule" class="tab-content sotab-box ftbox" style="display:none;">
 
-                        <h2><?php _e('Logs','ai-auto-tool'); ?></h2>
-                         <button id="clear-log-button" class="ft-submit" ><?php _e('Clear Log', 'ai-auto-tool'); ?></button>
+                        <h2><?php esc_html_e('Logs','ai-auto-tool'); ?></h2>
+                         <button id="clear-log-button" class="ft-submit" ><?php esc_html_e('Clear Log', 'ai-auto-tool'); ?></button>
 
                         <p>
                             <?php $draft = self::aiautotool_get_all_draft(); 
 
-                                echo __('Has content:','ai-auto-tool').$draft['hascontent'].' / total '.$draft['total'];
+                                echo esc_html__('Has content:','ai-auto-tool').esc_html($draft['hascontent']).' / total '.esc_html($draft['total']);
                             ?>
                         </p>
                             <?php  $log = new AIautoTool_log();
@@ -1562,7 +1549,7 @@ public static function insert_text_after_third_paragraph($content, $text) {
             event.preventDefault();
             // Gửi yêu cầu xóa log thông qua AJAX
             $.ajax({
-                url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                url: '<?php echo esc_url(admin_url('admin-ajax.php')); ?>',
                 type: 'POST',
                 data: {
                     action: 'clear_log_action',
@@ -1581,7 +1568,7 @@ public static function insert_text_after_third_paragraph($content, $text) {
                 </div>
         <div class="ft-sidebar-right">
             <div class="ft-widget ft-widget-color1">
-                <h2><?php _e('If you find it helpful','ai-auto-tool'); ?></h2>
+                <h2><?php esc_html_e('If you find it helpful','ai-auto-tool'); ?></h2>
                 <a target="_blank" href="https://wordpress.org/support/plugin/ai-auto-tool/reviews/?filter=5">Rate now
                 <div class="starloader"></div></a>
             </div>
@@ -1591,31 +1578,31 @@ public static function insert_text_after_third_paragraph($content, $text) {
             
             <div class="ft-box-">
                 <div class="ft-main">
-                    <h3><?php echo wp_kses_post($this->icon); ?> <?php _e('Config Schedule time','ai-auto-tool'); ?> </h3>
+                    <h3><?php echo wp_kses_post($this->icon); ?> <?php esc_html_e('Config Schedule time','ai-auto-tool'); ?> </h3>
                     <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                        <?php _e('Note: This form only saves the list of titles you enter into a draft. Configure the time for the AI BOT to run in the background to generate content for draft articles. For example, if you choose 5 hours, the AI BOT will automatically select a random draft article every 5 hours and proceed to create content and images for the article. Afterward, it will automatically publish the article according to the schedule you set.','ai-auto-tool'); ?>
+                        <?php esc_html_e('Note: This form only saves the list of titles you enter into a draft. Configure the time for the AI BOT to run in the background to generate content for draft articles. For example, if you choose 5 hours, the AI BOT will automatically select a random draft article every 5 hours and proceed to create content and images for the article. Afterward, it will automatically publish the article according to the schedule you set.','ai-auto-tool'); ?>
                        
                     </p>
-                    <img class="ft-img" src="<?php echo plugins_url('../images/schedule-post.png', __FILE__); ?>" />   
+                    <img class="ft-img" src="<?php echo esc_url(plugins_url('../images/schedule-post.png', __FILE__)); ?>" />   
 
-                    <h3><?php echo wp_kses_post($this->icon); ?><?php _e('Manually set up Cron in WordPress','ai-auto-tool'); ?> </h3>
+                    <h3><?php echo wp_kses_post($this->icon); ?><?php esc_html_e('Manually set up Cron in WordPress','ai-auto-tool'); ?> </h3>
                     <p>
-            <?php _e('Edit the wp-config.php file:','ai-auto-tool'); ?></p>
-            <p><?php _e('Open the wp-config.php file, usually located in the root directory of your WordPress website, and add the following line:','ai-auto-tool'); ?></p>
+            <?php esc_html_e('Edit the wp-config.php file:','ai-auto-tool'); ?></p>
+            <p><?php esc_html_e('Open the wp-config.php file, usually located in the root directory of your WordPress website, and add the following line:','ai-auto-tool'); ?></p>
 
             <code>define('DISABLE_WP_CRON', true);</code>
 
-           <p> <?php _e('Schedule Cron using crontab:','ai-auto-tool'); ?></p>
-           <p> <?php  _e('Open crontab using the command:','ai-auto-tool');?></p>
+           <p> <?php esc_html_e('Schedule Cron using crontab:','ai-auto-tool'); ?></p>
+           <p> <?php  esc_html_e('Open crontab using the command:','ai-auto-tool');?></p>
             crontab -e
             <code>
                 */5 * * * * wget -q -O - http://yourdomain.com/wp-cron.php?doing_wp_cron >/dev/null 2>&1
 
             </code>
             <p>
-            <?php _e('Here:','ai-auto-tool'); ?>
+            <?php esc_html_e('Here:','ai-auto-tool'); ?>
 
-            */5 * * * *: <?php _e('Represents the Cron interval, here set to every 5 minutes. You can adjust it as needed.','ai-auto-tool'); ?>
+            */5 * * * *: <?php esc_html_e('Represents the Cron interval, here set to every 5 minutes. You can adjust it as needed.','ai-auto-tool'); ?>
 
                     </p>
                 </div>

@@ -68,9 +68,9 @@ class AIautotool_Web_Stories extends rendersetting{
             <h2><i class="fa-solid fa-link"></i> Website Stories </h2>
             <p class="ft-note">
                 	<i class="fa-solid fa-lightbulb"></i>
-                	<?php _e('Link Stories','ai-auto-tool'); ?>: <a href="<?php echo get_home_url();?>/aiwebstories/">Stories</a>
+                	<?php esc_html_e('Link Stories','ai-auto-tool'); ?>: <a href="<?php echo esc_url(get_home_url());?>/aiwebstories/">Stories</a>
                 	<br>
-                	<?php _e('Link Feed Stories','ai-auto-tool'); ?>: <a href="<?php echo get_home_url();?>/aiwebstories/feed/">Stories Feed Rss</a>
+                	<?php esc_html_e('Link Feed Stories','ai-auto-tool'); ?>: <a href="<?php echo esc_url(get_home_url());?>/aiwebstories/feed/">Stories Feed Rss</a>
                 </p>
 
              <form method="post" action="options.php">
@@ -81,43 +81,43 @@ class AIautotool_Web_Stories extends rendersetting{
                 </p>
 
                 <p style="display:flex;">
-					<input id="ft-add3" class="ft-input-big" name="<?php echo $this->namesetting; ?>[logo]" type="text" value="<?php if(!empty($this->setting['logo'])){echo sanitize_text_field($this->setting['logo']);} ?>" placeholder="<?php _e('Select logo publisher size : 96x96px','ai-auto-tool'); ?>">
+					<input id="ft-add3" class="ft-input-big" name="<?php echo esc_attr($this->namesetting); ?>[logo]" type="text" value="<?php if(!empty($this->setting['logo'])){echo esc_attr($this->setting['logo']);} ?>" placeholder="<?php esc_html_e('Select logo publisher size : 96x96px','ai-auto-tool'); ?>">
 					<button class="ft-selec" data-input-id="ft-add3">Upload</button>
 					</p>
 
-				<h3><?php _e('Upload mp3 for storie','ai-auto-tool'); ?></h3>
+				<h3><?php esc_html_e('Upload mp3 for storie','ai-auto-tool'); ?></h3>
 				<p class="ft-note">
                 	<i class="fa-solid fa-lightbulb"></i>
-                	<?php _e('Select file mp3 - 1','ai-auto-tool'); ?>
+                	<?php esc_html_e('Select file mp3 - 1','ai-auto-tool'); ?>
                 </p>
 
                 <p style="display:flex;">
-					<input id="ft-mp31" class="ft-input-big" name="<?php echo $this->namesetting; ?>[mp31]" type="text" value="<?php if(!empty($this->setting['mp31'])){echo sanitize_text_field($this->setting['mp31']);} ?>" placeholder="<?php _e('Select file mp3','ai-auto-tool'); ?>">
+					<input id="ft-mp31" class="ft-input-big" name="<?php echo esc_attr($this->namesetting); ?>[mp31]" type="text" value="<?php if(!empty($this->setting['mp31'])){echo esc_attr($this->setting['mp31']);} ?>" placeholder="<?php esc_html_e('Select file mp3','ai-auto-tool'); ?>">
 					<button class="ft-selec" data-input-id="ft-mp31">Upload</button>
 					</p>
 				<p class="ft-note">
                 	<i class="fa-solid fa-lightbulb"></i>
                 	
-                	<?php _e('Select file mp3 - 2','ai-auto-tool'); ?>
+                	<?php esc_html_e('Select file mp3 - 2','ai-auto-tool'); ?>
                 </p>
 
                 <p style="display:flex;">
-					<input id="ft-mp32" class="ft-input-big" name="<?php echo $this->namesetting; ?>[mp32]" type="text" value="<?php if(!empty($this->setting['mp32'])){echo sanitize_text_field($this->setting['mp32']);} ?>" placeholder="<?php _e('Select file mp3','ai-auto-tool'); ?>">
+					<input id="ft-mp32" class="ft-input-big" name="<?php echo esc_attr($this->namesetting); ?>[mp32]" type="text" value="<?php if(!empty($this->setting['mp32'])){echo esc_attr($this->setting['mp32']);} ?>" placeholder="<?php esc_html_e('Select file mp3','ai-auto-tool'); ?>">
 					<button class="ft-selec" data-input-id="ft-mp32">Upload</button>
 					</p>
 
-				<h3><?php _e('Config webstories','ai-auto-tool'); ?></h3>
-				<label class="ft-label-right"><?php _e('Add link stories to post', 'ai-auto-tool'); ?></label>
-					<p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php _e('If active , a link storie in article post.', 'ai-auto-tool'); ?></p>
+				<h3><?php esc_html_e('Config webstories','ai-auto-tool'); ?></h3>
+				<label class="ft-label-right"><?php esc_html_e('Add link stories to post', 'ai-auto-tool'); ?></label>
+					<p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php esc_html_e('If active , a link storie in article post.', 'ai-auto-tool'); ?></p>
 
 					<!-- tool class 1 -->
 					<label class="nut-switch">
-					<input type="checkbox" name="<?php echo $this->namesetting; ?>[addstorietopost]" value="1" <?php if ( isset( $this->setting['addstorietopost']) && 1 ==  $this->setting['addstorietopost'] ) echo 'checked="checked"'; ?> />
+					<input type="checkbox" name="<?php echo esc_attr($this->namesetting); ?>[addstorietopost]" value="1" <?php if ( isset( $this->setting['addstorietopost']) && 1 ==  $this->setting['addstorietopost'] ) echo esc_attr('checked="checked"'); ?> />
 					<span class="slider"></span></label>
-				<h3><?php _e('Google analytics code','ai-auto-tool'); ?></h3>
-				<p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php _e('Google Analytic ID', 'ai-auto-tool'); ?></p>
+				<h3><?php esc_html_e('Google analytics code','ai-auto-tool'); ?></h3>
+				<p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php esc_html_e('Google Analytic ID', 'ai-auto-tool'); ?></p>
 					<p>
-					<input class="ft-input-big" placeholder="<?php _e('G-xxxxxx', 'ai-auto-tool') ?>" name="<?php echo $this->namesetting; ?>[analytic]" type="text" value="<?php if(!empty($this->setting['analytic'])){echo sanitize_text_field($this->setting['analytic']);} ?>"/>
+					<input class="ft-input-big" placeholder="<?php esc_html_e('G-xxxxxx', 'ai-auto-tool') ?>" name="<?php echo esc_attr($this->namesetting); ?>[analytic]" type="text" value="<?php if(!empty($this->setting['analytic'])){echo esc_attr($this->setting['analytic']);} ?>"/>
 					</p>
                   <?php submit_button(__( 'Save all', 'ai-auto-tool' ),'ft-submit'); ?>
 
@@ -129,14 +129,14 @@ class AIautotool_Web_Stories extends rendersetting{
     public function render_tab_setting() {
         // Cài đặt cho lớp auto_ex_link ở đây
         if ($this->active=='true') {
-        echo '<button href="#tab-webstorie-setting" class="nav-tab sotab">'.$this->icon.' WebStories setting</button>';
+        echo '<button href="#tab-webstorie-setting" class="nav-tab sotab">'.esc_attr($this->icon).' WebStories setting</button>';
     	}
     }
     
     public function render_feature(){
         $autoToolBox = new AutoToolBox($this->icon." Active Webstorie", __('If active it, webstories has domain.com/aiwebstories/','ai-auto-tool'), "https://aiautotool.com", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
 
-        echo $autoToolBox->generateHTML();
+         echo ($autoToolBox->generateHTML());
         ?>
         
 
@@ -265,12 +265,12 @@ class AIautotool_Web_Stories extends rendersetting{
 	   				<?php 
 	   				echo '<nav aria-label="Page navigation">';
 					    echo '<ul class="pagination justify-content-center" style="width:auto">';
-					    echo paginate_links(array(
+					    echo esc_html(paginate_links(array(
 					        'total'     => $query->max_num_pages,
 					        'current'   => max(1, get_query_var('paged')),
-					        'prev_text' => '«',
-					        'next_text' => '»',
-					    ));
+					        'prev_text' => esc_html( '«' ),
+    						'next_text' => esc_html( '»' ),
+					    )));
 					    echo '</ul></nav>';
 
 					    wp_reset_postdata();
@@ -417,7 +417,7 @@ class AIautotool_Web_Stories extends rendersetting{
 <meta itemprop="publisher" content="<?php echo esc_html($post_author); ?>">
 <meta itemprop="inLanguage" content="en-US">
 <link rel="canonical" href="<?php echo esc_url($this->gen_url_storiepost($postname));?>">
-<link rel="icon" href="<?php echo $this->setting['logo']; ?>">
+<link rel="icon" href="<?php echo esc_attr($this->setting['logo']); ?>">
 		    	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes
     -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes
     -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>.amphtml-cap span,amp-img:after{display:block;position:absolute;left:0}amp-story-page{background:#000}amp-img img{width:100%;height:auto;margin:0;object-fit:cover}amp-img:after{background:linear-gradient(180deg,#fff0,#000);content:"";height:36%;pointer-events:none;bottom:0;width:100%}.amphtml-cap{position:relative;width:100%;height:100%}.amphtml-cap span{padding:15px;right:0;bottom:80px;color:#fff;font-size:24px;line-height:1.2}#page-1 amp-img img{height:auto;min-height:0;margin:0}#page-1 amp-img:after{height:58.1436%;background: linear-gradient(180deg,#fff0,#ff5722)}#page-2 amp-img img{height:auto;min-height:0;margin:0}#page-2 amp-img:after{height:64.0008%;background: linear-gradient(180deg,#fff0,#009688)}#page-3 amp-img img{height:auto;min-height:0;margin:0}#page-3 amp-img:after{height:53.9568%;background: linear-gradient(180deg,#fff0,#795548)}#page-4 amp-img img{height:auto;min-height:0;margin:0}#page-4 amp-img:after{height:49.5%;background: linear-gradient(180deg,#fff0,#4caf50)}#page-5 amp-img img{height:auto;min-height:0;margin:0}#page-5 amp-img:after{height:54%;background: linear-gradient(180deg,#fff0,#4caf50)}#page-6 amp-img img{height:auto;min-height:0;margin:0}#page-6 amp-img:after{height:54%;background: linear-gradient(180deg,#fff0,#2196f3)}#page-7 amp-img img{height:auto;min-height:0;margin:0}#page-7 amp-img:after{height:57.6%;background: linear-gradient(180deg,#fff0,#ff9800)}#page-8 amp-img img{height:auto;min-height:0;margin:0}#page-8 amp-img:after{height:68.5728%;background: linear-gradient(180deg,#fff0,#cddc39)}#page-9 amp-img img{height:auto;min-height:0;margin:0}#page-9 amp-img:after{height:51.5232%;background: linear-gradient(180deg,#fff0,#00bcd4)}#page-10 amp-img img{height:auto;min-height:0;margin:0}#page-10 amp-img:after{height:64.0008%;background: linear-gradient(180deg,#fff0,#4caf50)}#page-11 amp-img img{height:auto;min-height:0;margin:0}#page-11 amp-img:after{height:47.9988%;background: linear-gradient(180deg,#fff0,#8bc34a)}#page-12 amp-img img{height:auto;min-height:0;margin:0}#page-12 amp-img:after{height:36%;background: linear-gradient(180deg,#fff0,#ff5722)}#page-13 amp-img img{height:auto;min-height:0;margin:0}#page-13 amp-img:after{height:43.2%;background: linear-gradient(180deg,#fff0,#00bcd4)}#page-14 amp-img img{height:auto;min-height:0;margin:0}#page-14 amp-img:after{height:54.396%;background: linear-gradient(180deg,#fff0,#f44336)}#page-15 amp-img img{height:auto;min-height:0;margin:0}#page-15 amp-img:after{height:36%;background: linear-gradient(180deg,#fff0,#ff5722)}#page-16 amp-img img{height:auto;min-height:0;margin:0}#page-16 amp-img:after{height:52.362%;background: linear-gradient(180deg,#fff0,#8bc34a)}#page-17 amp-img img{height:auto;min-height:0;margin:0}#page-17 amp-img:after{height:71.3232%;background: linear-gradient(180deg,#fff0,#f44336)}#page-18 amp-img img{height:auto;min-height:0;margin:0}#page-18 amp-img:after{height:54.4068%;background: linear-gradient(180deg,#fff0,#2196f3)}#page-19 amp-img img{height:auto;min-height:0;margin:0}#page-19 amp-img:after{height:64.0008%;background: linear-gradient(180deg,#fff0,#00bcd4)}#page-20 amp-img img{height:auto;min-height:0;margin:0}#page-20 amp-img:after{height:47.0412%;background: linear-gradient(180deg,#fff0,#ffc107)}#page-21 amp-img img{height:auto;min-height:0;margin:0}#page-21 amp-img:after{height:52.758%;background: linear-gradient(180deg,#fff0,#e91e63)}#page-22 amp-img img{height:auto;min-height:0;margin:0}#page-22 amp-img:after{height:64.0008%;background: linear-gradient(180deg,#fff0,#ffc107)}#page-23 amp-img img{height:auto;min-height:0;margin:0}#page-23 amp-img:after{height:57.5064%;background: linear-gradient(180deg,#fff0,#9c27b0)}#page-24 amp-img img{height:auto;min-height:0;margin:0}#page-24 amp-img:after{height:63.4788%;background: linear-gradient(180deg,#fff0,#03a9f4)}#page-25 amp-img img{height:auto;min-height:0;margin:0}#page-25 amp-img:after{height:47.2896%;background: linear-gradient(180deg,#fff0,#607d8b)}#page-27 amp-img img{height:auto;min-height:0;margin:0}#page-27 amp-img:after{height:54%;background: linear-gradient(180deg,#fff0,#9c27b0)}#page-28 amp-img img{height:auto;min-height:0;margin:0}#page-28 amp-img:after{height:47.9988%;background: linear-gradient(180deg,#fff0,#009688)}#page-29 amp-img img{height:auto;min-height:0;margin:0}#page-29 amp-img:after{height:36%;background: linear-gradient(180deg,#fff0,#795548)}#page-30 amp-img img{height:auto;min-height:0;margin:0}#page-30 amp-img:after{height:64.0008%;background: linear-gradient(180deg,#fff0,#009688)}#page-31 amp-img img{height:auto;min-height:0;margin:0}#page-31 amp-img:after{height:52.9776%;background: linear-gradient(180deg,#fff0,#f44336)}#page-32 amp-img img{height:auto;min-height:0;margin:0}#page-32 amp-img:after{height:51.9228%;background: linear-gradient(180deg,#fff0,#ffeb3b)}#page-33 amp-img img{height:auto;min-height:0;margin:0}#page-33 amp-img:after{height:36%;background: linear-gradient(180deg,#fff0,#cddc39)}#page-34 amp-img img{height:auto;min-height:0;margin:0}#page-34 amp-img:after{height:36%;background: linear-gradient(180deg,#fff0,#9e9e9e)}#page-35 amp-img img{height:auto;min-height:0;margin:0}#page-35 amp-img:after{height:64.422%;background: linear-gradient(180deg,#fff0,#e91e63)}#page-36 amp-img img{height:auto;min-height:0;margin:0}#page-36 amp-img:after{height:42.9444%;background: linear-gradient(180deg,#fff0,#4caf50)}#page-37 amp-img img{height:auto;min-height:0;margin:0}#page-37 amp-img:after{height:54.4176%;background: linear-gradient(180deg,#fff0,#e91e63)}#page-38 amp-img img{height:auto;min-height:0;margin:0}#page-38 amp-img:after{height:64.0008%;background: linear-gradient(180deg,#fff0,#9c27b0)}#page-39 amp-img img{height:auto;min-height:0;margin:0}#page-39 amp-img:after{height:58.1832%;background: linear-gradient(180deg,#fff0,#00bcd4)}#page-40 amp-img img{height:auto;min-height:0;margin:0}#page-40 amp-img:after{height:52.362%;background: linear-gradient(180deg,#fff0,#9e9e9e)}#page-41 amp-img img{height:auto;min-height:0;margin:0}#page-41 amp-img:after{height:53.2728%;background: linear-gradient(180deg,#fff0,#ff9800)}#page-42 amp-img img{height:auto;min-height:0;margin:0}#page-42 amp-img:after{height:63.6012%;background: linear-gradient(180deg,#fff0,#e91e63)}#page-43 amp-img img{height:auto;min-height:0;margin:0}#page-43 amp-img:after{height:53.9316%;background: linear-gradient(180deg,#fff0,#ff9800)}#page-44 amp-img img{height:auto;min-height:0;margin:0}#page-44 amp-img:after{height:54.0828%;background: linear-gradient(180deg,#fff0,#f44336)}#page-45 amp-img img{height:auto;min-height:0;margin:0}#page-45 amp-img:after{height:49.2912%;background: linear-gradient(180deg,#fff0,#3f51b5)}#page-46 amp-img img{height:auto;min-height:0;margin:0}#page-46 amp-img:after{height:47.9988%;background: linear-gradient(180deg,#fff0,#3f51b5)}#page-47 amp-img img{height:auto;min-height:0;margin:0}#page-47 amp-img:after{height:60.48%;background: linear-gradient(180deg,#fff0,#8bc34a)}#page-48 amp-img img{height:auto;min-height:0;margin:0}#page-48 amp-img:after{height:64.0008%;background: linear-gradient(180deg,#fff0,#2196f3)}#page-49 amp-img img{height:auto;min-height:0;margin:0}#page-49 amp-img:after{height:49.8996%;background: linear-gradient(180deg,#fff0,#cddc39)}#page-50 amp-img img{height:auto;min-height:0;margin:0}#page-50 amp-img:after{height:54%;background: linear-gradient(180deg,#fff0,#3f51b5)}#page-51 amp-img img{height:auto;min-height:0;margin:0}#page-51 amp-img:after{height:62.4276%;background: linear-gradient(180deg,#fff0,#4caf50)}#page-52 amp-img img{height:auto;min-height:0;margin:0}#page-52 amp-img:after{height:63.6012%;background: linear-gradient(180deg,#fff0,#f44336)}#page-53 amp-img img{height:auto;min-height:0;margin:0}#page-53 amp-img:after{height:54%;background: linear-gradient(180deg,#fff0,#607d8b)}#page-54 amp-img img{height:auto;min-height:0;margin:0}#page-54 amp-img:after{height:51.57%;background: linear-gradient(180deg,#fff0,#009688)}#page-56 amp-img img{height:auto;min-height:0;margin:0}#page-56 amp-img:after{height:77.1444%;background: linear-gradient(180deg,#fff0,#3f51b5)}#page-57 amp-img img{height:auto;min-height:0;margin:0}#page-57 amp-img:after{height:45.288%;background: linear-gradient(180deg,#fff0,#ffeb3b)}#page-59 amp-img img{height:auto;min-height:0;margin:0}#page-59 amp-img:after{height:52.056%;background: linear-gradient(180deg,#fff0,#cddc39)}#page-60 amp-img img{height:auto;min-height:0;margin:0}#page-60 amp-img:after{height:54.3384%;background: linear-gradient(180deg,#fff0,#e91e63)}#page-61 amp-img img{height:auto;min-height:0;margin:0}#page-61 amp-img:after{height:54%;background: linear-gradient(180deg,#fff0,#2196f3)}#page-62 amp-img img{height:auto;min-height:0;margin:0}#page-62 amp-img:after{height:54.054%;background: linear-gradient(180deg,#fff0,#673ab7)}#page-63 amp-img img{height:auto;min-height:0;margin:0}#page-63 amp-img:after{height:64.0008%;background: linear-gradient(180deg,#fff0,#8bc34a)}#page-64 amp-img img{height:auto;min-height:0;margin:0}#page-64 amp-img:after{height:54%;background: linear-gradient(180deg,#fff0,#009688)}#page-65 amp-img img{height:auto;min-height:0;margin:0}#page-65 amp-img:after{height:36%;background: linear-gradient(180deg,#fff0,#ff5722)}.bg-image {  height: 100px; background-position: center; background-repeat: no-repeat; background-size: cover; }.blur { background: #ffffffbb;backdrop-filter: blur(10px);height: 100vh;width: 100vw;position: absolute;top: 0;left: 0;}</style>
@@ -456,7 +456,7 @@ class AIautotool_Web_Stories extends rendersetting{
         echo '</script>';
 		     ?>
 		 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-		</head><body><amp-story standalone title="<?php echo esc_html($post_title);?>" publisher="<?php echo esc_html($post_author); ?>" publisher-logo-src="<?php echo $this->setting['logo']; ?>" poster-portrait-src="<?php echo esc_url($url_thumb);?>" background-audio="<?php echo $this->setting['mp31']; ?>">
+		</head><body><amp-story standalone title="<?php echo esc_html($post_title);?>" publisher="<?php echo esc_html($post_author); ?>" publisher-logo-src="<?php echo esc_attr($this->setting['logo']); ?>" poster-portrait-src="<?php echo esc_url($url_thumb);?>" background-audio="<?php echo esc_attr($this->setting['mp31']); ?>">
 				<amp-story-page id="cover" class="bg-image bg-image-cover page">
 					<amp-story-grid-layer template="vertical" class="blur">
 						<amp-img src="<?php echo esc_url($url_thumb);?>" width="100" height="100" layout="responsive" object-fit="cover" style="border-radius: 1rem">
@@ -555,7 +555,9 @@ class AIautotool_Web_Stories extends rendersetting{
         header('Content-Type: application/rss+xml; charset=' . get_option('blog_charset'), true);
 		$more = 1;
 
-		echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '"?' . '>';
+	
+echo '<?xml version="1.0" encoding="' . esc_attr( get_option( 'blog_charset' ) ) . '"?' . '>';
+
 		?><rss version="2.0"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
 	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
@@ -568,10 +570,11 @@ class AIautotool_Web_Stories extends rendersetting{
     <atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
     <link><?php bloginfo_rss('url') ?></link>
     <description><?php bloginfo_rss("description") ?></description>
-    <lastBuildDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_lastpostmodified('GMT'), false); ?></lastBuildDate>
+    <lastBuildDate><?php echo esc_html(mysql2date('D, d M Y H:i:s +0000', get_lastpostmodified('GMT'), false)); ?></lastBuildDate>
     <language>en</language>
-    <sy:updatePeriod><?php echo apply_filters('rss_update_period', 'daily'); ?></sy:updatePeriod>
-    <sy:updateFrequency><?php echo apply_filters('rss_update_frequency', '1'); ?></sy:updateFrequency>
+    <sy:updatePeriod><?php echo esc_html( apply_filters( 'rss_update_period', 'daily' ) ); ?></sy:updatePeriod>
+	<sy:updateFrequency><?php echo esc_html( apply_filters( 'rss_update_frequency', '1' ) ); ?></sy:updateFrequency>
+
     <?php do_action('rss2_head'); ?>
     <?php
    
@@ -583,11 +586,11 @@ class AIautotool_Web_Stories extends rendersetting{
         ?>
         <item>
             <title>Stories <?php the_title_rss(); ?></title>
-            <link><?php echo $urllink; ?></link>
-            <pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?></pubDate>
-            <guid isPermaLink="false"><?php echo $urllink; ?></guid>
-            <description><![CDATA[<?php echo $description; ?>]]></description>
-            <content:encoded><![CDATA[<?php echo $content; ?>]]></content:encoded>
+            <link><?php echo esc_url($urllink); ?></link>
+            <pubDate><?php echo esc_html(mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false)); ?></pubDate>
+            <guid isPermaLink="false"><?php echo esc_url($urllink); ?></guid>
+            <description><![CDATA[<?php echo esc_html($description); ?>]]></description>
+            <content:encoded><![CDATA[<?php echo esc_html($content); ?>]]></content:encoded>
             <slash:comments>0</slash:comments>
         </item>
         <?php

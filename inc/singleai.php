@@ -172,7 +172,7 @@ class AIAutoToolsinglepost  extends rendersetting{
             <div class="aiautotool-modal-container">
         <div class="aiautotool-modal-overlay"></div>
         <div class="aiautotool-modal-content">
-            <h2><?php _e('All tool for AI Post','ai-auto-tool');  ?></h2>
+            <h2><?php esc_html_e('All tool for AI Post','ai-auto-tool');  ?></h2>
             <p>
                 <span class=" aiautotool_btn_v1 aiautotool_btn_v16 btn_bardWriter btnoutline" id="btn_outline"  onclick="changeType('Outline')"><span class="icon"><i class="fa-solid fa-lightbulb"></i>  </span><span>Outline </span></span>
                 
@@ -284,60 +284,60 @@ class AIAutoToolsinglepost  extends rendersetting{
     </div>
             <div class="aiautotool_box1 ">
                         <div class="aiautotool_box_head">
-                               <img src="<?php echo plugins_url('../images/logo.svg', __FILE__); ?>" width="16px" height="16px">
-                            <?php _e('Ai auto Tool','ai-auto-tool'); ?> </div>
+                               <img src="<?php echo esc_url(plugins_url('../images/logo.svg', __FILE__)); ?>" width="16px" height="16px">
+                            <?php esc_html_e('Ai auto Tool','ai-auto-tool'); ?> </div>
                                 <style type="text/css">
                                     
 
                                 </style>
                                 <div class="askassistant" >
-                                    <textarea id="promptask" rows="2" placeholdertext="<?php _e('Type your promp...','ai-auto-tool');?>" placeholder="<?php _e('Type your promp...','ai-auto-tool');?>"></textarea>
+                                    <textarea id="promptask" rows="2" placeholdertext="<?php esc_html_e('Type your promp...','ai-auto-tool');?>" placeholder="<?php esc_html_e('Type your promp...','ai-auto-tool');?>"></textarea>
                                    <div class="select-and-button">
                                         <select id="askAI">
                                             <option value="chatgpt">Chatgpt</option>
                                             <option value="gemini">Gemini AI</option>
                                         </select>
-                                        <button id="askprompt"><?php _e('<i class="fa-solid fa-robot"></i> Ask Assistant','ai-auto-tool'); ?></button>
+                                        <button id="askprompt"><?php esc_html_e('<i class="fa-solid fa-robot"></i> Ask Assistant','ai-auto-tool'); ?></button>
                                     </div>
                                 </div>
                                 <div class="aiautotool_form">
                                     <div class="aiautotool_tab">
-                                        <button type="button" data-tab="aiContentTab" class="tablinks" onclick="openTab(event, 'aiContentTab')"><?php _e('AI Content','ai-auto-tool'); ?></button>
+                                        <button type="button" data-tab="aiContentTab" class="tablinks" onclick="openTab(event, 'aiContentTab')"><?php esc_html_e('AI Content','ai-auto-tool'); ?></button>
 
-                                        <button type="button" data-tab="imagesTab" class="tablinks" onclick="openTab(event, 'imagesTab')"><?php _e('Images','ai-auto-tool'); ?></button>
-                                        <button type="button" data-tab="videoTab" class="tablinks" onclick="openTab(event, 'videoTab')"><?php _e('Video','ai-auto-tool'); ?></button>
+                                        <button type="button" data-tab="imagesTab" class="tablinks" onclick="openTab(event, 'imagesTab')"><?php esc_html_e('Images','ai-auto-tool'); ?></button>
+                                        <button type="button" data-tab="videoTab" class="tablinks" onclick="openTab(event, 'videoTab')"><?php esc_html_e('Video','ai-auto-tool'); ?></button>
                                         
                                     </div>
 
                                     <!-- AI Content Tab -->
                                     <div id="aiContentTab" class="tabcontent">
-                                        <div id="info_content" placeholdertext="<?php _e('Input title for post Then Click gen Article,Select a phrase and click the Write button to use this feature','ai-auto-tool'); ?>"  ></div>
+                                        <div id="info_content" placeholdertext="<?php esc_html_e('Input title for post Then Click gen Article,Select a phrase and click the Write button to use this feature','ai-auto-tool'); ?>"  ></div>
                                         
                                         <div class="loadingprocess p-5 aiautotool-text-center div_proccess_1 d-none div_proccess">
-                                        <div id="loading-icon" class="loader" style="display:block"></div> <?php _e('Start socket','ai-auto-tool'); ?> <span id="proccess_1" class="process_loading badge badge-soft-primary"></span>
+                                        <div id="loading-icon" class="loader" style="display:block"></div> <?php esc_html_e('Start socket','ai-auto-tool'); ?> <span id="proccess_1" class="process_loading badge badge-soft-primary"></span>
                                         </div>
                                         <div class="div_proccess_error aiautotool-text-center div_proccess d-none">
-                                        <div class="aiautotool-pt-5"> <span><?php _e('Start socket Error, Please F5 to reload.','ai-auto-tool'); ?></span></div>
+                                        <div class="aiautotool-pt-5"> <span><?php esc_html_e('Start socket Error, Please F5 to reload.','ai-auto-tool'); ?></span></div>
                                         
                                         </div>
                                         <!-- Content for AI Content tab goes here -->
                                         <div id="outbard">
                                             
                                             <center>
-                                            <?php _e('Select a phrase and click the <b>Write</b> button to use this feature','ai-auto-tool'); ?>
+                                            <?php esc_html_e('Select a phrase and click the <b>Write</b> button to use this feature','ai-auto-tool'); ?>
                                             <br>
-                                            <img src="<?php echo plugins_url('../images/find1.png', __FILE__); ?>" width="150px"  /></center></div>
-                                        <button class="btn btnaddpost aiautotool_button" style="display:none" ><?php _e('Add To Post','ai-auto-tool'); ?></button>
+                                            <img src="<?php echo esc_url(plugins_url('../images/find1.png', __FILE__)); ?>" width="150px"  /></center></div>
+                                        <button class="btn btnaddpost aiautotool_button" style="display:none" ><?php esc_html_e('Add To Post','ai-auto-tool'); ?></button>
                                     </div>
 
                                     <!-- Images Tab -->
                                     <div id="imagesTab" class="tabcontent">
                                         <div class="infodiv">
-                                        <div id="info_img" placeholdertext="<?php _e('Select a phrase and click the Find Image button to use this feature','ai-auto-tool'); ?>"  ></div>
+                                        <div id="info_img" placeholdertext="<?php esc_html_e('Select a phrase and click the Find Image button to use this feature','ai-auto-tool'); ?>"  ></div>
                                         <center>
-                                            <?php _e('Select a phrase and click the <b>Find Image</b> button to use this feature','ai-auto-tool'); ?>
+                                            <?php esc_html_e('Select a phrase and click the <b>Find Image</b> button to use this feature','ai-auto-tool'); ?>
                                             <br>
-                                            <img src="<?php echo plugins_url('../images/find1.png', __FILE__); ?>" width="150px"  /></center>
+                                            <img src="<?php echo esc_url(plugins_url('../images/find1.png', __FILE__)); ?>" width="150px"  /></center>
                                         </div>
                                         
                                         <div id="img_list_find" class="img_list_find"></div>
@@ -347,11 +347,11 @@ class AIAutoToolsinglepost  extends rendersetting{
                                     <!-- Images Tab -->
                                     <div id="videoTab" class="tabcontent">
                                         <div class="infodiv">
-                                        <div id="info_img" placeholdertext="<?php _e('Select a phrase and click the Find Image button to use this feature','ai-auto-tool'); ?>"  ></div>
+                                        <div id="info_img" placeholdertext="<?php esc_html_e('Select a phrase and click the Find Image button to use this feature','ai-auto-tool'); ?>"  ></div>
                                         <center>
-                                            <?php _e('Select a phrase and click the <b>Find Image</b> button to use this feature','ai-auto-tool'); ?>
+                                            <?php esc_html_e('Select a phrase and click the <b>Find Image</b> button to use this feature','ai-auto-tool'); ?>
                                             <br>
-                                            <img src="<?php echo plugins_url('../images/find1.png', __FILE__); ?>" width="150px"  /></center>
+                                            <img src="<?php echo esc_url(plugins_url('../images/find1.png', __FILE__)); ?>" width="150px"  /></center>
                                         </div>
                                         
                                         <div id="video_list_find" class="video_list_find"></div>
@@ -442,8 +442,9 @@ class AIAutoToolsinglepost  extends rendersetting{
     }
     public function render_plan(){
          if ($this->active=='true') {
-           $quota = $this->config['number_post']==-1? 'Unlimited':$this->config['number_post'];
-        echo '<p>'.$this->icon.' '.$this->name_plan.':<strong>  Usage : '.$this->config['usage'].'</strong></p>';
+             $quota = $this->config['number_post'] == -1 ? 'Unlimited' : esc_html($this->config['number_post']);
+echo '<p>' . esc_html($this->icon) . ' ' . esc_html($this->name_plan) . ': <strong> Usage: ' . esc_html($this->config['usage']) . '</strong></p>';
+
        
 
         }
@@ -890,9 +891,8 @@ Trên đây là những yêu cầu tối thiểu cho một bài viết blog, b�
 
     public function render_feature(){
         $autoToolBox = new AutoToolBox($this->icon.' '.$this->name_plan, "An intelligent editor that supports image searching, real-time content writing in multiple languages", "https://doc.aiautotool.com/", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
+    echo $autoToolBox->generateHTML();
 
-        echo $autoToolBox->generateHTML();
-        
     }
 
 
@@ -919,36 +919,36 @@ Trên đây là những yêu cầu tối thiểu cho một bài viết blog, b�
             // $post = new SinglePost('','vi');
             // print_r($post->getPost());
         ?>
-        <h1 class="wp-heading-inline">  <img src="<?php echo plugins_url('../images/logo.svg', __FILE__); ?>" width="16px" height="16px"  /> AI Autotool Single Post</h1>
+        <h1 class="wp-heading-inline">  <img src="<?php echo esc_url(plugins_url('../images/logo.svg', __FILE__)); ?>" width="16px" height="16px"  /> AI Autotool Single Post</h1>
         <div >
             <form method="post" action="" id="aiautotool_post_form" class="wrap aiautotool_container">
                 <div class="aiautotool_left ">
                 	<div class="aiautotool_box ">
                 		<div class="aiautotool_box_head">
                 
-			                     <img src="<?php echo plugins_url('../images/logo.svg', __FILE__); ?>" width="16px" height="16px"  />
+			                     <img src="<?php echo esc_url(plugins_url('../images/logo.svg', __FILE__)); ?>" width="16px" height="16px"  />
 
 			                <span id="titlehead">Ai Bard content</span>  
 			            </div>
                         <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('Language','ai-auto-tool'); ?>
+                                    <?php esc_html_e('Language','ai-auto-tool'); ?>
                                 </p>
                         <?php  echo '<select name="post_language" id="post_language">';
             foreach ($languages as $code => $name) {
                 $is_selected = selected($language_code, $code, false);
-                echo '<option value="' . $code . '" ' . $is_selected . '>' . $name . '</option>';
+                echo '<option value="' . esc_attr($code) . '" ' . esc_attr($is_selected ). '>' . esc_attr($name ). '</option>';
             }
             echo '</select>';
             ?>
                         <br>
                         <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('Title','ai-auto-tool'); ?>
+                                    <?php esc_html_e('Title','ai-auto-tool'); ?>
                                 </p>
 	                    <input placeholdertext="Input title for post Then Click gen Article." type="text" id="aiautotool_title" class=" ft-input-big" name="aiautotool_title">
 
     <hr>
          <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('Slug:','ai-auto-tool'); ?>
+                                    <?php esc_html_e('Slug:','ai-auto-tool'); ?>
                                 </p>
 	                    <input type="text" id="aiautotool_slug" class="ft-input-big" name="aiautotool_slug">
 
@@ -959,14 +959,14 @@ Trên đây là những yêu cầu tối thiểu cho một bài viết blog, b�
 	                    
 	                    <div class="aiautotool_form">
                             <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('Categories:','ai-auto-tool'); ?>
+                                    <?php esc_html_e('Categories:','ai-auto-tool'); ?>
                                 </p>
 		                    <div class="aiautotool_categories">
 		                    	 
 		                        <?php wp_category_checklist(); ?>
 		                    </div>
                              <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('Tags:','ai-auto-tool'); ?>
+                                    <?php esc_html_e('Tags:','ai-auto-tool'); ?>
                                 </p>
 		                    <input placeholdertext="Input tag for post." type="text" id="aiautotool_tags" class="ft-input-big" name="aiautotool_tags">
 		                 </div>
@@ -975,7 +975,7 @@ Trên đây là những yêu cầu tối thiểu cho một bài viết blog, b�
         $thumbnail_url = wp_get_attachment_image_url($thumbnail_id, 'thumbnail');
         ?>
         <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('Thumbnail:','ai-auto-tool'); ?>
+                                    <?php esc_html_e('Thumbnail:','ai-auto-tool'); ?>
                                 </p>
         <?php
         echo '<input type="hidden" id="custom-thumbnail-id" name="custom-thumbnail-id" value="' . esc_attr($thumbnail_id) . '">';
@@ -1015,14 +1015,14 @@ Trên đây là những yêu cầu tối thiểu cho một bài viết blog, b�
                                 <option <?php selected($month, '12'); ?> value="12">December</option>
                             </select>
                             
-                            <input value="<?php echo $year; ?>" type="text" id="publish_year" name="publish_year" class="aiautotool_box_time_input">
+                            <input value="<?php echo esc_attr($year); ?>" type="text" id="publish_year" name="publish_year" class="aiautotool_box_time_input">
                             
-                            <input value="<?php echo $day; ?> "type="text" id="publish_day" name="publish_day" class="aiautotool_box_time_input">
+                            <input value="<?php echo esc_attr($day); ?> "type="text" id="publish_day" name="publish_day" class="aiautotool_box_time_input">
                             
                             <label for="publish_hour" class="aiautotool_box_time_label"> - </label>
-                            <input value="<?php echo $hour; ?>" type="text" id="publish_hour" name="publish_hour" class="aiautotool_box_time_input">
+                            <input value="<?php echo esc_attr($hour); ?>" type="text" id="publish_hour" name="publish_hour" class="aiautotool_box_time_input">
                             
-                            <input value="<?php echo $minute; ?>" type="text" id="publish_minute" name="publish_minute" class="aiautotool_box_time_input">
+                            <input value="<?php echo esc_attr($minute); ?>" type="text" id="publish_minute" name="publish_minute" class="aiautotool_box_time_input">
                         </div>
                 		<button type="" class="aiautotool_button save-single-generation ft-submit">Publish</button>
 
@@ -1036,13 +1036,13 @@ Trên đây là những yêu cầu tối thiểu cho một bài viết blog, b�
 					           <img src="https://dichvuxetai.com/wp-content/plugins/ai-auto-tool/images/logo.svg" width="16px" height="16px">
 					        Ai auto Tool </div>
 					            <div class="askassistant" >
-                                    <textarea id="promptask" rows="2" placeholdertext="<?php _e('Type your promp...','ai-auto-tool');?>" placeholder="<?php _e('Type your promp...','ai-auto-tool');?>"></textarea>
+                                    <textarea id="promptask" rows="2" placeholdertext="<?php esc_html_e('Type your promp...','ai-auto-tool');?>" placeholder="<?php esc_html_e('Type your promp...','ai-auto-tool');?>"></textarea>
                                    <div class="select-and-button">
                                         <select id="askAI">
                                             <option value="chatgpt">Chatgpt</option>
                                             <option value="gemini">Gemini AI</option>
                                         </select>
-                                        <button id="askprompt"><?php _e('<i class="fa-solid fa-robot"></i> Ask Assistant','ai-auto-tool'); ?></button>
+                                        <button id="askprompt"><?php esc_html_e('<i class="fa-solid fa-robot"></i> Ask Assistant','ai-auto-tool'); ?></button>
                                     </div>
                                 </div>
 					            <div class="aiautotool_form">
@@ -1069,7 +1069,7 @@ Trên đây là những yêu cầu tối thiểu cho một bài viết blog, b�
                                             <center>
                                             Select a phrase and click the <b>Write</b> button to use this feature
                                             <br>
-                                            <img src="<?php echo plugins_url('../images/find1.png', __FILE__); ?>" width="150px"  /></center></div>
+                                            <img src="<?php echo esc_url(plugins_url('../images/find1.png', __FILE__)); ?>" width="150px"  /></center></div>
 							            <button class="btn btnaddpost aiautotool_button" style="display:none" >Add To Post</button>
 							        </div>
 
@@ -1080,7 +1080,7 @@ Trên đây là những yêu cầu tối thiểu cho một bài viết blog, b�
                                         <center>
                                             Select a phrase and click the <b>Find Image</b> button to use this feature
                                             <br>
-                                            <img src="<?php echo plugins_url('../images/find1.png', __FILE__); ?>" width="150px"  /></center>
+                                            <img src="<?php echo esc_url(plugins_url('../images/find1.png', __FILE__)); ?>" width="150px"  /></center>
                                         </div>
 							            
 							            <div id="img_list_find" class="img_list_find"></div>
@@ -1098,7 +1098,7 @@ Trên đây là những yêu cầu tối thiểu cho một bài viết blog, b�
             <div class="aiautotool-modal-container">
         <div class="aiautotool-modal-overlay"></div>
         <div class="aiautotool-modal-content">
-            <h2><?php _e('All tool for AI Post','ai-auto-tool');  ?></h2>
+            <h2><?php esc_html_e('All tool for AI Post','ai-auto-tool');  ?></h2>
             <p>
                 <span class=" aiautotool_btn_v1 aiautotool_btn_v16 btn_bardWriter btnoutline" id="btn_outline"  onclick="changeType('Outline')"><span class="icon"><i class="fa-solid fa-lightbulb"></i>  </span><span>Outline </span></span>
                 

@@ -131,53 +131,53 @@ class AIAutoTool_SubmitIndex extends rendersetting{
             <div class="aiautotool_left">
             <div class="ft-box">
                 <div class="ft-menu">
-                    <div class="ft-logo"><img src="<?php echo plugins_url('../images/logo.svg', __FILE__); ?>">
+                    <div class="ft-logo"><img src="<?php echo esc_url(plugins_url('../images/logo.svg', __FILE__)); ?>">
                     <br>Instant Indexing</div>
-                    <button href="#tab-Instant_Indexing" class="nav-tab sotabt "><i class="fa-solid fa-share-nodes"></i> <?php _e('Manual Submit','ai-auto-tool'); ?></button>
+                    <button href="#tab-Instant_Indexing" class="nav-tab sotabt "><i class="fa-solid fa-share-nodes"></i> <?php esc_html_e('Manual Submit','ai-auto-tool'); ?></button>
                     
-                    <button href="#tab-log-schedule" class="nav-tab sotabt "><i class="fa-regular fa-folder-closed"></i> <?php _e('View log','ai-auto-tool'); ?></button>
+                    <button href="#tab-log-schedule" class="nav-tab sotabt "><i class="fa-regular fa-folder-closed"></i> <?php esc_html_e('View log','ai-auto-tool'); ?></button>
                 
                 </div>
                 <div class="ft-main">
 
                     <div id="tab-Instant_Indexing" class="tab-content sotab-box ftbox">
-                         <h2><i class="fa-solid fa-share-nodes"></i> <?php _e('Console Instant Indexing','ai-auto-tool'); ?></h2>
+                         <h2><i class="fa-solid fa-share-nodes"></i> <?php esc_html_e('Console Instant Indexing','ai-auto-tool'); ?></h2>
                                
                             <!-- start form -->
                             <form id="push_link_form"  method="post" >
                                 <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('Multiple Post Url Input','ai-auto-tool'); ?> 
+                                    <?php esc_html_e('Multiple Post Url Input','ai-auto-tool'); ?> 
                                     <br>
-                                   <?php _e('URLs (one per line, up to 100 for Google and 10,000 for IndexNow):','ai-auto-tool'); ?>
+                                   <?php esc_html_e('URLs (one per line, up to 100 for Google and 10,000 for IndexNow):','ai-auto-tool'); ?>
                                    <br>
                                    
                                    
                                 </p>
-                                <textarea id="url" class="ft-code-textarea" style="height:200px" name="url" rows="5" cols="50"  placeholdertext="<?php _e('Enter post url',''); ?>"></textarea>
+                                <textarea id="url" class="ft-code-textarea" style="height:200px" name="url" rows="5" cols="50"  placeholdertext="<?php esc_html_e('Enter post url','ai-auto-tool'); ?>"></textarea>
                                 
                                  <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('Action:','ai-auto-tool'); ?> 
+                                    <?php esc_html_e('Action:','ai-auto-tool'); ?> 
                                    
                                 </p>
                                 <p>
                                     <label class="nut-switch">
                                     <input type="radio" name="action" id="auto_change_title" checked  value="update">
                                     <span class="slider"></span></label>
-                                    <label class="ft-label-right"><?php _e('Google: : Publish/update URL','ai-auto-tool'); ?></label>
+                                    <label class="ft-label-right"><?php esc_html_e('Google: : Publish/update URL','ai-auto-tool'); ?></label>
                                 </p>
 
                                 <p>
                                     <label class="nut-switch">
                                     <input type="radio" name="action" id="auto_change_title"  value="remove">
                                     <span class="slider"></span></label>
-                                    <label class="ft-label-right"><?php _e('Google: : remove URL','ai-auto-tool'); ?></label>
+                                    <label class="ft-label-right"><?php esc_html_e('Google: : remove URL','ai-auto-tool'); ?></label>
                                 </p>
                                 
                                  
                                    
 
                                 
-                                  <input type="submit" value="<?php _e('Send to ','ai-auto-tool'); ?>" id="btnsendtoapi" class="ft-submit"><div id="loading-icon" class="loader"></div>
+                                  <input type="submit" value="<?php esc_html_e('Send to ','ai-auto-tool'); ?>" id="btnsendtoapi" class="ft-submit"><div id="loading-icon" class="loader"></div>
                                   </form>
                                   
                                   <div id="progress-bar-container">
@@ -211,8 +211,8 @@ class AIAutoTool_SubmitIndex extends rendersetting{
                     
                      <div id="tab-log-schedule" class="tab-content sotab-box ftbox" style="display:none;">
 
-                        <h2><?php _e('Logs','ai-auto-tool'); ?></h2>
-                         <button id="clear-log-button" class="ft-submit" ><?php _e('Clear Log', 'ai-auto-tool'); ?></button>
+                        <h2><?php esc_html_e('Logs','ai-auto-tool'); ?></h2>
+                         <button id="clear-log-button" class="ft-submit" ><?php esc_html_e('Clear Log', 'ai-auto-tool'); ?></button>
 
                         <p>
                           <?php 
@@ -303,7 +303,7 @@ class AIAutoTool_SubmitIndex extends rendersetting{
             event.preventDefault();
             // Gửi yêu cầu xóa log thông qua AJAX
             $.ajax({
-                url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                url: '<?php echo esc_url(admin_url('admin-ajax.php')); ?>',
                 type: 'POST',
                 data: {
                     action: 'clear_log_submitindex',
@@ -343,11 +343,11 @@ $json = $this->get_settings(  );
                 <p class="" style="line-height: 1.8">
 
                      <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                        <a href="https://developers.google.com/search/apis/indexing-api/v3/quota-pricing" target="_blank"><strong><?php esc_html_e( 'Google API Remaining Quota:', 'aiautotool' ); ?></strong></a>
+                        <a href="https://developers.google.com/search/apis/indexing-api/v3/quota-pricing" target="_blank"><strong><?php esc_htmlesc_html_e( 'Google API Remaining Quota:', 'ai-auto-tool' ); ?></strong></a>
                     </p>
-                <code><?php esc_html_e( 'Publish Requests Per Day', 'aiautotool' ); ?> = <strong id="aiautotool-limit-publishperday"><?php echo absint( $limits['publishperday'] ); ?></strong> / <?php echo absint( $limits['publishperday_max'] ); ?></code><br>
-                <code><?php esc_html_e( 'Requests Per Minute Per Project', 'aiautotool' ); ?> = <strong id="aiautotool-limit-permin"><?php echo absint( $limits['permin'] ); ?></strong> / <?php echo absint( $limits['permin_max'] ); ?></code><br>
-                <code><?php esc_html_e( 'Metadata Requests Per Minute Per Project', 'aiautotool' ); ?> = <strong id="aiautotool-limit-metapermin"><?php echo absint( $limits['metapermin'] ); ?></strong> / <?php echo absint( $limits['metapermin_max'] ); ?></code></p>
+                <code><?php esc_htmlesc_html_e( 'Publish Requests Per Day', 'ai-auto-tool' ); ?> = <strong id="aiautotool-limit-publishperday"><?php echo absint( $limits['publishperday'] ); ?></strong> / <?php echo absint( $limits['publishperday_max'] ); ?></code><br>
+                <code><?php esc_htmlesc_html_e( 'Requests Per Minute Per Project', 'ai-auto-tool' ); ?> = <strong id="aiautotool-limit-permin"><?php echo absint( $limits['permin'] ); ?></strong> / <?php echo absint( $limits['permin_max'] ); ?></code><br>
+                <code><?php esc_htmlesc_html_e( 'Metadata Requests Per Minute Per Project', 'ai-auto-tool' ); ?> = <strong id="aiautotool-limit-metapermin"><?php echo absint( $limits['metapermin'] ); ?></strong> / <?php echo absint( $limits['metapermin_max'] ); ?></code></p>
             <?php } ?>
                    
                        
@@ -374,9 +374,9 @@ $json = $this->get_settings(  );
     // Khởi tạo cài đặt
     public function init_settings() {
         register_setting('aiautotool-settings-group', 'aiautotool_setting_submitindex');
-        add_settings_section('aiautotool-section', __('AI Auto Tool Settings', 'aiautotool'), array($this, 'section_callback'), 'aiautotool-settings');
-        add_settings_field('submitindex_field', __('Information:', 'aiautotool'), array($this, 'submitindex_field_callback'), 'aiautotool-settings', 'aiautotool-section');
-        add_settings_field('post_types_field', __('Post Types List:', 'aiautotool'), array($this, 'post_types_field_callback'), 'aiautotool-settings', 'aiautotool-section');
+        add_settings_section('aiautotool-section', __('AI Auto Tool Settings', 'ai-auto-tool' ), array($this, 'section_callback'), 'aiautotool-settings');
+        add_settings_field('submitindex_field', __('Information:', 'ai-auto-tool' ), array($this, 'submitindex_field_callback'), 'aiautotool-settings', 'aiautotool-section');
+        add_settings_field('post_types_field', __('Post Types List:', 'ai-auto-tool' ), array($this, 'post_types_field_callback'), 'aiautotool-settings', 'aiautotool-section');
     }
 
     // Gọi hàm này khi vào trang cài đặt
@@ -389,14 +389,14 @@ $json = $this->get_settings(  );
     ?>
 
     <div id="tool-submitindex" class="tab-content" style="display:none;">
-        <h1><i class="fa-solid fa-shield-halved"></i> <?php _e('Config Google API key Json', 'ai-auto-tool'); ?></h1>
+        <h1><i class="fa-solid fa-shield-halved"></i> <?php esc_html_e('Config Google API key Json', 'ai-auto-tool'); ?></h1>
         <div class="wrap">
-            <h3><?php _e('Config Google API key Json', 'aiautotool'); ?></h3>
+            <h3><?php esc_html_e('Config Google API key Json', 'ai-auto-tool' ); ?></h3>
             <form method="post" action="options.php">
                 <?php
                 settings_fields('aiautotool-settings-group');
                 ?>
-                <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php _e('Input json key content.', 'ai-auto-tool'); ?>
+                <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php esc_html_e('Input json key content.', 'ai-auto-tool'); ?>
                 Google JSON Key: paste Service Account JSON key contents in the field. <a target="_blank" href="https://rankmath.com/blog/google-indexing-api/">Example setup</a>
             </p>
 
@@ -405,18 +405,18 @@ $json = $this->get_settings(  );
                     $setting['json_key'] = (array)$setting['json_key'];
                     foreach ($setting['json_key'] as $index => $json_key_item) {
                         ?>
-                        <div class="json-key-item aiautotool_submitindex_jsonkey" data-index="<?php echo $index;?>">
+                        <div class="json-key-item aiautotool_submitindex_jsonkey" data-index="<?php echo esc_attr($index);?>">
                             <textarea class="ft-code-textarea" style="height: 100px;" name="aiautotool_setting_submitindex[json_key][]" placeholder="Input json Key"><?php echo esc_textarea($json_key_item); ?></textarea>
-                            <button type="button" class="remove-json-key-item delete-post-csdl button-secondary " data-index="<?php echo $index; ?>"><?php _e('Remove', 'ai-auto-tool'); ?></button>
+                            <button type="button" class="remove-json-key-item delete-post-csdl button-secondary " data-index="<?php echo esc_attr($index); ?>"><?php esc_html_e('Remove', 'ai-auto-tool'); ?></button>
                         </div>
                         <?php
                     }
                 }
                 ?>
 
-                <button type="button" id="add-json-key-item" class="button ft-submit"><?php _e('Add More', 'ai-auto-tool'); ?></button>
+                <button type="button" id="add-json-key-item" class="button ft-submit"><?php esc_html_e('Add More', 'ai-auto-tool'); ?></button>
 
-                <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php _e('Select post type: Submit posts from these post types automatically to the Google Instant Indexing API when a post is published, edited, or deleted.', 'ai-auto-tool'); ?></p>
+                <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php esc_html_e('Select post type: Submit posts from these post types automatically to the Google Instant Indexing API when a post is published, edited, or deleted.', 'ai-auto-tool'); ?></p>
 
                 <?php
                 $post_types = get_post_types();
@@ -424,17 +424,17 @@ $json = $this->get_settings(  );
                 foreach ($post_types as $post_type) {
                     ?>
                     <label class="nut-switch">
-                        <input type="checkbox" name="aiautotool_setting_submitindex[post_type][]" value="<?php echo $post_type; ?>" <?php if (isset($setting['post_type'][$i]) && $post_type == $setting['post_type'][$i]) echo 'checked="checked"'; ?> />
+                        <input type="checkbox" name="aiautotool_setting_submitindex[post_type][]" value="<?php echo esc_attr($post_type); ?>" <?php if (isset($setting['post_type'][$i]) && $post_type == $setting['post_type'][$i]) echo 'checked="checked"'; ?> />
                         <span class="slider"></span></label>
-                    <label class="ft-label-right"><?php _e('Active :  ', 'aiautotool');
-                        echo $post_type; ?></label>
+                    <label class="ft-label-right"><?php esc_html_e('Active :  ', 'ai-auto-tool' );
+                        echo esc_attr($post_type); ?></label>
                     </p>
                     <?php
                     $i++;
                 }
                 ?>
 
-                <?php submit_button(__('Save Config', 'ai-auto-tool'), 'ft-submit'); ?>
+                <?php submit_button(esc_html__('Save Config', 'ai-auto-tool'), 'ft-submit'); ?>
             </form>
 
             <script type="text/javascript">
@@ -444,13 +444,13 @@ $json = $this->get_settings(  );
                      if(isset($setting['json_key'])){
                         $currentIndex = count($setting['json_key']);
                     } ?>
-                    var currentIndex = <?php echo sanitize_text_field($currentIndex); ?>;
+                    var currentIndex = <?php echo esc_html($currentIndex); ?>;
 
                     $('#add-json-key-item').on('click', function() {
                         currentIndex++;
                         var newItem = '<div class="json-key-item aiautotool_submitindex_jsonkey" data-index="' + currentIndex + '"> ' +
                             '<textarea class="ft-code-textarea" style="height: 100px;" name="aiautotool_setting_submitindex[json_key][]" placeholder="Input json Key"></textarea>' +
-                            '<button type="button" class="remove-json-key-item delete-post-csdl button-secondary " data-index="' + currentIndex + '"><?php _e('Remove', 'ai-auto-tool'); ?></button>' +
+                            '<button type="button" class="remove-json-key-item delete-post-csdl button-secondary " data-index="' + currentIndex + '"><?php esc_html_e('Remove', 'ai-auto-tool'); ?></button>' +
                             '</div>';
                         $(this).before(newItem);
                     });
@@ -472,20 +472,20 @@ $json = $this->get_settings(  );
     public function render_tab_setting() {
         if($this->active=="true"){
 
-         echo '<button href="#tool-submitindex" class="nav-tab sotab"><i class="fa-solid fa-shield-halved"></i> '.__('Indexing API','ai-auto-tool').'</button>';
+         echo '<button href="#tool-submitindex" class="nav-tab sotab"><i class="fa-solid fa-shield-halved"></i> '.esc_html__('Indexing API','ai-auto-tool').'</button>';
         }
     }
 
     public function render_feature() {
 
        $autoToolBox = new AutoToolBox($this->icon.' '.__('Index GOOGLE API','ai-auto-tool'), __('Index GOOGLE API','ai-auto-tool'), "#", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
-
-        echo $autoToolBox->generateHTML();
+       echo ($autoToolBox->generateHTML());
+        
     }
 
     // Callback cho section
     public function section_callback() {
-        echo '<p>' . __('Enter information and select Post Types.', 'aiautotool') . '</p>';
+        echo '<p>' . esc_html__('Enter information and select Post Types.', 'ai-auto-tool' ) . '</p>';
     }
 
     // Callback cho textarea thông tin
@@ -501,7 +501,7 @@ $json = $this->get_settings(  );
 
         foreach ($post_types as $post_type) {
             $checked = in_array($post_type->name, $selected_post_types) ? 'checked="checked"' : '';
-            echo '<input type="checkbox" name="aiautotool_setting_post_types[]" value="' . esc_attr($post_type->name) . '" ' . $checked . ' /> ' . esc_html($post_type->label) . '<br>';
+            echo '<input type="checkbox" name="aiautotool_setting_post_types[]" value="' . esc_attr($post_type->name) . '" ' . esc_attr($checked) . ' /> ' . esc_html($post_type->label) . '<br>';
         }
     }
     private function get_settings() {
@@ -551,7 +551,7 @@ $json = $this->get_settings(  );
 
 
         $this->send_to_api( $send_url, 'update', false );
-        $this->add_notice( __( 'A recently published post has been automatically submitted to the Search Index API.', 'aiautotool' ), 'notice-info', null, true );
+        $this->add_notice( __( 'A recently published post has been automatically submitted to the Search Index API.', 'ai-auto-tool' ), 'notice-info', null, true );
     }
     public function add_notice( $message, $class = '', $show_on = null, $persist = false, $id = '' ) {
         $notice = [
@@ -592,7 +592,7 @@ $json = $this->get_settings(  );
         }
 
         $this->send_to_api( $send_url, 'delete', false );
-        $this->add_notice( __( 'A deleted post has been automatically submitted to the Search Index API for deletion.', 'aiautotool' ), 'notice-info', null, true );
+        $this->add_notice( __( 'A deleted post has been automatically submitted to the Search Index API for deletion.', 'ai-auto-tool' ), 'notice-info', null, true );
     }
 
 
@@ -889,7 +889,7 @@ $json = $this->get_settings(  );
             }
 
             $html .= '</table>';
-            echo $html;
+            echo esc_html($html);
         } else {
             echo 'No Logs';
         }

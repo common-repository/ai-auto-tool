@@ -41,8 +41,8 @@ class Auto_Install_Plugins extends rendersetting {
 
     public function render_feature(){
         $autoToolBox = new AutoToolBox("Install Plugin", "Install plugin SEO, MMO ", "#", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
-
-        echo $autoToolBox->generateHTML();
+        echo ($autoToolBox->generateHTML());
+       
         
     }
 

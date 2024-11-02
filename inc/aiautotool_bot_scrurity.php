@@ -176,7 +176,7 @@ RewriteRule ^/robots.txt$ /index.php?robots=1 [L]
 
         $url = esc_url_raw($_POST['url']);
         
-        echo $this->aiautotool_remote_txt_content($url);
+        echo esc_html($this->aiautotool_remote_txt_content($url));
         wp_die();
     }
     public function aiautotool_remote_txt_content($url) {
@@ -209,10 +209,7 @@ RewriteRule ^/robots.txt$ /index.php?robots=1 [L]
         if (!$this->aiautotool_checklimit($this->config)) {
             
             $this->notice->add_notice(
-                                sprintf(
-                                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                                    aiautotool_premium()->get_upgrade_url()
-                                ),
+                                AIAUTOTOOL_TITLE_UPGRADE,
                                 'notice-error',
                                 null,
                                 true,
@@ -238,7 +235,7 @@ RewriteRule ^/robots.txt$ /index.php?robots=1 [L]
    public function render_tab_setting() {
         
         if ($this->active=='true') {
-        echo '<button href="#tab-robots_txt-setting" class="nav-tab sotab"> '. wp_kses_post($this->icon).' '.__('Robots & block','ai-auto-tool').'</button>';
+        echo '<button href="#tab-robots_txt-setting" class="nav-tab sotab"> '. wp_kses_post($this->icon).' '.esc_html__('Robots & block','ai-auto-tool').'</button>';
         }
     }
     public function render_setting() {
@@ -285,8 +282,8 @@ RewriteRule ^/robots.txt$ /index.php?robots=1 [L]
                 </div>
                 
             <div id="robotsx" class="navtab">
-            <h2><?php echo wp_kses_post($this->icon); ?> <?php _e('Robots & ads txt','ai-auto-tool'); ?></h2>
-            <form method="post" action="<?php echo admin_url('admin-post.php'); ?>">
+            <h2><?php echo wp_kses_post($this->icon); ?> <?php esc_html_e('Robots & ads txt','ai-auto-tool'); ?></h2>
+            <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
              <input type="hidden" name="action" value="save_robots_content">
                <?php wp_nonce_field('save_robots_content_nonce'); ?>
                 <?php
@@ -294,7 +291,7 @@ RewriteRule ^/robots.txt$ /index.php?robots=1 [L]
                 // do_settings_sections('ai_auto_tool_security_bot_page');
                 ?>
                 <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                   <?php _e('Robots.txt content','ai-auto-tool'); ?>: <a href="/robots.txt?v=<?php echo rand();?>" target="_blank">View Robots.txt</a>. <br> <span>If system for website using nginx, please config rewrite : <code>rewrite ^/robots.txt$ /index.php?robots=1 last;</code></span>
+                   <?php esc_html_e('Robots.txt content','ai-auto-tool'); ?>: <a href="/robots.txt?v=<?php echo esc_html(rand());?>" target="_blank">View Robots.txt</a>. <br> <span>If system for website using nginx, please config rewrite : <code>rewrite ^/robots.txt$ /index.php?robots=1 last;</code></span>
                     </p>
                     <span class=" aiautotool_btn_v1 aiautotool_btn_v16 btn_getdatatxt " id="get_robotsai" data-url="https://aiautotool.com/plugin/txt/robotsai.txt" data-editor="robots_txt_content" ><span class="icon"><i class="fa-solid fa-lightbulb"></i>  </span><span>Disallow Bot AI</span></span>
 
@@ -302,7 +299,7 @@ RewriteRule ^/robots.txt$ /index.php?robots=1 [L]
                  echo '<textarea class="ft-code-textarea" id="robots_txt_content" name="ai_auto_tool_security_bot_options[robots_txt_content]" rows="5" cols="50">' . esc_textarea($options['robots_txt_content']) . '</textarea>';
                   ?>
                 <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                   <?php _e('ads.txt content','ai-auto-tool'); ?>: <a href="/ads.txt?v=<?php echo rand();?>" target="_blank">View ads.txt</a><br>
+                   <?php esc_html_e('ads.txt content','ai-auto-tool'); ?>: <a href="/ads.txt?v=<?php echo esc_html(rand());?>" target="_blank">View ads.txt</a><br>
                    <span>If system for website using nginx, please config rewrite : <code>rewrite ^/ads.txt$ /index.php?ads=1 last;</code></span>
                     </p>
                     <?php
@@ -314,13 +311,13 @@ RewriteRule ^/robots.txt$ /index.php?robots=1 [L]
             </form>
             </div>
             <div id="blockspam" class="navtab">
-            <h2><?php echo wp_kses_post($this->icon); ?> <?php _e('Block spam','ai-auto-tool'); ?></h2>
+            <h2><?php echo wp_kses_post($this->icon); ?> <?php esc_html_e('Block spam','ai-auto-tool'); ?></h2>
              <form method="post" action="options.php">
                 <?php settings_fields('aiautotool_user_agents_settings_group'); ?>
                 <?php do_settings_sections('aiautotool_user_agents_settings_group'); ?>
 
                         <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                   <?php _e('Enter the list of user agents (one user agent per line):','ai-auto-tool'); ?>
+                   <?php esc_html_e('Enter the list of user agents (one user agent per line):','ai-auto-tool'); ?>
                     </p>
                     <span class=" aiautotool_btn_v1 aiautotool_btn_v16 btn_getdatatxt "  data-url="https://aiautotool.com/plugin/txt/useagentblacklist.txt" data-editor="aiautotool_user_agents_list" ><span class="icon"><i class="fa-solid fa-lightbulb"></i>  </span><span>List Bot user agen </span></span>
                       <textarea class="ft-code-textarea" id="aiautotool_user_agents_list" name="aiautotool_user_agents_list" rows="10" cols="50"><?php echo esc_attr(get_option('aiautotool_user_agents_list')); ?></textarea>
@@ -329,21 +326,23 @@ RewriteRule ^/robots.txt$ /index.php?robots=1 [L]
             </form>
             </div>
             <div id="loginauth" class="navtab">
-            <h2><?php echo wp_kses_post($this->icon); ?> <?php _e('Auth Login wp','ai-auto-tool'); ?></h2>
+            <h2><?php echo wp_kses_post($this->icon); ?> <?php esc_html_e('Auth Login wp','ai-auto-tool'); ?></h2>
              <form method="post" action="options.php">
                 <?php  settings_fields('wp_login_security_settings');?>
                         <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                   <?php _e('UserName','ai-auto-tool'); ?>
+                   <?php esc_html_e('UserName','ai-auto-tool'); ?>
                     </p>
                     <?php 
-                      echo "<input type='text' id='aiautotool_login_auth_login_username' name='aiautotool_login_auth_login_username' value='$username' />";
-                      ?>
+echo "<input type='text' id='aiautotool_login_auth_login_username' name='aiautotool_login_auth_login_username' value='" . esc_attr( $username ) . "' />";
+?>
+
                        <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                   <?php _e('Pass','ai-auto-tool'); ?>
+                   <?php esc_html_e('Pass','ai-auto-tool'); ?>
                     </p>
                       <?php
-                      echo "<input type='password' id='aiautotool_login_auth_login_password' name='aiautotool_login_auth_login_password' value='$password' />";
-                     ?>
+echo "<input type='password' id='aiautotool_login_auth_login_password' name='aiautotool_login_auth_login_password' value='" . esc_attr( $password ) . "' />";
+?>
+
                 <?php submit_button(__( 'Save all', 'ai-auto-tool' ),'ft-submit'); ?>
             </form>
             </div>
@@ -446,7 +445,7 @@ jQuery(document).ready(function($) {
     public function render_feature(){
         $autoToolBox = new AutoToolBox(wp_kses_post($this->icon).' '.__('Robots&ads txt','ai-auto-tool'), "Change robots txt and ads txt.", "#", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
 
-        echo $autoToolBox->generateHTML();
+         echo ($autoToolBox->generateHTML());
         
         
     }
@@ -516,7 +515,7 @@ jQuery(document).ready(function($) {
             $robots_content = isset($options['robots_txt_content']) ? $options['robots_txt_content'] : '';
             
             header('Content-Type: text/plain; charset=utf-8');
-            echo $robots_content;
+            echo esc_html($robots_content);
             exit;
         }
     }
@@ -529,7 +528,7 @@ jQuery(document).ready(function($) {
             $ads_content = isset($options['ads_txt_content']) ? $options['ads_txt_content'] : '';
 
             header('Content-Type: text/plain; charset=utf-8');
-            echo $ads_content;
+            echo esc_html($ads_content);
             exit;
         }
     }

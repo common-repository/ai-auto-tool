@@ -77,7 +77,7 @@ class AIautoTool_log {
         	
             echo '<tr>';
             echo '<td>' . esc_html($log['time']) . '</td>';
-            echo '<td>' . $this->display_table((Object)$log['data']) . '</td>';
+            echo '<td>' . esc_html($this->display_table((Object)$log['data'])) . '</td>';
             echo '</tr>';
         }
 

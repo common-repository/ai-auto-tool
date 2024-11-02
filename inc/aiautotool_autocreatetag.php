@@ -55,10 +55,7 @@ class AIautotool_autocreatetags extends rendersetting{
         if (!$this->aiautotool_checklimit($this->config)) {
             
             $this->notice->add_notice(
-                                sprintf(
-                                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                                    aiautotool_premium()->get_upgrade_url()
-                                ),
+                                AIAUTOTOOL_TITLE_UPGRADE,
                                 'notice-error',
                                 null,
                                 true,
@@ -114,9 +111,8 @@ class AIautotool_autocreatetags extends rendersetting{
     }
     public function render_plan(){
          if ($this->active=='true') {
-           $quota = $this->config['number_post']==-1? 'Unlimited':$this->config['number_post'];
-        echo '<p>'.$this->icon.' '.$this->name_plan.':<strong>  Usage : '.$this->config['usage'].'</strong></p>';
-       
+          $quota = $this->config['number_post'] == -1 ? 'Unlimited' : esc_html($this->config['number_post']);
+echo '<p>' . esc_html($this->icon) . ' ' . esc_html($this->name_plan) . ': <strong> Usage: ' . esc_html($this->config['usage']) . '</strong></p>';
 
         }
     }
@@ -182,10 +178,7 @@ class AIautotool_autocreatetags extends rendersetting{
             
 
              $this->notice->add_notice(
-                                sprintf(
-                                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                                    aiautotool_premium()->get_upgrade_url()
-                                ),
+                                AIAUTOTOOL_TITLE_UPGRADE,
                                 'notice-error',
                                 null,
                                 true,
@@ -218,9 +211,9 @@ class AIautotool_autocreatetags extends rendersetting{
         $success = true;
 
         if ($success) {
-            echo $tag_id;
+            echo esc_html($tag_id);
         } else {
-            echo 'error';
+            echo esc_html('error');
         }
 
         wp_die();
@@ -266,10 +259,7 @@ class AIautotool_autocreatetags extends rendersetting{
         if (!$this->aiautotool_checklimit($this->config)) {
             
            $this->notice->add_notice(
-                                sprintf(
-                                    __( 'AI Auto Tool Limit Quota. Please <a class="aiautotool_btn_upgradepro aiautotool_red" href="%s" target="_blank"><i class="fa-solid fa-unlock-keyhole"></i> Upgrade Pro</a>', 'ai-auto-tool' ),
-                                    aiautotool_premium()->get_upgrade_url()
-                                ),
+                                AIAUTOTOOL_TITLE_UPGRADE,
                                 'notice-error',
                                 null,
                                 true,
@@ -357,7 +347,7 @@ The results must only be in JSON format, with this exact format, you have to fil
                                     wp_set_post_tags($post_id, $tag_name, true);
                                     $generated_posts[] = $post_id;
                                     update_option('autocreatetag_generated_posts', $generated_posts);
-                                    $this->notice->add_notice($tag_name.__( 'A New Tag created for post <a href="'.get_permalink($post_id).'">'.$post->post_title.'</a> ', 'ai-auto-tool'), 'notice-info', null, true, $this->name_plan);
+                                    $this->notice->add_notice($tag_name.'A New Tag created for post <a href="'.get_permalink($post_id).'">'.$post->post_title.'</a> ', 'notice-info', null, true, $this->name_plan);
                                     $this->updateTagDescription($tag_name);
                                     $checkinsert = true;
                                 }
@@ -454,7 +444,7 @@ The results must only be in JSON format, with this exact format, you have to fil
     // Khởi tạo cài đặt
     public function init_settings() {
         register_setting('aiautotool-settings-group', 'aiautotool_setting_autocreatetag');
-        add_settings_section('aiautotool-section', __('AI Auto Tool Settings', 'aiautotool'), array($this, 'section_callback'), 'aiautotool-settings');
+        add_settings_section('aiautotool-section', __('AI Auto Tool Settings', 'ai-auto-tool'), array($this, 'section_callback'), 'aiautotool-settings');
         add_settings_field('submitindex_field', __('Information:', 'ai-auto-tool'), array($this, 'submitindex_field_callback'), 'aiautotool-settings', 'aiautotool-section');
         add_settings_field('post_types_field', __('Post Types List:', 'ai-auto-tool'), array($this, 'post_types_field_callback'), 'aiautotool-settings', 'aiautotool-section');
     }
@@ -498,9 +488,9 @@ The results must only be in JSON format, with this exact format, you have to fil
     ?>
 
     <div id="tool-autocreatetag" class="tab-content" style="display:none;">
-        <h1><i class="fa-regular fa-Tags"></i> <?php _e('Config using AI auto Create Tags', 'ai-auto-tool'); ?></h1>
+        <h1><i class="fa-regular fa-Tags"></i> <?php esc_html_e('Config using AI auto Create Tags', 'ai-auto-tool'); ?></h1>
         <div class="wrap">
-            <h3><?php _e('Config post type for auto Create Tags', 'aiautotool'); ?></h3>
+            <h3><?php esc_html_e('Config post type for auto Create Tags', 'ai-auto-tool'); ?></h3>
             <form method="post" action="options.php">
                 <?php
                 settings_fields('aiautotool-settings-group');
@@ -508,7 +498,7 @@ The results must only be in JSON format, with this exact format, you have to fil
                 ?>
 
                 <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                    <?php _e('Time Create Tags','ai-auto-tool'); ?>
+                    <?php esc_html_e('Time Create Tags','ai-auto-tool'); ?>
                     </p>
                      <select id="aiautotool_setting_autocreatetag[time_comment]" name="aiautotool_setting_autocreatetag[time_comment]">
                             <option value="1" <?php selected($current_interval, 1); ?>>1 minute</option>
@@ -525,18 +515,18 @@ The results must only be in JSON format, with this exact format, you have to fil
                         </select>
                
                  <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                                    <?php _e('Language for tag, Ai has write description for tag by language your select.','ai-auto-tool'); ?>
+                                    <?php esc_html_e('Language for tag, Ai has write description for tag by language your select.','ai-auto-tool'); ?>
                                 </p>
                                  <?php 
                                  echo '<select name="aiautotool_setting_autocreatetag[lang]" id="aiautotool_setting_autocreatetag[lang]">';
                                     foreach ($languages as $code => $name) {
                                         $is_selected = selected($language_code, $code, false);
-                                        echo '<option value="' . $code . '" ' . $is_selected . '>' . $name . '</option>';
+                                        echo '<option value="' . esc_html($code) . '" ' . esc_html($is_selected) . '>' . esc_html($name) . '</option>';
                                     }
                                     echo '</select>';
 
                                   ?>
-                <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php _e('Select post type', 'ai-auto-tool'); ?></p>
+                <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php esc_html_e('Select post type', 'ai-auto-tool'); ?></p>
 
                 <?php
                     $post_types = get_post_types( array( 'public' => true ), 'names' );
@@ -544,11 +534,11 @@ The results must only be in JSON format, with this exact format, you have to fil
                     foreach ($post_types as $post_type) {
                         ?>
                         <label class="nut-switch">
-                            <input type="checkbox" name="aiautotool_setting_autocreatetag[post_type][]" value="<?php echo $post_type; ?>" <?php echo in_array($post_type, $setting['post_type']) ? 'checked="checked"' : ''; ?> />
+                            <input type="checkbox" name="aiautotool_setting_autocreatetag[post_type][]" value="<?php echo esc_html($post_type); ?>" <?php echo in_array($post_type, $setting['post_type']) ? 'checked="checked"' : ''; ?> />
                             <span class="slider"></span>
                         </label>
-                        <label class="ft-label-right"><?php _e('Active :  ', 'ai-auto-tool');
-                            echo $post_type; ?></label>
+                        <label class="ft-label-right"><?php esc_html_e('Active :  ', 'ai-auto-tool');
+                            echo esc_html($post_type); ?></label>
                         </p>
                         <?php
                         $i++;
@@ -569,7 +559,7 @@ The results must only be in JSON format, with this exact format, you have to fil
     public function render_tab_setting() {
         if($this->active=="true"){
 
-         echo '<button href="#tool-autocreatetag" class="nav-tab sotab">'.$this->icon.' '.__('Auto Tags','ai-auto-tool').'</button>';
+         echo '<button href="#tool-autocreatetag" class="nav-tab sotab">'.esc_html($this->icon).' '.esc_html__('Auto Tags','ai-auto-tool').'</button>';
         }
     }
 
@@ -577,12 +567,12 @@ The results must only be in JSON format, with this exact format, you have to fil
 
        $autoToolBox = new AutoToolBox($this->icon.' '.$this->name_plan, __('Auto General Tags and Description using AI','ai-auto-tool'), "#", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
 
-        echo $autoToolBox->generateHTML();
+         echo ($autoToolBox->generateHTML());
     }
 
     // Callback cho section
     public function section_callback() {
-        echo '<p>' . __('Enter information and select Post Types.', 'aiautotool') . '</p>';
+        echo '<p>' . esc_html__('Enter information and select Post Types.', 'ai-auto-tool') . '</p>';
     }
 
     // Callback cho textarea thông tin
@@ -598,7 +588,7 @@ The results must only be in JSON format, with this exact format, you have to fil
 
         foreach ($post_types as $post_type) {
             $checked = in_array($post_type->name, $selected_post_types) ? 'checked="checked"' : '';
-            echo '<input type="checkbox" name="aiautotool_setting_post_types[]" value="' . esc_attr($post_type->name) . '" ' . $checked . ' /> ' . esc_html($post_type->label) . '<br>';
+            echo '<input type="checkbox" name="aiautotool_setting_post_types[]" value="' . esc_attr($post_type->name) . '" ' . esc_attr($checked) . ' /> ' . esc_html($post_type->label) . '<br>';
         }
     }
     private function get_settings() {
@@ -763,7 +753,7 @@ Create a title for a website article from the following keyword: %%TAGNAME%%.
     private function updateTagDescriptionById($tagId, $newDescription) {
         // Update tag description in WordPress
         $tag = get_term($tagId, 'post_tag');
-        $this->notice->add_notice($tag->name.__( 'Update desc tag  <a href="'.get_tag_link($tagId).'">'.$tag->name.'</a> '.$newDescription, 'ai-auto-tool'), 'notice-info', null, true, $this->name_plan);
+        $this->notice->add_notice($tag->name.' '.'Update desc tag  <a href="'.get_tag_link($tagId).'">'.$tag->name.'</a> '.$newDescription, 'notice-info', null, true, $this->name_plan);
         wp_update_term($tagId, 'post_tag', array('description' => $newDescription));
     }
 

@@ -92,7 +92,7 @@ Write all output in [%%lang%%]',
                 }
                 
                 ?>
-                <button type="submit" name="save" class=" ft-submit"><?php _e('Save Prompt','ai-auto-tool'); ?></button>
+                <button type="submit" name="save" class=" ft-submit"><?php esc_html_e('Save Prompt','ai-auto-tool'); ?></button>
             </form>
         </div>
         <?php
@@ -128,7 +128,8 @@ Write all output in [%%lang%%]',
         
         ?>
         <p class="ft-note"><i class="fa-solid fa-lightbulb"></i>
-                    <?php echo $this->options_label[$option_name]; ?>                  </p>
+                    <?php echo esc_html($this->options_label[$option_name]); ?>
+                 </p>
         
         <div>
             <button class=" aiautotool_btn_v1 aiautotool_btn_v12" onclick="insertSpan('%%title%%', event)"><span class="dashicons dashicons-plus-alt2"></span>Title</button>
@@ -137,7 +138,10 @@ Write all output in [%%lang%%]',
             <button class=" aiautotool_btn_v1 aiautotool_btn_v12" onclick="insertSpan('%%lang%%', event)"><span class="dashicons dashicons-plus-alt2"></span> Language</button>
             <button class=" aiautotool_btn_v1 aiautotool_btn_v12" onclick="insertSpan('%%content%%', event)"><span class="dashicons dashicons-plus-alt2"></span> Content</button>
         </div>
-        <div contenteditable="true" class="editable ft-code-textarea" data-option="<?php echo $option_name; ?>"><?php echo stripslashes(nl2br($option_value)); ?></div>
+        <div contenteditable="true" class="editable ft-code-textarea" data-option="<?php echo esc_attr($option_name); ?>">
+    <?php echo esc_html(stripslashes(nl2br($option_value))); ?>
+</div>
+
        
         
         

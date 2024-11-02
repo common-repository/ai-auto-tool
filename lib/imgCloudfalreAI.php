@@ -32,13 +32,13 @@ class ImgCloudflare {
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 
         $response = curl_exec($ch);
-        if ($response === false) {
-            throw new Exception('cURL error: ' . curl_error($ch));
+        if ( $response === false ) {
+            throw new Exception( 'cURL error: ' . esc_html( curl_error( $ch ) ) );
         }
 
         $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         if ($http_code !== 200) {
-            throw new Exception('API error: ' . $response);
+            throw new Exception('API error: ' . esc_html($response));
         }
 
         curl_close($ch);
@@ -72,7 +72,7 @@ class ImgCloudflare {
 
         $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         if ($http_code !== 200) {
-            throw new Exception('API error: ' . $response);
+            throw new Exception('API error: ' . esc_html($response));
         }
 
         curl_close($ch);
@@ -112,7 +112,7 @@ class ImgCloudflare {
 
         $response = curl_exec($ch);
         if (curl_errno($ch)) {
-            echo 'Error:' . curl_error($ch);
+            echo 'Error:' . esc_html(curl_error($ch));
             return null;
         }
 

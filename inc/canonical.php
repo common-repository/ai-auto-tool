@@ -115,11 +115,11 @@ public function init(){
         <div class="aiautotool_left">
             <div class="ft-box">
                 <div class="ft-menu">
-                     <div class="ft-logo"><img src="<?php echo plugins_url('../images/logo.svg', __FILE__); ?>">
+                     <div class="ft-logo"><img src="<?php echo esc_url(plugins_url('../images/logo.svg', __FILE__)); ?>">
                     <br>Aiautotool Canonical</div>
                 </div>
                 <div class="ft-main">
-        <h1 class="wp-heading-inline">  <img src="<?php echo plugins_url('../images/logo.svg', __FILE__); ?>" width="16px" height="16px"  /> AI Autotool Single Post</h1>
+        <h1 class="wp-heading-inline">  <img src="<?php echo esc_url(plugins_url('../images/logo.svg', __FILE__)); ?>" width="16px" height="16px"  /> AI Autotool Single Post</h1>
         <div >
             <div  id="aiautotool_post_form" class="wrap aiautotool_container">
                 <?php self::render_search_canonical_setting();?>
@@ -149,10 +149,10 @@ public function init(){
                     }
                         ?>
                         <tr>
-                            <td><?php echo $key;?></td>
-                            <td><a data-json="<?php echo $key;?>" href="javascript:void(0);" onclick="showRightBox(this)"><?php echo $canonical_url;?></a></td>
-                            <td>(<?php echo count($post_ids) ;?>/<?php echo count($kq);?>) post</td>
-                            <td><span data-ids=<?php echo $key; ?> type="button" class="aiautotool_btn btn_writer canonical_del "><i class="mce-ico mce-i-dashicon dashicons-del"></i> Del</span></td>
+                            <td><?php echo esc_html($key);?></td>
+                            <td><a data-json="<?php echo esc_html($key);?>" href="javascript:void(0);" onclick="showRightBox(this)"><?php echo esc_html($canonical_url);?></a></td>
+                            <td>(<?php echo esc_html(count($post_ids)) ;?>/<?php echo esc_html(count($kq));?>) post</td>
+                            <td><span data-ids=<?php echo esc_html($key); ?> type="button" class="aiautotool_btn btn_writer canonical_del "><i class="mce-ico mce-i-dashicon dashicons-del"></i> Del</span></td>
 
                         </tr>
                         <?php
@@ -241,7 +241,7 @@ public function init(){
                     ids: ids,
                     security:aiautotool_js_setting.security
                 };
-                $.post('<?php echo admin_url('admin-ajax.php');?>', data, function(response) {
+                $.post('<?php echo esc_url(admin_url('admin-ajax.php'));?>', data, function(response) {
                 if (response.success) {
                         var results = response.data;
                       $(this).remove();
@@ -336,7 +336,7 @@ public function init(){
 
         ?>
 
-<h1 class="wp-heading-inline">  <img src="<?php echo plugins_url('../images/logo.svg', __FILE__); ?>" width="16px" height="16px"  /> 301 Control Link</h1>
+<h1 class="wp-heading-inline">  <img src="<?php echo esc_url(plugins_url('../images/logo.svg', __FILE__)); ?>" width="16px" height="16px"  /> 301 Control Link</h1>
         <div >
             <div   class="wrap aiautotool_container">
                 
@@ -743,14 +743,7 @@ public function init(){
 
     public function render_search_canonical_setting() {
         ?>
-        <!-- <div id="" class="wrap aiautotool_container" style="">
-        <div class="aiautotool_left">
-            <div class="ft-box">
-                <div class="ft-menu">
-                     <div class="ft-logo"><img src="<?php echo plugins_url('../images/logo.svg', __FILE__); ?>">
-                    <br>Aiautotool Canonical</div>
-                </div>
-                <div class="ft-main"> -->
+        
         <div class="wrap ">
             <h3><i class="fa-solid fa-angles-right"></i>Aiautotool Canonical</h3>
                 <!-- start box -->
@@ -866,7 +859,7 @@ public function init(){
             document.getElementById(loadingId).style.display = 'inline-block';
             jQuery('#'+loadingId).show();
            console.log(document.getElementById(loadingId).style.display);
-            jQuery.post('<?php echo admin_url('admin-ajax.php');?>', data, function(response) {
+            jQuery.post('<?php echo esc_url(admin_url('admin-ajax.php'));?>', data, function(response) {
                 if (response.success) {
                     var results = response.data;
                   
@@ -969,7 +962,7 @@ public function init(){
 
             };
 
-            jQuery.post('<?php echo admin_url('admin-ajax.php');?>', data, function(response) {
+            jQuery.post('<?php echo esc_url(admin_url('admin-ajax.php'));?>', data, function(response) {
                 if (response.success) {
                     
                     location.reload();
@@ -1000,7 +993,7 @@ public function init(){
      public function render_feature(){
         $autoToolBox = new AutoToolBox($this->icon.' '.$this->name_plan, "Canonical multiple posts intelligently, schedule deletion, and 301 old posts after canonicalizing for a certain period, supporting the retention of old link values ", "https://doc.aiautotool.com/", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
 
-        echo $autoToolBox->generateHTML();
+         echo ($autoToolBox->generateHTML());
         
     }
 }

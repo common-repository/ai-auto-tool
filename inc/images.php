@@ -55,7 +55,7 @@ class AIAutotool_ThumbPlusSettings extends rendersetting{
     public function render_feature(){
         $autoToolBox = new AutoToolBox("<i class=\"fa-solid fa-link\"></i> Active Thumb Fix 404", __('If active it, auto fix thumb 404.','ai-auto-tool'), "https://aiautotool.com", $this->active_option_name, $this->active,plugins_url('../images/logo.svg', __FILE__));
 
-        echo $autoToolBox->generateHTML();
+         echo ($autoToolBox->generateHTML());
         ?>
         
 
@@ -86,13 +86,13 @@ class AIAutotool_ThumbPlusSettings extends rendersetting{
     		 <form method="post" action="options.php">
     		 	<p class="ft-note">
                 	<i class="fa-solid fa-lightbulb"></i>
-                	<?php _e('Min Width: Only use images of minimum size.','ai-auto-tool'); ?> 
+                	<?php esc_html_e('Min Width: Only use images of minimum size.','ai-auto-tool'); ?> 
                 </p>
-                <input class="ft-input-big" placeholder="<?php _e('400', 'ai-auto-tool'); ?>" name="thumb_plus_option[min_width]" type="number" value="<?php if(!empty($this->options['min_width'])){echo sanitize_text_field($this->options['min_width']);} ?>"/>
+                <input class="ft-input-big" placeholder="<?php esc_html_e('400', 'ai-auto-tool'); ?>" name="thumb_plus_option[min_width]" type="number" value="<?php if(!empty($this->options['min_width'])){echo esc_html($this->options['min_width']);} ?>"/>
 
                 <p class="ft-note">
                 	<i class="fa-solid fa-lightbulb"></i>
-                	<?php _e('Max Width, dimensions exceed the maximum size. Setting = 0 will not resize.','ai-auto-tool'); ?> 
+                	<?php esc_html_e('Max Width, dimensions exceed the maximum size. Setting = 0 will not resize.','ai-auto-tool'); ?> 
                 </p>
                 <?php 
 
@@ -100,16 +100,16 @@ class AIAutotool_ThumbPlusSettings extends rendersetting{
                 
 
  ?>
-                <input class="ft-input-big" placeholder="<?php _e('400', 'ai-auto-tool'); ?>" name="thumb_plus_option[max_width]" type="number" value="<?php echo $max_width_value; ?>"/>
+                <input class="ft-input-big" placeholder="<?php esc_html_e('400', 'ai-auto-tool'); ?>" name="thumb_plus_option[max_width]" type="number" value="<?php echo esc_html($max_width_value); ?>"/>
 
-                <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php _e('Disable scaled images, Disable automatic resizing of images above the threshold 2560, keeping only the original images. Does not work with PNG images.', 'ai-auto-tool'); ?></p>
+                <p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php esc_html_e('Disable scaled images, Disable automatic resizing of images above the threshold 2560, keeping only the original images. Does not work with PNG images.', 'ai-auto-tool'); ?></p>
 
 					<!-- tool class 1 -->
 					<label class="nut-switch">
 					<input type="checkbox" name="thumb_plus_option[disable_scaled]" value="1" <?php if ( isset( $this->options['disable_scaled']) && 1 ==  $this->options['disable_scaled'] ) echo 'checked="checked"'; ?> />
 					<span class="slider"></span></label>
 
-				<p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php _e('Disable image sizes', 'ai-auto-tool'); ?></p>
+				<p class="ft-note"><i class="fa-solid fa-lightbulb"></i><?php esc_html_e('Disable image sizes', 'ai-auto-tool'); ?></p>
 
 
 					<?php 
@@ -120,8 +120,8 @@ class AIAutotool_ThumbPlusSettings extends rendersetting{
                                     ?>
                                     <p>
                                     <label class="nut-switch">
-									<input type="checkbox" name="thumb_plus_option[disable_sizes][<?php echo $type; ?>]" value="<?php echo $size;  ?>" <?php if ( $cur_size ==  $size ) echo 'checked="checked"'; ?> />
-									<span class="slider"></span><?php echo  $type . ' (' . $size . ')'; ?></label>
+									<input type="checkbox" name="thumb_plus_option[disable_sizes][<?php echo esc_html($type); ?>]" value="<?php echo esc_html($size);  ?>" <?php if ( $cur_size ==  $size ) echo 'checked="checked"'; ?> />
+									<span class="slider"></span><?php echo  esc_html($type) . ' (' . esc_html($size) . ')'; ?></label>
 									</p>
                                     <?php
                                 }
